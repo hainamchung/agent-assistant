@@ -1,0 +1,58 @@
+# agent-assistant CI — Thin wrapper over npm scripts (ADR-S3-007)
+#
+# ADAPTATION NOTES (AC14.6):
+#   GitLab CI:  Replace `jobs.<id>.steps` with `script:` blocks.
+#               Replace `actions/checkout@v4` with `GIT_STRATEGY: clone`.
+#               Replace `actions/setup-node@v4` with `image: node:20`.
+#               Replace matrix strategy with `parallel:` keyword.
+#   Other CI:   All checks are npm scripts — run `npm run ci:local` in any
+#               CI system that supports Node.js.
+
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Validate (Node ${{ matrix.node-version }})
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: true
+      matrix:
+        node-version: [18, 20]
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+
+      - name: Setup Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@39370e3970a6d050c480ffad4ff0ed4d3fdee5af # v4.1.0
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Security audit
+        run: npm audit --audit-level=moderate
+
+      - name: Lint agents
+        run: npm run lint:agents
+
+      - name: Simulate all agents
+        run: npm run simulate
+
+      - name: Word-count check (RUNTIME.md ≤ 3200)
+        run: npm run wordcount
+
+      - name: Schema validation
+        run: npm run validate:schemas

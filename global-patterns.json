@@ -1,0 +1,6 @@
+{
+  "version": "1.0",
+  "_description": "Populated by scripts/extract-patterns.js when opt-in is enabled in .agent-assistant/config.json",
+  "_setup": "Set extract_patterns: true in .agent-assistant/config.json, then run: npm run extract:patterns",
+  "patterns": []
+}

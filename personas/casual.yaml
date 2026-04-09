@@ -1,0 +1,11 @@
+name: casual
+description: "Relaxed, friendly, approachable"
+locale: "en-US"
+formality_adaptation: true
+base_formality: casual
+override_commands: ["/review", "/deploy"]
+overrides:
+  tone: casual
+  verbosity: balanced
+  style: pragmatic
+  humor: subtle

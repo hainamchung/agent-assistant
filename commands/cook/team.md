@@ -1,8 +1,10 @@
 ---
+schema-version: "1.0"
 description: "🔺 Team Feature — Golden Triangle parallel agent collaboration for maximum quality"
 version: "2.0"
 category: engineering
 execution-mode: execute
+topology: golden-triangle
 ---
 
 # /cook:team — Golden Triangle Feature Development
@@ -18,51 +20,39 @@ execution-mode: execute
 
 ## 🛑 PRE-FLIGHT (DO FIRST — BLOCKS PHASE 1)
 
-**LOAD now** (in order; path `./rules/` or `~/.{TOOL}/skills/agent-assistant/rules/`):
+**LOAD now** (path `./rules/` or `~/.{TOOL}/skills/agent-assistant/rules/`):
 
-1. CORE.md — Identity, Laws, Routing
-2. PHASES.md — Phase Execution
-3. AGENTS.md — Tiered Execution
-4. **TEAMS.md** — Golden Triangle protocol (MANDATORY)
+1. RUNTIME.md — Identity, Laws, Routing, Phase Execution, Agent Protocol
+2. **TEAMS-LITE.md** — Team roles, review checklist, phase output format
+3. **topologies/golden-triangle.md** — Golden Triangle execution protocol
+
+**LOAD on-demand** (when entering relevant phase):
+- `VALIDATION-GATES.md` — Phase gates block progression until exit criteria pass
+- `AGENT-JOURNALS.md` — Agents record decisions/observations inline (max 3/phase)
+- `CONDITIONAL-HANDOFFS.md` — Guard expressions route work dynamically on errors/complexity
 
 **⛔ Do not run Phase 1 until all are loaded.** Follow **all** rules in those files; they override any conflicting instructions in this file.
 
-**Skills Resolution**: Load `SKILLS.md` on-demand for fitness calculation and dynamic discovery.
+**Skills Resolution**: Load `SKILLS-LITE.md` on-demand for fitness calculation and dynamic discovery.
 
 ---
 
-## 🔀 TIERED EXECUTION
+## 🔀 EXECUTION MODEL
 
-> Reference: AGENTS.md (Tiered Execution) + TEAMS.md (Golden Triangle Protocol)
+> **Topology**: Golden Triangle — load `topologies/golden-triangle.md` for full protocol.
+> Reference: RUNTIME.md (Execution Model) + TEAMS-LITE.md (Team Review Protocol)
 
-| Tier       | When                          | Action                                                                    |
-| ---------- | ----------------------------- | ------------------------------------------------------------------------- |
-| **TIER 1** | runSubagent/Agent Tool EXISTS | Orchestrator spawns Tech Lead → Tech Lead spawns Executor + Reviewer      |
-| **TIER 2** | Tool MISSING or SYSTEM error  | EMBODY Tech Lead → EMBODY Executor → EMBODY Reviewer → EMBODY Tech Lead  |
+Roles for this command:
+| Role | Agent | Mode |
+|------|-------|------|
+| Tech Lead | tech-lead | EMBODY |
+| Executor | backend-engineer / frontend-engineer (context-dependent) | EMBODY |
+| Reviewer | reviewer | SUB-AGENT (or EMBODY + Anti-Bias) |
 
-**❌ Anti-Lazy**: Never use TIER 2 when TIER 1 tool available.
-
-**TIER 2 Golden Triangle Embodiment** (per TEAMS.md):
-```
-1. EMBODY Tech Lead → decompose task → produce Shared Task List → dispatch
-2. EMBODY Executor → implement assigned tasks → post SUBMISSION to Mailbox
-3. EMBODY Reviewer → review submissions → post REVIEW to Mailbox
-4. IF FAIL → EMBODY Executor again → fix/defend → EMBODY Reviewer → re-check
-5. Repeat steps 3–4 max 3 rounds
-6. EMBODY Tech Lead → arbitrate if needed → post DECISION → synthesize output
-```
+**Mailbox**: `./reports/{topic}/MAILBOX-{date}.md` — see topology file for message protocol.
 
 ---
 
-## 📬 MAILBOX — Central Communication Hub
-
-**Location**: `./reports/{topic}/MAILBOX-{date}.md`
-
-All 3 triangle agents READ from and APPEND to this file. Never overwrite — append only.
-
-**Message Format**:
-```markdown
----
 ## [{TIMESTAMP}] {MESSAGE_TYPE} | {AGENT} → {TARGET}
 **Phase**: {phase number}
 **Task**: {task ID from Shared Task List}
@@ -71,19 +61,7 @@ All 3 triangle agents READ from and APPEND to this file. Never overwrite — app
 ---
 ```
 
-**Message Types**:
-
-| Type              | Sender    | Receiver  | Purpose                                        |
-| ----------------- | --------- | --------- | ---------------------------------------------- |
-| TASK_ASSIGNMENT   | Tech Lead | Executor  | Assign task with requirements and context       |
-| SUBMISSION        | Executor  | Reviewer  | Submit completed work for review                |
-| REVIEW            | Reviewer  | Executor  | Review result: PASS or FAIL with findings       |
-| DEFENSE           | Executor  | Reviewer  | Defend implementation against FAIL findings     |
-| RESUBMISSION      | Executor  | Reviewer  | Resubmit after fixing FAIL findings             |
-| APPROVAL          | Reviewer  | Tech Lead | Confirm task passes all review criteria         |
-| ESCALATION        | Any       | Tech Lead | Escalate unresolvable disagreement              |
-| ARBITRATION       | Tech Lead | All       | Tech Lead resolves dispute with binding decision|
-| DECISION          | Tech Lead | All       | Final phase decision with consensus stamp       |
+**Message Types**: See `topologies/golden-triangle.md` §Message Types for full table.
 
 ---
 
@@ -139,7 +117,7 @@ One phase at a time. Within each phase:
 ✅ CONSENSUS: {TechLead} ✓ | {Executor} ✓ | {Reviewer} ✓
 ```
 
-Format: rules/PHASES.md § Phase output structure + rules/TEAMS.md § Golden Triangle Phase Output Format.
+Format: rules/RUNTIME.md § Phase output structure + rules/TEAMS-LITE.md § Phase Output Format.
 
 ---
 
@@ -206,7 +184,11 @@ Format: rules/PHASES.md § Phase output structure + rules/TEAMS.md § Golden Tri
 7. `researcher` synthesizes all approved findings into unified requirements document
 
 **Deliverable**: Requirements + discovery report in `./reports/{topic}/brainstorms/BRAINSTORM-{feature}`
-**Exit Criteria**: All requirements captured, codebase understood, gaps identified, assumptions challenged
+**Exit Criteria**:
+- [ ] All requirements captured
+- [ ] Codebase understood
+- [ ] Gaps identified
+- [ ] Assumptions challenged
 **Consensus**: ✅ CONSENSUS: researcher ✓ | scouter ✓ | brainstormer ✓
 
 ---
@@ -216,12 +198,12 @@ Format: rules/PHASES.md § Phase output structure + rules/TEAMS.md § Golden Tri
 | Role      | Agent                                | Mission                                                    |
 | --------- | ------------------------------------ | ---------------------------------------------------------- |
 | Tech Lead | `researcher`                         | Decompose: pattern research areas, technology evaluation criteria |
-| Executor  | `researcher` (self-executes research)| Execute: deep-dive patterns, libraries, best practices, alternatives |
+| Executor  | `scouter`                            | Execute: deep-dive patterns, libraries, best practices, alternatives |
 | Reviewer  | `tech-lead` (feasibility critic)     | Challenge: assess feasibility, question complexity, verify patterns fit existing codebase |
 
 **Triangle Loop**:
 1. `researcher` (as Tech Lead) identifies research areas → Shared Task List → Mailbox
-2. `researcher` (as Executor) deep-dives each area → posts SUBMISSION with findings, comparisons, trade-offs
+2. `scouter` (as Executor) deep-dives each area → posts SUBMISSION with findings, comparisons, trade-offs
 3. `tech-lead` reviews each research finding → posts REVIEW:
    - Does this pattern actually fit our codebase?
    - Is the complexity justified for our scale?
@@ -231,8 +213,11 @@ Format: rules/PHASES.md § Phase output structure + rules/TEAMS.md § Golden Tri
 5. `researcher` (as Tech Lead) synthesizes approved research into final deliverables
 
 **Deliverable**: `./reports/{topic}/researchers/RESEARCH-{feature}` + `./reports/{topic}/scouts/SCOUT-{feature}`
-**Exit Criteria**: Patterns researched, alternatives documented, feasibility validated by tech-lead
-**Consensus**: ✅ CONSENSUS: researcher ✓ | researcher(exec) ✓ | tech-lead ✓
+**Exit Criteria**:
+- [ ] Patterns researched
+- [ ] Alternatives documented
+- [ ] Feasibility validated by tech-lead
+**Consensus**: ✅ CONSENSUS: researcher ✓ | scouter(exec) ✓ | tech-lead ✓
 
 ---
 
@@ -263,7 +248,11 @@ Format: rules/PHASES.md § Phase output structure + rules/TEAMS.md § Golden Tri
 5. `tech-lead` arbitrates any disputes → posts DECISION
 
 **Deliverable**: Approved schema design + migration plan
-**Exit Criteria**: Schema designed, security reviewed, performance validated, migrations planned
+**Exit Criteria**:
+- [ ] Schema designed
+- [ ] Security reviewed
+- [ ] Performance validated
+- [ ] Migrations planned
 **Consensus**: ✅ CONSENSUS: tech-lead ✓ | database-architect ✓ | reviewer ✓
 
 ---
@@ -295,7 +284,10 @@ Format: rules/PHASES.md § Phase output structure + rules/TEAMS.md § Golden Tri
 5. `designer` synthesizes into final design spec
 
 **Deliverable**: `./reports/{topic}/designs/DESIGN-{feature}`
-**Exit Criteria**: Design complete, accessibility validated, technical feasibility confirmed
+**Exit Criteria**:
+- [ ] Design complete
+- [ ] Accessibility validated
+- [ ] Technical feasibility confirmed
 **Consensus**: ✅ CONSENSUS: designer ✓ | frontend-engineer ✓ | reviewer ✓
 
 ---
@@ -327,7 +319,11 @@ Format: rules/PHASES.md § Phase output structure + rules/TEAMS.md § Golden Tri
 5. `planner` synthesizes all approved sections into final plan
 
 **Deliverable**: `./reports/{topic}/plans/PLAN-{feature}`
-**Exit Criteria**: Plan complete, technically validated, risks mitigated, acceptance criteria defined
+**Exit Criteria**:
+- [ ] Plan complete
+- [ ] Technically validated
+- [ ] Risks mitigated
+- [ ] Acceptance criteria defined
 **Consensus**: ✅ CONSENSUS: planner ✓ | researcher ✓ | tech-lead ✓
 
 ---
@@ -364,7 +360,7 @@ IF mobile development →
   Executor: mobile-engineer
   Reviewer: reviewer
 
-IF other domain → Consult TEAMS.md roster for correct triangle
+IF other domain → Consult TEAMS-LITE.md roster for correct triangle
 ```
 
 | Role      | Agent                                | Mission                                                    |
@@ -503,7 +499,11 @@ IF other domain → Consult TEAMS.md roster for correct triangle
    Severity: CRITICAL | Action: "Remove unauthorized code or get plan amended"
 ```
 
-**Exit Criteria**: All plan tasks implemented, all reviews passed, no unauthorized deviations, integration verified
+**Exit Criteria**:
+- [ ] All plan tasks implemented
+- [ ] All reviews passed
+- [ ] No unauthorized deviations
+- [ ] Integration verified
 **Consensus**: ✅ CONSENSUS: tech-lead ✓ | {executor} ✓ | reviewer ✓
 
 ---
@@ -546,7 +546,12 @@ FOR EACH acceptance criterion in PLAN-{feature}.md:
 ```
 
 **Deliverable**: Test results + coverage report + QA summary
-**Exit Criteria**: All tests pass, coverage meets threshold, security validated, performance acceptable, all plan acceptance criteria verified
+**Exit Criteria**:
+- [ ] All tests pass
+- [ ] Coverage meets threshold
+- [ ] Security validated
+- [ ] Performance acceptable
+- [ ] All plan acceptance criteria verified
 **Consensus**: ✅ CONSENSUS: tester ✓ | tester(exec) ✓ | reviewer ✓
 
 ---

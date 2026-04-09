@@ -24,6 +24,9 @@ const FEATURES_ITEMS: NavItem[] = [
   { label: 'Quality Gates', href: '/features/quality-gates' },
   { label: 'System Architecture', href: '/features/workflow' },
   { label: 'Agent Teams', href: '/features/agent-teams' },
+  { label: 'Benchmarks & Scorecard', href: '/features/benchmarks' },
+  { label: 'Execution Topologies', href: '/features/topologies' },
+  { label: 'Security & Trust', href: '/features/security-trust' },
 ]
 
 const NAV_ITEMS: NavItem[] = [

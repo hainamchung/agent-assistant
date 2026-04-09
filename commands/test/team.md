@@ -1,8 +1,10 @@
 ---
+schema-version: "1.0"
 description: "🔺 Team Test — Golden Triangle adversarial collaboration for maximum quality testing"
 version: "2.0"
-category: testing
+category: validation
 execution-mode: execute
+topology: golden-triangle
 ---
 
 # /test:team — Golden Triangle Test & Quality Assurance
@@ -18,41 +20,31 @@ execution-mode: execute
 
 ## 🛑 PRE-FLIGHT (DO FIRST — BLOCKS PHASE 1)
 
-**LOAD now** (in order; path `./rules/` or `~/.{TOOL}/skills/agent-assistant/rules/`):
+**LOAD now** (path `./rules/` or `~/.{TOOL}/skills/agent-assistant/rules/`):
 
-1. CORE.md — Identity, Laws, Routing
-2. PHASES.md — Phase Execution
-3. AGENTS.md — Tiered Execution
-4. **TEAMS.md** — Golden Triangle protocol (MANDATORY)
+1. RUNTIME.md — Identity, Laws, Routing, Phase Execution, Agent Protocol
+2. **TEAMS-LITE.md** — Team roles, review checklist, phase output format
+3. **topologies/golden-triangle.md** — Golden Triangle execution protocol
 
 **⛔ Do not run Phase 1 until all are loaded.** Follow **all** rules in those files; they override any conflicting instructions in this file.
 
-**Skills Resolution**: Load `SKILLS.md` on-demand for fitness calculation and dynamic discovery.
+**Skills Resolution**: Load `SKILLS-LITE.md` on-demand for fitness calculation and dynamic discovery.
 
 ---
 
-## 🔀 TIERED EXECUTION
+## 🔀 EXECUTION MODEL
 
-> Reference: AGENTS.md (Tiered Execution) + TEAMS.md (Golden Triangle Protocol)
+> **Topology**: Golden Triangle — load `topologies/golden-triangle.md` for full protocol.
+> Reference: RUNTIME.md (Execution Model) + TEAMS-LITE.md (Team Review Protocol)
 
-| Tier       | When                          | Action                                                                    |
-| ---------- | ----------------------------- | ------------------------------------------------------------------------- |
-| **TIER 1** | runSubagent/Agent Tool EXISTS | Orchestrator spawns Tech Lead → Tech Lead spawns Executor + Reviewer      |
-| **TIER 2** | Tool MISSING or SYSTEM error  | EMBODY Tech Lead → EMBODY Executor → EMBODY Reviewer → EMBODY Tech Lead  |
+Roles for this command:
+| Role | Agent | Mode |
+|------|-------|------|
+| Tech Lead | tech-lead | EMBODY |
+| Executor | tester | EMBODY |
+| Reviewer | reviewer | SUB-AGENT (or EMBODY + Anti-Bias) |
 
-**❌ Anti-Lazy**: Never use TIER 2 when TIER 1 tool available.
-
-**TIER 2 Golden Triangle Embodiment**: EMBODY Tech Lead (decompose) → EMBODY Executor (implement) → EMBODY Reviewer (review) → IF FAIL loop max 3 → EMBODY Tech Lead (arbitrate + synthesize)
-
----
-
-## 📬 MAILBOX — Central Communication Hub
-
-**Location**: `./reports/{topic}/MAILBOX-{date}.md` — All 3 triangle agents READ + APPEND. Never overwrite.
-
-**Message Types**: `TASK_ASSIGNMENT` (Lead→Executor) · `SUBMISSION` (Executor→Reviewer) · `REVIEW` (Reviewer→Executor: PASS/FAIL) · `DEFENSE` / `RESUBMISSION` (Executor→Reviewer) · `APPROVAL` (Reviewer→Lead) · `ESCALATION` (Any→Lead) · `ARBITRATION` / `DECISION` (Lead→All)
-
-**Format**: `[{TIMESTAMP}] {TYPE} | {AGENT} → {TARGET} | Phase: {n} | Task: {id} | Content: ...`
+**Mailbox**: `./reports/{topic}/MAILBOX-{date}.md` — see topology file for message protocol.
 
 ---
 
@@ -103,7 +95,7 @@ One phase at a time. Within each phase, follow the **Golden Triangle Loop**:
 
 **Consensus Stamp** (required per phase): `✅ CONSENSUS: {TechLead} ✓ | {Executor} ✓ | {Reviewer} ✓`
 
-Format: rules/PHASES.md § Phase output + rules/TEAMS.md § Golden Triangle Phase Output Format.
+Format: rules/RUNTIME.md § Phase output + rules/TEAMS-LITE.md § Phase Output Format.
 
 ---
 
@@ -123,7 +115,11 @@ Format: rules/PHASES.md § Phase output + rules/TEAMS.md § Golden Triangle Phas
 5. `tester` synthesizes approved findings into unified test strategy
 
 **Deliverable**: `./reports/{topic}/tests/TEST-STRATEGY-{scope}`
-**Exit Criteria**: Test pyramid defined, coverage targets set, frameworks chosen, testable units mapped
+**Exit Criteria**:
+- [ ] Test pyramid defined
+- [ ] Coverage targets set
+- [ ] Frameworks chosen
+- [ ] Testable units mapped
 **Consensus**: ✅ CONSENSUS: tester ✓ | scouter ✓ | tech-lead ✓
 
 ---
@@ -146,7 +142,10 @@ Format: rules/PHASES.md § Phase output + rules/TEAMS.md § Golden Triangle Phas
 5. `tester` synthesizes approved test cases into final test plan
 
 **Deliverable**: `./reports/{topic}/tests/TEST-PLAN-{scope}`
-**Exit Criteria**: Every component has specific test cases, edge cases documented, security scenarios covered
+**Exit Criteria**:
+- [ ] Every component has specific test cases
+- [ ] Edge cases documented
+- [ ] Security scenarios covered
 **Consensus**: ✅ CONSENSUS: tester ✓ | researcher ✓ | security-engineer ✓
 
 ---
@@ -236,7 +235,11 @@ Self     → Tech Lead: tester | Executor: tester (self) | Reviewer: reviewer + 
 4. Unauthorized deviations → automatic FAIL: CRITICAL | "Remove or get plan amended"
 ```
 
-**Exit Criteria**: All plan test cases implemented, all reviews passed, no unauthorized deviations, test suite integration verified
+**Exit Criteria**:
+- [ ] All plan test cases implemented
+- [ ] All reviews passed
+- [ ] No unauthorized deviations
+- [ ] Test suite integration verified
 **Consensus**: ✅ CONSENSUS: tester ✓ | {executor} ✓ | reviewer ✓
 
 ---
@@ -269,7 +272,12 @@ Performance: no regressions beyond threshold | baselines established
 ```
 
 **Deliverable**: `./reports/{topic}/tests/TEST-RESULTS-{scope}` + `./reports/{topic}/qa/QA-{scope}`
-**Exit Criteria**: All tests run, quality gates evaluated, coverage verified, no brittle/flaky tests, report complete
+**Exit Criteria**:
+- [ ] All tests run
+- [ ] Quality gates evaluated
+- [ ] Coverage verified
+- [ ] No brittle/flaky tests
+- [ ] Report complete
 **Consensus**: ✅ CONSENSUS: tester ✓ | tester(exec) ✓ | tech-lead ✓
 
 ---

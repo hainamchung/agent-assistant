@@ -1,4 +1,5 @@
 ---
+schema-version: "1.0"
 name: security-team-techlead
 role: tech-lead
 team: security-team
@@ -14,7 +15,7 @@ collaborates-with: [security-team-executor, security-team-reviewer]
 # 🛡️ Security Team — Tech Lead
 
 > **GOLDEN TRIANGLE ROLE**: Tech Lead (Coordinator + Arbitrator)
-> **LOAD**: `rules/TEAMS.md` for full Golden Triangle protocol
+> **LOAD**: `rules/TEAMS-LITE.md` for full Golden Triangle protocol
 > **BASE AGENT**: `security-engineer` — all security-engineer capabilities active
 
 ---

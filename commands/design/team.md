@@ -1,8 +1,10 @@
 ---
+schema-version: "1.0"
 description: "🔺 Team Design — Golden Triangle adversarial collaboration for maximum quality design"
 version: "2.0"
 category: design
 execution-mode: execute
+topology: golden-triangle
 ---
 
 # /design:team — Golden Triangle Design System Development
@@ -18,51 +20,34 @@ execution-mode: execute
 
 ## 🛑 PRE-FLIGHT (DO FIRST — BLOCKS PHASE 1)
 
-**LOAD now** (in order; path `./rules/` or `~/.{TOOL}/skills/agent-assistant/rules/`):
+**LOAD now** (path `./rules/` or `~/.{TOOL}/skills/agent-assistant/rules/`):
 
-1. CORE.md — Identity, Laws, Routing
-2. PHASES.md — Phase Execution
-3. AGENTS.md — Tiered Execution
-4. **TEAMS.md** — Golden Triangle protocol (MANDATORY)
+1. RUNTIME.md — Identity, Laws, Routing, Phase Execution, Agent Protocol
+2. **TEAMS-LITE.md** — Team roles, review checklist, phase output format
+3. **topologies/golden-triangle.md** — Golden Triangle execution protocol
 
 **⛔ Do not run Phase 1 until all are loaded.** Follow **all** rules in those files; they override any conflicting instructions in this file.
 
-**Skills Resolution**: Load `SKILLS.md` on-demand for fitness calculation and dynamic discovery.
+**Skills Resolution**: Load `SKILLS-LITE.md` on-demand for fitness calculation and dynamic discovery.
 
 ---
 
-## 🔀 TIERED EXECUTION
+## 🔀 EXECUTION MODEL
 
-> Reference: AGENTS.md (Tiered Execution) + TEAMS.md (Golden Triangle Protocol)
+> **Topology**: Golden Triangle — load `topologies/golden-triangle.md` for full protocol.
+> Reference: RUNTIME.md (Execution Model) + TEAMS-LITE.md (Team Review Protocol)
 
-| Tier       | When                          | Action                                                                    |
-| ---------- | ----------------------------- | ------------------------------------------------------------------------- |
-| **TIER 1** | runSubagent/Agent Tool EXISTS | Orchestrator spawns Tech Lead → Tech Lead spawns Executor + Reviewer     |
-| **TIER 2** | Tool MISSING or SYSTEM error  | EMBODY Tech Lead → EMBODY Executor → EMBODY Reviewer → EMBODY Tech Lead|
+Roles for this command:
+| Role | Agent | Mode |
+|------|-------|------|
+| Tech Lead | tech-lead | EMBODY |
+| Executor | designer | EMBODY |
+| Reviewer | reviewer | SUB-AGENT (or EMBODY + Anti-Bias) |
 
-**❌ Anti-Lazy**: Never use TIER 2 when TIER 1 tool available.
-
-**TIER 2 Golden Triangle Embodiment** (per TEAMS.md):
-```
-1. EMBODY Tech Lead → decompose task → produce Shared Task List → dispatch
-2. EMBODY Executor → implement assigned tasks → post SUBMISSION to Mailbox
-3. EMBODY Reviewer → review submissions → post REVIEW to Mailbox
-4. IF FAIL → EMBODY Executor again → fix/defend → EMBODY Reviewer → re-check
-5. Repeat steps 3-4 max 3 rounds
-6. EMBODY Tech Lead → arbitrate if needed → post DECISION → synthesize output
-```
+**Mailbox**: `./reports/{topic}/MAILBOX-{date}.md` — see topology file for message protocol.
 
 ---
 
-## 📬 MAILBOX — Central Communication Hub
-
-**Location**: `./reports/{topic}/MAILBOX-{date}.md`
-
-All 3 triangle agents READ from and APPEND to this file. Never overwrite — append only.
-
-**Message Format**:
-```markdown
----
 ## [{TIMESTAMP}] {MESSAGE_TYPE} | {AGENT} → {TARGET}
 **Phase**: {phase number}
 **Task**: {task ID from Shared Task List}
@@ -71,19 +56,7 @@ All 3 triangle agents READ from and APPEND to this file. Never overwrite — app
 ---
 ```
 
-**Message Types**:
-
-| Type              | Sender    | Receiver  | Purpose                                        |
-| ----------------- | --------- | --------- | ---------------------------------------------- |
-| TASK_ASSIGNMENT   | Tech Lead | Executor  | Assign task with requirements and context       |
-| SUBMISSION        | Executor  | Reviewer  | Submit completed work for review                |
-| REVIEW            | Reviewer  | Executor  | Review result: PASS or FAIL with findings       |
-| DEFENSE           | Executor  | Reviewer  | Defend design decision against FAIL findings    |
-| RESUBMISSION      | Executor  | Reviewer  | Resubmit after fixing FAIL findings             |
-| APPROVAL          | Reviewer  | Tech Lead | Confirm task passes all review criteria         |
-| ESCALATION        | Any       | Tech Lead | Escalate unresolvable disagreement              |
-| ARBITRATION       | Tech Lead | All       | Tech Lead resolves dispute with binding decision|
-| DECISION          | Tech Lead | All       | Final phase decision with consensus stamp       |
+**Message Types**: See `topologies/golden-triangle.md` §Message Types for full table.
 
 ---
 
@@ -136,7 +109,7 @@ One phase at a time. Within each phase:
 ✅ CONSENSUS: {TechLead} ✓ | {Executor} ✓ | {Reviewer} ✓
 ```
 
-Format: rules/PHASES.md § Phase output structure + rules/TEAMS.md § Golden Triangle Phase Output Format.
+Format: rules/RUNTIME.md § Phase output structure + rules/TEAMS-LITE.md § Phase Output Format.
 
 ---
 
@@ -206,7 +179,12 @@ Format: rules/PHASES.md § Phase output structure + rules/TEAMS.md § Golden Tri
 8. `designer` synthesizes all approved findings into unified design research document
 
 **Deliverable**: `./reports/{topic}/researchers/RESEARCH-{request}` + `./reports/{topic}/scouts/SCOUT-{request}`
-**Exit Criteria**: User needs validated, existing design system audited, competitive patterns identified, accessibility constraints mapped, research gaps challenged
+**Exit Criteria**:
+- [ ] User needs validated
+- [ ] Existing design system audited
+- [ ] Competitive patterns identified
+- [ ] Accessibility constraints mapped
+- [ ] Research gaps challenged
 **Consensus**: ✅ CONSENSUS: designer ✓ | researcher+scouter ✓ | brainstormer ✓
 
 ---
@@ -373,7 +351,13 @@ Format: rules/PHASES.md § Phase output structure + rules/TEAMS.md § Golden Tri
 - Accessibility specifications (WCAG 2.1 AA, ARIA roles, keyboard nav, color contrast)
 - Technical feasibility notes from frontend engineer
 
-**Exit Criteria**: Design specs complete, all states covered, accessibility verified, feasibility validated, responsive defined, tokens documented
+**Exit Criteria**:
+- [ ] Design specs complete
+- [ ] All states covered
+- [ ] Accessibility verified
+- [ ] Feasibility validated
+- [ ] Responsive defined
+- [ ] Tokens documented
 **Consensus**: ✅ CONSENSUS: designer ✓ | designer(exec) ✓ | frontend-engineer ✓
 
 ---
@@ -424,7 +408,11 @@ Format: rules/PHASES.md § Phase output structure + rules/TEAMS.md § Golden Tri
 - Accessibility implementation checklist
 - Integration points between components
 
-**Exit Criteria**: All components spec'd with APIs, all design states mapped to code, designer confirms fidelity, technical approach sound
+**Exit Criteria**:
+- [ ] All components spec'd with APIs
+- [ ] All design states mapped to code
+- [ ] Designer confirms fidelity
+- [ ] Technical approach sound
 **Consensus**: ✅ CONSENSUS: tech-lead ✓ | frontend-engineer ✓ | designer ✓
 
 ---
@@ -467,7 +455,11 @@ Format: rules/PHASES.md § Phase output structure + rules/TEAMS.md § Golden Tri
 - Developer handoff checklist
 - Outstanding questions or known limitations
 
-**Exit Criteria**: Documentation complete, developer handoff verified, design system compliance confirmed, all edge states documented
+**Exit Criteria**:
+- [ ] Documentation complete
+- [ ] Developer handoff verified
+- [ ] Design system compliance confirmed
+- [ ] All edge states documented
 **Consensus**: ✅ CONSENSUS: designer ✓ | docs-manager ✓ | tech-lead ✓
 
 ---

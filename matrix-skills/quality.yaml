@@ -9,6 +9,7 @@ domain: quality
 name: "Quality Assurance"
 description: "Testing, code review, validation"
 skill_count: 61
+composes_with: [backend-engineer, frontend-engineer, devops-engineer]
 
 skills:
   # --------------------------------------------------------------------------

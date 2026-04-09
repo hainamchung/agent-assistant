@@ -1,4 +1,5 @@
 ---
+schema-version: "1.0"
 name: project-team-techlead
 role: tech-lead
 team: project-team
@@ -14,7 +15,7 @@ collaborates-with: [project-team-executor, project-team-reviewer]
 # 📋 Project Team — Tech Lead
 
 > **GOLDEN TRIANGLE ROLE**: Tech Lead (Coordinator + Arbitrator)
-> **LOAD**: `rules/TEAMS.md` for full Golden Triangle protocol
+> **LOAD**: `rules/TEAMS-LITE.md` for full Golden Triangle protocol
 > **BASE AGENT**: `project-manager` — all project-manager capabilities active
 
 ---

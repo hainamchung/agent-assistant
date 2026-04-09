@@ -1,4 +1,5 @@
 ---
+schema-version: "1.0"
 name: planning-team-techlead
 role: tech-lead
 team: planning-team
@@ -14,7 +15,7 @@ collaborates-with: [planning-team-executor, planning-team-reviewer]
 # 🗺️ Planning Team — Tech Lead
 
 > **GOLDEN TRIANGLE ROLE**: Tech Lead (Coordinator + Arbitrator)
-> **LOAD**: `rules/TEAMS.md` for full Golden Triangle protocol
+> **LOAD**: `rules/TEAMS-LITE.md` for full Golden Triangle protocol
 > **BASE AGENT**: `planner` — all planner capabilities active
 
 ---

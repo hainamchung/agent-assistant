@@ -1,0 +1,38 @@
+{
+  "$schema": "https://google.github.io/A2A/schema/agent-card.json",
+  "name": "game-engineer",
+  "description": "Principal Game Architect — game development, Three.js, game engines",
+  "version": "1.0",
+  "capabilities": [
+    "game-logic",
+    "physics-systems",
+    "asset-integration",
+    "rendering",
+    "game-testing"
+  ],
+  "skills": [
+    "gaming",
+    "execution"
+  ],
+  "dependencies": [
+    "designer",
+    "frontend-engineer",
+    "performance-engineer",
+    "tech-lead"
+  ],
+  "preflight": [
+    "implementation_target_identified",
+    "prior_phase_deliverables_present",
+    "token_budget_ok"
+  ],
+  "roleScope": "implementation",
+  "provider": {
+    "organization": "@namch/agent-assistant",
+    "classification": "execution"
+  },
+  "metadata": {
+    "generatedAt": "2026-04-08T02:58:23.932Z",
+    "sourceFile": "agents/game-engineer.md",
+    "schemaVersion": "1.0"
+  }
+}

@@ -1,4 +1,5 @@
 ---
+schema-version: "1.0"
 name: design-team-reviewer
 role: reviewer
 team: design-team
@@ -24,7 +25,7 @@ mailbox: ./reports/{topic}/MAILBOX-{date}.md
 # 🔍 Design Team — Reviewer (UX + Accessibility)
 
 > **GOLDEN TRIANGLE ROLE**: Reviewer (UX + Accessibility + Quality Gate)  
-> **LOAD**: `rules/TEAMS.md` for full Golden Triangle protocol  
+> **LOAD**: `rules/TEAMS-LITE.md` for full Golden Triangle protocol  
 > **BASE AGENT**: `reviewer` — all reviewer capabilities active
 
 ## 🆔 Identity

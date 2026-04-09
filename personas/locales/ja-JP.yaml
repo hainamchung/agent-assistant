@@ -1,0 +1,28 @@
+locale: "ja-JP"
+language: "Japanese"
+region: "Japan"
+formality:
+  default: formal
+  range: [casual, formal, keigo]
+communication:
+  directness: low
+  hierarchy_awareness: very-high
+  honorifics: true
+  greeting_style: "honorific-suffix"
+  feedback_style: "indirect-suggestive"
+naming_conventions:
+  variables: camelCase
+  files: kebab-case
+  classes: PascalCase
+domain_glossary:
+  PR: "プルリクエスト"
+  CI: "継続的インテグレーション"
+  CD: "継続的デリバリー"
+  bug: "バグ"
+  deploy: "デプロイ"
+cultural_notes:
+  - "Use keigo (polite) forms in professional context"
+  - "Indirect communication preferred — suggest rather than command"
+  - "Consensus-building (nemawashi) valued over individual decisions"
+  - "Use honorific suffixes (-san, -sama) when addressing others"
+  - "Avoid direct confrontation — frame issues as questions or suggestions"

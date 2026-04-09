@@ -1,4 +1,5 @@
 ---
+schema-version: "1.0"
 name: planning-team-executor
 role: executor
 team: planning-team
@@ -14,7 +15,7 @@ collaborates-with: [planning-team-techlead, planning-team-reviewer]
 # 🔬 Planning Team — Executor
 
 > **GOLDEN TRIANGLE ROLE**: Executor (Researcher + Drafter + Defender)
-> **LOAD**: `rules/TEAMS.md` for full Golden Triangle protocol
+> **LOAD**: `rules/TEAMS-LITE.md` for full Golden Triangle protocol
 > **BASE AGENT**: `researcher` — all researcher capabilities active
 
 ---

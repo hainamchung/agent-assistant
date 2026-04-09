@@ -1,0 +1,12 @@
+{
+  "id": "test-002",
+  "agent": "backend-engineer",
+  "scenario": "Routing — agent referenced in cook and fix commands",
+  "expectations": {
+    "expectedCommands": ["cook", "fix"],
+    "requiredSections": [],
+    "expectedHandoffs": [],
+    "forbiddenPatterns": [],
+    "mustContainKeywords": []
+  }
+}

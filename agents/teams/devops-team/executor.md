@@ -1,4 +1,5 @@
 ---
+schema-version: "1.0"
 name: devops-team-executor
 role: executor
 team: devops-team
@@ -15,7 +16,7 @@ collaborates-with: [devops-team-techlead, devops-team-reviewer]
 # 🔨 DevOps Team — Executor
 
 > **GOLDEN TRIANGLE ROLE**: Executor (Implementer + Defender)
-> **LOAD**: `rules/TEAMS.md` for full Golden Triangle protocol
+> **LOAD**: `rules/TEAMS-LITE.md` for full Golden Triangle protocol
 > **BASE AGENT**: `backend-engineer` (mode: infrastructure) — backend capabilities active, applied to infrastructure domain
 
 ---

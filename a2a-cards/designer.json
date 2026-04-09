@@ -1,0 +1,38 @@
+{
+  "$schema": "https://google.github.io/A2A/schema/agent-card.json",
+  "name": "designer",
+  "description": "Principal Design Architect — UI/UX design, design systems, user experience",
+  "version": "1.0",
+  "capabilities": [
+    "ui-design",
+    "ux-design",
+    "wireframing",
+    "design-systems",
+    "interaction-design"
+  ],
+  "skills": [
+    "design",
+    "creative"
+  ],
+  "dependencies": [
+    "frontend-engineer",
+    "mobile-engineer",
+    "researcher",
+    "tech-lead"
+  ],
+  "preflight": [
+    "research_scope_defined",
+    "relevant_files_identified",
+    "prior_research_reviewed"
+  ],
+  "roleScope": "discovery",
+  "provider": {
+    "organization": "@namch/agent-assistant",
+    "classification": "research"
+  },
+  "metadata": {
+    "generatedAt": "2026-04-08T02:58:23.932Z",
+    "sourceFile": "agents/designer.md",
+    "schemaVersion": "1.0"
+  }
+}

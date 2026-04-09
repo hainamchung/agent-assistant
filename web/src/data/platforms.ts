@@ -139,16 +139,41 @@ export const platforms: Platform[] = [
       'agent-assistant uninstall codex',
     ]
   },
+  {
+    id: 'qwen',
+    name: 'Qwen',
+    icon: '🧠',
+    description: 'Full support for Qwen through QWEN.md configuration file.',
+    status: 'full',
+    configFile: 'QWEN.md',
+    installPath: '~/.qwen/skills/agent-assistant/',
+    features: [
+      'Qwen integration',
+      'QWEN.md configuration',
+      'Full skill library',
+      'Orchestration laws',
+    ],
+    steps: [
+      'Install Agent Assistant globally',
+      'QWEN.md is auto-detected in projects',
+      'Global config applies to all projects',
+      'Use slash commands in any project',
+    ],
+    setup: [
+      'agent-assistant install qwen',
+      'agent-assistant uninstall qwen',
+    ]
+  },
 ]
 
 // Platform comparison features
 export const platformComparisonFeatures = [
-  { feature: 'Agent Orchestration', cursor: true, claude: true, copilot: true, antigravity: true, codex: true },
-  { feature: 'Skill Injection', cursor: true, claude: true, copilot: true, antigravity: true, codex: true },
-  { feature: 'Command Workflows', cursor: true, claude: true, copilot: true, antigravity: true, codex: true },
-  { feature: 'Quality Gates', cursor: true, claude: true, copilot: true, antigravity: true, codex: true },
-  { feature: 'Global Config', cursor: true, claude: true, copilot: true, antigravity: true, codex: true },
-  { feature: 'Sub-agent Invocation', cursor: true, claude: true, copilot: true, antigravity: true, codex: true },
+  { feature: 'Agent Orchestration', cursor: true, claude: true, copilot: true, antigravity: true, codex: true, qwen: true },
+  { feature: 'Skill Injection', cursor: true, claude: true, copilot: true, antigravity: true, codex: true, qwen: true },
+  { feature: 'Command Workflows', cursor: true, claude: true, copilot: true, antigravity: true, codex: true, qwen: true },
+  { feature: 'Quality Gates', cursor: true, claude: true, copilot: true, antigravity: true, codex: true, qwen: true },
+  { feature: 'Global Config', cursor: true, claude: true, copilot: true, antigravity: true, codex: true, qwen: true },
+  { feature: 'Sub-agent Invocation', cursor: true, claude: true, copilot: true, antigravity: true, codex: true, qwen: false },
 ]
 
 // Simplified platform data for badges

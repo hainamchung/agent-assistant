@@ -1,0 +1,81 @@
+{
+  "totalSkills": 1430,
+  "categories": [
+    {
+      "name": "AI/ML Engineering",
+      "count": 229
+    },
+    {
+      "name": "Backend Development",
+      "count": 208
+    },
+    {
+      "name": "Cloud & Infrastructure",
+      "count": 67
+    },
+    {
+      "name": "Data & Database",
+      "count": 33
+    },
+    {
+      "name": "DevOps & Deployment",
+      "count": 66
+    },
+    {
+      "name": "Frontend Development",
+      "count": 109
+    },
+    {
+      "name": "Game Development",
+      "count": 14
+    },
+    {
+      "name": "MCP & Agents",
+      "count": 9
+    },
+    {
+      "name": "Mobile Development",
+      "count": 27
+    },
+    {
+      "name": "Performance Engineering",
+      "count": 22
+    },
+    {
+      "name": "Planning & Analysis",
+      "count": 38
+    },
+    {
+      "name": "Programming Languages",
+      "count": 57
+    },
+    {
+      "name": "Project Management",
+      "count": 21
+    },
+    {
+      "name": "Quality Assurance",
+      "count": 61
+    },
+    {
+      "name": "Research & Documentation",
+      "count": 83
+    },
+    {
+      "name": "Security Engineering",
+      "count": 102
+    },
+    {
+      "name": "System Architecture",
+      "count": 22
+    },
+    {
+      "name": "Tools & Utilities",
+      "count": 234
+    },
+    {
+      "name": "UI/UX Design",
+      "count": 28
+    }
+  ]
+}

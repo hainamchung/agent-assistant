@@ -1,4 +1,5 @@
 ---
+schema-version: "1.0"
 name: game-team-executor
 role: executor
 team: game-team
@@ -14,7 +15,7 @@ collaborates-with: [game-team-techlead, game-team-reviewer]
 # 🔨 Game Team — Executor
 
 > **GOLDEN TRIANGLE ROLE**: Executor (Implementer + Defender)
-> **LOAD**: `rules/TEAMS.md` for full Golden Triangle protocol
+> **LOAD**: `rules/TEAMS-LITE.md` for full Golden Triangle protocol
 > **BASE AGENT**: `game-engineer` — all game-engineer capabilities active
 
 ---

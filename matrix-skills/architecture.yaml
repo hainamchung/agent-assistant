@@ -9,6 +9,7 @@ domain: architecture
 name: "System Architecture"
 description: "Design patterns, system design, ADRs"
 skill_count: 22
+composes_with: [backend-engineer, frontend-engineer, designer, devops-engineer]
 
 skills:
   # --------------------------------------------------------------------------

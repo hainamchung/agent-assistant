@@ -1,4 +1,5 @@
 ---
+schema-version: "1.0"
 name: report-team-techlead
 role: tech-lead
 team: report-team
@@ -14,7 +15,7 @@ collaborates-with: [report-team-executor, report-team-reviewer]
 # 📊 Report Team — Tech Lead
 
 > **GOLDEN TRIANGLE ROLE**: Tech Lead (Coordinator + Arbitrator)
-> **LOAD**: `rules/TEAMS.md` for full Golden Triangle protocol
+> **LOAD**: `rules/TEAMS-LITE.md` for full Golden Triangle protocol
 > **BASE AGENT**: `reporter` — all reporter capabilities active
 
 ---

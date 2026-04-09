@@ -14,6 +14,7 @@ name: {agent-name}
 description: {one-line description}
 # MATRIX SKILL DISCOVERY — replaces explicit skill lists
 profile: "{domain}:{category}"
+# skill-profile: "{Domain Label}"  # Execution agents ONLY — activates domain-specific matrix skills
 # Optional: Override Matrix with additional/fewer skills
 # skill_overrides:
 #   include: [additional-skill]      # Force include
@@ -22,34 +23,49 @@ profile: "{domain}:{category}"
 tools: [{tool1}, {tool2}]
 handoffs: [{agent1}, {agent2}]
 version: "1.0"
-category: {execution|planning|validation|research|debugging|orchestration}
+category: {meta|execution|investigation|validation|research|support}
+role-scope: {coordination|implementation|analysis|evaluation|discovery|operations}
+voice:
+  adaptation: true         # Whether agent adapts to team voice
+  deviation_tolerance: 1   # Max tone levels from team base (0 = exact match)
+guardrail_levels:           # Optional — I/O pipeline severity override
+  input: standard            # strict/standard/minimal
+  output: standard
+  escalation: auto           # auto/manual/none
+preflight: []               # Pre-flight checks from PREFLIGHT-TEMPLATES.md (category-specific verification before execution)
+liason: false               # Optional — true if agent interfaces with external systems (CI, monitoring, etc.)
+# liaison_targets: [monitoring, ci]  # Optional — list of external systems this agent interfaces with
+# priority: normal           # Optional — agent priority level (normal|high|critical). Used by security-engineer (critical)
 ---
 ```
 
 ### Profile Values
 
-| Domain       | Categories                                  |
-| ------------ | ------------------------------------------- |
-| `backend`    | execution                                   |
-| `frontend`   | execution                                   |
-| `architecture` | orchestration                             |
-| `quality`    | debugging, validation, review               |
-| `security`   | validation                                  |
-| `design`     | creative                                    |
-| `planning`   | analysis, discovery, business               |
-| `devops`     | execution                                   |
-| `data`       | execution                                   |
-| `performance`| validation                                  |
-| `research`   | analysis, exploration, documentation        |
-| `mobile`     | execution                                   |
-| `gaming`     | execution                                   |
-| `management` | orchestration                               |
+| Domain         | Categories                                  | Agents |
+| -------------- | ------------------------------------------- | ------ |
+| `backend`      | execution                                   | backend-engineer |
+| `frontend`     | execution                                   | frontend-engineer |
+| `architecture` | meta                                        | tech-lead |
+| `quality`      | investigation, validation                   | debugger, reviewer, tester |
+| `security`     | validation                                  | security-engineer |
+| `design`       | research                                    | designer |
+| `planning`     | meta, research, support                     | planner, brainstormer, business-analyst |
+| `devops`       | support                                     | devops-engineer |
+| `data`         | execution                                   | database-architect |
+| `performance`  | investigation                               | performance-engineer |
+| `research`     | research, support                           | researcher, scouter, docs-manager |
+| `reporting`    | support                                     | reporter |
+| `mobile`       | execution                                   | mobile-engineer |
+| `gaming`       | execution                                   | game-engineer |
+| `management`   | support                                     | project-manager |
 
 ---
 
 ## REQUIRED SECTIONS (IN ORDER)
 
-### 1. COGNITIVE ANCHOR (Compact)
+### 1. COGNITIVE ANCHOR (Optional)
+
+> **When to include**: Recommended for support/operations agents that produce document-heavy output (e.g., docs-manager, reporter). Optional for all other categories.
 
 ```markdown
 <!-- 🔒 COGNITIVE ANCHOR — MANDATORY OPERATING SYSTEM -->
@@ -73,6 +89,18 @@ category: {execution|planning|validation|research|debugging|orchestration}
 > **CORE DIRECTIVE**: {1-2 sentence directive}
 
 **Prime Directive**: {One-liner constraint}
+```
+
+### 2b. PRE-FLIGHT SELF-DIAGNOSIS
+
+```markdown
+## 🏥 Pre-Flight Self-Diagnosis
+
+Before executing, verify (from category template in PREFLIGHT-TEMPLATES.md):
+{items from preflight: field}
+
+IF any check marked [BLOCKING] FAILS → HALT with diagnostic message
+IF advisory check fails → WARN and proceed
 ```
 
 ### 3. SKILLS (Auto-Resolved)
@@ -126,7 +154,7 @@ category: {execution|planning|validation|research|debugging|orchestration}
 
 | Section           | Max Lines |
 | ----------------- | --------- |
-| Frontmatter       | 12        |
+| Frontmatter       | 25        |
 | Cognitive Anchor  | 5         |
 | Identity          | 15        |
 | Skills            | 10        |

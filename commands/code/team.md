@@ -1,8 +1,10 @@
 ---
+schema-version: "1.0"
 description: "🔺 Team Code — Golden Triangle adversarial collaboration for maximum quality coding"
 version: "2.0"
 category: engineering
 execution-mode: execute
+topology: golden-triangle
 ---
 
 # /code:team — Golden Triangle Code Implementation
@@ -21,51 +23,34 @@ execution-mode: execute
 
 ## 🛑 PRE-FLIGHT (DO FIRST — BLOCKS PHASE 1)
 
-**LOAD now** (in order; path `./rules/` or `~/.{TOOL}/skills/agent-assistant/rules/`):
+**LOAD now** (path `./rules/` or `~/.{TOOL}/skills/agent-assistant/rules/`):
 
-1. CORE.md — Identity, Laws, Routing
-2. PHASES.md — Phase Execution
-3. AGENTS.md — Tiered Execution
-4. **TEAMS.md** — Golden Triangle protocol (MANDATORY)
+1. RUNTIME.md — Identity, Laws, Routing, Phase Execution, Agent Protocol
+2. **TEAMS-LITE.md** — Team roles, review checklist, phase output format
+3. **topologies/golden-triangle.md** — Golden Triangle execution protocol
 
 **⛔ Do not run Phase 1 until all are loaded.** Follow **all** rules in those files; they override any conflicting instructions in this file.
 
-**Skills Resolution**: Load `SKILLS.md` on-demand for fitness calculation and dynamic discovery.
+**Skills Resolution**: Load `SKILLS-LITE.md` on-demand for fitness calculation and dynamic discovery.
 
 ---
 
-## 🔀 TIERED EXECUTION
+## 🔀 EXECUTION MODEL
 
-> Reference: AGENTS.md (Tiered Execution) + TEAMS.md (Golden Triangle Protocol)
+> **Topology**: Golden Triangle — load `topologies/golden-triangle.md` for full protocol.
+> Reference: RUNTIME.md (Execution Model) + TEAMS-LITE.md (Team Review Protocol)
 
-| Tier       | When                          | Action                                                                    |
-| ---------- | ----------------------------- | ------------------------------------------------------------------------- |
-| **TIER 1** | runSubagent/Agent Tool EXISTS | Orchestrator spawns Tech Lead → Tech Lead spawns Executor + Reviewer      |
-| **TIER 2** | Tool MISSING or SYSTEM error  | EMBODY Tech Lead → EMBODY Executor → EMBODY Reviewer → EMBODY Tech Lead  |
+Roles for this command:
+| Role | Agent | Mode |
+|------|-------|------|
+| Tech Lead | tech-lead | EMBODY |
+| Executor | backend-engineer / frontend-engineer (context-dependent) | EMBODY |
+| Reviewer | reviewer | SUB-AGENT (or EMBODY + Anti-Bias) |
 
-**❌ Anti-Lazy**: Never use TIER 2 when TIER 1 tool available.
-
-**TIER 2 Golden Triangle Embodiment** (per TEAMS.md):
-```
-1. EMBODY Tech Lead → decompose task → produce Shared Task List → dispatch
-2. EMBODY Executor → implement assigned tasks → post SUBMISSION to Mailbox
-3. EMBODY Reviewer → review submissions → post REVIEW to Mailbox
-4. IF FAIL → EMBODY Executor again → fix/defend → EMBODY Reviewer → re-check
-5. Repeat steps 3–4 max 3 rounds
-6. EMBODY Tech Lead → arbitrate if needed → post DECISION → synthesize output
-```
+**Mailbox**: `./reports/{topic}/MAILBOX-{date}.md` — see topology file for message protocol.
 
 ---
 
-## 📬 MAILBOX — Central Communication Hub
-
-**Location**: `./reports/{topic}/MAILBOX-{date}.md`
-
-All 3 triangle agents READ from and APPEND to this file. Never overwrite — append only.
-
-**Message Format**:
-```markdown
----
 ## [{TIMESTAMP}] {MESSAGE_TYPE} | {AGENT} → {TARGET}
 **Phase**: {phase number}
 **Task**: {task ID from Shared Task List}
@@ -74,19 +59,7 @@ All 3 triangle agents READ from and APPEND to this file. Never overwrite — app
 ---
 ```
 
-**Message Types**:
-
-| Type              | Sender    | Receiver  | Purpose                                        |
-| ----------------- | --------- | --------- | ---------------------------------------------- |
-| TASK_ASSIGNMENT   | Tech Lead | Executor  | Assign task with requirements and context       |
-| SUBMISSION        | Executor  | Reviewer  | Submit completed work for review                |
-| REVIEW            | Reviewer  | Executor  | Review result: PASS or FAIL with findings       |
-| DEFENSE           | Executor  | Reviewer  | Defend implementation against FAIL findings     |
-| RESUBMISSION      | Executor  | Reviewer  | Resubmit after fixing FAIL findings             |
-| APPROVAL          | Reviewer  | Tech Lead | Confirm task passes all review criteria         |
-| ESCALATION        | Any       | Tech Lead | Escalate unresolvable disagreement              |
-| ARBITRATION       | Tech Lead | All       | Tech Lead resolves dispute with binding decision|
-| DECISION          | Tech Lead | All       | Final phase decision with consensus stamp       |
+**Message Types**: See `topologies/golden-triangle.md` §Message Types for full table.
 
 ---
 
@@ -136,7 +109,7 @@ One phase at a time. Within each phase:
 ✅ CONSENSUS: {TechLead} ✓ | {Executor} ✓ | {Reviewer} ✓
 ```
 
-Format: rules/PHASES.md § Phase output structure + rules/TEAMS.md § Golden Triangle Phase Output Format.
+Format: rules/RUNTIME.md § Phase output structure + rules/TEAMS-LITE.md § Phase Output Format.
 
 ---
 
@@ -209,7 +182,11 @@ Format: rules/PHASES.md § Phase output structure + rules/TEAMS.md § Golden Tri
 7. `tech-lead` synthesizes into final Shared Task List for Phase 2
 
 **Deliverable**: Scoped task list with affected files, dependencies, and integration points
-**Exit Criteria**: All affected files identified, dependencies mapped, risks surfaced, task list ready
+**Exit Criteria**:
+- [ ] All affected files identified
+- [ ] Dependencies mapped
+- [ ] Risks surfaced
+- [ ] Task list ready
 **Consensus**: ✅ CONSENSUS: tech-lead ✓ | scouter ✓ | reviewer ✓
 
 ---
@@ -246,7 +223,7 @@ IF mobile development →
   Executor: mobile-engineer
   Reviewer: reviewer
 
-IF other domain → Consult TEAMS.md roster for correct triangle
+IF other domain → Consult TEAMS-LITE.md roster for correct triangle
 ```
 
 | Role      | Agent                                    | Mission                                                    |
@@ -385,7 +362,11 @@ IF other domain → Consult TEAMS.md roster for correct triangle
    Severity: CRITICAL | Action: "Remove out-of-scope code or get scope amended"
 ```
 
-**Exit Criteria**: All scoped tasks implemented, all reviews passed, no unauthorized scope creep, integration verified
+**Exit Criteria**:
+- [ ] All scoped tasks implemented
+- [ ] All reviews passed
+- [ ] No unauthorized scope creep
+- [ ] Integration verified
 **Consensus**: ✅ CONSENSUS: tech-lead ✓ | {executor} ✓ | reviewer ✓
 
 ---
@@ -419,7 +400,11 @@ IF other domain → Consult TEAMS.md roster for correct triangle
 6. `tester` (as Tech Lead) synthesizes final verification report
 
 **Deliverable**: `./reports/{topic}/reviews/REVIEW-{task}`
-**Exit Criteria**: All tests pass, changed code covered, security validated, no regressions detected
+**Exit Criteria**:
+- [ ] All tests pass
+- [ ] Changed code covered
+- [ ] Security validated
+- [ ] No regressions detected
 **Consensus**: ✅ CONSENSUS: tester ✓ | tester(exec) ✓ | security-engineer ✓
 
 ---

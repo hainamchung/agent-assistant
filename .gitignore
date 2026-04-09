@@ -43,3 +43,12 @@ coverage/
 .vscode
 .cursor
 .claude
+
+# Agent assistant runtime data
+.agent-assistant/
+
+# Install cache
+.install-cache.json
+
+# AI docs
+ai-docs/

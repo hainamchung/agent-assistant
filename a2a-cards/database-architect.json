@@ -1,0 +1,39 @@
+{
+  "$schema": "https://google.github.io/A2A/schema/agent-card.json",
+  "name": "database-architect",
+  "description": "Principal Database Architect — schema design, query optimization, data integrity",
+  "version": "1.0",
+  "capabilities": [
+    "schema-design",
+    "query-optimization",
+    "migration-planning",
+    "index-strategy",
+    "data-modeling"
+  ],
+  "skills": [
+    "data",
+    "execution"
+  ],
+  "dependencies": [
+    "backend-engineer",
+    "security-engineer",
+    "performance-engineer",
+    "devops-engineer",
+    "tech-lead"
+  ],
+  "preflight": [
+    "implementation_target_identified",
+    "prior_phase_deliverables_present",
+    "token_budget_ok"
+  ],
+  "roleScope": "implementation",
+  "provider": {
+    "organization": "@namch/agent-assistant",
+    "classification": "execution"
+  },
+  "metadata": {
+    "generatedAt": "2026-04-08T02:58:23.932Z",
+    "sourceFile": "agents/database-architect.md",
+    "schemaVersion": "1.0"
+  }
+}

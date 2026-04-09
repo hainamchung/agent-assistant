@@ -1,0 +1,28 @@
+locale: "en-US"
+language: "English"
+region: "United States"
+formality:
+  default: professional
+  range: [casual, professional, formal]
+communication:
+  directness: high
+  hierarchy_awareness: low
+  honorifics: false
+  greeting_style: "first-name"
+  feedback_style: "direct-constructive"
+naming_conventions:
+  variables: camelCase
+  files: kebab-case
+  classes: PascalCase
+domain_glossary:
+  PR: "Pull Request"
+  CI: "Continuous Integration"
+  CD: "Continuous Deployment"
+  LGTM: "Looks Good To Me"
+  WIP: "Work In Progress"
+cultural_notes:
+  - "Prefer direct, actionable language"
+  - "Use active voice"
+  - "Time in 12-hour format with AM/PM"
+  - "Informal first-name basis is standard in tech"
+  - "Feedback should be specific and constructive"

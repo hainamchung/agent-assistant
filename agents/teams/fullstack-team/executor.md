@@ -1,4 +1,5 @@
 ---
+schema-version: "1.0"
 name: fullstack-team-executor
 role: executor
 team: fullstack-team
@@ -17,7 +18,7 @@ collaborates-with: [fullstack-team-techlead, fullstack-team-reviewer]
 # 🔨 Fullstack Team — Executor (Dual: Backend + Frontend)
 
 > **GOLDEN TRIANGLE ROLE**: Executor (Implementer + Defender)
-> **LOAD**: `rules/TEAMS.md` for full Golden Triangle protocol
+> **LOAD**: `rules/TEAMS-LITE.md` for full Golden Triangle protocol
 > **BASE AGENTS**: `backend-engineer` + `frontend-engineer` — spawned as separate Executor instances
 > **SPECIAL**: This file defines TWO executor roles. Each instance runs as one role only.
 

@@ -1,8 +1,10 @@
 ---
+schema-version: "1.0"
 description: ⚡ Quick Debug — Fast diagnosis for simple bugs
 version: "1.0"
 category: debugging
 execution-mode: execute
+topology: pipeline
 ---
 
 # /debug:fast — Quick Diagnosis
@@ -15,29 +17,29 @@ execution-mode: execute
 
 ## 🛑 PRE-FLIGHT (DO FIRST — BLOCKS PHASE 1)
 
-**LOAD now** (in order; path `./rules/` or `~/.{TOOL}/skills/agent-assistant/rules/`):
-1. CORE.md — Identity, Laws, Routing  
-2. PHASES.md — Phase Execution  
-3. AGENTS.md — Tiered Execution  
+**LOAD now** (path `./rules/` or `~/.{TOOL}/skills/agent-assistant/rules/`):
+1. RUNTIME.md — Identity, Laws, Routing, Phase Execution, Agent Protocol
 
 **⛔ Do not run Phase 1 until all are loaded.** Follow **all** rules in those files; they override any conflicting instructions in this file.
 
-**Skills Resolution**: When delegating, load `SKILLS.md` on-demand. Fast variant uses matrix-only (no dynamic discovery for speed optimization).
+**Skills Resolution**: When delegating, load `SKILLS-LITE.md` on-demand. Fast variant uses matrix-only (no dynamic discovery for speed optimization).
 
 ---
 
-## 🔀 TIERED EXECUTION
+## 🔀 EXECUTION MODEL
 
 | Tier | When | Action |
 |------|------|--------|
-| **TIER 1** | runSubagent EXISTS | Invoke sub-agent (MANDATORY) |
-| **TIER 2** | Tool MISSING | EMBODY agent file (FALLBACK) |
+| **EMBODY**    | Agent category = meta/execution/investigation/support | EMBODY — shared context, continuity critical |
+| **SUB-AGENT** | Agent category = validation/research + tool exists     | SUB-AGENT with Context Briefing — independence |
 
 ---
 
 ## ⛔ INCREMENTAL EXECUTION (MANDATORY)
 
 One phase at a time, each phase independent: Phase 1 → then Phase 2 → … in one reply. No batching (load only what each phase needs). **Within each phase:** when doing a part, output it in format so user sees what’s happening (announce before doing).
+
+**Phase Dependencies**: P1 (single phase)
 
 ---
 

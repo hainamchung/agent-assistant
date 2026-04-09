@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "metadata": {
+    "generatedAt": "2026-04-08T13:48:53.588Z",
+    "version": "1.0"
+  },
+  "skills": {
+    "matrix-skills/_dynamic.yaml": {
+      "trust": "core",
+      "sha256": "18e38ccb4df584412e5fbe9ee49e5745eea2d5b3e3cf3a61247135ef14698bf2"
+    },
+    "matrix-skills/_index.yaml": {
+      "trust": "core",
+      "sha256": "5c4abf4d06a505d07f16d9fc12bc172ecd53863c44958e57fc827ebdbb8932f4"
+    },
+    "matrix-skills/ai-ml.yaml": {
+      "trust": "core",
+      "sha256": "d069ded0aaaf63f952e3427965d149c11464e9fe8d98978261dd73371f867e07"
+    },
+    "matrix-skills/architecture.yaml": {
+      "trust": "core",
+      "sha256": "a941537ab0915000017a7f5b3969b403a8ca688d09ab686c3df02f6d9dd877eb"
+    },
+    "matrix-skills/backend.yaml": {
+      "trust": "core",
+      "sha256": "1d301827f1d496733830556db3c81f1a25759ee5f3671679b639db6a8d9ee2ae"
+    },
+    "matrix-skills/cloud.yaml": {
+      "trust": "core",
+      "sha256": "642950f242b36568d8df4fd2df5b684c8cd00870f7f17b7d7f500d9012efc317"
+    },
+    "matrix-skills/data.yaml": {
+      "trust": "core",
+      "sha256": "71b8ce3543d8add224ea9fe02495b62644694180420f3f66188f1c870049035c"
+    },
+    "matrix-skills/design.yaml": {
+      "trust": "core",
+      "sha256": "c909e6bba168e83f92ecb6bcf9e21bddddfb18b54a5a26e4b096c9c30488890d"
+    },
+    "matrix-skills/devops.yaml": {
+      "trust": "core",
+      "sha256": "c5962e16805805ebe42de312e77f10a71cc3fa8b0e1593bbf14c3afa1b666ece"
+    },
+    "matrix-skills/frontend.yaml": {
+      "trust": "core",
+      "sha256": "78e58e8352445a4bcbc87d6ad816adfbbd3eb3bc44b387ae7ca138ab37e88378"
+    },
+    "matrix-skills/gaming.yaml": {
+      "trust": "core",
+      "sha256": "26d0dff459d853fedec35a365c4d32407649a8e2313cac48c61a9f1121ee018a"
+    },
+    "matrix-skills/languages.yaml": {
+      "trust": "core",
+      "sha256": "c9f424bc380b2ca4c7a367da13cf9c0c19744cb5a2ac8c51b5e894c7a3928f46"
+    },
+    "matrix-skills/management.yaml": {
+      "trust": "core",
+      "sha256": "aa1c3256c508b00b96bfd60ac5e826275c0257de1ab5b318fc77e70180e9664b"
+    },
+    "matrix-skills/mcp.yaml": {
+      "trust": "core",
+      "sha256": "68cbc999bdc3b4544116ce3207b76328e578e47d05289ce77195709eabf9bb33"
+    },
+    "matrix-skills/mobile.yaml": {
+      "trust": "core",
+      "sha256": "dcb52ada07f8a1ef7dbee3520619fe42122b6b2006a263bd044407a5b6e75ee1"
+    },
+    "matrix-skills/performance.yaml": {
+      "trust": "core",
+      "sha256": "638060a6c963894863ab93c4a82b943e6130224da325fce80d6f0b116e937e21"
+    },
+    "matrix-skills/planning.yaml": {
+      "trust": "core",
+      "sha256": "fab353061a70a7677830af8758f254ba0b49ec7ae0c86f1c2dc7aaf3444f8876"
+    },
+    "matrix-skills/quality.yaml": {
+      "trust": "core",
+      "sha256": "179861cea86ddb7437ffbe5f2bfd1e3324f2c0abd426892030d1ade6d0f6fb79"
+    },
+    "matrix-skills/research.yaml": {
+      "trust": "core",
+      "sha256": "f297d5a238a56fe744c0d6b6feec9bd8b96eae81f591f5d397e7ea91bc0f721a"
+    },
+    "matrix-skills/security.yaml": {
+      "trust": "core",
+      "sha256": "4b0a39df71e017b140af8e21c17edb0dd6761fc3b43080707edb84f7c5d824a3"
+    },
+    "matrix-skills/tools.yaml": {
+      "trust": "core",
+      "sha256": "b1e932284a2aa6c2344d1d44e20d3823471f505cb9612d2c0800d479ed222ab8"
+    }
+  }
+}

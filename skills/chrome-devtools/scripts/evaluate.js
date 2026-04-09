@@ -27,6 +27,17 @@ async function evaluate() {
       });
     }
 
+    // SECURITY: page.evaluate executes arbitrary JS in browser context.
+    // This is intentional for DevTools automation but requires explicit opt-in.
+    if (!args['allow-eval'] && !process.env.AGENT_ASSISTANT_ALLOW_EVAL) {
+      outputError(new Error(
+        'Script evaluation requires explicit consent. ' +
+        'Pass --allow-eval flag or set AGENT_ASSISTANT_ALLOW_EVAL=1 environment variable. ' +
+        'WARNING: This executes arbitrary JavaScript in the browser page context.'
+      ));
+      return;
+    }
+
     const result = await page.evaluate((script) => {
       // eslint-disable-next-line no-eval
       return eval(script);

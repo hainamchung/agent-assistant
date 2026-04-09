@@ -79,6 +79,7 @@ export const commandCategories: CommandCategory[] = [
         variants: [
           { name: 'fast', description: 'Quick review' },
           { name: 'hard', description: 'Deep review' },
+          { name: 'team', description: 'Adversarial review with Golden Triangle' },
         ],
         example: '/review the changes in this PR',
       },
@@ -116,6 +117,7 @@ export const commandCategories: CommandCategory[] = [
         variants: [
           { name: 'fast', description: 'Quick ideas' },
           { name: 'hard', description: 'Deep exploration' },
+          { name: 'team', description: 'Collaborative brainstorm with Golden Triangle' },
         ],
         example: '/brainstorm how should we handle real-time notifications',
       },
@@ -176,6 +178,57 @@ export const commandCategories: CommandCategory[] = [
     ],
   },
   {
+    name: 'Knowledge',
+    description: 'Ask questions and get intelligent answers',
+    icon: '💡',
+    color: 'cyan',
+    commands: [
+      {
+        name: '/ask',
+        description: 'Ask questions about code, architecture, or best practices.',
+        variants: [
+          { name: 'fast', description: 'Quick answer' },
+          { name: 'hard', description: 'Deep research' },
+        ],
+        example: '/ask what is the best way to handle auth tokens',
+      },
+      {
+        name: '/help',
+        description: 'System discovery — explore commands, agents, and capabilities.',
+        variants: [
+          { name: 'overview', description: 'Full system overview' },
+          { name: 'command', description: 'Help for a specific command' },
+          { name: 'agents', description: 'List all agents' },
+        ],
+        example: '/help agents',
+      },
+    ],
+  },
+  {
+    name: 'Automation',
+    description: 'Smart routing and quick tactical work',
+    icon: '🤖',
+    color: 'orange',
+    commands: [
+      {
+        name: '/auto',
+        description: 'Classify the request and auto-route to the best command.',
+        variants: [],
+        example: '/auto implement dark mode for the dashboard',
+      },
+      {
+        name: '/quick',
+        description: 'Minimal ceremony — fast tactical work with reduced phases.',
+        variants: [
+          { name: 'fast', description: 'Ultra-fast execution' },
+          { name: 'hard', description: 'Quick but thorough' },
+          { name: 'team', description: 'Quick team collaboration' },
+        ],
+        example: '/quick rename the API endpoints',
+      },
+    ],
+  },
+  {
     name: 'Deploy',
     description: 'Deployment and operations',
     icon: '🚀',
@@ -212,14 +265,21 @@ export const commandCategories: CommandCategory[] = [
 // Quick reference commands for docs page
 export const quickReferenceCommands = [
   { cmd: '/cook', desc: 'Full feature implementation', variants: ':fast, :hard, :team' },
+  { cmd: '/code', desc: 'Quick code generation', variants: ':fast, :hard, :team' },
   { cmd: '/fix', desc: 'Bug fix with investigation', variants: ':fast, :hard, :team' },
   { cmd: '/test', desc: 'Generate test suites', variants: ':fast, :hard, :team' },
-  { cmd: '/review', desc: 'Code review', variants: ':fast, :hard' },
-  { cmd: '/plan', desc: 'Create implementation plan', variants: ':fast, :hard, :team' },
+  { cmd: '/review', desc: 'Code review', variants: ':fast, :hard, :team' },
   { cmd: '/debug', desc: 'Root cause analysis', variants: ':fast, :hard, :team' },
+  { cmd: '/plan', desc: 'Create implementation plan', variants: ':fast, :hard, :team' },
+  { cmd: '/brainstorm', desc: 'Explore ideas and approaches', variants: ':fast, :hard, :team' },
+  { cmd: '/design', desc: 'UI/UX or system design', variants: ':fast, :hard, :team' },
   { cmd: '/report', desc: 'Create/update reports and summaries', variants: ':fast, :hard, :team' },
   { cmd: '/docs', desc: 'Generate documentation', variants: ':core, :business, :audit' },
-  { cmd: '/deploy', desc: 'Deployment workflows', variants: ':check, :preview, :production' },
+  { cmd: '/deploy', desc: 'Deployment workflows', variants: ':check, :preview, :production, :rollback' },
+  { cmd: '/ask', desc: 'Ask questions about code', variants: ':fast, :hard' },
+  { cmd: '/auto', desc: 'Auto-route to best command', variants: '—' },
+  { cmd: '/quick', desc: 'Fast tactical work', variants: ':fast, :hard, :team' },
+  { cmd: '/help', desc: 'System discovery', variants: ':overview, :command, :agents' },
 ]
 
 // Natural language detection examples

@@ -7,8 +7,7 @@ commands: [cook, fix, plan, debug, test, review, docs, design, deploy]
 
 # ⚡ AGENT ASSISTANT v2.0
 
-> **LOAD**: `{TOOL}/.cursor/skills/agent-assistant/rules/CORE.md`
-> Load additional rules on demand from `{RULES_PATH}/`.
+> **LOAD**: `~/.cursor/skills/agent-assistant/rules/RUNTIME.md`
 
 ---
 
@@ -54,16 +53,13 @@ REPORTS  = ./reports/{topic}/
 
 ---
 
-## 🔀 TIERED EXECUTION
+## 🔀 EXECUTION MODEL
 
-| Tier | When | Action |
+| Mode | When | Action |
 |------|------|--------|
-| **TIER 1** | Subagent tool exists | **MUST** use sub-agent |
-| **TIER 2** | Tool missing/error | EMBODY (fallback only) |
-
-```
-❌ FORBIDDEN: Using TIER 2 when subagent available
-```
+| **EMBODY** | Agent category = meta/execution/investigation/support | EMBODY — shared context, continuity critical |
+| **SUB-AGENT** | Agent category = validation/research + tool exists | SUB-AGENT with Context Briefing — independence |
+| **EMBODY (fallback)** | Sub-agent tool unavailable | All EMBODY + Anti-Bias Protocol for evaluators |
 
 ---
 
@@ -93,11 +89,12 @@ REPORTS  = ./reports/{topic}/
 
 | Situation | Load from RULES/ |
 |-----------|------------------|
-| Running phases | `PHASES.md` |
-| Delegating | `AGENTS.md` |
-| Skill resolution | `SKILLS.md` |
+| Running phases | Included in `RUNTIME.md` |
+| Delegating | Included in `RUNTIME.md` |
+| Skill resolution | `SKILLS-LITE.md` |
 | Error occurred | `ERRORS.md` |
 | Quick lookup | `REFERENCE.md` |
+| Team execution | `TEAMS-LITE.md` |
 
 ---
 

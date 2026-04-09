@@ -1,8 +1,10 @@
 ---
+schema-version: "1.0"
 description: "🔺 Team Debug — Golden Triangle adversarial collaboration for maximum quality investigation"
 version: "2.0"
 category: debugging
 execution-mode: execute
+topology: golden-triangle
 ---
 
 # /debug:team — Golden Triangle Bug Investigation
@@ -18,48 +20,35 @@ execution-mode: execute
 
 ## 🛑 PRE-FLIGHT (DO FIRST — BLOCKS PHASE 1)
 
-**LOAD now** (in order; path `./rules/` or `~/.{TOOL}/skills/agent-assistant/rules/`):
+**LOAD now** (path `./rules/` or `~/.{TOOL}/skills/agent-assistant/rules/`):
 
-1. CORE.md — Identity, Laws, Routing
-2. PHASES.md — Phase Execution
-3. AGENTS.md — Tiered Execution
-4. **TEAMS.md** — Golden Triangle protocol (MANDATORY)
+1. RUNTIME.md — Identity, Laws, Routing, Phase Execution, Agent Protocol
+2. **TEAMS-LITE.md** — Team roles, review checklist, phase output format
+3. **topologies/golden-triangle.md** — Golden Triangle execution protocol
 
 **⛔ Do not run Phase 1 until all are loaded.** Follow **all** rules in those files; they override any conflicting instructions in this file.
 
-**Skills Resolution**: Load `SKILLS.md` on-demand for fitness calculation and dynamic discovery.
+**Skills Resolution**: Load `SKILLS-LITE.md` on-demand for fitness calculation and dynamic discovery.
 
 ---
 
-## 🔀 TIERED EXECUTION
+## 🔀 EXECUTION MODEL
 
-> Reference: AGENTS.md (Tiered Execution) + TEAMS.md (Golden Triangle Protocol)
+> **Topology**: Golden Triangle — load `topologies/golden-triangle.md` for full protocol.
+> Reference: RUNTIME.md (Execution Model) + TEAMS-LITE.md (Team Review Protocol)
 
-| Tier       | When                          | Action                                                                    |
-| ---------- | ----------------------------- | ------------------------------------------------------------------------- |
-| **TIER 1** | runSubagent/Agent Tool EXISTS | Orchestrator spawns Tech Lead → Tech Lead spawns Executor + Reviewer      |
-| **TIER 2** | Tool MISSING or SYSTEM error  | EMBODY Tech Lead → EMBODY Executor → EMBODY Reviewer → EMBODY Tech Lead  |
+Roles for this command:
+| Role | Agent | Mode |
+|------|-------|------|
+| Tech Lead | tech-lead | EMBODY |
+| Executor | debugger | EMBODY |
+| Reviewer | reviewer | SUB-AGENT (or EMBODY + Anti-Bias) |
 
-**❌ Anti-Lazy**: Never use TIER 2 when TIER 1 tool available.
-
-**TIER 2 Golden Triangle Embodiment** (per TEAMS.md):
-```
-1. EMBODY Tech Lead → decompose → Shared Task List → dispatch
-2. EMBODY Executor → investigate → post SUBMISSION to Mailbox
-3. EMBODY Reviewer → review → post REVIEW to Mailbox
-4. IF FAIL → EMBODY Executor → fix/defend → EMBODY Reviewer → re-check (max 3 rounds)
-5. EMBODY Tech Lead → arbitrate if needed → post DECISION → synthesize
-```
+**Mailbox**: `./reports/{topic}/MAILBOX-{date}.md` — see topology file for message protocol.
 
 ---
 
-## 📬 MAILBOX & DELIVERABLES
-
-**Mailbox Location**: `./reports/{topic}/MAILBOX-{date}.md` — All agents APPEND only, never overwrite.
-**Message Types**: TASK_ASSIGNMENT | SUBMISSION | REVIEW | DEFENSE | RESUBMISSION | APPROVAL | ESCALATION | ARBITRATION | DECISION
-**Full protocol**: See TEAMS.md § Mailbox Protocol
-
-**Deliverable Files**:
+## 📁 DELIVERABLE FILES
 
 | Phase              | Output                                         |
 | ------------------ | ---------------------------------------------- |
@@ -91,7 +80,7 @@ All files in `./reports/{topic}/` → English only.
 
 **Deliverable paths = base names.** Small (≤ 150 lines) → `{name}.md`. Large (> 150 lines or ≥ 4 sections) → `{name}/` folder with `00-index.md` + section files.
 
-One phase at a time. Within each phase follow the **Golden Triangle Loop** (per TEAMS.md):
+One phase at a time. Within each phase follow the **Golden Triangle Loop** :
 
 ```
 1. Tech Lead decomposes → Shared Task List → TASK_ASSIGNMENT to Mailbox
@@ -134,7 +123,11 @@ One phase at a time. Within each phase follow the **Golden Triangle Loop** (per 
 6. `debugger` synthesizes approved symptom data into unified symptom catalog
 
 **Deliverable**: `./reports/{topic}/debugs/SYMPTOMS-{issue}`
-**Exit Criteria**: All symptoms documented, reproduction confirmed, environment captured, data sources exhausted
+**Exit Criteria**:
+- [ ] All symptoms documented
+- [ ] Reproduction confirmed
+- [ ] Environment captured
+- [ ] Data sources exhausted
 **Consensus**: ✅ CONSENSUS: debugger ✓ | scouter ✓ | researcher ✓
 
 ---
@@ -168,7 +161,11 @@ One phase at a time. Within each phase follow the **Golden Triangle Loop** (per 
 6. `debugger` synthesizes approved hypotheses into prioritized hypothesis tree
 
 **Deliverable**: `./reports/{topic}/debugs/HYPOTHESES-{issue}`
-**Exit Criteria**: Hypothesis tree complete, alternatives explored, priorities assigned, investigation paths defined
+**Exit Criteria**:
+- [ ] Hypothesis tree complete
+- [ ] Alternatives explored
+- [ ] Priorities assigned
+- [ ] Investigation paths defined
 **Consensus**: ✅ CONSENSUS: debugger ✓ | researcher ✓ | brainstormer ✓
 
 ---
@@ -290,7 +287,10 @@ One phase at a time. Within each phase follow the **Golden Triangle Loop** (per 
 ```
 
 **Deliverable**: `./reports/{topic}/debugs/EVIDENCE-{issue}`
-**Exit Criteria**: All hypotheses tested with evidence, verdicts debated and consensus-approved, root cause identified or narrowed
+**Exit Criteria**:
+- [ ] All hypotheses tested with evidence
+- [ ] Verdicts debated and consensus-approved
+- [ ] Root cause identified or narrowed
 **Consensus**: ✅ CONSENSUS: debugger ✓ | scouter/backend-engineer ✓ | reviewer ✓
 
 ---
@@ -326,7 +326,12 @@ One phase at a time. Within each phase follow the **Golden Triangle Loop** (per 
 6. `debugger` synthesizes approved sections into final report
 
 **Deliverable**: `./reports/{topic}/debugs/DEBUG-REPORT-{issue}`
-**Exit Criteria**: Root cause documented, evidence chain complete, fix approaches recommended, impact assessed, report validated
+**Exit Criteria**:
+- [ ] Root cause documented
+- [ ] Evidence chain complete
+- [ ] Fix approaches recommended
+- [ ] Impact assessed
+- [ ] Report validated
 **Consensus**: ✅ CONSENSUS: debugger ✓ | reporter ✓ | tech-lead ✓
 
 ---

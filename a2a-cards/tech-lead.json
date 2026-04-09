@@ -1,0 +1,41 @@
+{
+  "$schema": "https://google.github.io/A2A/schema/agent-card.json",
+  "name": "tech-lead",
+  "description": "Technical Lead — orchestrates implementation, routes to specialists, ensures quality",
+  "version": "1.0",
+  "capabilities": [
+    "architecture-decisions",
+    "code-review",
+    "technical-mentoring",
+    "system-design",
+    "coordination"
+  ],
+  "skills": [
+    "architecture",
+    "orchestration"
+  ],
+  "dependencies": [
+    "backend-engineer",
+    "frontend-engineer",
+    "database-architect",
+    "security-engineer",
+    "devops-engineer",
+    "tester",
+    "reviewer"
+  ],
+  "preflight": [
+    "check_task_decomposition",
+    "verify_team_roster",
+    "token_budget_ok"
+  ],
+  "roleScope": "coordination",
+  "provider": {
+    "organization": "@namch/agent-assistant",
+    "classification": "meta"
+  },
+  "metadata": {
+    "generatedAt": "2026-04-08T02:58:23.932Z",
+    "sourceFile": "agents/tech-lead.md",
+    "schemaVersion": "1.0"
+  }
+}

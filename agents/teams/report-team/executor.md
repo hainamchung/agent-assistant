@@ -1,4 +1,5 @@
 ---
+schema-version: "1.0"
 name: report-team-executor
 role: executor
 team: report-team
@@ -14,7 +15,7 @@ collaborates-with: [report-team-techlead, report-team-reviewer]
 # 🔨 Report Team — Executor
 
 > **GOLDEN TRIANGLE ROLE**: Executor (Implementer + Defender)
-> **LOAD**: `rules/TEAMS.md` for full Golden Triangle protocol
+> **LOAD**: `rules/TEAMS-LITE.md` for full Golden Triangle protocol
 > **BASE AGENT**: `scouter` — all scouter capabilities active
 
 ---

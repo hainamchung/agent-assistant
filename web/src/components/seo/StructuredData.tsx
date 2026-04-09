@@ -24,7 +24,7 @@ interface OrganizationData {
 // Software Application Schema
 export function SoftwareApplicationSchema({
   name = 'Agent Assistant',
-  description = 'Multi-agent orchestration framework for AI coding assistants. 21 specialist agents, 310+ skills, and 50+ workflows.',
+  description = 'Multi-agent orchestration framework for AI coding assistants. 21 specialist agents, 1400+ skills, and 60+ workflows across 6 platforms.',
   applicationCategory = 'DeveloperApplication',
   operatingSystem = 'Any',
   offers = { price: '0', priceCurrency: 'USD' },

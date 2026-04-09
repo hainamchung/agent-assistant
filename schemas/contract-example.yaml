@@ -1,0 +1,60 @@
+# Contract Definition Schema & Example
+# Created by: planner agent during /plan or /cook Phase 2
+# Consumed by: implementation agents as hard constraints
+
+version: "1.0"
+task: "{task-name}"
+contracts:
+  - name: "User API"
+    type: api
+    producer: "backend-engineer"
+    consumer: "frontend-engineer"
+    interface:
+      endpoints:
+        - method: GET
+          path: "/api/users"
+          request: {}
+          response:
+            users: "array"
+            total: "number"
+        - method: POST
+          path: "/api/users"
+          request:
+            name: "string"
+            email: "string"
+          response:
+            id: "number"
+            created: "boolean"
+    validation: |
+      GET /api/users must return paginated list.
+      POST /api/users must validate email format.
+
+  - name: "Users Table"
+    type: database
+    producer: "database-architect"
+    consumer: "backend-engineer"
+    interface:
+      tables:
+        - name: "users"
+          columns:
+            - id: "serial primary key"
+            - name: "varchar(255) not null"
+            - email: "varchar(255) unique not null"
+            - created_at: "timestamp default now()"
+    validation: |
+      Email must have unique constraint.
+      created_at must auto-populate.
+
+  - name: "UserCard Component"
+    type: component
+    producer: "frontend-engineer"
+    consumer: "frontend-engineer"
+    interface:
+      props:
+        - name: "string"
+        - email: "string"
+        - avatarUrl: "string?"
+      events:
+        - onClick: "void"
+    validation: |
+      Must handle missing avatarUrl gracefully.

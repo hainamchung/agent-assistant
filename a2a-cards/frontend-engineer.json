@@ -1,0 +1,39 @@
+{
+  "$schema": "https://google.github.io/A2A/schema/agent-card.json",
+  "name": "frontend-engineer",
+  "description": "Principal Frontend Architect — UI/UX excellence, web performance, accessibility",
+  "version": "1.0",
+  "capabilities": [
+    "ui-development",
+    "component-design",
+    "state-management",
+    "responsive-design",
+    "accessibility"
+  ],
+  "skills": [
+    "frontend",
+    "execution"
+  ],
+  "dependencies": [
+    "tester",
+    "designer",
+    "performance-engineer",
+    "backend-engineer",
+    "security-engineer"
+  ],
+  "preflight": [
+    "implementation_target_identified",
+    "prior_phase_deliverables_present",
+    "token_budget_ok"
+  ],
+  "roleScope": "implementation",
+  "provider": {
+    "organization": "@namch/agent-assistant",
+    "classification": "execution"
+  },
+  "metadata": {
+    "generatedAt": "2026-04-08T02:58:23.932Z",
+    "sourceFile": "agents/frontend-engineer.md",
+    "schemaVersion": "1.0"
+  }
+}

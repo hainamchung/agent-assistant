@@ -1,4 +1,5 @@
 ---
+schema-version: "1.0"
 name: project-team-reviewer
 role: reviewer
 team: project-team
@@ -23,7 +24,7 @@ mailbox: ./reports/{topic}/MAILBOX-{date}.md
 # 🔍 Project Team — Reviewer (Devil's Advocate)
 
 > **GOLDEN TRIANGLE ROLE**: Reviewer (Devil's Advocate + Quality Gate)  
-> **LOAD**: `rules/TEAMS.md` for full Golden Triangle protocol  
+> **LOAD**: `rules/TEAMS-LITE.md` for full Golden Triangle protocol  
 > **BASE AGENT**: `tech-lead` — all tech-lead capabilities active
 
 ## 🆔 Identity

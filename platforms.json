@@ -1,0 +1,231 @@
+{
+  "claude": {
+    "PLATFORM_NAME": "Claude Code",
+    "TOOL_PATH": ".claude",
+    "BOOT_FILE": "CLAUDE.md",
+    "TIER1_TOOL": "runSubagent",
+    "capabilities": {
+      "sub_agents": true,
+      "terminal": true,
+      "file_edit": true,
+      "web_search": false,
+      "mcp": true,
+      "background_tasks": true,
+      "max_context_tokens": 200000
+    },
+    "adapter_hints": {
+      "tier_default": "full",
+      "execution_model": "enhanced",
+      "tool_alternatives": {
+        "web_search": "Use terminal with curl for web requests"
+      }
+    },
+    "formatting_hints": {
+      "max_line_length": null,
+      "heading_style": "atx",
+      "emphasis_style": "bold_for_headers",
+      "code_fence": "```",
+      "section_separator": "---",
+      "table_support": true,
+      "collapsible_sections": false,
+      "xml_tags": true,
+      "emoji_in_headers": true,
+      "notes": "XML tags preferred for structured data. Supports full markdown."
+    }
+  },
+  "copilot": {
+    "PLATFORM_NAME": "GitHub Copilot",
+    "TOOL_PATH": ".copilot",
+    "BOOT_FILE": "COPILOT.md",
+    "TIER1_TOOL": "runSubagent",
+    "capabilities": {
+      "sub_agents": true,
+      "terminal": true,
+      "file_edit": true,
+      "web_search": true,
+      "mcp": true,
+      "background_tasks": true,
+      "max_context_tokens": 128000
+    },
+    "adapter_hints": {
+      "tier_default": "full",
+      "execution_model": "enhanced",
+      "tool_alternatives": {}
+    },
+    "formatting_hints": {
+      "max_line_length": null,
+      "heading_style": "atx",
+      "emphasis_style": "standard",
+      "code_fence": "```",
+      "section_separator": "---",
+      "table_support": true,
+      "collapsible_sections": false,
+      "xml_tags": false,
+      "emoji_in_headers": true,
+      "notes": "Standard markdown. No XML tags. Keep sections concise."
+    }
+  },
+  "cursor": {
+    "PLATFORM_NAME": "Cursor",
+    "TOOL_PATH": ".cursor",
+    "BOOT_FILE": "CURSOR.md",
+    "TIER1_TOOL": "Agent Tool",
+    "capabilities": {
+      "sub_agents": false,
+      "terminal": true,
+      "file_edit": true,
+      "web_search": false,
+      "mcp": true,
+      "background_tasks": false,
+      "max_context_tokens": 128000
+    },
+    "adapter_hints": {
+      "tier_default": "micro",
+      "execution_model": "embody",
+      "tool_alternatives": {
+        "sub_agents": "Use EMBODY fallback execution",
+        "web_search": "Use terminal with curl"
+      }
+    },
+    "formatting_hints": {
+      "max_line_length": null,
+      "heading_style": "atx",
+      "emphasis_style": "standard",
+      "code_fence": "```",
+      "section_separator": "---",
+      "table_support": true,
+      "collapsible_sections": false,
+      "xml_tags": false,
+      "emoji_in_headers": true,
+      "notes": "Cursor Rules format. Markdown with .mdc extension support."
+    }
+  },
+  "codex": {
+    "PLATFORM_NAME": "OpenAI Codex",
+    "TOOL_PATH": ".codex",
+    "BOOT_FILE": "CODEX.md",
+    "TIER1_TOOL": "native sub-agent/task delegation tool",
+    "capabilities": {
+      "sub_agents": false,
+      "terminal": true,
+      "file_edit": true,
+      "web_search": false,
+      "mcp": false,
+      "background_tasks": false,
+      "max_context_tokens": 192000
+    },
+    "adapter_hints": {
+      "tier_default": "micro",
+      "execution_model": "embody",
+      "tool_alternatives": {
+        "sub_agents": "Use EMBODY fallback execution",
+        "web_search": "Use terminal with curl"
+      }
+    },
+    "formatting_hints": {
+      "max_line_length": null,
+      "heading_style": "atx",
+      "emphasis_style": "standard",
+      "code_fence": "```",
+      "section_separator": "---",
+      "table_support": true,
+      "collapsible_sections": false,
+      "xml_tags": false,
+      "emoji_in_headers": true,
+      "notes": "Codex sandbox. Keep instructions terse."
+    }
+  },
+  "gemini": {
+    "PLATFORM_NAME": "Google Gemini",
+    "TOOL_PATH": ".gemini/antigravity",
+    "BOOT_FILE": "GEMINI.md",
+    "TIER1_TOOL": "native sub-agent/task delegation tool",
+    "capabilities": {
+      "sub_agents": false,
+      "terminal": true,
+      "file_edit": true,
+      "web_search": false,
+      "mcp": false,
+      "background_tasks": false,
+      "max_context_tokens": 1000000
+    },
+    "adapter_hints": {
+      "tier_default": "micro",
+      "execution_model": "embody",
+      "tool_alternatives": {
+        "sub_agents": "Use EMBODY fallback execution",
+        "web_search": "Use terminal with curl"
+      }
+    },
+    "formatting_hints": {
+      "max_line_length": null,
+      "heading_style": "atx",
+      "emphasis_style": "standard",
+      "code_fence": "```",
+      "section_separator": "---",
+      "table_support": true,
+      "collapsible_sections": false,
+      "xml_tags": false,
+      "emoji_in_headers": true,
+      "notes": "Gemini context. Standard markdown."
+    }
+  },
+  "qwen": {
+    "PLATFORM_NAME": "Qwen",
+    "TOOL_PATH": ".qwen",
+    "BOOT_FILE": "QWEN.md",
+    "TIER1_TOOL": "native sub-agent/task delegation tool",
+    "capabilities": {
+      "sub_agents": false,
+      "terminal": true,
+      "file_edit": true,
+      "web_search": false,
+      "mcp": false,
+      "background_tasks": false,
+      "max_context_tokens": 128000
+    },
+    "adapter_hints": {
+      "tier_default": "micro",
+      "execution_model": "embody",
+      "tool_alternatives": {
+        "sub_agents": "Use EMBODY fallback execution",
+        "web_search": "Use terminal with curl"
+      }
+    },
+    "formatting_hints": {
+      "max_line_length": null,
+      "heading_style": "atx",
+      "emphasis_style": "standard",
+      "code_fence": "```",
+      "section_separator": "---",
+      "table_support": true,
+      "collapsible_sections": false,
+      "xml_tags": false,
+      "emoji_in_headers": true,
+      "notes": "Qwen Code context. Standard markdown. No XML tags."
+    }
+  },
+  "agent": {
+    "PLATFORM_NAME": "{TOOL}",
+    "TOOL_PATH": ".{TOOL}",
+    "BOOT_FILE": "AGENT.md",
+    "TIER1_TOOL": "native sub-agent/task delegation tool",
+    "capabilities": {
+      "sub_agents": false,
+      "terminal": true,
+      "file_edit": true,
+      "web_search": false,
+      "mcp": false,
+      "background_tasks": false,
+      "max_context_tokens": 128000
+    },
+    "adapter_hints": {
+      "tier_default": "nano",
+      "execution_model": "embody",
+      "tool_alternatives": {
+        "sub_agents": "Use EMBODY fallback execution",
+        "web_search": "Use terminal with curl"
+      }
+    }
+  }
+}

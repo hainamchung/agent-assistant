@@ -1,0 +1,39 @@
+{
+  "$schema": "https://google.github.io/A2A/schema/agent-card.json",
+  "name": "devops-engineer",
+  "description": "Principal DevOps Architect — CI/CD, infrastructure as code, deployment automation",
+  "version": "1.0",
+  "capabilities": [
+    "ci-cd-pipelines",
+    "container-orchestration",
+    "infrastructure-as-code",
+    "monitoring-setup",
+    "deployment-automation"
+  ],
+  "skills": [
+    "devops",
+    "execution"
+  ],
+  "dependencies": [
+    "backend-engineer",
+    "security-engineer",
+    "performance-engineer",
+    "database-architect",
+    "tech-lead"
+  ],
+  "preflight": [
+    "target_files_identified",
+    "project_context_loaded",
+    "output_format_clear"
+  ],
+  "roleScope": "operations",
+  "provider": {
+    "organization": "@namch/agent-assistant",
+    "classification": "support"
+  },
+  "metadata": {
+    "generatedAt": "2026-04-08T02:58:23.932Z",
+    "sourceFile": "agents/devops-engineer.md",
+    "schemaVersion": "1.0"
+  }
+}

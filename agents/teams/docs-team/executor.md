@@ -1,4 +1,5 @@
 ---
+schema-version: "1.0"
 name: docs-team-executor
 role: executor
 team: docs-team
@@ -14,7 +15,7 @@ collaborates-with: [docs-team-techlead, docs-team-reviewer]
 # 🔨 Docs Team — Executor
 
 > **GOLDEN TRIANGLE ROLE**: Executor (Implementer + Defender)
-> **LOAD**: `rules/TEAMS.md` for full Golden Triangle protocol
+> **LOAD**: `rules/TEAMS-LITE.md` for full Golden Triangle protocol
 > **BASE AGENT**: `researcher` — all researcher capabilities active
 
 ---

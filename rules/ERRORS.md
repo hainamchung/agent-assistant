@@ -1,6 +1,6 @@
 # 🛠️ ERRORS
 
-> **LOAD**: When errors occur | **PURPOSE**: Self-healing protocols
+> **VERSION**: 1.0 | **LOAD**: When errors occur | **PURPOSE**: Error recovery procedures
 
 ---
 
@@ -36,7 +36,7 @@ on_error:
   2. CLASSIFY: E1/E1b/E2/E3/E4
   3. ATTEMPT recovery:
      E1: Retry (max 3)
-     E1b: Switch to chunked deliverable strategy (see PHASES.md)
+     E1b: Switch to chunked deliverable strategy (see RUNTIME.md)
      E2: Alternative approach
      E3: Pick best recovery option → auto-recover
      E4: Rollback, report impact
@@ -90,7 +90,7 @@ on_limit: Escalate to user
 | A2 | Workflow bypass | Follow phase order |
 | A3 | Silent halt | Notify + provide options |
 | A4 | Skipped step | Backtrack + complete |
-| A5 | Lazy fallback | Attempt TIER 1 first |
+| A5 | Lazy fallback | Attempt Enhanced first |
 | A6 | Assumed requirements | Ask for clarification |
 | A7 | Modified prior deliverable | Treat as immutable |
 | A8 | Batched phase loading | One phase at a time |
@@ -110,7 +110,7 @@ guarantees:
 
 future_proof:
   - New platforms auto-detected via Tool Discovery
-  - TIER 2 EMBODY always available as fallback
+  - EMBODY always available as fallback (with Anti-Bias Protocol for validation/research agents)
   - No hard dependencies on specific tools
 ```
 

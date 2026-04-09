@@ -1,8 +1,10 @@
 ---
+schema-version: "1.0"
 description: 📝 Report Router — Multi-purpose reporting (create report, update docs, or generate from template)
 version: "1.0"
 category: documentation
 execution-mode: router
+topology: pipeline
 ---
 
 # /report — Reporting Router
@@ -17,11 +19,9 @@ execution-mode: router
 
 ## 🛑 PRE-FLIGHT (DO FIRST — BLOCKS EXECUTION)
 
-**LOAD now** (in order; path `./rules/` or `~/.{TOOL}/skills/agent-assistant/rules/`):
+**LOAD now** (path `./rules/` or `~/.{TOOL}/skills/agent-assistant/rules/`):
 
-1. CORE.md — Identity, Laws, Routing
-2. PHASES.md — Phase Execution
-3. AGENTS.md — Tiered Execution
+1. RUNTIME.md — Identity, Laws, Routing, Phase Execution, Agent Protocol
 
 **⛔ Do not run any workflow phase until all are loaded.** Follow **all** rules in those files. Then run this file's ROUTING LOGIC, LOAD the chosen variant workflow, and execute it.
 

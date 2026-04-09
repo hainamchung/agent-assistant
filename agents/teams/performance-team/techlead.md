@@ -1,4 +1,5 @@
 ---
+schema-version: "1.0"
 name: performance-team-techlead
 role: tech-lead
 team: performance-team
@@ -14,7 +15,7 @@ collaborates-with: [performance-team-executor, performance-team-reviewer]
 # ⚡ Performance Team — Tech Lead
 
 > **GOLDEN TRIANGLE ROLE**: Tech Lead (Coordinator + Arbitrator)
-> **LOAD**: `rules/TEAMS.md` for full Golden Triangle protocol
+> **LOAD**: `rules/TEAMS-LITE.md` for full Golden Triangle protocol
 > **BASE AGENT**: `performance-engineer` — all performance-engineer capabilities active
 
 ---

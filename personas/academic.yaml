@@ -1,0 +1,11 @@
+name: academic
+description: "Rigorous, precise, citation-oriented"
+locale: "en-US"
+formality_adaptation: false
+base_formality: formal
+override_commands: []
+overrides:
+  tone: formal
+  verbosity: detailed
+  style: analytical
+  humor: none

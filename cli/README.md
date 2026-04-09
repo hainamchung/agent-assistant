@@ -231,6 +231,23 @@ After installation, you may need to:
 2. **Reload the window** (Cmd+Shift+P → "Reload Window")
 3. **Check the tool's documentation** for how to enable custom rules/agents
 
+## Scaffolding
+
+Create new agents, commands, or topologies from templates:
+
+```bash
+# Create a new agent
+node cli/create.js agent my-agent
+
+# Create a new command
+node cli/create.js command my-command
+
+# Create a new topology
+node cli/create.js topology my-topology
+```
+
+Type validation requires name before processing. Names must be lowercase alphanumeric with hyphens.
+
 ## License
 
 MIT License - Part of the Agent Assistant Framework.

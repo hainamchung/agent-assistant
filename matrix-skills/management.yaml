@@ -9,6 +9,7 @@ domain: management
 name: "Project Management"
 description: "Delivery, risk management, agile"
 skill_count: 21
+composes_with: [planner, tech-lead, researcher]
 
 skills:
   # --------------------------------------------------------------------------

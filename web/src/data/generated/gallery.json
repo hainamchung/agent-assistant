@@ -1,0 +1,631 @@
+{
+  "generated": "2026-04-08T03:28:45.990Z",
+  "agents": [
+    {
+      "id": "backend-engineer",
+      "name": "backend-engineer",
+      "description": "Principal Backend Architect — server-side logic, API design, scalable systems",
+      "category": "execution",
+      "profile": "backend:execution",
+      "roleScope": "implementation",
+      "voice": {
+        "adaptation": true,
+        "deviation_tolerance": 1
+      },
+      "guardrails": [
+        "injection-defense",
+        "output-sanitization"
+      ],
+      "guardrailLevels": null,
+      "handoffs": [
+        "tester",
+        "database-architect",
+        "performance-engineer",
+        "devops-engineer",
+        "frontend-engineer",
+        "security-engineer"
+      ]
+    },
+    {
+      "id": "brainstormer",
+      "name": "brainstormer",
+      "description": "Principal Requirements Architect — requirements discovery, Socratic clarification, ideation",
+      "category": "research",
+      "profile": "planning:discovery",
+      "roleScope": "discovery",
+      "voice": {
+        "adaptation": true,
+        "deviation_tolerance": 2
+      },
+      "guardrails": [],
+      "guardrailLevels": null,
+      "handoffs": [
+        "planner",
+        "researcher",
+        "tech-lead",
+        "designer"
+      ]
+    },
+    {
+      "id": "business-analyst",
+      "name": "business-analyst",
+      "description": "Principal Business Analyst — requirements, stakeholder management, domain modeling",
+      "category": "support",
+      "profile": "planning:business",
+      "roleScope": "operations",
+      "voice": {
+        "adaptation": true,
+        "deviation_tolerance": 1
+      },
+      "guardrails": [],
+      "guardrailLevels": null,
+      "handoffs": [
+        "brainstormer",
+        "planner",
+        "project-manager",
+        "tech-lead"
+      ]
+    },
+    {
+      "id": "database-architect",
+      "name": "database-architect",
+      "description": "Principal Database Architect — schema design, query optimization, data integrity",
+      "category": "execution",
+      "profile": "data:execution",
+      "roleScope": "implementation",
+      "voice": {
+        "adaptation": true,
+        "deviation_tolerance": 1
+      },
+      "guardrails": [
+        "injection-defense",
+        "output-sanitization"
+      ],
+      "guardrailLevels": null,
+      "handoffs": [
+        "backend-engineer",
+        "security-engineer",
+        "performance-engineer",
+        "devops-engineer",
+        "tech-lead"
+      ]
+    },
+    {
+      "id": "debugger",
+      "name": "debugger",
+      "description": "Principal Debug Specialist — root cause analysis and systematic investigation",
+      "category": "investigation",
+      "profile": "quality:debugging",
+      "roleScope": "analysis",
+      "voice": {
+        "adaptation": true,
+        "deviation_tolerance": 1
+      },
+      "guardrails": [],
+      "guardrailLevels": null,
+      "handoffs": [
+        "backend-engineer",
+        "frontend-engineer",
+        "tester",
+        "tech-lead",
+        "performance-engineer"
+      ]
+    },
+    {
+      "id": "designer",
+      "name": "designer",
+      "description": "Principal Design Architect — UI/UX design, design systems, user experience",
+      "category": "research",
+      "profile": "design:creative",
+      "roleScope": "discovery",
+      "voice": {
+        "adaptation": true,
+        "deviation_tolerance": 1
+      },
+      "guardrails": [],
+      "guardrailLevels": null,
+      "handoffs": [
+        "frontend-engineer",
+        "mobile-engineer",
+        "researcher",
+        "tech-lead"
+      ]
+    },
+    {
+      "id": "devops-engineer",
+      "name": "devops-engineer",
+      "description": "Principal DevOps Architect — CI/CD, infrastructure as code, deployment automation",
+      "category": "support",
+      "profile": "devops:execution",
+      "roleScope": "operations",
+      "voice": {
+        "adaptation": true,
+        "deviation_tolerance": 1
+      },
+      "guardrails": [
+        "injection-defense"
+      ],
+      "guardrailLevels": null,
+      "handoffs": [
+        "backend-engineer",
+        "security-engineer",
+        "performance-engineer",
+        "database-architect",
+        "tech-lead"
+      ]
+    },
+    {
+      "id": "docs-manager",
+      "name": "docs-manager",
+      "description": "Principal Documentation Architect — technical writing, API docs, architecture docs",
+      "category": "support",
+      "profile": "research:documentation",
+      "roleScope": "operations",
+      "voice": {
+        "adaptation": true,
+        "deviation_tolerance": 1
+      },
+      "guardrails": [],
+      "guardrailLevels": null,
+      "handoffs": [
+        "tech-lead",
+        "backend-engineer",
+        "frontend-engineer",
+        "designer"
+      ]
+    },
+    {
+      "id": "frontend-engineer",
+      "name": "frontend-engineer",
+      "description": "Principal Frontend Architect — UI/UX excellence, web performance, accessibility",
+      "category": "execution",
+      "profile": "frontend:execution",
+      "roleScope": "implementation",
+      "voice": {
+        "adaptation": true,
+        "deviation_tolerance": 1
+      },
+      "guardrails": [
+        "injection-defense",
+        "output-sanitization"
+      ],
+      "guardrailLevels": null,
+      "handoffs": [
+        "tester",
+        "designer",
+        "performance-engineer",
+        "backend-engineer",
+        "security-engineer"
+      ]
+    },
+    {
+      "id": "game-engineer",
+      "name": "game-engineer",
+      "description": "Principal Game Architect — game development, Three.js, game engines",
+      "category": "execution",
+      "profile": "gaming:execution",
+      "roleScope": "implementation",
+      "voice": {
+        "adaptation": true,
+        "deviation_tolerance": 1
+      },
+      "guardrails": [
+        "injection-defense",
+        "output-sanitization"
+      ],
+      "guardrailLevels": null,
+      "handoffs": [
+        "designer",
+        "frontend-engineer",
+        "performance-engineer",
+        "tech-lead"
+      ]
+    },
+    {
+      "id": "mobile-engineer",
+      "name": "mobile-engineer",
+      "description": "Principal Mobile Architect — iOS, Android, React Native, Flutter",
+      "category": "execution",
+      "profile": "mobile:execution",
+      "roleScope": "implementation",
+      "voice": {
+        "adaptation": true,
+        "deviation_tolerance": 1
+      },
+      "guardrails": [
+        "injection-defense",
+        "output-sanitization"
+      ],
+      "guardrailLevels": null,
+      "handoffs": [
+        "designer",
+        "backend-engineer",
+        "tester",
+        "tech-lead"
+      ]
+    },
+    {
+      "id": "performance-engineer",
+      "name": "performance-engineer",
+      "description": "Principal Performance Architect — profiling, optimization, load testing",
+      "category": "investigation",
+      "profile": "performance:validation",
+      "roleScope": "analysis",
+      "voice": {
+        "adaptation": true,
+        "deviation_tolerance": 1
+      },
+      "guardrails": [],
+      "guardrailLevels": null,
+      "handoffs": [
+        "backend-engineer",
+        "frontend-engineer",
+        "database-architect",
+        "devops-engineer",
+        "tech-lead"
+      ]
+    },
+    {
+      "id": "planner",
+      "name": "planner",
+      "description": "Principal Technical Planner — implementation blueprints and task decomposition",
+      "category": "meta",
+      "profile": "planning:analysis",
+      "roleScope": "coordination",
+      "voice": {
+        "adaptation": true,
+        "deviation_tolerance": 1
+      },
+      "guardrails": [
+        "injection-defense"
+      ],
+      "guardrailLevels": null,
+      "handoffs": [
+        "tech-lead",
+        "scouter",
+        "researcher",
+        "brainstormer",
+        "backend-engineer",
+        "frontend-engineer"
+      ]
+    },
+    {
+      "id": "project-manager",
+      "name": "project-manager",
+      "description": "Principal Delivery Manager — project coordination, risk management, delivery",
+      "category": "support",
+      "profile": "management:orchestration",
+      "roleScope": "operations",
+      "voice": {
+        "adaptation": true,
+        "deviation_tolerance": 1
+      },
+      "guardrails": [],
+      "guardrailLevels": null,
+      "handoffs": [
+        "tech-lead",
+        "planner",
+        "business-analyst",
+        "all-agents"
+      ]
+    },
+    {
+      "id": "reporter",
+      "name": "reporter",
+      "description": "Documentation & Reporting Specialist — transforms data into structured insights",
+      "category": "support",
+      "profile": "reporting:synthesis",
+      "roleScope": "operations",
+      "voice": {
+        "adaptation": true,
+        "deviation_tolerance": 1
+      },
+      "guardrails": [],
+      "guardrailLevels": null,
+      "handoffs": [
+        "docs-manager",
+        "planner",
+        "tech-lead",
+        "project-manager"
+      ]
+    },
+    {
+      "id": "researcher",
+      "name": "researcher",
+      "description": "Principal Research Analyst — technical research, documentation discovery, best practices",
+      "category": "research",
+      "profile": "research:analysis",
+      "roleScope": "discovery",
+      "voice": {
+        "adaptation": true,
+        "deviation_tolerance": 1
+      },
+      "guardrails": [],
+      "guardrailLevels": null,
+      "handoffs": [
+        "planner",
+        "tech-lead",
+        "brainstormer",
+        "backend-engineer",
+        "frontend-engineer"
+      ]
+    },
+    {
+      "id": "reviewer",
+      "name": "reviewer",
+      "description": "Principal Code Reviewer — quality assurance and plan compliance verification",
+      "category": "validation",
+      "profile": "quality:review",
+      "roleScope": "evaluation",
+      "voice": {
+        "adaptation": true,
+        "deviation_tolerance": 0
+      },
+      "guardrails": [],
+      "guardrailLevels": null,
+      "handoffs": [
+        "tech-lead",
+        "backend-engineer",
+        "frontend-engineer",
+        "security-engineer",
+        "tester"
+      ]
+    },
+    {
+      "id": "scouter",
+      "name": "scouter",
+      "description": "Principal Codebase Analyst — code exploration and pattern discovery",
+      "category": "research",
+      "profile": "research:exploration",
+      "roleScope": "discovery",
+      "voice": {
+        "adaptation": true,
+        "deviation_tolerance": 1
+      },
+      "guardrails": [],
+      "guardrailLevels": null,
+      "handoffs": [
+        "planner",
+        "tech-lead",
+        "researcher",
+        "backend-engineer",
+        "frontend-engineer"
+      ]
+    },
+    {
+      "id": "security-engineer",
+      "name": "security-engineer",
+      "description": "Principal Security Architect — threat modeling, secure coding, vulnerability assessment",
+      "category": "validation",
+      "profile": "security:validation",
+      "roleScope": "evaluation",
+      "voice": {
+        "adaptation": true,
+        "deviation_tolerance": 0
+      },
+      "guardrails": [
+        "injection-defense"
+      ],
+      "guardrailLevels": null,
+      "handoffs": [
+        "backend-engineer",
+        "devops-engineer",
+        "database-architect",
+        "tester",
+        "tech-lead"
+      ]
+    },
+    {
+      "id": "tech-lead",
+      "name": "tech-lead",
+      "description": "Technical Lead — orchestrates implementation, routes to specialists, ensures quality",
+      "category": "meta",
+      "profile": "architecture:orchestration",
+      "roleScope": "coordination",
+      "voice": {
+        "adaptation": true,
+        "deviation_tolerance": 1
+      },
+      "guardrails": [],
+      "guardrailLevels": null,
+      "handoffs": [
+        "backend-engineer",
+        "frontend-engineer",
+        "database-architect",
+        "security-engineer",
+        "devops-engineer",
+        "tester",
+        "reviewer"
+      ]
+    },
+    {
+      "id": "tester",
+      "name": "tester",
+      "description": "Principal QA Architect — test strategy, automation, quality assurance",
+      "category": "validation",
+      "profile": "quality:validation",
+      "roleScope": "evaluation",
+      "voice": {
+        "adaptation": true,
+        "deviation_tolerance": 1
+      },
+      "guardrails": [],
+      "guardrailLevels": null,
+      "handoffs": [
+        "backend-engineer",
+        "frontend-engineer",
+        "reviewer",
+        "debugger",
+        "security-engineer",
+        "tech-lead"
+      ]
+    }
+  ],
+  "commands": [
+    {
+      "name": "ask",
+      "description": "❓ Ask Router — Route questions to appropriate answer workflow",
+      "category": "knowledge",
+      "variants": [
+        "fast",
+        "hard"
+      ]
+    },
+    {
+      "name": "brainstorm",
+      "description": "💡 Brainstorm Router — Route to ideation workflows",
+      "category": "planning",
+      "variants": [
+        "fast",
+        "hard",
+        "team"
+      ]
+    },
+    {
+      "name": "code",
+      "description": "💻 Code Router — Route to implementation workflows",
+      "category": "engineering",
+      "variants": [
+        "fast",
+        "hard",
+        "team"
+      ]
+    },
+    {
+      "name": "cook",
+      "description": "🍳 Cook Router — Route to feature implementation workflows",
+      "category": "engineering",
+      "variants": [
+        "fast",
+        "hard",
+        "team"
+      ]
+    },
+    {
+      "name": "debug",
+      "description": "🐛 Debug Router — Route to debugging workflows",
+      "category": "debugging",
+      "variants": [
+        "fast",
+        "hard",
+        "team"
+      ]
+    },
+    {
+      "name": "deploy",
+      "description": "🚀 Deploy Router — Route to deployment workflows",
+      "category": "operations",
+      "variants": [
+        "check",
+        "preview",
+        "production",
+        "rollback"
+      ]
+    },
+    {
+      "name": "design",
+      "description": "🎨 Design Router — Route to design workflows",
+      "category": "design",
+      "variants": [
+        "fast",
+        "hard",
+        "team"
+      ]
+    },
+    {
+      "name": "docs",
+      "description": "📝 Docs - Full Documentation Suite (executes ALL sub-commands sequentially)",
+      "category": "documentation",
+      "variants": [
+        "audit",
+        "business",
+        "core"
+      ]
+    },
+    {
+      "name": "fix",
+      "description": "🔧 Fix Router — Route to issue resolution workflows",
+      "category": "debugging",
+      "variants": [
+        "fast",
+        "hard",
+        "team"
+      ]
+    },
+    {
+      "name": "help",
+      "description": "Help — Discover commands, agents, and system capabilities",
+      "category": "support",
+      "variants": [
+        "agents",
+        "command",
+        "overview"
+      ]
+    },
+    {
+      "name": "plan",
+      "description": "📋 Plan Router — Route to planning workflows",
+      "category": "planning",
+      "variants": [
+        "fast",
+        "hard",
+        "team"
+      ]
+    },
+    {
+      "name": "quick",
+      "description": "Quick command — single-phase execution for simple tasks",
+      "category": "execution",
+      "variants": [
+        "code",
+        "fix",
+        "review"
+      ]
+    },
+    {
+      "name": "report",
+      "description": "📝 Report Router — Multi-purpose reporting (create report, update docs, or generate from template)",
+      "category": "documentation",
+      "variants": [
+        "fast",
+        "hard",
+        "team"
+      ]
+    },
+    {
+      "name": "review",
+      "description": "🔍 Review Router — Route to code review workflows",
+      "category": "validation",
+      "variants": [
+        "fast",
+        "hard",
+        "team"
+      ]
+    },
+    {
+      "name": "test",
+      "description": "🧪 Test Router — Route to testing workflows",
+      "category": "validation",
+      "variants": [
+        "fast",
+        "hard",
+        "team"
+      ]
+    }
+  ],
+  "stats": {
+    "totalAgents": 21,
+    "totalCommands": 15,
+    "totalVariants": 45,
+    "categories": [
+      "execution",
+      "research",
+      "support",
+      "investigation",
+      "meta",
+      "validation"
+    ],
+    "voiceEnabled": 21,
+    "guardrailCoverage": 8
+  }
+}

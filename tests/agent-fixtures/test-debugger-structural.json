@@ -1,0 +1,12 @@
+{
+  "id": "test-007",
+  "agent": "debugger",
+  "scenario": "Structural — debugger has diagnosis workflow sections",
+  "expectations": {
+    "requiredSections": ["Root Cause"],
+    "expectedHandoffs": ["backend-engineer"],
+    "expectedCommands": [],
+    "forbiddenPatterns": ["TODO", "FIXME"],
+    "mustContainKeywords": ["debug", "root cause"]
+  }
+}

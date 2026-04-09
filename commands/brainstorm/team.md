@@ -1,8 +1,10 @@
 ---
+schema-version: "1.0"
 description: "🔺 Team Brainstorm — Golden Triangle adversarial collaboration for maximum quality ideation"
 version: "2.0"
-category: ideation
+category: planning
 execution-mode: execute
+topology: golden-triangle
 ---
 
 # /brainstorm:team — Golden Triangle Creative Brainstorming
@@ -23,41 +25,27 @@ execution-mode: execute
 ## 🛑 PRE-FLIGHT (DO FIRST — BLOCKS PHASE 1)
 
 **LOAD now** (path `./rules/` or `~/.{TOOL}/skills/agent-assistant/rules/`):
-1. CORE.md — Identity, Laws, Routing
-2. PHASES.md — Phase Execution
-3. AGENTS.md — Tiered Execution
-4. **TEAMS.md** — Golden Triangle protocol (MANDATORY)
+1. RUNTIME.md — Identity, Laws, Routing, Phase Execution, Agent Protocol
+2. **TEAMS-LITE.md** — Team roles, review checklist, phase output format
+3. **topologies/golden-triangle.md** — Golden Triangle execution protocol
 
 **⛔ Do not run Phase 1 until all are loaded.**
 
 ---
 
-## 🔀 TIERED EXECUTION
+## 🔀 EXECUTION MODEL
 
-| Tier       | When                          | Action                                                                    |
-| ---------- | ----------------------------- | ------------------------------------------------------------------------- |
-| **TIER 1** | runSubagent/Agent Tool EXISTS | Orchestrator spawns Tech Lead → Tech Lead spawns Executor + Reviewer      |
-| **TIER 2** | Tool MISSING or SYSTEM error  | EMBODY Tech Lead → EMBODY Executor → EMBODY Reviewer → EMBODY Tech Lead  |
+> **Topology**: Golden Triangle — load `topologies/golden-triangle.md` for full protocol.
+> Reference: RUNTIME.md (Execution Model) + TEAMS-LITE.md (Team Review Protocol)
 
-**❌ Anti-Lazy**: Never use TIER 2 when TIER 1 tool available.
+Roles for this command:
+| Role | Agent | Mode |
+|------|-------|------|
+| Tech Lead | tech-lead | EMBODY |
+| Executor | brainstormer | EMBODY |
+| Reviewer | reviewer | SUB-AGENT (or EMBODY + Anti-Bias) |
 
----
-
-## 📬 MAILBOX — Central Communication Hub
-
-**Location**: `./reports/{topic}/MAILBOX-{date}.md` — Append only, never overwrite.
-
-| Type              | Sender    | Receiver  | Purpose                                        |
-| ----------------- | --------- | --------- | ---------------------------------------------- |
-| TASK_ASSIGNMENT   | Tech Lead | Executor  | Assign task with requirements and context       |
-| SUBMISSION        | Executor  | Reviewer  | Submit completed work for review                |
-| REVIEW            | Reviewer  | Executor  | PASS or FAIL with findings table                |
-| DEFENSE           | Executor  | Reviewer  | Defend work against FAIL findings               |
-| RESUBMISSION      | Executor  | Reviewer  | Resubmit after addressing findings              |
-| APPROVAL          | Reviewer  | Tech Lead | Confirm task passes review criteria             |
-| ESCALATION        | Any       | Tech Lead | Escalate unresolvable disagreement              |
-| ARBITRATION       | Tech Lead | All       | Binding resolution of dispute                   |
-| DECISION          | Tech Lead | All       | Final phase decision with consensus stamp       |
+**Mailbox**: `./reports/{topic}/MAILBOX-{date}.md` — see topology file for message protocol.
 
 ---
 

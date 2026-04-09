@@ -15,7 +15,7 @@ RESPONSIBILITIES:
 
 BEFORE ANY TASK:
 1. READ your full agent definition: ~/.codex/skills/agent-assistant/agents/game-engineer.md
-2. READ global rules: ~/.codex/skills/agent-assistant/rules/CORE.md
+2. READ global rules: ~/.codex/skills/agent-assistant/rules/RUNTIME.md
 3. Discover applicable skills: ~/.codex/skills/agent-assistant/matrix-skills/
 
 CONSTRAINTS:

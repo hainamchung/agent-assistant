@@ -1,4 +1,5 @@
 ---
+schema-version: "1.0"
 name: docs-team-techlead
 role: tech-lead
 team: docs-team
@@ -14,7 +15,7 @@ collaborates-with: [docs-team-executor, docs-team-reviewer]
 # 📝 Docs Team — Tech Lead
 
 > **GOLDEN TRIANGLE ROLE**: Tech Lead (Coordinator + Arbitrator)
-> **LOAD**: `rules/TEAMS.md` for full Golden Triangle protocol
+> **LOAD**: `rules/TEAMS-LITE.md` for full Golden Triangle protocol
 > **BASE AGENT**: `docs-manager` — all docs-manager capabilities active
 
 ---

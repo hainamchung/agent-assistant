@@ -1,4 +1,5 @@
 ---
+schema-version: "1.0"
 name: frontend-team-executor
 role: executor
 team: frontend-team
@@ -14,7 +15,7 @@ collaborates-with: [frontend-team-techlead, frontend-team-reviewer]
 # 🔨 Frontend Team — Executor
 
 > **GOLDEN TRIANGLE ROLE**: Executor (Implementer + Defender)
-> **LOAD**: `rules/TEAMS.md` for full Golden Triangle protocol
+> **LOAD**: `rules/TEAMS-LITE.md` for full Golden Triangle protocol
 > **BASE AGENT**: `frontend-engineer` — all frontend-engineer capabilities active
 
 ---
