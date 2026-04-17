@@ -198,7 +198,7 @@ standards:    ./documents/knowledge-standards/00-index.md       # + 01~04 sub-fi
 
 | Group | Files | Load When |
 |-------|-------|-----------|
-| **Core** | `RUNTIME.md`, `REFERENCE.md`, `TEAMS-LITE.md`, `SKILLS-LITE.md`, `ERRORS.md` | Always / on-demand per tier |
+| **Core** | `RUNTIME.md`, `REFERENCE.md`, `ENFORCEMENT.md`, `TEAMS-LITE.md`, `SKILLS-LITE.md`, `ERRORS.md` | Always / on-demand per tier |
 | **Quality** | `EVALUATION.md`, `QUALITY-SCORECARD.md`, `VALIDATION-GATES.md`, `VALIDATION-RULES.md`, `PREFLIGHT-TEMPLATES.md` | Review/validation phases |
 | **Context** | `CONTEXT-BUDGET.md`, `CONTEXT-DECAY.md`, `CONTEXT-COMPRESSION.md`, `HANDOFF-COMPRESSION.md`, `TOKEN-PREDICTION.md` | Context pressure / multi-agent handoff |
 | **Memory** | `SEMANTIC-MEMORY.md`, `DECISION-TRAIL.md`, `AGENT-JOURNALS.md` | Decision tracking / cross-session |
@@ -213,6 +213,7 @@ standards:    ./documents/knowledge-standards/00-index.md       # + 01~04 sub-fi
 | File | Purpose | Load When |
 |------|---------|-----------|
 | `RUNTIME.md` | Identity, laws, routing, phases, agents | **Always** (tier-aware) |
+| `ENFORCEMENT.md` | Mandatory compliance, SELF-CHECK GATE, violation detection | **Always** (pre-flight) |
 | `SKILLS-LITE.md` | Tag-based skill resolution | Skill lookups |
 | `TEAMS-LITE.md` | Streamlined team review protocol | `:team` variants |
 | `ERRORS.md` | Error recovery | Errors occur |
@@ -444,9 +445,9 @@ RECOVERY_FAILED:
 
 ### Platform Resolution
 
-Replace `{TOOL}` in path templates with your platform prefix:
+Replace `cursor` in path templates with your platform prefix:
 
-| Platform | {TOOL} | Example Path |
+| Platform | cursor | Example Path |
 |----------|--------|--------------|
 | Cursor | `cursor` | `~/.cursor/skills/agent-assistant/` |
 | GitHub Copilot | `copilot` | `~/.copilot/skills/agent-assistant/` |
@@ -454,9 +455,9 @@ Replace `{TOOL}` in path templates with your platform prefix:
 | Gemini/Antigravity | `gemini/antigravity` | `~/.gemini/antigravity/skills/agent-assistant/` |
 | Qwen | `qwen` | `~/.qwen/skills/agent-assistant/` |
 | Codex | `codex` | `~/.codex/skills/agent-assistant/` |
-| Generic / Other | `{TOOL}` | `~/.{TOOL}/skills/agent-assistant/` |
+| Generic / Other | `cursor` | `~/.cursor/skills/agent-assistant/` |
 
-> **Note**: For Gemini/Antigravity, `{TOOL}` = `gemini/antigravity` (contains a slash).
+> **Note**: For Gemini/Antigravity, `cursor` = `gemini/antigravity` (contains a slash).
 
 | Platform | Sub-agent | File I/O | Terminal | Web |
 |----------|-----------|----------|----------|-----|

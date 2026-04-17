@@ -1,0 +1,4 @@
+display_name: "/docs:audit"
+short_description: "🔒 Audit Docs — Security and compliance documentation"
+brand_color: "#3B82F6"
+allow_implicit_invocation: true

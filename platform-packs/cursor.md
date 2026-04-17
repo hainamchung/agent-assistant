@@ -11,7 +11,7 @@ last-verified: 2025-04-07
 
 | Capability | Status |
 |-----------|--------|
-| Sub-agents | ❌ Not supported |
+| Sub-agents | ✅ Supported |
 | Terminal | ✅ Full access |
 | File edit | ✅ Native |
 | Web search | ✅ Supported |
@@ -28,7 +28,7 @@ Cursor uses the **standard** execution model:
 
 ## Constraints
 
-- **No sub-agents**: All `:team` workflows must use EMBODY fallback
+- **Supported sub-agents**: All `:team` workflows must use sub-agents
 - **No background tasks**: Long-running operations block the session
 - **Context limit**: ~128k tokens; more aggressive budget management needed
 
@@ -43,7 +43,6 @@ Cursor uses the **standard** execution model:
 
 | Missing | Workaround |
 |---------|-----------|
-| Sub-agents | EMBODY mode with strict context isolation |
 | Background tasks | Break long tasks into sequential phases |
 
 ## Skill Tier Loading

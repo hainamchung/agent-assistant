@@ -59,19 +59,19 @@ prohibition violation. Upon EXIT, orchestrator constraints resume immediately.
 
 > **Platform Detection**: Identify your platform from the entry point file that loaded this RUNTIME.md
 > (e.g., CLAUDE.md → `.claude`, COPILOT.md → `.copilot`, CURSOR.md → `.cursor`).
-> Replace `{TOOL}` below with your platform prefix.
+> Replace `cursor` below with your platform prefix.
 
 ```bash
-COMMANDS   = ~/.{TOOL}/skills/agent-assistant/commands/
-AGENTS     = ~/.{TOOL}/skills/agent-assistant/agents/
-SKILLS     = ~/.{TOOL}/skills/
-RULES      = ~/.{TOOL}/skills/agent-assistant/rules/
-GUARDRAILS = ~/.{TOOL}/skills/agent-assistant/guardrails/
-TOPOLOGIES = ~/.{TOOL}/skills/agent-assistant/topologies/
+COMMANDS   = ~/.cursor/skills/agent-assistant/commands/
+AGENTS     = ~/.cursor/skills/agent-assistant/agents/
+SKILLS     = ~/.cursor/skills/
+RULES      = ~/.cursor/skills/agent-assistant/rules/
+GUARDRAILS = ~/.cursor/skills/agent-assistant/guardrails/
+TOPOLOGIES = ~/.cursor/skills/agent-assistant/topologies/
 REPORTS    = ./reports/{topic}/
 ```
 
-**Platform Resolution**: See `REFERENCE.md` §Platform Resolution for the `{TOOL}` mapping per platform.
+**Platform Resolution**: See `REFERENCE.md` §Platform Resolution for the `cursor` mapping per platform.
 
 ---
 
@@ -164,12 +164,57 @@ Do not: assume intent, guess meaning, or skip unclear items.
 
 ---
 
-## ✅ SELF-CHECK — Before EVERY Response
+## 🚨 MANDATORY SELF-CHECK + ENFORCEMENT
+
+### ⚡ Pre-Flight (Load Order)
 
 ```
-□ DELEGATING (not implementing)? → If no: STOP → find the right agent
-□ FOLLOWING workflow phase order? → If no: STOP → resume correct phase
-□ RESPONDING in user's language? → If no: STOP → switch language
+PRE-FLIGHT SEQUENCE:
+  1. Load RUNTIME.md          ← Always first
+  2. Load ENFORCEMENT.md       ← MANDATORY — Enforcement layer
+  3. Execute SELF-CHECK GATE  ← Before EVERY action
+  4. Proceed only if all ✅
+```
+
+### ✅ SELF-CHECK GATE — Before EVERY Response
+
+```markdown
+## 🚦 SELF-CHECK GATE
+
+| # | Check | Status | Action if ❌ |
+|---|-------|--------|--------------|
+| 1 | DELEGATING or IMPLEMENTING? | ✅/❌ | If IMPLEMENTING → STOP → Delegate |
+| 2 | Correct AGENT CATEGORY mode? | ✅/❌ | Validation/Research → SUB-AGENT; Execution/Meta → EMBODY |
+| 3 | Correct PHASE OUTPUT FORMAT? | ✅/❌ | If wrong → STOP → fix format |
+| 4 | Reviewer identifying or fixing? | ✅/❌ | If fixing → STOP → only identify |
+| 5 | Following PROHIBITIONS? | ✅/❌ | See ENFORCEMENT.md §PROHIBITIONS |
+| 6 | Violating any ANTI-PATTERN? | ✅/❌ | See ENFORCEMENT.md §VIOLATION |
+```
+
+**If any ❌ → STOP → Insert violation block → fix before proceeding.**
+
+---
+
+## ⚠️ Violation Detection & Response
+
+| Violation | Code | Response |
+|-----------|------|----------|
+| Meta agent implements instead of delegate | **A9** | STOP → "Meta agent must delegate" |
+| Validation/research agent self-implements | **A1** | STOP → "Must spawn sub-agent or EMBODY + Anti-Bias" |
+| Orchestrator directly implements | **P6** | STOP → "Orchestrator must delegate" |
+| Reviewer fixes instead of identifying | **REVIEWER-BOUNDARY** | STOP → "Reviewer boundary violation" |
+| Skip phases | **A2** | STOP → "Must follow phase order" |
+| Violate prohibitions | **P1-P8** | STOP → "Prohibition violated" |
+
+**Violation Block Format**:
+
+```markdown
+## ⚠️ VIOLATION DETECTED
+**Code**: {code}
+**Description**: {what was violated}
+**Expected**: {what should have happened}
+**Actual**: {what happened}
+**Action**: STOP → fix → RESUME
 ```
 
 ---

@@ -30,22 +30,11 @@ function installCursor() {
     // 1.2 Global Commands (Suggestions)
     total += copyWithReplace(path.join(ROOT, 'commands'), tool.paths.commands, tool.replacements);
 
-    // --- 1.2 Global Config Files (CURSOR.md, AGENT.md, CLAUDE.md) ---
-    // We want CURSOR.md, AGENT.md, CLAUDE.md in ~/.cursor/
-    // .cursorrules from extension becomes CURSOR.md
+    // --- 1.2 Global Config Files (CURSOR.md) ---
+    // CURSOR.md from .cursorrules — Cursor's native instruction file
     if (tool.assets.cursorRules && fs.existsSync(tool.assets.cursorRules)) {
         const destFile = path.join(tool.paths.editorHome, 'CURSOR.md');
         if (copyFileWithReplace(tool.assets.cursorRules, destFile, tool.replacements)) total++;
-    }
-
-    // AGENT.md, CLAUDE.md
-    const globalFiles = ['AGENT.md', 'CLAUDE.md'];
-    for (const file of globalFiles) {
-        const src = path.join(ROOT, file);
-        const dest = path.join(tool.paths.editorHome, file);
-        if (fs.existsSync(src)) {
-            if (copyFileWithReplace(src, dest, tool.replacements)) total++;
-        }
     }
 
     // --- 2. INSTALL EXTENSION BRAIN (~/.cursor/skills/agent-assistant) ---
@@ -73,6 +62,14 @@ function installCursor() {
 
     // --- 3. INSTALL USER SKILLS (~/.cursor/skills/) ---
     total += copyWithReplace(path.join(ROOT, 'skills'), tool.paths.skills, tool.replacements);
+
+    // 3.1 Install Cursor-specific command skills (from cursor-assistant/skills/)
+    if (tool.assets.commandSkillsDir && fs.existsSync(tool.assets.commandSkillsDir)) {
+        total += copyWithReplace(tool.assets.commandSkillsDir, tool.paths.skills, tool.replacements);
+        const cmdSkillCount = fs.readdirSync(tool.assets.commandSkillsDir)
+            .filter(f => fs.statSync(path.join(tool.assets.commandSkillsDir, f)).isDirectory()).length;
+        console.log(`   ✅ Installed ${cmdSkillCount} command skills (Cursor-native)`);
+    }
 
     // --- 4. NATIVE SUBAGENT SUPPORT (~/.cursor/agents/) ---
     // Only copy bundled agents (merge/update)
@@ -110,8 +107,6 @@ function uninstallCursor() {
     const filesToRemove = [
         path.join(tool.paths.rules, 'agent-assistant.mdc'),
         path.join(tool.paths.editorHome, 'CURSOR.md'),
-        path.join(tool.paths.editorHome, 'AGENT.md'),
-        path.join(tool.paths.editorHome, 'CLAUDE.md')
     ];
 
     for (const file of filesToRemove) {

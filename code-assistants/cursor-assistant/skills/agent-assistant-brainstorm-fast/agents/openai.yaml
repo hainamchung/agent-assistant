@@ -1,0 +1,4 @@
+display_name: "/brainstorm:fast"
+short_description: "⚡ Quick Ideation — Rapid idea generation"
+brand_color: "#F59E0B"
+allow_implicit_invocation: true

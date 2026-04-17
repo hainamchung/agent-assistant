@@ -71,7 +71,7 @@
     "BOOT_FILE": "CURSOR.md",
     "TIER1_TOOL": "Agent Tool",
     "capabilities": {
-      "sub_agents": false,
+      "sub_agents": true,
       "terminal": true,
       "file_edit": true,
       "web_search": false,
@@ -106,7 +106,7 @@
     "BOOT_FILE": "CODEX.md",
     "TIER1_TOOL": "native sub-agent/task delegation tool",
     "capabilities": {
-      "sub_agents": false,
+      "sub_agents": true,
       "terminal": true,
       "file_edit": true,
       "web_search": false,
@@ -211,7 +211,7 @@
     "BOOT_FILE": "AGENT.md",
     "TIER1_TOOL": "native sub-agent/task delegation tool",
     "capabilities": {
-      "sub_agents": false,
+      "sub_agents": true,
       "terminal": true,
       "file_edit": true,
       "web_search": false,

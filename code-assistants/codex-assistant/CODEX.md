@@ -1,4 +1,4 @@
-<!-- Platform: sub_agents=false, terminal=true, file_edit=true, web_search=false, mcp=false -->
+<!-- Platform: sub_agents=true, terminal=true, file_edit=true, web_search=false, mcp=false -->
 # CODEX.md — Agent Assistant Orchestrator for OpenAI Codex
 
 > ⛔ **MANDATORY BOOT SEQUENCE** — EXECUTE BEFORE ANY OTHER ACTION

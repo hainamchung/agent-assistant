@@ -1,0 +1,4 @@
+display_name: "/design"
+short_description: "🎨 Design Router — Route to design workflows"
+brand_color: "#EC4899"
+allow_implicit_invocation: true

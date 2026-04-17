@@ -1,0 +1,4 @@
+display_name: "/fix"
+short_description: "🔧 Fix Router — Route to issue resolution workflows"
+brand_color: "#EF4444"
+allow_implicit_invocation: true

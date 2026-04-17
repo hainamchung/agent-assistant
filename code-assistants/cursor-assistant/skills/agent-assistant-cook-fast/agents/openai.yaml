@@ -1,0 +1,4 @@
+display_name: "/cook:fast"
+short_description: "⚡ Quick Feature — Rapid feature implementation"
+brand_color: "#6366F1"
+allow_implicit_invocation: true

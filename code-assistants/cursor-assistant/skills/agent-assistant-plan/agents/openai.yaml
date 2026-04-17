@@ -1,0 +1,4 @@
+display_name: "/plan"
+short_description: "📋 Plan Router — Route to planning workflows"
+brand_color: "#F59E0B"
+allow_implicit_invocation: true

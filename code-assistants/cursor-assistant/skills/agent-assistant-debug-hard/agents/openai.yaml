@@ -1,0 +1,4 @@
+display_name: "/debug:hard"
+short_description: "⚡⚡⚡ Full Debug — Deep investigation for complex issues"
+brand_color: "#EF4444"
+allow_implicit_invocation: true

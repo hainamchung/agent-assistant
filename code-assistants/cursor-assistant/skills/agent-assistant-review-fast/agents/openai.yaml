@@ -1,0 +1,4 @@
+display_name: "/review:fast"
+short_description: "⚡ Quick Review — Fast PR/file review"
+brand_color: "#10B981"
+allow_implicit_invocation: true

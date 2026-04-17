@@ -1,0 +1,4 @@
+display_name: "/test:fast"
+short_description: "⚡ Quick Test — Fast testing for specific scope"
+brand_color: "#10B981"
+allow_implicit_invocation: true

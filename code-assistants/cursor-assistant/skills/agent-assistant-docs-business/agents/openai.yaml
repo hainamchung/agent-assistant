@@ -1,0 +1,4 @@
+display_name: "/docs:business"
+short_description: "📊 Business Docs — Business documentation files"
+brand_color: "#3B82F6"
+allow_implicit_invocation: true

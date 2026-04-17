@@ -1,0 +1,4 @@
+display_name: "/debug:team"
+short_description: "🔺 Team Debug — Golden Triangle adversarial collaboration"
+brand_color: "#EF4444"
+allow_implicit_invocation: true

@@ -89,17 +89,13 @@ function installCodex() {
     // --- 1. INSTALL GLOBAL CONFIG (~/.codex) ---
     ensureDir(tool.paths.home);
 
-    // 1.1 Global Config Files (AGENTS.md, CODEX.md, AGENT.md)
+    // 1.1 CODEX.md (Codex primary instruction file)
     if (tool.assets.codexMd && fs.existsSync(tool.assets.codexMd)) {
         const destFile = path.join(tool.paths.home, 'CODEX.md');
         if (copyFileWithReplace(tool.assets.codexMd, destFile, tool.replacements)) total++;
-
-        // Codex discovers global instructions from ~/.codex/AGENTS.md.
-        const agentsDestFile = path.join(tool.paths.home, 'AGENTS.md');
-        if (copyFileWithReplace(tool.assets.codexMd, agentsDestFile, tool.replacements)) total++;
     }
-    
-    // Copy AGENT.md as well
+
+    // 1.2 AGENT.md (shared across platforms)
     const agentMdSrc = path.join(ROOT, 'AGENT.md');
     if (fs.existsSync(agentMdSrc)) {
         const agentMdDest = path.join(tool.paths.home, 'AGENT.md');
@@ -191,12 +187,6 @@ function uninstallCodex() {
     // 1. Remove Global Config
     const codexMd = path.join(tool.paths.home, 'CODEX.md');
     if (removeFile(codexMd)) {
-        removed++;
-    }
-
-    // Remove AGENTS.md (Codex primary instruction file)
-    const agentsMd = path.join(tool.paths.home, 'AGENTS.md');
-    if (removeFile(agentsMd)) {
         removed++;
     }
 

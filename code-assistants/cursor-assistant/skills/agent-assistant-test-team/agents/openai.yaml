@@ -1,0 +1,4 @@
+display_name: "/test:team"
+short_description: "🔺 Team Test — Golden Triangle adversarial collaboration"
+brand_color: "#10B981"
+allow_implicit_invocation: true

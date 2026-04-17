@@ -1,0 +1,4 @@
+display_name: "/docs:core"
+short_description: "💻 Core Docs — Essential technical documentation files"
+brand_color: "#3B82F6"
+allow_implicit_invocation: true

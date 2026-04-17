@@ -1,0 +1,4 @@
+display_name: "/deploy:check"
+short_description: "✅ Deploy Check — Pre-deployment readiness verification"
+brand_color: "#8B5CF6"
+allow_implicit_invocation: true

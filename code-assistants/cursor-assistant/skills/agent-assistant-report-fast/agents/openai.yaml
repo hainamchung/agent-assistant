@@ -1,0 +1,4 @@
+display_name: "/report:fast"
+short_description: "⚡ Fast Report — Quick status updates and summaries"
+brand_color: "#3B82F6"
+allow_implicit_invocation: true

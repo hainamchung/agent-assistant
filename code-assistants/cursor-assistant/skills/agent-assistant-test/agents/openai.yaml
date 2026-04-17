@@ -1,0 +1,4 @@
+display_name: "/test"
+short_description: "🧪 Test Router — Route to testing workflows"
+brand_color: "#10B981"
+allow_implicit_invocation: true
