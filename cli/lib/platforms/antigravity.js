@@ -66,8 +66,8 @@ function installAntigravity() {
         total++;
     }
 
-    // 2.2 Global Config Files (AGENT.md)
-    const globalFiles = ['AGENT.md'];
+    // 2.2 Global Config Files (AGENT.md, CLAUDE.md)
+    const globalFiles = ['AGENT.md', 'CLAUDE.md'];
     for (const file of globalFiles) {
         const src = path.join(ROOT, file);
         const dest = path.join(tool.paths.gemini, file);
@@ -159,8 +159,8 @@ function uninstallAntigravity() {
 
 
     // 2. Remove Platform Config (~/.gemini)
-    // 2.1 Remove GEMINI.md, AGENT.md
-    const globalFiles = ["GEMINI.md", "AGENT.md"];
+    // 2.1 Remove GEMINI.md, AGENT.md, CLAUDE.md
+    const globalFiles = ["GEMINI.md", "AGENT.md", "CLAUDE.md"];
     for (const file of globalFiles) {
         const filePath = path.join(tool.paths.gemini, file);
         if (removeFile(filePath)) {

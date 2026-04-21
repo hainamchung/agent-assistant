@@ -44,7 +44,6 @@ const TOOLS = {
         assets: {
             rules: path.join(ROOT, 'code-assistants', 'cursor-assistant', 'rules'),
             cursorRules: path.join(ROOT, 'code-assistants', 'cursor-assistant', '.cursorrules'),
-            commandSkillsDir: path.join(ROOT, 'code-assistants', 'cursor-assistant', 'skills'),
         }
     },
     copilot: {

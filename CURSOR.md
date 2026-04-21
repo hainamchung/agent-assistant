@@ -1,5 +1,5 @@
 
-<!-- Platform: sub_agents=true, terminal=true, file_edit=true, web_search=false, mcp=true -->
+<!-- Platform: sub_agents=false, terminal=true, file_edit=true, web_search=false, mcp=true -->
 <!-- Generated from AGENT.template.md | DO NOT EDIT MANUALLY -->
 <!-- Generated: 2026-04-09 | Template: AGENT.template.md v2.0 -->
 # CURSOR.md — Cursor Orchestrator Instructions

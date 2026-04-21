@@ -167,11 +167,11 @@ function removeDir(dir, trackProgress = true) {
         throw new Error(`SAFETY: Refusing to delete ${resolved} — outside HOME boundary`);
     }
 
-    // Safety: require at least 2 path segments below home
-    // ~/.cursor/commands (depth=2) or ~/.claude/skills/agent-assistant (depth=3) are both valid
+    // Safety: require at least 3 path segments below home
+    // (e.g., ~/.claude/skills/agent-assistant is 3 deep, ~/.claude is only 1)
     const relativeDepth = resolved.slice(home.length).split(path.sep).filter(Boolean).length;
-    if (relativeDepth < 2) {
-        throw new Error(`SAFETY: Refusing to delete ${resolved} — too close to home directory (depth ${relativeDepth}, minimum 2)`);
+    if (relativeDepth < 3) {
+        throw new Error(`SAFETY: Refusing to delete ${resolved} — too close to home directory (depth ${relativeDepth}, minimum 3)`);
     }
 
     if (fs.existsSync(dir)) {
@@ -188,15 +188,6 @@ function removeDir(dir, trackProgress = true) {
             }
             return true;
         } catch (e) {
-            // EPERM on macOS often means SIP/system-protected location
-            // Treat as graceful "already gone or can't touch" rather than fatal
-            if (e.code === 'EPERM' || e.code === 'EACCES') {
-                if (process.env.DEBUG) {
-                    console.warn(`  ⚠️  Permission denied (${e.code}), skipping: ${dir}`);
-                }
-                logError('remove-skip', dir, e);
-                return false;
-            }
             logError('remove', dir, e);
             return false;
         }

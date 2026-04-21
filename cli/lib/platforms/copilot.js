@@ -31,9 +31,9 @@ function installCopilot() {
         }
     }
 
-    // --- 1.2 Global Config Files (COPILOT.md, AGENT.md) ---
+    // --- 1.2 Global Config Files (COPILOT.md, AGENT.md, CLAUDE.md) ---
     ensureDir(tool.paths.home);
-    const globalFiles = ['COPILOT.md', 'AGENT.md'];
+    const globalFiles = ['COPILOT.md', 'AGENT.md', 'CLAUDE.md'];
     for (const file of globalFiles) {
         const src = path.join(ROOT, file);
         const dest = path.join(tool.paths.home, file);
@@ -126,7 +126,7 @@ function uninstallCopilot() {
     }
 
     // 4. Remove Global Config Files
-    const globalFiles = ['AGENT.md', 'COPILOT.md'];
+    const globalFiles = ['AGENT.md', 'COPILOT.md', 'CLAUDE.md'];
     for (const file of globalFiles) {
         const filePath = path.join(tool.paths.home, file);
         if (removeFile(filePath)) {
