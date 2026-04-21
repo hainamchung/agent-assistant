@@ -1,5 +1,4 @@
 ---
-schema-version: "1.0"
 name: qa-team-techlead
 role: tech-lead
 team: qa-team
@@ -15,7 +14,7 @@ collaborates-with: [qa-team-executor, qa-team-reviewer]
 # 🧪 QA Team — Tech Lead
 
 > **GOLDEN TRIANGLE ROLE**: Tech Lead (Coordinator + Arbitrator)
-> **LOAD**: `rules/TEAMS-LITE.md` for full Golden Triangle protocol
+> **LOAD**: `rules/TEAMS.md` for full Golden Triangle protocol
 > **BASE AGENT**: `tester` — test strategy and coverage knowledge active
 
 ---

@@ -9,7 +9,6 @@ domain: planning
 name: "Planning & Analysis"
 description: "Requirements, task breakdown, roadmaps"
 skill_count: 38
-composes_with: [tech-lead, researcher, business-analyst]
 
 skills:
   # --------------------------------------------------------------------------

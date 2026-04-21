@@ -9,7 +9,6 @@ domain: frontend
 name: "Frontend Development"
 description: "UI/UX, web applications, client-side"
 skill_count: 109
-composes_with: [designer, backend-engineer]
 
 skills:
   # --------------------------------------------------------------------------

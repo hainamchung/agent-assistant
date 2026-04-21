@@ -1,5 +1,4 @@
 ---
-schema-version: "1.0"
 name: backend-team-executor
 role: executor
 team: backend-team
@@ -15,7 +14,7 @@ collaborates-with: [backend-team-techlead, backend-team-reviewer]
 # 🔨 Backend Team — Executor
 
 > **GOLDEN TRIANGLE ROLE**: Executor (Implementer + Defender)
-> **LOAD**: `rules/TEAMS-LITE.md` for full Golden Triangle protocol
+> **LOAD**: `rules/TEAMS.md` for full Golden Triangle protocol
 > **BASE AGENT**: `backend-engineer` — all backend-engineer capabilities active
 
 ---

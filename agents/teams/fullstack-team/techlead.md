@@ -1,5 +1,4 @@
 ---
-schema-version: "1.0"
 name: fullstack-team-techlead
 role: tech-lead
 team: fullstack-team
@@ -15,7 +14,7 @@ collaborates-with: [fullstack-team-executor, fullstack-team-reviewer]
 # 🏗️ Fullstack Team — Tech Lead
 
 > **GOLDEN TRIANGLE ROLE**: Tech Lead (Coordinator + Arbitrator)
-> **LOAD**: `rules/TEAMS-LITE.md` for full Golden Triangle protocol
+> **LOAD**: `rules/TEAMS.md` for full Golden Triangle protocol
 > **SPECIAL**: Dual-Executor coordination (backend + frontend)
 > **BASE AGENT**: `tech-lead` — all tech-lead capabilities active
 

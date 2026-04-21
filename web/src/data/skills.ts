@@ -5,27 +5,27 @@ export interface SkillDomain {
   examples: string[]
 }
 
-// 19 domains from matrix-skills/_index.yaml v1.1 — total 1430 matrix skills
+// 19 domains from matrix-skills/_index.yaml v1.1 — total 1400 skills
 export const skillDomains: SkillDomain[] = [
-  { name: 'Backend', count: 208, icon: '⚙️', examples: ['fastapi-expert', 'django-expert', 'nodejs-best-practices'] },
-  { name: 'Frontend', count: 109, icon: '🎨', examples: ['react-expert', 'vue-expert', 'nextjs-developer'] },
-  { name: 'Architecture', count: 22, icon: '🏗️', examples: ['microservices-architect', 'api-designer', 'database-optimizer'] },
-  { name: 'Quality', count: 61, icon: '✅', examples: ['playwright-expert', 'code-review', 'debugging'] },
-  { name: 'Security', count: 102, icon: '🔒', examples: ['api-security-best-practices', 'secure-code-guardian', 'vulnerability-scanner'] },
-  { name: 'Design', count: 28, icon: '🎯', examples: ['ui-design-system', 'frontend-design', 'aesthetic'] },
-  { name: 'Planning', count: 38, icon: '📑', examples: ['brainstorming', 'plan-writing', 'sequential-thinking'] },
-  { name: 'DevOps', count: 66, icon: '🔧', examples: ['docker-expert', 'kubernetes-specialist', 'terraform-engineer'] },
-  { name: 'Data', count: 33, icon: '📊', examples: ['pandas-pro', 'sql-pro', 'postgres-pro'] },
-  { name: 'Performance', count: 22, icon: '⚡', examples: ['performance-profiling'] },
-  { name: 'Research', count: 83, icon: '🔍', examples: ['docs-seeker', 'research', 'tavily-web'] },
-  { name: 'Mobile', count: 27, icon: '📱', examples: ['react-native-expert', 'flutter-expert', 'swift-expert'] },
-  { name: 'Gaming', count: 14, icon: '🎮', examples: ['game-developer', '2d-games', '3d-games'] },
-  { name: 'Management', count: 21, icon: '📋', examples: ['agile-product-owner', 'product-manager-toolkit', 'jira-issues'] },
-  { name: 'AI/ML', count: 229, icon: '🤖', examples: ['prompt-engineering', 'rag-implementation', 'llm-app-patterns'] },
-  { name: 'Cloud', count: 67, icon: '☁️', examples: ['aws-serverless-eda', 'azure-functions', 'gcp-cloud-run'] },
-  { name: 'Languages', count: 57, icon: '📝', examples: ['typescript-pro', 'python-pro', 'golang-pro'] },
-  { name: 'Tools', count: 234, icon: '🛠️', examples: ['git-pushing', 'chrome-devtools', 'repomix'] },
-  { name: 'MCP & Agents', count: 9, icon: '🔌', examples: ['mcp-builder', 'langgraph', 'crewai'] },
+  { name: 'Backend', count: 32, icon: '⚙️', examples: ['fastapi-expert', 'django-expert', 'nodejs-best-practices'] },
+  { name: 'Frontend', count: 22, icon: '🎨', examples: ['react-expert', 'vue-expert', 'nextjs-developer'] },
+  { name: 'Architecture', count: 9, icon: '🏗️', examples: ['microservices-architect', 'api-designer', 'database-optimizer'] },
+  { name: 'Quality', count: 21, icon: '✅', examples: ['playwright-expert', 'code-review', 'debugging'] },
+  { name: 'Security', count: 35, icon: '🔒', examples: ['api-security-best-practices', 'secure-code-guardian', 'vulnerability-scanner'] },
+  { name: 'Design', count: 10, icon: '🎯', examples: ['ui-design-system', 'frontend-design', 'aesthetic'] },
+  { name: 'Planning', count: 12, icon: '📑', examples: ['brainstorming', 'plan-writing', 'sequential-thinking'] },
+  { name: 'DevOps', count: 22, icon: '🔧', examples: ['docker-expert', 'kubernetes-specialist', 'terraform-engineer'] },
+  { name: 'Data', count: 7, icon: '📊', examples: ['pandas-pro', 'sql-pro', 'postgres-pro'] },
+  { name: 'Performance', count: 1, icon: '⚡', examples: ['performance-profiling'] },
+  { name: 'Research', count: 11, icon: '🔍', examples: ['docs-seeker', 'research', 'tavily-web'] },
+  { name: 'Mobile', count: 8, icon: '📱', examples: ['react-native-expert', 'flutter-expert', 'swift-expert'] },
+  { name: 'Gaming', count: 3, icon: '🎮', examples: ['game-developer', '2d-games', '3d-games'] },
+  { name: 'Management', count: 4, icon: '📋', examples: ['agile-product-owner', 'product-manager-toolkit', 'jira-issues'] },
+  { name: 'AI/ML', count: 40, icon: '🤖', examples: ['prompt-engineering', 'rag-implementation', 'llm-app-patterns'] },
+  { name: 'Cloud', count: 11, icon: '☁️', examples: ['aws-serverless-eda', 'azure-functions', 'gcp-cloud-run'] },
+  { name: 'Languages', count: 17, icon: '📝', examples: ['typescript-pro', 'python-pro', 'golang-pro'] },
+  { name: 'Tools', count: 41, icon: '🛠️', examples: ['git-pushing', 'chrome-devtools', 'repomix'] },
+  { name: 'MCP & Agents', count: 8, icon: '🔌', examples: ['mcp-builder', 'langgraph', 'crewai'] },
 ]
 
 // Skill injection example (backend-engineer) — matrix + optional dynamic
@@ -165,5 +165,5 @@ export const skillBenefits = [
 
 export const getTotalSkills = () => skillDomains.reduce((acc, d) => acc + d.count, 0)
 // Framework total from matrix-skills/_index.yaml
-export const totalSkills = 1430
+export const totalSkills = 1400
 export const totalDomains = 19

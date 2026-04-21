@@ -9,7 +9,6 @@ domain: data
 name: "Data & Database"
 description: "Schema design, queries, migrations"
 skill_count: 33
-composes_with: [backend-engineer, security-engineer]
 
 skills:
   # --------------------------------------------------------------------------

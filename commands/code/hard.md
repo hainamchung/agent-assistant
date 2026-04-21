@@ -1,10 +1,8 @@
 ---
-schema-version: "1.0"
 description: ⚡⚡⚡ Full Development Cycle — Plan → Implement → Test → Review
 version: "1.0"
 category: engineering
 execution-mode: execute
-topology: pipeline
 ---
 
 # /code:hard — Full Development Cycle
@@ -17,17 +15,15 @@ topology: pipeline
 
 ## 🛑 PRE-FLIGHT (DO FIRST — BLOCKS PHASE 1)
 
-**LOAD now** (path `./rules/` or `~/.{TOOL}/skills/agent-assistant/rules/`):
-1. RUNTIME.md — Identity, Laws, Routing, Phase Execution, Agent Protocol
+**LOAD now** (in order; path `./rules/` or `~/.{TOOL}/skills/agent-assistant/rules/`):
 
-**LOAD on-demand** (when entering relevant phase):
-- `VALIDATION-GATES.md` — Phase gates block progression until exit criteria pass
-- `AGENT-JOURNALS.md` — Agents record decisions/observations inline (max 3/phase)
-- `CONDITIONAL-HANDOFFS.md` — Guard expressions route work dynamically on errors/complexity
+1. CORE.md — Identity, Laws, Routing
+2. PHASES.md — Phase Execution
+3. AGENTS.md — Tiered Execution
 
 **⛔ Do not run Phase 1 until all are loaded.** Follow **all** rules in those files; they override any conflicting instructions in this file.
 
-**Skills Resolution**: When delegating, load `SKILLS-LITE.md` on-demand for fitness calculation and dynamic discovery (hard/team variants enable find-skills).
+**Skills Resolution**: When delegating, load `SKILLS.md` on-demand for fitness calculation and dynamic discovery (hard/team variants enable find-skills).
 
 ---
 
@@ -51,25 +47,24 @@ topology: pipeline
 
 ---
 
-## 🔀 EXECUTION MODEL
+## 🔀 TIERED EXECUTION PROTOCOL (MANDATORY)
 
-> **Reference: RUNTIME.md (Execution Model)`
+> **Reference: AGENTS.md (Tiered Execution)`
 
 ```yaml
-execution_model:
-  principle: "Role-Based Hybrid — EMBODY for context-dependent agents, SUB-AGENT for independence-dependent agents."
+tiered_execution:
+  principle: "Sub-agent FIRST (Tier 1). EMBODY ONLY on system failure (Tier 2)."
 
   tool_discovery: "Check runSubagent availability BEFORE first delegation"
 
   for_each_phase:
-    EMBODY_MODE: "IF agent.category IN [meta, execution, investigation, support] → EMBODY (shared context)"
-    SUB_AGENT_MODE: "IF agent.category IN [validation, research] → SUB-AGENT with Context Briefing"
+    TIER_1_MANDATORY: "IF tool exists → MUST use SUB_AGENT_DELEGATION"
+    TIER_2_FALLBACK: "ONLY on system error—NOT complexity/preference/speed"
 
-  rules:
-    - ❌ NEVER use SUB-AGENT for context-dependent agents (execution/meta/investigation/support)
-    - ✅ ALWAYS use SUB-AGENT for independence-dependent agents (validation/research) when tool exists
-    - ⚠️ FALLBACK: All EMBODY + Anti-Bias Protocol when sub-agent tool unavailable
-    - ✅ ALWAYS log justification for EMBODY fallback
+  anti_lazy_fallback:
+    - ❌ NEVER use Tier 2 when Tier 1 tool is available
+    - ✅ ALWAYS attempt Tier 1 first when tool exists
+    - ✅ ALWAYS log justification for Tier 2 fallback
 ```
 
 ---
@@ -167,13 +162,13 @@ One phase at a time, each phase independent: Phase 1 → then Phase 2 → … in
 | **Goal**    | Clarify requirements if ambiguous |
 | **Trigger** | If requirements unclear           |
 
-### ⚡ EXECUTION MODEL
+### ⚡ TIERED EXECUTION
 
-**Enhanced (when available):**
+**TIER 1 (MANDATORY when tool exists):**
 
 > Invoke runSubagent for `brainstormer`. Context: ISOLATED.
 
-**Standard (default):**
+**TIER 2 (FALLBACK on system error only):**
 
 > Load `{AGENTS_PATH}/brainstormer.md`
 > EMBODY [brainstormer] — Requires logged system error justification.
@@ -194,13 +189,13 @@ One phase at a time, each phase independent: Phase 1 → then Phase 2 → … in
 | **Agent** | `scouter`                     |
 | **Goal**  | Full codebase context mapping |
 
-### ⚡ EXECUTION MODEL
+### ⚡ TIERED EXECUTION
 
-**Enhanced (when available):**
+**TIER 1 (MANDATORY when tool exists):**
 
 > Invoke runSubagent for `scouter`. Context: ISOLATED.
 
-**Standard (default):**
+**TIER 2 (FALLBACK on system error only):**
 
 > Load `{AGENTS_PATH}/scouter.md`
 > EMBODY [scouter] — Requires logged system error justification.
@@ -221,13 +216,13 @@ One phase at a time, each phase independent: Phase 1 → then Phase 2 → … in
 | **Agent** | `planner`                  |
 | **Goal**  | Create implementation plan |
 
-### ⚡ EXECUTION MODEL
+### ⚡ TIERED EXECUTION
 
-**Enhanced (when available):**
+**TIER 1 (MANDATORY when tool exists):**
 
 > Invoke runSubagent for `planner`. Context: ISOLATED.
 
-**Standard (default):**
+**TIER 2 (FALLBACK on system error only):**
 
 > Load `{AGENTS_PATH}/planner.md`
 > EMBODY [planner] — Requires logged system error justification.
@@ -241,17 +236,6 @@ One phase at a time, each phase independent: Phase 1 → then Phase 2 → … in
 
 ---
 
-## 🔄 Verification Checkpoint: CONTEXT OPTIMIZATION
-
-> Between planning and implementation — verify context is sufficient for coding.
-
-1. **Confirm**: Plan file exists and has clear implementation steps
-2. **Verify**: All file paths referenced in plan are accessible
-3. **Check**: No ambiguous requirements remain — escalate to user if unclear
-4. **Optimize**: If context window is > 60% consumed, summarize completed phases before proceeding
-
-**Pass** → Proceed to Phase 4 | **Fail** → Re-run relevant earlier phase
-
 ---
 
 ## 🎭 Phase 4: IMPLEMENTATION
@@ -261,14 +245,14 @@ One phase at a time, each phase independent: Phase 1 → then Phase 2 → … in
 | **Agent** | `tech-lead` → routes to specialists |
 | **Goal**  | Execute plan with specialist agents |
 
-### ⚡ EXECUTION MODEL
+### ⚡ TIERED EXECUTION
 
-**Enhanced (when available):**
+**TIER 1 (MANDATORY when tool exists):**
 
 > Invoke runSubagent for `tech-lead`. Context: ISOLATED.
 > Tech-lead will spawn specialist subagents as needed.
 
-**Standard (default):**
+**TIER 2 (FALLBACK on system error only):**
 
 > Load `{AGENTS_PATH}/tech-lead.md`
 > EMBODY [tech-lead] — Requires logged system error justification.
@@ -315,13 +299,13 @@ required_inputs:
 | **Agent** | `tester`              |
 | **Goal**  | Comprehensive testing |
 
-### ⚡ EXECUTION MODEL
+### ⚡ TIERED EXECUTION
 
-**Enhanced (when available):**
+**TIER 1 (MANDATORY when tool exists):**
 
 > Invoke runSubagent for `tester`. Context: ISOLATED.
 
-**Standard (default):**
+**TIER 2 (FALLBACK on system error only):**
 
 > Load `{AGENTS_PATH}/tester.md`
 > EMBODY [tester] — Requires logged system error justification.
@@ -342,13 +326,13 @@ required_inputs:
 | **Agent** | `reviewer`          |
 | **Goal**  | Code quality review |
 
-### ⚡ EXECUTION MODEL
+### ⚡ TIERED EXECUTION
 
-**Enhanced (when available):**
+**TIER 1 (MANDATORY when tool exists):**
 
 > Invoke runSubagent for `reviewer`. Context: ISOLATED.
 
-**Standard (default):**
+**TIER 2 (FALLBACK on system error only):**
 
 > Load `{AGENTS_PATH}/reviewer.md`
 > EMBODY [reviewer] — Requires logged system error justification.

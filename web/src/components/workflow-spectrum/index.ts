@@ -1,1 +1,0 @@
-export { WorkflowSpectrum } from './WorkflowSpectrum'

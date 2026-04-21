@@ -168,7 +168,7 @@ const themeConfigs: Record<DecorationTheme, DecorationConfig> = {
       { text: 'GraphQL', icon: '◈', color: '#ff4444' },
       { text: 'Database', icon: '🗄️', color: '#8844ff' },
     ],
-    codeLeft: ['1400+', 'skills', 'tools'],
+    codeLeft: ['310+', 'skills', 'tools'],
     codeRight: ['match', 'load', 'use'],
   },
 }

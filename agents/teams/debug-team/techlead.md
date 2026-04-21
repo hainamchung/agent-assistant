@@ -1,5 +1,4 @@
 ---
-schema-version: "1.0"
 name: debug-team-techlead
 role: tech-lead
 team: debug-team
@@ -15,7 +14,7 @@ collaborates-with: [debug-team-executor, debug-team-reviewer]
 # 🐛 Debug Team — Tech Lead
 
 > **GOLDEN TRIANGLE ROLE**: Tech Lead (Coordinator + Arbitrator)
-> **LOAD**: `rules/TEAMS-LITE.md` for full Golden Triangle protocol
+> **LOAD**: `rules/TEAMS.md` for full Golden Triangle protocol
 > **BASE AGENT**: `debugger` — all debugger capabilities active
 
 ---

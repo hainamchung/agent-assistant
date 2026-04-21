@@ -1,1 +1,0 @@
-export { SectionDivider } from './SectionDivider'

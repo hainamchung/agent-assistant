@@ -1,5 +1,4 @@
 ---
-schema-version: "1.0"
 name: design-team-techlead
 role: tech-lead
 team: design-team
@@ -15,7 +14,7 @@ collaborates-with: [design-team-executor, design-team-reviewer]
 # 🎨 Design Team — Tech Lead
 
 > **GOLDEN TRIANGLE ROLE**: Tech Lead (Coordinator + Arbitrator)
-> **LOAD**: `rules/TEAMS-LITE.md` for full Golden Triangle protocol
+> **LOAD**: `rules/TEAMS.md` for full Golden Triangle protocol
 > **BASE AGENT**: `designer` — all designer capabilities active
 
 ---

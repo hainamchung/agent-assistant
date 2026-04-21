@@ -1,10 +1,8 @@
 ---
-schema-version: "1.0"
 description: "🔺 Team Plan — Golden Triangle adversarial collaboration for maximum quality planning"
 version: "2.0"
 category: planning
 execution-mode: execute
-topology: golden-triangle
 ---
 
 # /plan:team — Golden Triangle Planning & Architecture
@@ -20,31 +18,57 @@ topology: golden-triangle
 
 ## 🛑 PRE-FLIGHT (DO FIRST — BLOCKS PHASE 1)
 
-**LOAD now** (path `./rules/` or `~/.{TOOL}/skills/agent-assistant/rules/`):
+**LOAD now** (in order; path `./rules/` or `~/.{TOOL}/skills/agent-assistant/rules/`):
 
-1. RUNTIME.md — Identity, Laws, Routing, Phase Execution, Agent Protocol
-2. **TEAMS-LITE.md** — Team roles, review checklist, phase output format
-3. **topologies/golden-triangle.md** — Golden Triangle execution protocol
+1. CORE.md — Identity, Laws, Routing
+2. PHASES.md — Phase Execution
+3. AGENTS.md — Tiered Execution
+4. **TEAMS.md** — Golden Triangle protocol (MANDATORY)
 
 **⛔ Do not run Phase 1 until all are loaded.** Follow **all** rules in those files; they override any conflicting instructions in this file.
 
-**Skills Resolution**: Load `SKILLS-LITE.md` on-demand for fitness calculation and dynamic discovery.
+**Skills Resolution**: Load `SKILLS.md` on-demand for fitness calculation and dynamic discovery.
 
 ---
 
-## 🔀 EXECUTION MODEL
+## 🔀 TIERED EXECUTION
 
-> **Topology**: Golden Triangle — load `topologies/golden-triangle.md` for full protocol.
-> Reference: RUNTIME.md (Execution Model) + TEAMS-LITE.md (Team Review Protocol)
+> Reference: AGENTS.md (Tiered Execution) + TEAMS.md (Golden Triangle Protocol)
 
-Roles for this command:
-| Role | Agent | Mode |
-|------|-------|------|
-| Tech Lead | tech-lead | EMBODY |
-| Executor | planner | EMBODY |
-| Reviewer | reviewer | SUB-AGENT (or EMBODY + Anti-Bias) |
+| Tier       | When                          | Action                                                                    |
+| ---------- | ----------------------------- | ------------------------------------------------------------------------- |
+| **TIER 1** | runSubagent/Agent Tool EXISTS | Orchestrator spawns Tech Lead → Tech Lead spawns Executor + Reviewer      |
+| **TIER 2** | Tool MISSING or SYSTEM error  | EMBODY Tech Lead → EMBODY Executor → EMBODY Reviewer → EMBODY Tech Lead  |
 
-**Mailbox**: `./reports/{topic}/MAILBOX-{date}.md` — see topology file for message protocol.
+**❌ Anti-Lazy**: Never use TIER 2 when TIER 1 tool available.
+
+**TIER 2 Golden Triangle Embodiment** (per TEAMS.md):
+```
+1. EMBODY Tech Lead → decompose task → produce Shared Task List → dispatch
+2. EMBODY Executor → execute assigned tasks → post SUBMISSION to Mailbox
+3. EMBODY Reviewer → review submissions → post REVIEW to Mailbox
+4. IF FAIL → EMBODY Executor again → fix/defend → EMBODY Reviewer → re-check
+5. Repeat steps 3–4 max 3 rounds
+6. EMBODY Tech Lead → arbitrate if needed → post DECISION → synthesize output
+```
+
+---
+
+## 📬 MAILBOX — Central Communication Hub
+
+**Location**: `./reports/{topic}/MAILBOX-{date}.md` — Append only, never overwrite.
+
+| Type              | Sender    | Receiver  | Purpose                                        |
+| ----------------- | --------- | --------- | ---------------------------------------------- |
+| TASK_ASSIGNMENT   | Tech Lead | Executor  | Assign task with requirements and context       |
+| SUBMISSION        | Executor  | Reviewer  | Submit completed work for review                |
+| REVIEW            | Reviewer  | Executor  | Review result: PASS or FAIL with findings       |
+| DEFENSE           | Executor  | Reviewer  | Defend approach against FAIL findings           |
+| RESUBMISSION      | Executor  | Reviewer  | Resubmit after fixing FAIL findings             |
+| APPROVAL          | Reviewer  | Tech Lead | Confirm task passes all review criteria         |
+| ESCALATION        | Any       | Tech Lead | Escalate unresolvable disagreement              |
+| ARBITRATION       | Tech Lead | All       | Tech Lead resolves dispute with binding decision|
+| DECISION          | Tech Lead | All       | Final phase decision with consensus stamp       |
 
 ---
 
@@ -127,11 +151,7 @@ One phase at a time. Within each phase follow the Golden Triangle Loop below.
 6. `researcher` synthesizes all approved findings into unified artifacts
 
 **Deliverable**: `./reports/{topic}/brainstorms/BRAINSTORM-{task}` + `./reports/{topic}/scouts/SCOUT-{task}`
-**Exit Criteria**:
-- [ ] All requirements captured
-- [ ] Codebase mapped
-- [ ] Business context validated
-- [ ] Assumptions challenged
+**Exit Criteria**: All requirements captured, codebase mapped, business context validated, assumptions challenged
 **Consensus**: ✅ CONSENSUS: researcher ✓ | scouter+business-analyst ✓ | brainstormer ✓
 
 ---
@@ -158,11 +178,7 @@ One phase at a time. Within each phase follow the Golden Triangle Loop below.
 **CONSTRAINT INHERITANCE**: Architecture decisions MUST reference Phase 1 ("Based on requirement R1...", "Codebase constraint from SCOUT...", "Business rule from BA...")
 
 **Deliverable**: `./reports/{topic}/researchers/RESEARCH-{task}` + `./reports/{topic}/designs/ADR-{task}`
-**Exit Criteria**:
-- [ ] Patterns researched
-- [ ] Alternatives documented
-- [ ] ADRs drafted
-- [ ] Feasibility validated
+**Exit Criteria**: Patterns researched, alternatives documented, ADRs drafted, feasibility validated
 **Consensus**: ✅ CONSENSUS: tech-lead ✓ | researcher ✓ | reviewer ✓
 
 ---
@@ -249,12 +265,7 @@ One phase at a time. Within each phase follow the Golden Triangle Loop below.
 ```
 
 **Deliverable**: `./reports/{topic}/plans/PLAN-{task}` (single) or `PLAN-{task}-phase1`, … (multi-phase)
-**Exit Criteria**:
-- [ ] Plan complete
-- [ ] All sections reviewed
-- [ ] Security validated
-- [ ] Estimates challenged
-- [ ] Traceability verified
+**Exit Criteria**: Plan complete, all sections reviewed, security validated, estimates challenged, traceability verified
 **Consensus**: ✅ CONSENSUS: planner ✓ | planner(exec) ✓ | tech-lead+security ✓
 
 ---
@@ -288,11 +299,7 @@ FOR EACH requirement in BRAINSTORM-{task}.md:
 ```
 
 **Deliverable**: `./reports/{topic}/qa/QA-PLAN-{task}` — includes: PASS/REVISE verdict, traceability matrix, security summary, business confirmation
-**Exit Criteria**:
-- [ ] Plan validated
-- [ ] Technically coherent
-- [ ] Security reviewed
-- [ ] Business-aligned
+**Exit Criteria**: Plan validated, technically coherent, security reviewed, business-aligned
 **Consensus**: ✅ CONSENSUS: tech-lead ✓ | reviewer ✓ | business-analyst ✓
 
 **⚠️ IF VERDICT = NEEDS REVISION:**

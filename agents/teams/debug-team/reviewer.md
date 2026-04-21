@@ -1,7 +1,5 @@
 ---
-schema-version: "1.0"
 name: debug-team-reviewer
-description: Debug team reviewer — validates root-cause analysis and fix safety
 role: reviewer
 team: debug-team
 version: "2.0"
@@ -25,7 +23,7 @@ mailbox: ./reports/{topic}/MAILBOX-{date}.md
 # 🔍 Debug Team — Reviewer (Root-Cause Validator)
 
 > **GOLDEN TRIANGLE ROLE**: Reviewer (Root-Cause Validator + Quality Gate)  
-> **LOAD**: `rules/TEAMS-LITE.md` for full Golden Triangle protocol  
+> **LOAD**: `rules/TEAMS.md` for full Golden Triangle protocol  
 > **BASE AGENT**: `reviewer` — all reviewer capabilities active
 
 ## 🆔 Identity

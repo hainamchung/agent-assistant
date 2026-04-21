@@ -1,10 +1,8 @@
 ---
-schema-version: "1.0"
 description: "🔺 Team Report — Golden Triangle adversarial collaboration for maximum quality reporting"
 version: "2.0"
-category: documentation
+category: reporting
 execution-mode: execute
-topology: golden-triangle
 ---
 
 # /report:team — Golden Triangle Report Generation
@@ -20,34 +18,51 @@ topology: golden-triangle
 
 ## 🛑 PRE-FLIGHT (DO FIRST — BLOCKS PHASE 1)
 
-**LOAD now** (path `./rules/` or `~/.{TOOL}/skills/agent-assistant/rules/`):
+**LOAD now** (in order; path `./rules/` or `~/.{TOOL}/skills/agent-assistant/rules/`):
 
-1. RUNTIME.md — Identity, Laws, Routing, Phase Execution, Agent Protocol
-2. **TEAMS-LITE.md** — Team roles, review checklist, phase output format
-3. **topologies/golden-triangle.md** — Golden Triangle execution protocol
+1. CORE.md — Identity, Laws, Routing
+2. PHASES.md — Phase Execution
+3. AGENTS.md — Tiered Execution
+4. **TEAMS.md** — Golden Triangle protocol (MANDATORY)
 
 **⛔ Do not run Phase 1 until all are loaded.** Follow **all** rules in those files; they override any conflicting instructions in this file.
 
-**Skills Resolution**: Load `SKILLS-LITE.md` on-demand for fitness calculation and dynamic discovery.
+**Skills Resolution**: Load `SKILLS.md` on-demand for fitness calculation and dynamic discovery.
 
 ---
 
-## 🔀 EXECUTION MODEL
+## 🔀 TIERED EXECUTION
 
-> **Topology**: Golden Triangle — load `topologies/golden-triangle.md` for full protocol.
-> Reference: RUNTIME.md (Execution Model) + TEAMS-LITE.md (Team Review Protocol)
+> Reference: AGENTS.md (Tiered Execution) + TEAMS.md (Golden Triangle Protocol)
 
-Roles for this command:
-| Role | Agent | Mode |
-|------|-------|------|
-| Tech Lead | tech-lead | EMBODY |
-| Executor | reporter | EMBODY |
-| Reviewer | reviewer | SUB-AGENT (or EMBODY + Anti-Bias) |
+| Tier       | When                          | Action                                                                    |
+| ---------- | ----------------------------- | ------------------------------------------------------------------------- |
+| **TIER 1** | runSubagent/Agent Tool EXISTS | Orchestrator spawns Tech Lead → Tech Lead spawns Executor + Reviewer      |
+| **TIER 2** | Tool MISSING or SYSTEM error  | EMBODY Tech Lead → EMBODY Executor → EMBODY Reviewer → EMBODY Tech Lead  |
 
-**Mailbox**: `./reports/{topic}/MAILBOX-{date}.md` — see topology file for message protocol.
+**❌ Anti-Lazy**: Never use TIER 2 when TIER 1 tool available.
+
+**TIER 2 Golden Triangle Embodiment** (per TEAMS.md):
+```
+1. EMBODY Tech Lead → decompose task → produce Shared Task List → dispatch
+2. EMBODY Executor → execute assigned tasks → post SUBMISSION to Mailbox
+3. EMBODY Reviewer → review submissions → post REVIEW to Mailbox
+4. IF FAIL → EMBODY Executor again → fix/defend → EMBODY Reviewer → re-check
+5. Repeat steps 3–4 max 3 rounds
+6. EMBODY Tech Lead → arbitrate if needed → post DECISION → synthesize output
+```
 
 ---
 
+## 📬 MAILBOX — Central Communication Hub
+
+**Location**: `./reports/{topic}/MAILBOX-{date}.md`
+
+All 3 triangle agents READ from and APPEND to this file. Never overwrite — append only.
+
+**Message Format**:
+```markdown
+---
 ## [{TIMESTAMP}] {MESSAGE_TYPE} | {AGENT} → {TARGET}
 **Phase**: {phase number}
 **Task**: {task ID from Shared Task List}
@@ -56,7 +71,19 @@ Roles for this command:
 ---
 ```
 
-**Message Types**: See `topologies/golden-triangle.md` §Message Types for full table.
+**Message Types**:
+
+| Type              | Sender    | Receiver  | Purpose                                        |
+| ----------------- | --------- | --------- | ---------------------------------------------- |
+| TASK_ASSIGNMENT   | Tech Lead | Executor  | Assign task with requirements and context       |
+| SUBMISSION        | Executor  | Reviewer  | Submit completed work for review                |
+| REVIEW            | Reviewer  | Executor  | Review result: PASS or FAIL with findings       |
+| DEFENSE           | Executor  | Reviewer  | Defend work against FAIL findings               |
+| RESUBMISSION      | Executor  | Reviewer  | Resubmit after fixing FAIL findings             |
+| APPROVAL          | Reviewer  | Tech Lead | Confirm task passes all review criteria         |
+| ESCALATION        | Any       | Tech Lead | Escalate unresolvable disagreement              |
+| ARBITRATION       | Tech Lead | All       | Tech Lead resolves dispute with binding decision|
+| DECISION          | Tech Lead | All       | Final phase decision with consensus stamp       |
 
 ---
 
@@ -107,7 +134,7 @@ One phase at a time. Within each phase:
 ✅ CONSENSUS: {TechLead} ✓ | {Executor} ✓ | {Reviewer} ✓
 ```
 
-Format: rules/RUNTIME.md § Phase output structure + rules/TEAMS-LITE.md § Phase Output Format.
+Format: rules/PHASES.md § Phase output structure + rules/TEAMS.md § Golden Triangle Phase Output Format.
 
 ---
 
@@ -185,12 +212,7 @@ Format: rules/RUNTIME.md § Phase output structure + rules/TEAMS-LITE.md § Phas
 8. `reporter` synthesizes all approved findings into unified data package
 
 **Deliverable**: `./reports/{topic}/scouts/SCOUT-{topic}` + `./reports/{topic}/researchers/RESEARCH-{topic}`
-**Exit Criteria**:
-- [ ] All data sources tapped
-- [ ] Metrics collected
-- [ ] Patterns identified
-- [ ] Gaps acknowledged
-- [ ] Analysis dimensions defined
+**Exit Criteria**: All data sources tapped, metrics collected, patterns identified, gaps acknowledged, analysis dimensions defined
 **Consensus**: ✅ CONSENSUS: reporter ✓ | scouter/researcher ✓ | business-analyst ✓
 
 ---
@@ -395,11 +417,7 @@ Format: rules/RUNTIME.md § Phase output structure + rules/TEAMS-LITE.md § Phas
 ```
 
 **Deliverable**: `./reports/{topic}/general/REPORT-{topic}-{date}`
-**Exit Criteria**:
-- [ ] All sections drafted
-- [ ] Every claim evidence-backed
-- [ ] Recommendations actionable
-- [ ] Report coherent
+**Exit Criteria**: All sections drafted, every claim evidence-backed, recommendations actionable, report coherent
 **Consensus**: ✅ CONSENSUS: reporter ✓ | reporter(exec) ✓ | reviewer ✓
 
 ---
@@ -451,11 +469,7 @@ Format: rules/RUNTIME.md § Phase output structure + rules/TEAMS-LITE.md § Phas
 ```
 
 **Deliverable**: `./reports/{topic}/general/REPORT-{topic}-{date}` (final polished version)
-**Exit Criteria**:
-- [ ] Report stakeholder-ready
-- [ ] Professionally formatted
-- [ ] Actionable recommendations
-- [ ] Quality gate passed
+**Exit Criteria**: Report stakeholder-ready, professionally formatted, actionable recommendations, quality gate passed
 **Consensus**: ✅ CONSENSUS: tech-lead ✓ | docs-manager ✓ | business-analyst ✓
 
 ---

@@ -9,7 +9,6 @@ domain: backend
 name: "Backend Development"
 description: "Server-side logic, APIs, data access"
 skill_count: 208
-composes_with: [database-architect, devops-engineer, security-engineer]
 
 skills:
   # --------------------------------------------------------------------------

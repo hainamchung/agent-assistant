@@ -1,7 +1,5 @@
 export { FeatureCard } from './FeatureCard'
 export { AgentCard } from './AgentCard'
-export { AgentEditor } from './AgentEditor'
-export { AgentPreview } from './AgentPreview'
 export { CommandCard, CommandBadge } from './CommandCard'
 export { MetricCard, InlineMetric } from './MetricCard'
 export { PlatformBadge, PlatformGrid } from './PlatformBadge'

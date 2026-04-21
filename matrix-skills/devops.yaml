@@ -9,7 +9,6 @@ domain: devops
 name: "DevOps & Deployment"
 description: "CI/CD, infrastructure, containerization"
 skill_count: 66
-composes_with: [backend-engineer, security-engineer]
 
 skills:
   # --------------------------------------------------------------------------

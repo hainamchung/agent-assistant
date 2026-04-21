@@ -1,10 +1,8 @@
 ---
-schema-version: "1.0"
 description: "🔺 Team Fix — Golden Triangle adversarial collaboration for maximum quality issue resolution"
 version: "2.0"
 category: debugging
 execution-mode: execute
-topology: golden-triangle
 ---
 
 # /fix:team — Golden Triangle Issue Resolution
@@ -20,34 +18,51 @@ topology: golden-triangle
 
 ## 🛑 PRE-FLIGHT (DO FIRST — BLOCKS PHASE 1)
 
-**LOAD now** (path `./rules/` or `~/.{TOOL}/skills/agent-assistant/rules/`):
+**LOAD now** (in order; path `./rules/` or `~/.{TOOL}/skills/agent-assistant/rules/`):
 
-1. RUNTIME.md — Identity, Laws, Routing, Phase Execution, Agent Protocol
-2. **TEAMS-LITE.md** — Team roles, review checklist, phase output format
-3. **topologies/golden-triangle.md** — Golden Triangle execution protocol
+1. CORE.md — Identity, Laws, Routing
+2. PHASES.md — Phase Execution
+3. AGENTS.md — Tiered Execution
+4. **TEAMS.md** — Golden Triangle protocol (MANDATORY)
 
 **⛔ Do not run Phase 1 until all are loaded.** Follow **all** rules in those files; they override any conflicting instructions in this file.
 
-**Skills Resolution**: Load `SKILLS-LITE.md` on-demand for fitness calculation and dynamic discovery.
+**Skills Resolution**: Load `SKILLS.md` on-demand for fitness calculation and dynamic discovery.
 
 ---
 
-## 🔀 EXECUTION MODEL
+## 🔀 TIERED EXECUTION
 
-> **Topology**: Golden Triangle — load `topologies/golden-triangle.md` for full protocol.
-> Reference: RUNTIME.md (Execution Model) + TEAMS-LITE.md (Team Review Protocol)
+> Reference: AGENTS.md (Tiered Execution) + TEAMS.md (Golden Triangle Protocol)
 
-Roles for this command:
-| Role | Agent | Mode |
-|------|-------|------|
-| Tech Lead | tech-lead | EMBODY |
-| Executor | debugger | EMBODY |
-| Reviewer | reviewer | SUB-AGENT (or EMBODY + Anti-Bias) |
+| Tier       | When                          | Action                                                                    |
+| ---------- | ----------------------------- | ------------------------------------------------------------------------- |
+| **TIER 1** | runSubagent/Agent Tool EXISTS | Orchestrator spawns Tech Lead → Tech Lead spawns Executor + Reviewer      |
+| **TIER 2** | Tool MISSING or SYSTEM error  | EMBODY Tech Lead → EMBODY Executor → EMBODY Reviewer → EMBODY Tech Lead  |
 
-**Mailbox**: `./reports/{topic}/MAILBOX-{date}.md` — see topology file for message protocol.
+**❌ Anti-Lazy**: Never use TIER 2 when TIER 1 tool available.
+
+**TIER 2 Golden Triangle Embodiment** (per TEAMS.md):
+```
+1. EMBODY Tech Lead → decompose task → produce Shared Task List → dispatch
+2. EMBODY Executor → implement assigned tasks → post SUBMISSION to Mailbox
+3. EMBODY Reviewer → review submissions → post REVIEW to Mailbox
+4. IF FAIL → EMBODY Executor again → fix/defend → EMBODY Reviewer → re-check
+5. Repeat steps 3–4 max 3 rounds
+6. EMBODY Tech Lead → arbitrate if needed → post DECISION → synthesize output
+```
 
 ---
 
+## 📬 MAILBOX — Central Communication Hub
+
+**Location**: `./reports/{topic}/MAILBOX-{date}.md`
+
+All 3 triangle agents READ from and APPEND to this file. Never overwrite — append only.
+
+**Message Format**:
+```markdown
+---
 ## [{TIMESTAMP}] {MESSAGE_TYPE} | {AGENT} → {TARGET}
 **Phase**: {phase number}
 **Task**: {task ID from Shared Task List}
@@ -56,7 +71,19 @@ Roles for this command:
 ---
 ```
 
-**Message Types**: See `topologies/golden-triangle.md` §Message Types for full table.
+**Message Types**:
+
+| Type              | Sender    | Receiver  | Purpose                                        |
+| ----------------- | --------- | --------- | ---------------------------------------------- |
+| TASK_ASSIGNMENT   | Tech Lead | Executor  | Assign task with requirements and context       |
+| SUBMISSION        | Executor  | Reviewer  | Submit completed work for review                |
+| REVIEW            | Reviewer  | Executor  | Review result: PASS or FAIL with findings       |
+| DEFENSE           | Executor  | Reviewer  | Defend implementation against FAIL findings     |
+| RESUBMISSION      | Executor  | Reviewer  | Resubmit after fixing FAIL findings             |
+| APPROVAL          | Reviewer  | Tech Lead | Confirm task passes all review criteria         |
+| ESCALATION        | Any       | Tech Lead | Escalate unresolvable disagreement              |
+| ARBITRATION       | Tech Lead | All       | Tech Lead resolves dispute with binding decision|
+| DECISION          | Tech Lead | All       | Final phase decision with consensus stamp       |
 
 ---
 
@@ -109,7 +136,7 @@ One phase at a time. Within each phase:
 ✅ CONSENSUS: {TechLead} ✓ | {Executor} ✓ | {Reviewer} ✓
 ```
 
-Format: rules/RUNTIME.md § Phase output structure + rules/TEAMS-LITE.md § Phase Output Format.
+Format: rules/PHASES.md § Phase output structure + rules/TEAMS.md § Golden Triangle Phase Output Format.
 
 ---
 
@@ -182,12 +209,7 @@ Format: rules/RUNTIME.md § Phase output structure + rules/TEAMS-LITE.md § Phas
 7. `debugger` synthesizes all approved findings into unified investigation report
 
 **Deliverable**: `./reports/{topic}/debugs/INVESTIGATION-{issue}`
-**Exit Criteria**:
-- [ ] Bug reproduced
-- [ ] Error paths traced
-- [ ] Root cause candidates identified
-- [ ] Hypotheses challenged
-- [ ] Evidence chain documented
+**Exit Criteria**: Bug reproduced, error paths traced, root cause candidates identified, hypotheses challenged, evidence chain documented
 **Consensus**: ✅ CONSENSUS: debugger ✓ | scouter ✓ | researcher ✓
 
 ---
@@ -231,11 +253,7 @@ IF unclear → debugger (Tech Lead) decides based on P1 investigation findings
 6. `debugger` synthesizes confirmed root cause into authoritative debug report
 
 **Deliverable**: `./reports/{topic}/debugs/DEBUG-{issue}`
-**Exit Criteria**:
-- [ ] Root cause confirmed with code evidence
-- [ ] Impact scope documented
-- [ ] Regression risk assessed
-- [ ] Related issues cataloged
+**Exit Criteria**: Root cause confirmed with code evidence, impact scope documented, regression risk assessed, related issues cataloged
 **Consensus**: ✅ CONSENSUS: debugger ✓ | {executor} ✓ | reviewer ✓
 
 ---
@@ -275,12 +293,7 @@ IF unclear → debugger (Tech Lead) decides based on P1 investigation findings
 6. `planner` synthesizes all approved sections into final fix plan
 
 **Deliverable**: `./reports/{topic}/plans/PLAN-{issue}`
-**Exit Criteria**:
-- [ ] Fix approach selected
-- [ ] Implementation steps defined
-- [ ] Rollback strategy verified
-- [ ] Acceptance criteria set
-- [ ] Risks mitigated
+**Exit Criteria**: Fix approach selected, implementation steps defined, rollback strategy verified, acceptance criteria set, risks mitigated
 **Consensus**: ✅ CONSENSUS: planner ✓ | researcher ✓ | tech-lead ✓
 
 ---
@@ -319,7 +332,7 @@ IF fix is mobile-related →
   Executor: mobile-engineer
   Reviewer: reviewer
 
-IF other domain → Consult TEAMS-LITE.md roster for correct triangle
+IF other domain → Consult TEAMS.md roster for correct triangle
 ```
 
 | Role      | Agent                                    | Mission                                                    |
@@ -463,12 +476,7 @@ IF other domain → Consult TEAMS-LITE.md roster for correct triangle
    Severity: CRITICAL | Action: "Remove unauthorized code or get plan amended"
 ```
 
-**Exit Criteria**:
-- [ ] All fix tasks implemented
-- [ ] All reviews passed
-- [ ] No unauthorized deviations
-- [ ] Root cause addressed
-- [ ] Integration verified
+**Exit Criteria**: All fix tasks implemented, all reviews passed, no unauthorized deviations, root cause addressed, integration verified
 **Consensus**: ✅ CONSENSUS: tech-lead ✓ | {executor} ✓ | reviewer ✓
 
 ---
@@ -522,12 +530,7 @@ FOR EACH affected component in DEBUG-{issue}.md:
 ```
 
 **Deliverable**: `./reports/{topic}/qa/QA-{issue}`
-**Exit Criteria**:
-- [ ] Fix verified against root cause
-- [ ] Regression tests pass
-- [ ] Security validated
-- [ ] Edge cases covered
-- [ ] No new vulnerabilities
+**Exit Criteria**: Fix verified against root cause, regression tests pass, security validated, edge cases covered, no new vulnerabilities
 **Consensus**: ✅ CONSENSUS: tester ✓ | tester(exec) ✓ | security-engineer ✓
 
 ---

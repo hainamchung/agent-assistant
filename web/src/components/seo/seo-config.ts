@@ -11,12 +11,12 @@ export const SITE_NAME = 'Agent Assistant'
 export const pageSEO = {
   home: {
     title: 'Agent Assistant',
-    description: 'Multi-agent orchestration for AI coding assistants with 21 specialist agents, 1400+ skills, and 60+ workflows across 6 platforms.',
+    description: 'Multi-agent orchestration for AI coding assistants with 21 specialist agents, 310+ skills, and 50+ workflows. Multi-agent orchestration for AI coding assistants.',
     pathname: '/',
   },
   installation: {
     title: 'Installation Guide',
-    description: 'Install Agent Assistant globally and start using specialized agents in all your projects. Quick setup for Cursor, Claude Code, GitHub Copilot, Codex, Antigravity, and Qwen.',
+    description: 'Install Agent Assistant globally and start using specialized agents in all your projects. Quick setup for Cursor, Claude Code, GitHub Copilot, Codex, and Antigravity.',
     pathname: '/installation',
   },
   docs: {
@@ -36,7 +36,7 @@ export const pageSEO = {
   },
   matrixSkills: {
     title: 'Hybrid Skill Orchestration (HSOL)',
-    description: 'Matrix + dynamic skills: 1400+ curated skills across 19 domains plus on-demand community skills via find-skills. Variant-aware discovery, fitness thresholds, deep knowledge on demand.',
+    description: 'Matrix + dynamic skills: 310+ curated skills across 19 domains plus on-demand community skills via find-skills. Variant-aware discovery, fitness thresholds, deep knowledge on demand.',
     pathname: '/features/matrix-skills',
   },
   multiPlatform: {
@@ -61,27 +61,12 @@ export const pageSEO = {
   },
   workflow: {
     title: 'System Architecture',
-    description: 'Interactive architecture diagram showing how Agent Assistant orchestrates 21 specialist agents, 1400+ skills, and tiered execution through the Orchestrator Pattern.',
+    description: 'Interactive architecture diagram showing how Agent Assistant orchestrates 21 specialist agents, 310+ skills, and tiered execution through the Orchestrator Pattern.',
     pathname: '/features/workflow',
   },
   agentTeams: {
     title: 'Agent Teams — Golden Triangle',
     description: 'Adversarial collaboration with 17 specialized teams. Each team has a Tech Lead, Executor, and Reviewer working through structured debate for maximum quality output.',
     pathname: '/features/agent-teams',
-  },
-  benchmarks: {
-    title: 'Benchmarks — Agent Assistant vs. The Competition',
-    description: 'Feature-by-feature comparison against CrewAI, MetaGPT, Aider, Cline, SWE-Agent, and Cursor Rules across 22 dimensions. 89/100 internal quality score.',
-    pathname: '/features/benchmarks',
-  },
-  topologies: {
-    title: 'Execution Topologies',
-    description: '12 execution topologies for any workflow shape: pipeline, fan-out, hierarchical, golden triangle, swarm, debate round-robin, and more.',
-    pathname: '/features/topologies',
-  },
-  securityTrust: {
-    title: 'Security & Trust',
-    description: '8 guardrail modules, 3-tier trust model, D4 safety veto, SHA-256 integrity verification, and OWASP-aligned security across all agent operations.',
-    pathname: '/features/security-trust',
   },
 } as const

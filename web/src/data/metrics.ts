@@ -61,10 +61,9 @@ export const prerequisites = [
 export const agentCategorySummary = [
   { category: 'Implementation', count: 4, examples: 'backend, frontend, mobile, game' },
   { category: 'Architecture', count: 2, examples: 'tech-lead, database-architect' },
-  { category: 'Quality', count: 2, examples: 'tester, reviewer' },
-  { category: 'Investigation', count: 2, examples: 'debugger, performance-engineer' },
+  { category: 'Quality', count: 4, examples: 'tester, reviewer, debugger, security' },
   { category: 'Planning', count: 3, examples: 'planner, brainstormer, analyst' },
-  { category: 'Support', count: 8, examples: 'designer, devops, docs, reporter, researcher, scouter, project-manager, security' },
+  { category: 'Support', count: 8, examples: 'designer, devops, docs, reporter, researcher...' },
 ]
 
 // Documentation sections
@@ -106,7 +105,7 @@ export const docSections = [
     links: [
       { label: 'Agent Overview', href: '/features/specialist-agents' },
       { label: 'Agent Collaboration', href: '/features/sub-agent-orchestration' },
-      { label: 'Custom Agents', href: 'https://github.com/hainamchung/agent-assistant/docs/custom-agents', external: true },
+      { label: 'Custom Agents', href: 'https://github.com/anthropics/agent-assistant/docs/custom-agents', external: true },
     ],
   },
   {
@@ -116,7 +115,7 @@ export const docSections = [
     links: [
       { label: 'Skills Overview', href: '/features/matrix-skills' },
       { label: 'Skill Domains', href: '/features/matrix-skills#domains' },
-      { label: 'Custom Skills', href: 'https://github.com/hainamchung/agent-assistant/docs/custom-skills', external: true },
+      { label: 'Custom Skills', href: 'https://github.com/anthropics/agent-assistant/docs/custom-skills', external: true },
     ],
   },
   {
@@ -125,7 +124,7 @@ export const docSections = [
     description: 'Customize Agent Assistant to fit your workflow.',
     links: [
       { label: 'Global Config', href: '/features/one-time-setup' },
-      { label: 'Project Overrides', href: 'https://github.com/hainamchung/agent-assistant/docs/project-config', external: true },
+      { label: 'Project Overrides', href: 'https://github.com/anthropics/agent-assistant/docs/project-config', external: true },
       { label: 'Platform Config', href: '/features/multi-platform-support' },
     ],
   },
@@ -137,28 +136,28 @@ export const resources = [
     title: 'GitHub Repository',
     description: 'Source code, issues, and contributions.',
     icon: '🐙',
-    href: 'https://github.com/hainamchung/agent-assistant',
+    href: 'https://github.com/anthropics/agent-assistant',
     external: true,
   },
   {
     title: 'Release Notes',
     description: 'Latest updates and changelog.',
     icon: '📋',
-    href: 'https://github.com/hainamchung/agent-assistant/releases',
+    href: 'https://github.com/anthropics/agent-assistant/releases',
     external: true,
   },
   {
     title: 'Discussions',
     description: 'Community Q&A and feature requests.',
     icon: '💬',
-    href: 'https://github.com/hainamchung/agent-assistant/discussions',
+    href: 'https://github.com/anthropics/agent-assistant/discussions',
     external: true,
   },
   {
     title: 'Report Issues',
     description: 'Found a bug? Let us know.',
     icon: '🐛',
-    href: 'https://github.com/hainamchung/agent-assistant/issues/new',
+    href: 'https://github.com/anthropics/agent-assistant/issues/new',
     external: true,
   },
 ]

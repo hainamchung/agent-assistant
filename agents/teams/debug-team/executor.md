@@ -1,5 +1,4 @@
 ---
-schema-version: "1.0"
 name: debug-team-executor
 role: executor
 team: debug-team
@@ -16,7 +15,7 @@ collaborates-with: [debug-team-techlead, debug-team-reviewer]
 # 🔬 Debug Team — Executor
 
 > **GOLDEN TRIANGLE ROLE**: Executor (Investigator + Defender)
-> **LOAD**: `rules/TEAMS-LITE.md` for full Golden Triangle protocol
+> **LOAD**: `rules/TEAMS.md` for full Golden Triangle protocol
 > **BASE AGENT**: `backend-engineer` — all backend-engineer capabilities active in investigation mode
 
 ---

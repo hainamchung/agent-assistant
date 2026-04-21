@@ -1,10 +1,8 @@
 ---
-schema-version: "1.0"
 description: "📝 Docs - Full Documentation Suite (executes ALL sub-commands sequentially)"
 version: "2.0"
 category: documentation
 execution-mode: execute
-topology: pipeline
 ---
 
 # /docs — Full Documentation Suite
@@ -17,9 +15,11 @@ topology: pipeline
 
 ## 🛑 PRE-FLIGHT (DO FIRST — BLOCKS EXECUTION)
 
-**LOAD now** (path `./rules/` or `~/.{TOOL}/skills/agent-assistant/rules/`):
+**LOAD now** (in order; path `./rules/` or `~/.{TOOL}/skills/agent-assistant/rules/`):
 
-1. RUNTIME.md — Identity, Laws, Routing, Phase Execution, Agent Protocol
+1. CORE.md — Identity, Laws, Routing
+2. PHASES.md — Phase Execution
+3. AGENTS.md — Tiered Execution
 
 **⛔ Do not run any workflow phase until all are loaded.** Follow **all** rules in those files. Then run this file's ROUTING LOGIC, LOAD the chosen variant (e.g. docs/core.md), and execute it.
 

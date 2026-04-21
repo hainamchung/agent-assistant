@@ -210,7 +210,7 @@ export default function Docs() {
             <Button 
               variant="secondary" 
               size="lg" 
-              href="https://github.com/hainamchung/agent-assistant"
+              href="https://github.com/anthropics/agent-assistant"
               target="_blank"
               rel="noopener noreferrer"
             >

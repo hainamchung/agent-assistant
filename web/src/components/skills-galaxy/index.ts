@@ -1,1 +1,0 @@
-export { SkillsGalaxy } from './SkillsGalaxy'

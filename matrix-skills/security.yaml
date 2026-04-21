@@ -9,7 +9,6 @@ domain: security
 name: "Security Engineering"
 description: "Threat modeling, secure coding, compliance"
 skill_count: 102
-composes_with: [backend-engineer, devops-engineer, debugger]
 
 skills:
   # --------------------------------------------------------------------------

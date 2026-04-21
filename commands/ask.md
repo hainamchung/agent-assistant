@@ -1,10 +1,8 @@
 ---
-schema-version: "1.0"
 description: ❓ Ask Router — Route questions to appropriate answer workflow
 version: "1.0"
 category: knowledge
 execution-mode: router
-topology: pipeline
 ---
 
 # /ask — Question Answering Router
@@ -17,8 +15,10 @@ topology: pipeline
 
 ## 🛑 PRE-FLIGHT (DO FIRST — BLOCKS EXECUTION)
 
-**LOAD now** (path `./rules/` or `~/.{TOOL}/skills/agent-assistant/rules/`):
-1. RUNTIME.md — Identity, Laws, Routing, Phase Execution, Agent Protocol
+**LOAD now** (in order; path `./rules/` or `~/.{TOOL}/skills/agent-assistant/rules/`):
+1. CORE.md — Identity, Laws, Routing  
+2. PHASES.md — Phase Execution  
+3. AGENTS.md — Tiered Execution  
 
 **⛔ Do not run any workflow phase until all are loaded.** Follow **all** rules in those files. Then run this file's ROUTING LOGIC, LOAD the chosen variant workflow, and execute it.
 
@@ -45,8 +45,6 @@ IF unsure:
 | ----------- | ------------------------------------------- |
 | `/ask:fast` | Quick factual answers, codebase lookups     |
 | `/ask:hard` | Research-backed analysis, complex questions |
-
-> **Note**: `/ask` intentionally has no `:team` variant. Questions are answered, not debated — use `/brainstorm:team` for multi-perspective analysis.
 
 ---
 

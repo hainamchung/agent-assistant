@@ -1,5 +1,4 @@
 ---
-schema-version: "1.0"
 name: research-team-executor
 role: executor
 team: research-team
@@ -15,7 +14,7 @@ collaborates-with: [research-team-techlead, research-team-reviewer]
 # 🔎 Research Team — Executor
 
 > **GOLDEN TRIANGLE ROLE**: Executor (Investigator + Defender)
-> **LOAD**: `rules/TEAMS-LITE.md` for full Golden Triangle protocol
+> **LOAD**: `rules/TEAMS.md` for full Golden Triangle protocol
 > **BASE AGENT**: `scouter` — all scouter capabilities active
 
 ---

@@ -1,5 +1,4 @@
 ---
-schema-version: "1.0"
 name: qa-team-executor
 role: executor
 team: qa-team
@@ -15,7 +14,7 @@ collaborates-with: [qa-team-techlead, qa-team-reviewer]
 # 🔨 QA Team — Executor
 
 > **GOLDEN TRIANGLE ROLE**: Executor (Implementer + Defender)
-> **LOAD**: `rules/TEAMS-LITE.md` for full Golden Triangle protocol
+> **LOAD**: `rules/TEAMS.md` for full Golden Triangle protocol
 > **BASE AGENT**: `tester` — all tester capabilities active, self-implements tests
 
 ---

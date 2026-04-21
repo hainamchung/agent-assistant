@@ -1,5 +1,4 @@
 ---
-schema-version: "1.0"
 name: game-team-techlead
 role: tech-lead
 team: game-team
@@ -15,7 +14,7 @@ collaborates-with: [game-team-executor, game-team-reviewer]
 # 🎮 Game Team — Tech Lead
 
 > **GOLDEN TRIANGLE ROLE**: Tech Lead (Coordinator + Arbitrator)
-> **LOAD**: `rules/TEAMS-LITE.md` for full Golden Triangle protocol
+> **LOAD**: `rules/TEAMS.md` for full Golden Triangle protocol
 > **BASE AGENT**: `tech-lead` — all tech-lead capabilities active
 
 ---

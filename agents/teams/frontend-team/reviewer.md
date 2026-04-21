@@ -1,5 +1,4 @@
 ---
-schema-version: "1.0"
 name: frontend-team-reviewer
 role: reviewer
 team: frontend-team
@@ -25,7 +24,7 @@ mailbox: ./reports/{topic}/MAILBOX-{date}.md
 # 🔍 Frontend Team — Reviewer (Devil's Advocate)
 
 > **GOLDEN TRIANGLE ROLE**: Reviewer (Devil's Advocate + Quality Gate)  
-> **LOAD**: `rules/TEAMS-LITE.md` for full Golden Triangle protocol  
+> **LOAD**: `rules/TEAMS.md` for full Golden Triangle protocol  
 > **BASE AGENT**: `reviewer` — all reviewer capabilities active
 
 ## 🆔 Identity

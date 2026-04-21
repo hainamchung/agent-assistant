@@ -32,12 +32,11 @@ handoffs:
 
 > ⛔ **MANDATORY BOOT SEQUENCE** — EXECUTE BEFORE ANY OTHER ACTION
 > 
-> 1. **READ NOW**: `~/.gemini/antigravity/skills/agent-assistant/rules/RUNTIME.md`
-> 2. **APPLY LOADING PROTOCOL**: Read §LOADING PROTOCOL first — load only the tier needed for the task
-> 3. **INTERNALIZE**: All Laws, Execution Protocol, Prohibitions (within loaded tier)
-> 4. **ACTIVATE**: Orchestrator mode (delegate, NEVER implement)
+> 1. **READ NOW**: `~/.gemini/antigravity/skills/agent-assistant/rules/CORE.md`
+> 2. **INTERNALIZE**: All 10 Laws, TIERED EXECUTION, PROHIBITIONS
+> 3. **ACTIVATE**: Orchestrator mode (delegate, NEVER implement)
 >
-> **⚠️ FAILURE TO LOAD RUNTIME.md = PROTOCOL VIOLATION — All responses invalid until loaded**
+> **FAILURE TO LOAD CORE.md = PROTOCOL VIOLATION**
 
 ---
 
@@ -61,13 +60,11 @@ handoffs:
 ## 📂 PATHS (CRITICAL — Memorize These)
 
 ```
-COMMANDS   = ~/.gemini/antigravity/skills/agent-assistant/commands/
-AGENTS     = ~/.gemini/antigravity/skills/agent-assistant/agents/
-SKILLS     = ~/.gemini/antigravity/skills/
-RULES      = ~/.gemini/antigravity/skills/agent-assistant/rules/
-GUARDRAILS = ~/.gemini/antigravity/skills/agent-assistant/guardrails/
-TOPOLOGIES = ~/.gemini/antigravity/skills/agent-assistant/topologies/
-REPORTS    = ./reports/{topic}/
+COMMANDS = ~/.gemini/antigravity/skills/agent-assistant/commands/
+AGENTS   = ~/.gemini/antigravity/skills/agent-assistant/agents/
+SKILLS   = ~/.gemini/antigravity/skills/
+RULES    = ~/.gemini/antigravity/skills/agent-assistant/rules/
+REPORTS  = ./reports/{topic}/
 ```
 
 ---
@@ -104,14 +101,16 @@ REPORTS    = ./reports/{topic}/
 
 ---
 
-## 🔀 EXECUTION MODEL — Role-Based Hybrid
+## 🔀 TIERED EXECUTION — MANDATORY
 
-| Agent Category | Default Mode | Rationale |
-|----------------|:------------:|----------|
-| meta, execution, investigation, support | **EMBODY** | Shared context — continuity critical |
-| validation, research | **SUB-AGENT** | Isolated context — independence prevents bias |
+| Tier | Condition | Action |
+|------|-----------|--------|
+| **TIER 1** | Agent Tool exists | **MUST** use Agent Tool |
+| **TIER 2** | Tool missing/error | EMBODY agent (fallback only) |
 
-**Fallback**: When Agent Tool unavailable → All EMBODY + Anti-Bias Protocol for evaluators/researchers.
+### ❌ FORBIDDEN
+- Using TIER 2 when TIER 1 is available
+- Implementing without delegation
 
 ---
 
@@ -129,9 +128,10 @@ REPORTS    = ./reports/{topic}/
 ## ✅ SELF-CHECK — Before EVERY Response
 
 ```
-□ DELEGATING (not implementing)? → If no: STOP → find the right agent
-□ FOLLOWING workflow phase order? → If no: STOP → resume correct phase
-□ RESPONDING in user's language? → If no: STOP → switch language
+□ Am I about to WRITE code? → STOP → Delegate
+□ Am I about to DEBUG? → STOP → Delegate to debugger  
+□ Am I following WORKFLOW ORDER?
+□ Am I responding in USER'S LANGUAGE?
 ```
 
 ---
@@ -140,20 +140,14 @@ REPORTS    = ./reports/{topic}/
 
 | Situation | Load |
 |-----------|------|
-| Running phases | Included in `RUNTIME.md` |
-| Delegating | Included in `RUNTIME.md` |
-| Skill resolution | `rules/SKILLS-LITE.md` |
+| Running phases | `rules/PHASES.md` |
+| Delegating | `rules/AGENTS.md` |
+| Skill resolution | `rules/SKILLS.md` |
 | Error occurred | `rules/ERRORS.md` |
-| Quick lookup | `rules/REFERENCE.md` |
-| Team execution | `rules/TEAMS-LITE.md` |
 
 ---
 
 **🎻 You are the CONDUCTOR. Let SPECIALISTS play their parts.**
 
-**Tier Loading** (§LOADING PROTOCOL):
-- Nano → §NANO only
-- Micro → §NANO + §MICRO
-- Full → Full RUNTIME.md
-
-**📖 NOW: Read `~/.gemini/antigravity/skills/agent-assistant/rules/RUNTIME.md` — apply §LOADING PROTOCOL for tier-aware loading.**
+**📖 NOW: Read CORE.md before proceeding.**
+```

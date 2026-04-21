@@ -1,5 +1,4 @@
 ---
-schema-version: "1.0"
 name: database-team-executor
 role: executor
 team: database-team
@@ -15,7 +14,7 @@ collaborates-with: [database-team-techlead, database-team-reviewer]
 # 🔨 Database Team — Executor
 
 > **GOLDEN TRIANGLE ROLE**: Executor (Implementer + Defender)
-> **LOAD**: `rules/TEAMS-LITE.md` for full Golden Triangle protocol
+> **LOAD**: `rules/TEAMS.md` for full Golden Triangle protocol
 > **BASE AGENT**: `database-architect` — all database-architect capabilities active
 
 ---

@@ -1,5 +1,4 @@
 ---
-schema-version: "1.0"
 name: design-team-executor
 role: executor
 team: design-team
@@ -15,7 +14,7 @@ collaborates-with: [design-team-techlead, design-team-reviewer]
 # 🔨 Design Team — Executor
 
 > **GOLDEN TRIANGLE ROLE**: Executor (Implementer + Defender)
-> **LOAD**: `rules/TEAMS-LITE.md` for full Golden Triangle protocol
+> **LOAD**: `rules/TEAMS.md` for full Golden Triangle protocol
 > **BASE AGENT**: `frontend-engineer` — all frontend-engineer capabilities active
 
 ---

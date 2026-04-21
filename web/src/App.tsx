@@ -20,10 +20,6 @@ const Commands = lazy(() => import('./pages/features/Commands'))
 const QualityGates = lazy(() => import('./pages/features/QualityGates'))
 const Workflow = lazy(() => import('./pages/features/Workflow'))
 const AgentTeams = lazy(() => import('./pages/features/AgentTeams'))
-const Gallery = lazy(() => import('./pages/features/Gallery'))
-const Benchmarks = lazy(() => import('./pages/features/Benchmarks'))
-const Topologies = lazy(() => import('./pages/features/Topologies'))
-const SecurityTrust = lazy(() => import('./pages/features/SecurityTrust'))
 
 function App() {
   return (
@@ -51,10 +47,6 @@ function App() {
             <Route path="/features/quality-gates" element={<QualityGates />} />
             <Route path="/features/workflow" element={<Workflow />} />
             <Route path="/features/agent-teams" element={<AgentTeams />} />
-            <Route path="/features/gallery" element={<Gallery />} />
-            <Route path="/features/benchmarks" element={<Benchmarks />} />
-            <Route path="/features/topologies" element={<Topologies />} />
-            <Route path="/features/security-trust" element={<SecurityTrust />} />
             
             {/* Other pages */}
             <Route path="/installation" element={<Installation />} />

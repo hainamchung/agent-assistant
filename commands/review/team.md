@@ -1,10 +1,8 @@
 ---
-schema-version: "1.0"
 description: "🔺 Team Review — Golden Triangle adversarial collaboration for maximum quality code review"
 version: "2.0"
-category: validation
+category: quality
 execution-mode: execute
-topology: golden-triangle
 ---
 
 # /review:team — Golden Triangle Code Review
@@ -20,35 +18,45 @@ topology: golden-triangle
 
 ## 🛑 PRE-FLIGHT (DO FIRST — BLOCKS PHASE 1)
 
-**LOAD now** (path `./rules/` or `~/.{TOOL}/skills/agent-assistant/rules/`):
+**LOAD now** (in order; path `./rules/` or `~/.{TOOL}/skills/agent-assistant/rules/`):
 
-1. RUNTIME.md — Identity, Laws, Routing, Phase Execution, Agent Protocol
-2. **TEAMS-LITE.md** — Team roles, review checklist, phase output format
-3. **topologies/golden-triangle.md** — Golden Triangle execution protocol
+1. CORE.md — Identity, Laws, Routing
+2. PHASES.md — Phase Execution
+3. AGENTS.md — Tiered Execution
+4. **TEAMS.md** — Golden Triangle protocol (MANDATORY)
 
 **⛔ Do not run Phase 1 until all are loaded.** Follow **all** rules in those files; they override any conflicting instructions in this file.
 
-**Skills Resolution**: Load `SKILLS-LITE.md` on-demand for fitness calculation and dynamic discovery.
+**Skills Resolution**: Load `SKILLS.md` on-demand for fitness calculation and dynamic discovery.
 
 ---
 
-## 🔀 EXECUTION MODEL
+## 🔀 TIERED EXECUTION
 
-> **Topology**: Golden Triangle — load `topologies/golden-triangle.md` for full protocol.
-> Reference: RUNTIME.md (Execution Model) + TEAMS-LITE.md (Team Review Protocol)
+> Reference: AGENTS.md (Tiered Execution) + TEAMS.md (Golden Triangle Protocol)
 
-Roles for this command:
-| Role | Agent | Mode |
-|------|-------|------|
-| Tech Lead | tech-lead | EMBODY |
-| Executor | scouter → reviewer (2-pass) | EMBODY |
-| Reviewer | reviewer | SUB-AGENT (or EMBODY + Anti-Bias) |
+| Tier       | When                          | Action                                                                    |
+| ---------- | ----------------------------- | ------------------------------------------------------------------------- |
+| **TIER 1** | runSubagent/Agent Tool EXISTS | Orchestrator spawns Tech Lead → Tech Lead spawns Executor + Reviewer      |
+| **TIER 2** | Tool MISSING or SYSTEM error  | EMBODY Tech Lead → EMBODY Executor → EMBODY Reviewer → EMBODY Tech Lead  |
 
-**Mailbox**: `./reports/{topic}/MAILBOX-{date}.md` — see topology file for message protocol.
+**❌ Anti-Lazy**: Never use TIER 2 when TIER 1 tool available.
+
+**TIER 2 Golden Triangle Embodiment** (per TEAMS.md):
+```
+1. EMBODY Tech Lead → decompose → Shared Task List → dispatch
+2. EMBODY Executor → execute → post SUBMISSION to Mailbox
+3. EMBODY Reviewer → review → post REVIEW to Mailbox
+4. IF FAIL → EMBODY Executor → fix/defend → EMBODY Reviewer → re-check (max 3 rounds)
+5. EMBODY Tech Lead → arbitrate if needed → post DECISION → synthesize output
+```
 
 ---
 
-## 📁 DELIVERABLE FILES
+## 📬 MAILBOX & DELIVERABLES
+
+**Mailbox**: `./reports/{topic}/MAILBOX-{date}.md` — All triangle agents READ/APPEND. Never overwrite.
+**Protocol**: See TEAMS.md § Mailbox Message Types (TASK_ASSIGNMENT, SUBMISSION, REVIEW, DEFENSE, RESUBMISSION, APPROVAL, ESCALATION, ARBITRATION, DECISION).
 
 | Phase / Team     | Output                                          |
 | ---------------- | ----------------------------------------------- |
@@ -79,7 +87,7 @@ All files in `./reports/{topic}/` → English only.
 
 **Deliverable paths = base names.** Small (≤ 150 lines) → `{name}.md`. Large (> 150 lines or ≥ 4 sections) → `{name}/` folder with `00-index.md` + section files.
 
-One phase at a time. Within each phase follow the Golden Triangle Loop:
+One phase at a time. Within each phase follow the Golden Triangle Loop (TEAMS.md § Golden Triangle Protocol):
 
 ```
 1. Spawn Golden Triangle (Tech Lead + Executor + Reviewer)
@@ -123,11 +131,7 @@ One phase at a time. Within each phase follow the Golden Triangle Loop:
 7. `reviewer` synthesizes approved findings into unified scope document
 
 **Deliverable**: `./reports/{topic}/scouts/SCOUT-{scope}`
-**Exit Criteria**:
-- [ ] Review scope mapped
-- [ ] Blast radius assessed
-- [ ] Dependencies traced
-- [ ] Focus areas flagged
+**Exit Criteria**: Review scope mapped, blast radius assessed, dependencies traced, focus areas flagged
 **Consensus**: ✅ CONSENSUS: reviewer ✓ | scouter ✓ | tech-lead ✓
 
 ---
@@ -227,10 +231,7 @@ FOR EACH phase in PLAN-{scope}.md:
   - Verify code implements plan spec → "Plan Phase X → Code Y → ✅/⚠️/❌"
 ```
 
-**Exit Criteria**:
-- [ ] All files reviewed across 5 dimensions
-- [ ] Findings severity-ranked
-- [ ] Security + performance validated
+**Exit Criteria**: All files reviewed across 5 dimensions, findings severity-ranked, security + performance validated
 **Consensus**: ✅ CONSENSUS: reviewer ✓ | reviewer(exec) ✓ | security+perf ✓
 
 ---
@@ -266,11 +267,7 @@ FOR EACH phase in PLAN-{scope}.md:
 6. `tech-lead` synthesizes final improvement plan
 
 **Deliverable**: `./reports/{topic}/reviews/REVIEW-REPORT-{scope}`
-**Exit Criteria**:
-- [ ] All findings prioritized
-- [ ] Fix recommendations documented
-- [ ] Effort estimated
-- [ ] Nothing dropped
+**Exit Criteria**: All findings prioritized, fix recommendations documented, effort estimated, nothing dropped
 **Consensus**: ✅ CONSENSUS: tech-lead ✓ | planner ✓ | reviewer ✓
 
 ---
@@ -320,11 +317,7 @@ FOR EACH phase in PLAN-{scope}.md:
 6. `tech-lead` approves final report
 
 **Deliverable**: `./reports/{topic}/reviews/REVIEW-{scope}`
-**Exit Criteria**:
-- [ ] Executive summary complete
-- [ ] Verdict issued
-- [ ] All findings actionable
-- [ ] Stakeholder-ready
+**Exit Criteria**: Executive summary complete, verdict issued, all findings actionable, stakeholder-ready
 **Consensus**: ✅ CONSENSUS: tech-lead ✓ | reporter ✓ | business-analyst ✓
 
 ---

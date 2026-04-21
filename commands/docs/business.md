@@ -1,10 +1,8 @@
 ---
-schema-version: "1.0"
 description: "Business Docs - Generate 4 business folders with structured sub-files"
 version: "2.0"
 category: documentation
 execution-mode: execute
-topology: pipeline
 ---
 
 # /docs:business - Business Documentation (Folder-Based)
@@ -17,28 +15,29 @@ topology: pipeline
 
 ## PRE-FLIGHT (DO FIRST - BLOCKS PHASE 1)
 
-**LOAD now** (path `./rules/` or `~/.{TOOL}/skills/agent-assistant/rules/`):
+**LOAD now** (in order; path `./rules/` or `~/.{TOOL}/skills/agent-assistant/rules/`):
 
-1. RUNTIME.md — Identity, Laws, Routing, Phase Execution, Agent Protocol
+1. CORE.md - Identity, Laws, Routing
+2. PHASES.md - Phase Execution
+3. AGENTS.md - Tiered Execution
 
 **Do not run Phase 1 until all are loaded.** Follow all rules in those files; they override any conflicting instructions in this file.
 
 ---
 
-## EXECUTION MODEL
+## TIERED EXECUTION PROTOCOL (MANDATORY)
 
-> **Reference: RUNTIME.md (Execution Model)**
+> **Reference: AGENTS.md (Tiered Execution)**
 
 ```yaml
-execution_model:
-  principle: "Role-Based Hybrid — EMBODY for context-dependent agents, SUB-AGENT for independence-dependent agents."
+tiered_execution:
+  principle: "Sub-agent FIRST (Tier 1). EMBODY ONLY on system failure (Tier 2)."
   for_each_phase:
-    EMBODY_MODE: "IF agent.category IN [meta, execution, investigation, support] → EMBODY (shared context)"
-    SUB_AGENT_MODE: "IF agent.category IN [validation, research] → SUB-AGENT with Context Briefing"
-  rules:
-    - ❌ NEVER use SUB-AGENT for context-dependent agents (execution/meta/investigation/support)
-    - ✅ ALWAYS use SUB-AGENT for independence-dependent agents (validation/research) when tool exists
-    - ⚠️ FALLBACK: All EMBODY + Anti-Bias Protocol when sub-agent tool unavailable
+    TIER_1_MANDATORY: "IF tool exists -> MUST use SUB_AGENT_DELEGATION"
+    TIER_2_FALLBACK: "ONLY on system error - NOT complexity/preference/speed"
+  anti_lazy_fallback:
+    - NEVER use Tier 2 when Tier 1 tool is available
+    - ALWAYS attempt Tier 1 first when tool exists
 ```
 
 ---
@@ -141,12 +140,12 @@ One phase at a time, each phase independent: Phase 1 -> Phase 2 -> Phase 3 -> Ph
 | **Agent** | `scouter` |
 | **Goal** | Build evidence-backed business intelligence from codebase + existing docs |
 
-### EXECUTION MODEL
+### TIERED EXECUTION
 
-**Enhanced (when available):**
+**TIER 1 (MANDATORY when tool exists):**
 > Invoke runSubagent for `scouter`. Context: ISOLATED.
 
-**Standard (default):**
+**TIER 2 (FALLBACK on system error only):**
 > Load `{AGENTS_PATH}/scouter.md`
 > EMBODY [scouter] - Requires logged system error justification.
 
@@ -246,12 +245,12 @@ One phase at a time, each phase independent: Phase 1 -> Phase 2 -> Phase 3 -> Ph
 | **Goal** | Convert raw intelligence into structured, testable business artifacts |
 | **Skill** | Load `skills/business-analyst/SKILL.md` |
 
-### EXECUTION MODEL
+### TIERED EXECUTION
 
-**Enhanced (when available):**
+**TIER 1 (MANDATORY when tool exists):**
 > Invoke runSubagent for `business-analyst`. Context: ISOLATED.
 
-**Standard (default):**
+**TIER 2 (FALLBACK on system error only):**
 > Load `{AGENTS_PATH}/business-analyst.md`
 > EMBODY [business-analyst] - Requires logged system error justification.
 
@@ -317,12 +316,12 @@ One phase at a time, each phase independent: Phase 1 -> Phase 2 -> Phase 3 -> Ph
 | **Agent** | `docs-manager` |
 | **Goal** | Generate or update all 4 business folders in English only |
 
-### EXECUTION MODEL
+### TIERED EXECUTION
 
-**Enhanced (when available):**
+**TIER 1 (MANDATORY when tool exists):**
 > Invoke runSubagent for `docs-manager`. Context: ISOLATED.
 
-**Standard (default):**
+**TIER 2 (FALLBACK on system error only):**
 > Load `{AGENTS_PATH}/docs-manager.md`
 > EMBODY [docs-manager] - Requires logged system error justification.
 
@@ -409,12 +408,12 @@ For each business folder:
 | **Agent** | `project-manager` |
 | **Goal** | Validate cross-folder consistency, delivery readiness, and completeness |
 
-### EXECUTION MODEL
+### TIERED EXECUTION
 
-**Enhanced (when available):**
+**TIER 1 (MANDATORY when tool exists):**
 > Invoke runSubagent for `project-manager`. Context: ISOLATED.
 
-**Standard (default):**
+**TIER 2 (FALLBACK on system error only):**
 > Load `{AGENTS_PATH}/project-manager.md`
 > EMBODY [project-manager] - Requires logged system error justification.
 

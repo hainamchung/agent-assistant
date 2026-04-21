@@ -9,7 +9,6 @@ domain: research
 name: "Research & Documentation"
 description: "Technical research, documentation"
 skill_count: 83
-composes_with: [brainstormer, planner]
 
 skills:
   # --------------------------------------------------------------------------

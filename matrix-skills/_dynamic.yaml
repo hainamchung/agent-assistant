@@ -4,10 +4,6 @@
 # Auto-managed by Hybrid Skill Orchestration Layer (HSOL)
 # Manual edits may be overwritten
 #
-# STATUS: PLANNED — Trust progression logic is not yet implemented at runtime.
-#         This file defines the intended schema and lifecycle.
-#         See documents/HSOL-ASSESSMENT.md for implementation roadmap.
-#
 # PURPOSE:
 #   Track dynamically installed skills from the community ecosystem
 #   Enable unified skill resolution across matrix and dynamic sources
@@ -144,6 +140,12 @@ skills: []
 # ============================================================================
 
 rejected_skills: []
+  # Example entry (commented):
+  # - skill_id: "sketchy-skill"
+  #   source: "github/unknown/repo@sketchy"
+  #   rejected_at: "2026-01-25T08:00:00Z"
+  #   reason: "Schema validation failed"
+  #   block_reinstall: true
 
 # ============================================================================
 # TELEMETRY SUMMARY

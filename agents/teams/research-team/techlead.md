@@ -1,5 +1,4 @@
 ---
-schema-version: "1.0"
 name: research-team-techlead
 role: tech-lead
 team: research-team
@@ -15,7 +14,7 @@ collaborates-with: [research-team-executor, research-team-reviewer]
 # 🔬 Research Team — Tech Lead
 
 > **GOLDEN TRIANGLE ROLE**: Tech Lead (Coordinator + Arbitrator)
-> **LOAD**: `rules/TEAMS-LITE.md` for full Golden Triangle protocol
+> **LOAD**: `rules/TEAMS.md` for full Golden Triangle protocol
 > **BASE AGENT**: `researcher` — all researcher capabilities active
 
 ---

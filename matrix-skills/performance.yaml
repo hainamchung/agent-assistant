@@ -9,7 +9,6 @@ domain: performance
 name: "Performance Engineering"
 description: "Profiling, optimization, benchmarking"
 skill_count: 22
-composes_with: [backend-engineer, frontend-engineer, tester]
 
 skills:
   # --------------------------------------------------------------------------

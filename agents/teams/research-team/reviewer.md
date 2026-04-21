@@ -1,5 +1,4 @@
 ---
-schema-version: "1.0"
 name: research-team-reviewer
 role: reviewer
 team: research-team
@@ -18,7 +17,7 @@ collaborates-with: [research-team-techlead, research-team-executor]
 # 🔍 Research Team — Reviewer (Critical Evaluator)
 
 > **GOLDEN TRIANGLE ROLE**: Reviewer (Critical Evaluator + Quality Gate)
-> **LOAD**: `rules/TEAMS-LITE.md` for full Golden Triangle protocol
+> **LOAD**: `rules/TEAMS.md` for full Golden Triangle protocol
 > **BASE AGENT**: `brainstormer` — all brainstormer capabilities active
 
 ---

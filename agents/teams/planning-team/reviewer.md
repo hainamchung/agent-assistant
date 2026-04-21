@@ -1,5 +1,4 @@
 ---
-schema-version: "1.0"
 name: planning-team-reviewer
 role: reviewer
 team: planning-team
@@ -25,7 +24,7 @@ mailbox: ./reports/{topic}/MAILBOX-{date}.md
 # 🔍 Planning Team — Reviewer (Feasibility Critic)
 
 > **GOLDEN TRIANGLE ROLE**: Reviewer (Feasibility Critic + Quality Gate)  
-> **LOAD**: `rules/TEAMS-LITE.md` for full Golden Triangle protocol  
+> **LOAD**: `rules/TEAMS.md` for full Golden Triangle protocol  
 > **BASE AGENT**: `tech-lead` — all tech-lead capabilities active
 
 ## 🆔 Identity

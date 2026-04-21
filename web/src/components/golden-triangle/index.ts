@@ -1,1 +1,0 @@
-export { GoldenTriangle } from './GoldenTriangle'

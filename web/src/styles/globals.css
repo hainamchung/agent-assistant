@@ -1,27 +1,18 @@
 @import "tailwindcss";
 
 @theme {
-  /* Background colors — Mission Control dark palette */
-  --color-bg-primary: #080812;
-  --color-bg-secondary: #0f0f1e;
-  --color-bg-tertiary: #161630;
-  --color-bg-card: #0c0c1a;
-  --color-bg-hover: #1a1a3e;
-  --color-bg-surface: #0f0f1e;
+  /* Background colors */
+  --color-bg-primary: #0a0a0a;
+  --color-bg-secondary: #1a1a1a;
+  --color-bg-tertiary: #252525;
+  --color-bg-card: #111111;
+  --color-bg-hover: #1f1f1f;
   
   /* Text colors */
-  --color-text-primary: #e0e0f0;
-  --color-text-secondary: #a0a0c0;
-  --color-text-muted: #6a6a9a;
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #a0a0a0;
+  --color-text-muted: #666666;
   --color-text-accent: #00ff88;
-  
-  /* Agent category accent colors */
-  --color-agent-meta: #8844ff;
-  --color-agent-execution: #00d4ff;
-  --color-agent-investigation: #ffb347;
-  --color-agent-validation: #ff4444;
-  --color-agent-research: #00ff88;
-  --color-agent-support: #ff8844;
   
   /* Brand gradient colors */
   --color-gradient-red: #ff4444;
@@ -29,11 +20,10 @@
   --color-gradient-purple: #8844ff;
   --color-gradient-cyan: #00d4ff;
   --color-gradient-green: #00ff88;
-  --color-gradient-amber: #ffb347;
   
   /* Border colors */
-  --color-border-primary: #1a1a3e;
-  --color-border-secondary: #12122a;
+  --color-border-primary: #333333;
+  --color-border-secondary: #222222;
   --color-border-accent: rgba(0, 255, 136, 0.3);
   
   /* Typography */
@@ -102,79 +92,6 @@ body {
   font-family: var(--font-sans);
   line-height: 1.6;
   min-height: 100vh;
-  background-image: 
-    linear-gradient(rgba(26, 26, 62, 0.3) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(26, 26, 62, 0.3) 1px, transparent 1px);
-  background-size: 60px 60px;
-  position: relative;
-}
-
-/* Animated background orbs — large, soft, drifting color zones */
-body::before,
-body::after {
-  content: '';
-  position: fixed;
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 0;
-  filter: blur(140px);
-}
-
-body::before {
-  width: 700px;
-  height: 700px;
-  background: radial-gradient(circle, #8844ff, transparent 70%);
-  top: -250px;
-  right: -200px;
-  opacity: 0.1;
-  animation: orb-drift-1 22s ease-in-out infinite;
-}
-
-body::after {
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, #00ff88, transparent 70%);
-  bottom: -150px;
-  left: -150px;
-  opacity: 0.09;
-  animation: orb-drift-2 28s ease-in-out infinite;
-}
-
-@keyframes orb-drift-1 {
-  0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.1; }
-  25% { transform: translate(-100px, 150px) scale(1.2); opacity: 0.14; }
-  50% { transform: translate(40px, 200px) scale(1.05); opacity: 0.08; }
-  75% { transform: translate(80px, 80px) scale(0.9); opacity: 0.12; }
-}
-
-@keyframes orb-drift-2 {
-  0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.09; }
-  30% { transform: translate(120px, -100px) scale(1.15); opacity: 0.13; }
-  60% { transform: translate(60px, -160px) scale(0.95); opacity: 0.07; }
-  80% { transform: translate(-50px, -60px) scale(1.1); opacity: 0.11; }
-}
-
-/* Third ambient orb for depth */
-#root::before {
-  content: '';
-  position: fixed;
-  width: 500px;
-  height: 500px;
-  border-radius: 50%;
-  background: radial-gradient(circle, #00d4ff, transparent 70%);
-  top: 35%;
-  left: 25%;
-  filter: blur(140px);
-  opacity: 0.07;
-  pointer-events: none;
-  z-index: 0;
-  animation: orb-drift-3 32s ease-in-out infinite;
-}
-
-@keyframes orb-drift-3 {
-  0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.07; }
-  35% { transform: translate(150px, -80px) scale(1.2); opacity: 0.1; }
-  65% { transform: translate(-60px, 100px) scale(0.9); opacity: 0.05; }
 }
 
 /* Selection styling */

@@ -1,5 +1,4 @@
 ---
-schema-version: "1.0"
 name: project-team-executor
 role: executor
 team: project-team
@@ -15,7 +14,7 @@ collaborates-with: [project-team-techlead, project-team-reviewer]
 # 🔨 Project Team — Executor
 
 > **GOLDEN TRIANGLE ROLE**: Executor (Implementer + Defender)
-> **LOAD**: `rules/TEAMS-LITE.md` for full Golden Triangle protocol
+> **LOAD**: `rules/TEAMS.md` for full Golden Triangle protocol
 > **BASE AGENT**: `business-analyst` — all business-analyst capabilities active
 
 ---

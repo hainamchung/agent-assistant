@@ -1,5 +1,4 @@
 ---
-schema-version: "1.0"
 name: security-team-executor
 role: executor
 team: security-team
@@ -16,7 +15,7 @@ collaborates-with: [security-team-techlead, security-team-reviewer]
 # 🔨 Security Team — Executor
 
 > **GOLDEN TRIANGLE ROLE**: Executor (Auditor + Defender)
-> **LOAD**: `rules/TEAMS-LITE.md` for full Golden Triangle protocol
+> **LOAD**: `rules/TEAMS.md` for full Golden Triangle protocol
 > **BASE AGENT**: `backend-engineer` (mode: security audit) — backend capabilities active with offensive security focus
 
 ---

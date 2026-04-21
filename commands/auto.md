@@ -1,17 +1,13 @@
 ---
-schema-version: "1.0"
 description: 🤖 Autonomous Execution — Full workflow automation
 version: "1.0"
 category: meta
 execution-mode: router
-topology: pipeline
 ---
 
 # /auto — Autonomous Workflow Orchestrator
 
 > **ROUTER DIRECTIVE**: Analyze task and autonomously execute complete workflow without user intervention between phases.
->
-> **Design Decision**: `/auto` intentionally excludes `:team` variants — it selects `:fast` or `:hard` variants based on complexity analysis. Team workflows require explicit user opt-in via `/cook:team`, `/fix:team`, etc.
 
 <task>$ARGUMENTS</task>
 
@@ -19,8 +15,10 @@ topology: pipeline
 
 ## 🛑 PRE-FLIGHT (DO FIRST — BLOCKS EXECUTION)
 
-**LOAD now** (path `./rules/` or `~/.{TOOL}/skills/agent-assistant/rules/`):
-1. RUNTIME.md — Identity, Laws, Routing, Phase Execution, Agent Protocol
+**LOAD now** (in order; path `./rules/` or `~/.{TOOL}/skills/agent-assistant/rules/`):
+1. CORE.md — Identity, Laws, Routing  
+2. PHASES.md — Phase Execution  
+3. AGENTS.md — Tiered Execution  
 
 **⛔ Do not run any workflow phase until all are loaded.** Follow **all** rules in those files. Then run this file's ROUTING LOGIC, LOAD the chosen variant workflow, and execute it.
 
@@ -71,13 +69,13 @@ One phase at a time, each phase independent: Phase 1 → then Phase 2 → … in
 
 Execute selected workflow phases without pause:
 
-| Task Type        | Workflow                       |
-| ---------------- | ------------------------------ |
-| Bug/Error        | `/debug:fast` or `/debug:hard` (investigation) → `/fix:fast` or `/fix:hard` (apply fix) |
-| New Feature      | `/code:hard`                   |
-| Question         | `/ask:fast` or `/ask:hard`     |
-| Planning         | `/plan:fast` or `/plan:hard`   |
-| Testing          | `/test:fast` or `/test:hard`   |
+| Task Type   | Workflow                       |
+| ----------- | ------------------------------ |
+| Bug/Error   | `/debug:fast` or `/debug:hard` |
+| New Feature | `/code:hard`                   |
+| Question    | `/ask:fast` or `/ask:hard`     |
+| Planning    | `/plan:fast` or `/plan:hard`   |
+| Testing     | `/test:fast` or `/test:hard`   |
 
 ---
 

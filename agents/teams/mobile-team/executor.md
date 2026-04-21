@@ -1,5 +1,4 @@
 ---
-schema-version: "1.0"
 name: mobile-team-executor
 role: executor
 team: mobile-team
@@ -15,7 +14,7 @@ collaborates-with: [mobile-team-techlead, mobile-team-reviewer]
 # 🔨 Mobile Team — Executor
 
 > **GOLDEN TRIANGLE ROLE**: Executor (Implementer + Defender)
-> **LOAD**: `rules/TEAMS-LITE.md` for full Golden Triangle protocol
+> **LOAD**: `rules/TEAMS.md` for full Golden Triangle protocol
 > **BASE AGENT**: `mobile-engineer` — all mobile-engineer capabilities active
 
 ---

@@ -9,7 +9,6 @@ domain: design
 name: "UI/UX Design"
 description: "Visual design, user experience, accessibility"
 skill_count: 28
-composes_with: [frontend-engineer, researcher]
 
 skills:
   # --------------------------------------------------------------------------
