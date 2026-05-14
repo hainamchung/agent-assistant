@@ -1,0 +1,124 @@
+# Domain: Game Development
+# Skills: 15 | TIER: Professional/Specialized
+# Purpose: Game engines, graphics, game loop, physics, audio, multiplayer
+
+skills:
+  - skill_id: game-engine-patterns
+    category: professional
+    priority_score: 9
+    relevance_mapping:
+      agents: [game-engineer]
+      profiles: [gaming:execution]
+    description: Game loop architecture, update/render cycle, state machines, entity-component patterns
+
+  - skill_id: game-physics
+    category: specialized
+    priority_score: 8
+    relevance_mapping:
+      agents: [game-engineer]
+      profiles: [gaming:execution]
+    description: Rigid body dynamics, collision detection, ray casting, physics engine integration
+
+  - skill_id: game-rendering
+    category: specialized
+    priority_score: 9
+    relevance_mapping:
+      agents: [game-engineer, frontend-engineer]
+      profiles: [gaming:execution, frontend:execution]
+    description: 2D/3D rendering, shaders, sprite management, texture atlases, draw calls optimization
+
+  - skill_id: game-input-handling
+    category: professional
+    priority_score: 8
+    relevance_mapping:
+      agents: [game-engineer]
+      profiles: [gaming:execution]
+    description: Keyboard/mouse, gamepad, touch, gesture input, input buffering, dead zones
+
+  - skill_id: game-audio
+    category: professional
+    priority_score: 7
+    relevance_mapping:
+      agents: [game-engineer]
+      profiles: [gaming:execution]
+    description: Audio mixing, spatial audio, procedural sound, music systems, sound pooling
+
+  - skill_id: game-multiplayer
+    category: expert
+    priority_score: 8
+    relevance_mapping:
+      agents: [game-engineer]
+      profiles: [gaming:execution]
+    description: Client-server architecture, lag compensation, prediction, reconciliation, anti-cheat
+
+  - skill_id: game-ai-behaviors
+    category: specialized
+    priority_score: 8
+    relevance_mapping:
+      agents: [game-engineer]
+      profiles: [gaming:execution]
+    description: Pathfinding, behavior trees, state machines, utility AI, flocking, steering behaviors
+
+  - skill_id: game-resource-management
+    category: professional
+    priority_score: 8
+    relevance_mapping:
+      agents: [game-engineer]
+      profiles: [gaming:execution]
+    description: Asset loading, memory management, streaming, LOD, texture compression, audio streaming
+
+  - skill_id: game-save-systems
+    category: professional
+    priority_score: 7
+    relevance_mapping:
+      agents: [game-engineer]
+      profiles: [gaming:execution]
+    description: Save/load serialization, cloud saves, profile management, settings persistence
+
+  - skill_id: game-perf-optimization
+    category: expert
+    priority_score: 9
+    relevance_mapping:
+      agents: [game-engineer, performance-engineer]
+      profiles: [gaming:execution, performance:validation]
+    description: 60fps optimization, draw call batching, GPU profiling, memory fragmentation, mobile optimization
+
+  - skill_id: game-ui
+    category: professional
+    priority_score: 8
+    relevance_mapping:
+      agents: [game-engineer, frontend-engineer]
+      profiles: [gaming:execution, frontend:execution]
+    description: In-game UI, HUD, menus, dialog systems, UI animation, accessibility
+
+  - skill_id: game-localization
+    category: professional
+    priority_score: 6
+    relevance_mapping:
+      agents: [game-engineer]
+      profiles: [gaming:execution]
+    description: i18n/l10n, string tables, RTL support, font rendering, locale-specific assets
+
+  - skill_id: game-testing
+    category: specialized
+    priority_score: 8
+    relevance_mapping:
+      agents: [game-engineer, tester]
+      profiles: [gaming:execution, quality:validation]
+    description: Playtesting, automated game tests, QA automation, fuzzing, replay systems
+
+  - skill_id: game-platform-specific
+    category: specialized
+    priority_score: 7
+    relevance_mapping:
+      agents: [game-engineer, mobile-engineer]
+      profiles: [gaming:execution, mobile:execution]
+    description: Platform-specific considerations (Steam, iOS, Android, Console), certification, store integration
+
+  - skill_id: game-monetization
+    category: professional
+    priority_score: 7
+    relevance_mapping:
+      agents: [game-engineer, business-analyst]
+      profiles: [gaming:execution, planning:business]
+    description: IAP, ads integration, subscription systems, anti-cheat for monetization, fraud detection

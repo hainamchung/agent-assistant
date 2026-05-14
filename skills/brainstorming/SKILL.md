@@ -1,232 +1,157 @@
 ---
 name: brainstorming
-description: "Use before creative or constructive work (features, architecture, behavior). Transforms vague ideas into validated designs through disciplined reasoning and collaboration."
-risk: unknown
-source: community
-date_added: "2026-02-27"
+description: "MANDATORY design approval before any implementation. Use before creative work: features, components, behavior changes. One-at-a-time questions, 2-3 approach proposals, user approval gate."
 ---
 
 # Brainstorming Ideas Into Designs
 
-## Purpose
+Help turn ideas into fully formed designs and specs through natural collaborative dialogue.
 
-Turn raw ideas into **clear, validated designs and specifications**
-through structured dialogue **before any implementation begins**.
+Start by understanding the current project context, then ask questions one at a time to refine the idea. Once you understand what you're building, present the design and get user approval.
 
-This skill exists to prevent:
-- premature implementation
-- hidden assumptions
-- misaligned solutions
-- fragile systems
+<HARD-GATE>
+Do NOT invoke any implementation skill, write any code, scaffold any project, or take any implementation action until you have presented a design and the user has approved it. This applies to EVERY project regardless of perceived simplicity.
+</HARD-GATE>
 
-You are **not allowed** to implement, code, or modify behavior while this skill is active.
+## Anti-Pattern: "This Is Too Simple To Need A Design"
 
----
+Every project goes through this process. A todo list, a single-function utility, a config change — all of them. "Simple" projects are where unexamined assumptions cause the most wasted work. The design can be short (a few sentences for truly simple projects), but you MUST present it and get approval.
 
-## Operating Mode
+## Checklist
 
-You are operating as a **design facilitator and senior reviewer**, not a builder.
+You MUST complete these steps in order:
 
-- No creative implementation  
-- No speculative features  
-- No silent assumptions  
-- No skipping ahead  
+1. **Explore project context** — check files, docs, recent commits
+2. **Ask clarifying questions** — one at a time, understand purpose/constraints/success criteria
+3. **Propose 2-3 approaches** — with trade-offs and your recommendation
+4. **Present design** — in sections scaled to their complexity, get user approval after each section
+5. **Write design doc** — save to `.report/{FEATURE}/brainstorms/YYYY-MM-DD-<topic>-design.md` and commit
+6. **Spec self-review** — quick inline check for placeholders, contradictions, ambiguity, scope
+7. **User reviews written spec** — ask user to review the spec file before proceeding
+8. **Transition to implementation** — invoke `/plan:team` or proceed to `/cook:team`
 
-Your job is to **slow the process down just enough to get it right**.
+## Process Flow
 
----
+```
+Explore project context
+        ↓
+Ask clarifying questions (one at a time)
+        ↓
+Propose 2-3 approaches (with trade-offs)
+        ↓
+Present design (get approval after each section)
+        ↓
+User approves? → YES → Write design doc
+                ↓ NO → Revise design
+Write design doc
+        ↓
+Spec self-review (fix inline)
+        ↓
+User reviews spec?
+        ↓ YES → Proceed to implementation
+        ↓ NO → Make changes → Re-review
+```
 
 ## The Process
 
-### 1️⃣ Understand the Current Context (Mandatory First Step)
+**Understanding the idea:**
 
-Before asking any questions:
+- Check out the current project state first (files, docs, recent commits)
+- Before asking detailed questions, assess scope: if the request describes multiple independent subsystems, flag this immediately. Don't spend questions refining details of a project that needs to be decomposed first.
+- If the project is too large for a single spec, help the user decompose into sub-projects: what are the independent pieces, how do they relate, what order should they be built?
+- For appropriately-scoped projects, ask questions one at a time to refine the idea
+- Prefer multiple choice questions when possible, but open-ended is fine too
+- Only one question per message - if a topic needs more exploration, break it into multiple questions
+- Focus on understanding: purpose, constraints, success criteria
 
-- Review the current project state (if available):
-  - files
-  - documentation
-  - plans
-  - prior decisions
-- Identify what already exists vs. what is proposed
-- Note constraints that appear implicit but unconfirmed
+**Exploring approaches:**
 
-**Do not design yet.**
+- Propose 2-3 different approaches with trade-offs
+- Present options conversationally with your recommendation and reasoning
+- Lead with your recommended option and explain why
 
----
+**Presenting the design:**
 
-### 2️⃣ Understanding the Idea (One Question at a Time)
+- Once you believe you understand what you're building, present the design
+- Scale each section to its complexity: a few sentences if straightforward, up to 200-300 words if nuanced
+- Ask after each section whether it looks right so far
+- Cover: architecture, components, data flow, error handling, testing
+- Be ready to go back and clarify if something doesn't make sense
 
-Your goal here is **shared clarity**, not speed.
+**Design for isolation and clarity:**
 
-**Rules:**
+- Break the system into smaller units that each have one clear purpose
+- Communicate through well-defined interfaces
+- Each unit can be understood and tested independently
+- For each unit, answer: what does it do, how do you use it, and what does it depend on?
 
-- Ask **one question per message**
-- Prefer **multiple-choice questions** when possible
-- Use open-ended questions only when necessary
-- If a topic needs depth, split it into multiple questions
+**Working in existing codebases:**
 
-Focus on understanding:
-
-- purpose  
-- target users  
-- constraints  
-- success criteria  
-- explicit non-goals  
-
----
-
-### 3️⃣ Non-Functional Requirements (Mandatory)
-
-You MUST explicitly clarify or propose assumptions for:
-
-- Performance expectations  
-- Scale (users, data, traffic)  
-- Security or privacy constraints  
-- Reliability / availability needs  
-- Maintenance and ownership expectations  
-
-If the user is unsure:
-
-- Propose reasonable defaults  
-- Clearly mark them as **assumptions**
-
----
-
-### 4️⃣ Understanding Lock (Hard Gate)
-
-Before proposing **any design**, you MUST pause and do the following:
-
-#### Understanding Summary
-Provide a concise summary (5–7 bullets) covering:
-- What is being built  
-- Why it exists  
-- Who it is for  
-- Key constraints  
-- Explicit non-goals  
-
-#### Assumptions
-List all assumptions explicitly.
-
-#### Open Questions
-List unresolved questions, if any.
-
-Then ask:
-
-> “Does this accurately reflect your intent?  
-> Please confirm or correct anything before we move to design.”
-
-**Do NOT proceed until explicit confirmation is given.**
-
----
-
-### 5️⃣ Explore Design Approaches
-
-Once understanding is confirmed:
-
-- Propose **2–3 viable approaches**
-- Lead with your **recommended option**
-- Explain trade-offs clearly:
-  - complexity
-  - extensibility
-  - risk
-  - maintenance
-- Avoid premature optimization (**YAGNI ruthlessly**)
-
-This is still **not** final design.
-
----
-
-### 6️⃣ Present the Design (Incrementally)
-
-When presenting the design:
-
-- Break it into sections of **200–300 words max**
-- After each section, ask:
-
-  > “Does this look right so far?”
-
-Cover, as relevant:
-
-- Architecture  
-- Components  
-- Data flow  
-- Error handling  
-- Edge cases  
-- Testing strategy  
-
----
-
-### 7️⃣ Decision Log (Mandatory)
-
-Maintain a running **Decision Log** throughout the design discussion.
-
-For each decision:
-- What was decided  
-- Alternatives considered  
-- Why this option was chosen  
-
-This log should be preserved for documentation.
-
----
+- Explore the current structure before proposing changes. Follow existing patterns.
+- Where existing code has problems that affect the work, include targeted improvements as part of the design
+- Don't propose unrelated refactoring. Stay focused on what serves the current goal.
 
 ## After the Design
 
-### 📄 Documentation
+**Documentation:**
 
-Once the design is validated:
+- Write the validated design to `.report/{FEATURE}/brainstorms/YYYY-MM-DD-<topic>-design.md`
+- Commit the design document to git
 
-- Write the final design to a durable, shared format (e.g. Markdown)
-- Include:
-  - Understanding summary
-  - Assumptions
-  - Decision log
-  - Final design
+**Spec Self-Review:**
 
-Persist the document according to the project’s standard workflow.
+After writing the spec document, look at it with fresh eyes:
 
----
+1. **Placeholder scan:** Any "TBD", "TODO", incomplete sections, or vague requirements? Fix them.
+2. **Internal consistency:** Do any sections contradict each other? Does the architecture match the feature descriptions?
+3. **Scope check:** Is this focused enough for a single implementation plan, or does it need decomposition?
+4. **Ambiguity check:** Could any requirement be interpreted two different ways? If so, pick one and make it explicit.
 
-### 🛠️ Implementation Handoff (Optional)
+Fix any issues inline. No need to re-review — just fix and move on.
 
-Only after documentation is complete, ask:
+**User Review Gate:**
 
-> “Ready to set up for implementation?”
+After the spec review loop passes, ask the user to review the written spec before proceeding:
 
-If yes:
-- Create an explicit implementation plan
-- Isolate work if the workflow supports it
-- Proceed incrementally
+> "Spec written and committed to `<path>`. Please review it and let me know if you want to make any changes before we start writing out the implementation plan."
 
----
+Wait for the user's response. If they request changes, make them and re-run the spec review loop. Only proceed once the user approves.
 
-## Exit Criteria (Hard Stop Conditions)
+**Implementation:**
 
-You may exit brainstorming mode **only when all of the following are true**:
+- Proceed to `/plan:team` to create implementation plan
+- Or proceed to `/cook:team` to build directly
+- Do NOT invoke any implementation skill directly
 
-- Understanding Lock has been confirmed  
-- At least one design approach is explicitly accepted  
-- Major assumptions are documented  
-- Key risks are acknowledged  
-- Decision Log is complete  
+## Key Principles
 
-If any criterion is unmet:
-- Continue refinement  
-- **Do NOT proceed to implementation**
+- **One question at a time** - Don't overwhelm with multiple questions
+- **Multiple choice preferred** - Easier to answer than open-ended when possible
+- **YAGNI ruthlessly** - Remove unnecessary features from all designs
+- **Explore alternatives** - Always propose 2-3 approaches before settling
+- **Incremental validation** - Present design, get approval before moving on
+- **Be flexible** - Go back and clarify when something doesn't make sense
 
----
+## HARD-GATE Enforcement
 
-## Key Principles (Non-Negotiable)
+This skill creates a HARD-GATE that blocks ALL implementation actions:
 
-- One question at a time  
-- Assumptions must be explicit  
-- Explore alternatives  
-- Validate incrementally  
-- Prefer clarity over cleverness  
-- Be willing to go back and clarify  
-- **YAGNI ruthlessly**
+**Blocked actions:**
+- Invoking any implementation skill
+- Writing code
+- Scaffolding projects
+- Modifying behavior
+- Creating files that implement functionality
 
----
-If the design is high-impact, high-risk, or requires elevated confidence, you MUST hand off the finalized design and Decision Log to the `multi-agent-brainstorming` skill before implementation.
+**Unblocked actions:**
+- Asking clarifying questions
+- Presenting designs
+- Writing design documents
+- Research and exploration
+- Getting user approval
 
-## When to Use
-This skill is applicable to execute the workflow or actions described in the overview.
+**Gate release:**
+The HARD-GATE is released ONLY when:
+1. Design is presented to the user
+2. User explicitly approves the design
+3. Design document is committed to git

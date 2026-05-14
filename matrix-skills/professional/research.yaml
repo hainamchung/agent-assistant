@@ -1,0 +1,121 @@
+# Domain: Research & Documentation
+# Skills: 14 | TIER: Professional/Specialized
+# Purpose: Technical research, documentation, knowledge management, technical writing
+# Updated: 2026-04-21 — Added confidence-research, evidence-based skills
+
+skills:
+  - skill_id: research-technical
+    category: professional
+    priority_score: 8
+    relevance_mapping:
+      agents: [researcher, scouter]
+      profiles: [research:analysis, research:exploration]
+    description: Technology evaluation, benchmarking, competitive analysis, feasibility studies
+
+  - skill_id: research-codebase
+    category: professional
+    priority_score: 8
+    relevance_mapping:
+      agents: [scouter, researcher]
+      profiles: [research:exploration, research:analysis]
+    description: Codebase mapping, dependency analysis, architecture discovery, pattern detection
+
+  - skill_id: docs-api
+    category: professional
+    priority_score: 8
+    relevance_mapping:
+      agents: [docs-manager]
+      profiles: [research:documentation]
+    description: API documentation, OpenAPI/Swagger, interactive docs, changelog management
+
+  - skill_id: docs-runbook
+    category: professional
+    priority_score: 7
+    relevance_mapping:
+      agents: [docs-manager, devops-engineer]
+      profiles: [research:documentation, devops:execution]
+    description: Operations runbooks, incident response, troubleshooting guides, recovery procedures
+
+  - skill_id: docs-adr
+    category: professional
+    priority_score: 8
+    relevance_mapping:
+      agents: [docs-manager, tech-lead]
+      profiles: [research:documentation, architecture:orchestration]
+    description: Architecture Decision Records, decision rationale, alternatives considered
+
+  - skill_id: research-patterns
+    category: specialized
+    priority_score: 7
+    relevance_mapping:
+      agents: [researcher]
+      profiles: [research:analysis]
+    description: Design pattern research, anti-patterns, industry best practices, case studies
+
+  - skill_id: research-vendor
+    category: professional
+    priority_score: 7
+    relevance_mapping:
+      agents: [researcher, tech-lead]
+      profiles: [research:analysis, architecture:orchestration]
+    description: Vendor evaluation, RFP, proof-of-concept, TCO analysis, lock-in assessment
+
+  - skill_id: docs-onboarding
+    category: professional
+    priority_score: 7
+    relevance_mapping:
+      agents: [docs-manager]
+      profiles: [research:documentation]
+    description: Developer onboarding, architecture guides, getting started tutorials
+
+  - skill_id: research-security
+    category: specialized
+    priority_score: 8
+    relevance_mapping:
+      agents: [researcher, security-engineer]
+      profiles: [research:analysis, security:validation]
+    description: Security research, CVE analysis, threat landscape, vulnerability disclosure
+
+  - skill_id: docs-readme
+    category: professional
+    priority_score: 6
+    relevance_mapping:
+      agents: [docs-manager]
+      profiles: [research:documentation]
+    description: README files, project documentation, contribution guides, code of conduct
+
+  - skill_id: research-knowledge-management
+    category: specialized
+    priority_score: 7
+    relevance_mapping:
+      agents: [researcher, docs-manager]
+      profiles: [research:analysis, research:documentation]
+    description: Knowledge bases, wikis, tribal knowledge capture, documentation taxonomy
+
+  # === 2026-04-21: Confidence-Weighted Research ===
+  - skill_id: research-confidence-weighted
+    category: professional
+    priority_score: 8
+    relevance_mapping:
+      agents: [researcher, scouter]
+      profiles: [research:analysis, research:exploration]
+    description: Research with confidence levels and source hierarchy — prevents hallucination, evidence-based claims
+    source: "skills/confidence-research/SKILL.md"
+
+  - skill_id: research-source-hierarchy
+    category: specialized
+    priority_score: 7
+    relevance_mapping:
+      agents: [researcher]
+      profiles: [research:analysis]
+    description: Source hierarchy for research — Context7 > Official Docs > WebSearch > Inference
+    source: "skills/confidence-research/SKILL.md"
+
+  - skill_id: research-claim-validation
+    category: specialized
+    priority_score: 8
+    relevance_mapping:
+      agents: [researcher, tech-lead]
+      profiles: [research:analysis, architecture:orchestration]
+    description: Verify research claims with confidence levels before using in decisions
+    source: "skills/confidence-research/SKILL.md"

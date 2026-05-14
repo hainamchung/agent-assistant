@@ -1,0 +1,155 @@
+# Domain: Agent Orchestration
+# Skills: 11 | TIER: Professional/Specialized
+# Purpose: Multi-agent workflows, team collaboration, skill orchestration
+
+skills:
+  # === CORE ORCHESTRATION SKILLS ===
+
+  - skill_id: orchestration-brainstorming
+    category: professional
+    priority_score: 9
+    relevance_mapping:
+      agents: [brainstormer, tech-lead, planner]
+      profiles: [planning:discovery, architecture:orchestration]
+    description: "HARD-GATE design approval before implementation — mandatory brainstorming with user approval gate"
+    source: "skills/brainstorming/SKILL.md"
+    tier: 1
+    trigger_keywords: [brainstorm, design, plan, approach, propose, creative]
+
+  - skill_id: orchestration-subagent-dispatch
+    category: specialized
+    priority_score: 9
+    relevance_mapping:
+      agents: [tech-lead, planner, researcher]
+      profiles: [architecture:orchestration, planning:analysis]
+    description: "Fresh subagent dispatch per task + two-stage review (spec compliance then code quality)"
+    source: "skills/subagent-driven-development/SKILL.md"
+    tier: 3
+    trigger_keywords: [implement, execute, dispatch, subagent, task]
+
+  - skill_id: orchestration-parallel-dispatch
+    category: specialized
+    priority_score: 8
+    relevance_mapping:
+      agents: [tech-lead, planner]
+      profiles: [architecture:orchestration]
+    description: "Parallel subagent dispatch for independent tasks — concurrent execution for speedup"
+    source: "skills/dispatching-parallel-agents/SKILL.md"
+    tier: 3
+    trigger_keywords: [parallel, concurrent, multiple tasks, speedup]
+
+  - skill_id: orchestration-confidence-research
+    category: professional
+    priority_score: 8
+    relevance_mapping:
+      agents: [researcher, scouter]
+      profiles: [research:analysis, research:exploration]
+    description: "Confidence-weighted research with source hierarchy — reduces hallucination, evidence-based claims"
+    source: "skills/confidence-research/SKILL.md"
+    tier: 2
+    trigger_keywords: [research, investigate, evidence, source, fact, deep-dive]
+
+  - skill_id: orchestration-fresh-context
+    category: professional
+    priority_score: 9
+    relevance_mapping:
+      agents: [tech-lead, planner]
+      profiles: [architecture:orchestration]
+    description: "Subagent context isolation pattern — fresh isolated context per dispatch to prevent context rot"
+    source: "skills/fresh-context/SKILL.md"
+    tier: 2
+    trigger_keywords: [fresh context, isolation, prevent pollution, context budget, subagent dispatch]
+
+  - skill_id: orchestration-wave-execution
+    category: professional
+    priority_score: 9
+    relevance_mapping:
+      agents: [tech-lead, planner]
+      profiles: [architecture:orchestration, implementation:optimization]
+    description: "Dependency-aware parallel execution — wave-based grouping for speed optimization"
+    source: "skills/wave-execution/SKILL.md"
+    tier: 2
+    trigger_keywords: [wave, parallel, dependency, execute, speedup, batch]
+
+  # === QUALITY ASSURANCE SKILLS ===
+
+  - skill_id: quality-systematic-debugging
+    category: professional
+    priority_score: 9
+    relevance_mapping:
+      agents: [debugger, reviewer]
+      profiles: [quality:debugging, quality:review]
+    description: "Root cause analysis framework — prevents symptom masking, false completion claims"
+    source: "skills/debugging/SKILL.md"
+    tier: 2
+    trigger_keywords: [debug, error, fix, bug, issue, problem, crash, exception]
+
+  - skill_id: orchestration-code-review
+    category: professional
+    priority_score: 8
+    relevance_mapping:
+      agents: [reviewer, security-engineer]
+      profiles: [quality:review]
+    description: "Automated code review for PRs — quality, security, performance, best practices"
+    source: "skills/code-review/SKILL.md"
+    tier: 2
+    trigger_keywords: [review, pr, pull request, quality, check, audit]
+
+  - skill_id: quality-test-driven-development
+    category: specialized
+    priority_score: 8
+    relevance_mapping:
+      agents: [tester, backend-engineer, frontend-engineer]
+      profiles: [quality:validation, implementation:quality]
+    description: "TDD workflow — write tests before implementation, red-green-refactor cycle"
+    source: "skills/test-driven-development/SKILL.md"
+    tier: 2
+    trigger_keywords: [tdd, test, unit test, test-first, red-green]
+
+  # === PLANNING & COORDINATION SKILLS ===
+
+  - skill_id: planning-task-decomposition
+    category: professional
+    priority_score: 8
+    relevance_mapping:
+      agents: [planner, tech-lead]
+      profiles: [planning:analysis, architecture:orchestration]
+    description: "Break down complex tasks into manageable units with dependencies"
+    source: "rules/TEAMS.md"
+    tier: 2
+    trigger_keywords: [plan, decompose, breakdown, task, step, milestone]
+
+# === AGENT-PROFILE MAPPINGS ===
+
+agent_extensions:
+  # Extend agent profiles with orchestration skills
+  tech-lead:
+    additional_skills:
+      - orchestration-wave-execution
+    mandatory_skills:
+      - orchestration-subagent-dispatch
+
+  planner:
+    additional_skills:
+      - planning-task-decomposition
+      - orchestration-wave-execution
+    mandatory_skills:
+      - quality-systematic-debugging
+
+  debugger:
+    additional_skills:
+      - quality-systematic-debugging
+    mandatory_skills:
+      - quality-systematic-debugging
+
+  reviewer:
+    additional_skills:
+      - orchestration-code-review
+    mandatory_skills:
+      - orchestration-code-review
+
+# Integration with HSOL
+hsol_integration:
+  auto_discovery: true
+  fitness_weight: 0.9
+  promotion_candidate: true

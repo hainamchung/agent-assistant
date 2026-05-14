@@ -1,0 +1,137 @@
+# =============================================================================
+# Domain: Security Engineering
+# Skills: 13 | TIER: Specialized/Expert
+# Purpose: Threat modeling, secure coding, vulnerability assessment, compliance
+# Version: 1.0 | Updated: 2026-04-25
+# =============================================================================
+
+skills:
+  - skill_id: sec-threat-modeling
+    version: "1.0"
+    last_updated: "2026-04-25"
+    category: expert
+    priority_score: 9
+    relevance_mapping:
+      agents: [security-engineer, tech-lead]
+      profiles: [security:validation, architecture:orchestration]
+    description: STRIDE, attack trees, threat analysis, DFD, risk assessment matrix
+
+  - skill_id: sec-auth-design
+    version: "1.0"
+    last_updated: "2026-04-25"
+    category: expert
+    priority_score: 9
+    relevance_mapping:
+      agents: [security-engineer, backend-engineer]
+      profiles: [security:validation, backend:execution]
+    description: MFA, passwordless, passkeys, biometric auth, credential stuffing prevention
+
+  - skill_id: sec-injection-prevention
+    version: "1.0"
+    last_updated: "2026-04-25"
+    category: specialized
+    priority_score: 9
+    relevance_mapping:
+      agents: [security-engineer, reviewer, backend-engineer]
+      profiles: [security:validation, backend:execution, quality:review]
+    description: SQL/NoSQL injection, XSS, command injection, LDAP injection, SSRF prevention
+
+  - skill_id: sec-crypto-implementation
+    version: "1.0"
+    last_updated: "2026-04-25"
+    category: expert
+    priority_score: 9
+    relevance_mapping:
+      agents: [security-engineer, backend-engineer]
+      profiles: [security:validation, backend:execution]
+    description: Encryption at rest/transit, key management, HSM, envelope encryption, signing
+
+  - skill_id: sec-secrets-management
+    version: "1.0"
+    last_updated: "2026-04-25"
+    category: specialized
+    priority_score: 8
+    relevance_mapping:
+      agents: [security-engineer, devops-engineer]
+      profiles: [security:validation, devops:execution]
+    description: Vault, AWS Secrets Manager, secret rotation, injection, zero-trust secrets
+
+  - skill_id: sec-api-security
+    version: "1.0"
+    last_updated: "2026-04-25"
+    category: specialized
+    priority_score: 8
+    relevance_mapping:
+      agents: [security-engineer, backend-engineer]
+      profiles: [security:validation, backend:execution]
+    description: OAuth2, API keys, mTLS, HMAC, rate limiting, CORS, CSP headers
+
+  - skill_id: sec-owasp-top10
+    version: "1.0"
+    last_updated: "2026-04-25"
+    category: specialized
+    priority_score: 9
+    relevance_mapping:
+      agents: [security-engineer, reviewer]
+      profiles: [security:validation, quality:review]
+    description: OWASP Top 10 mitigations, common vulnerability patterns, remediation
+
+  - skill_id: sec-supply-chain
+    version: "1.0"
+    last_updated: "2026-04-25"
+    category: expert
+    priority_score: 8
+    relevance_mapping:
+      agents: [security-engineer, devops-engineer]
+      profiles: [security:validation, devops:execution]
+    description: SBOM, dependency scanning, CVE monitoring, malicious package detection
+
+  - skill_id: sec-zero-trust
+    version: "1.0"
+    last_updated: "2026-04-25"
+    category: expert
+    priority_score: 8
+    relevance_mapping:
+      agents: [security-engineer, devops-engineer, tech-lead]
+      profiles: [security:validation, devops:execution, architecture:orchestration]
+    description: Zero trust architecture, identity perimeter, microsegmentation, continuous verification
+
+  - skill_id: sec-compliance
+    version: "1.0"
+    last_updated: "2026-04-25"
+    category: specialized
+    priority_score: 8
+    relevance_mapping:
+      agents: [security-engineer, tech-lead]
+      profiles: [security:validation, architecture:orchestration]
+    description: SOC2, GDPR, HIPAA, PCI-DSS, data classification, privacy by design
+
+  - skill_id: sec-incident-response
+    version: "1.0"
+    last_updated: "2026-04-25"
+    category: expert
+    priority_score: 8
+    relevance_mapping:
+      agents: [security-engineer, devops-engineer]
+      profiles: [security:validation, devops:execution]
+    description: IR playbooks, forensics, containment, eradication, recovery procedures
+
+  - skill_id: sec-pen-testing
+    version: "1.0"
+    last_updated: "2026-04-25"
+    category: expert
+    priority_score: 9
+    relevance_mapping:
+      agents: [security-engineer]
+      profiles: [security:validation]
+    description: Manual penetration testing, bug bounty, vulnerability assessment, red teaming
+
+  - skill_id: sec-saast
+    version: "1.0"
+    last_updated: "2026-04-25"
+    category: specialized
+    priority_score: 7
+    relevance_mapping:
+      agents: [security-engineer, devops-engineer]
+      profiles: [security:validation, devops:execution]
+    description: SAST/DAST tooling, CI/CD security scanning, shift-left security practices

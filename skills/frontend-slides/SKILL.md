@@ -72,7 +72,7 @@ These invariants apply to EVERY slide in EVERY presentation:
 
 ---
 
-## Phase 0: Detect Mode
+## 🎭 Phase 0: Detect Mode
 
 Determine what the user wants:
 
@@ -94,7 +94,7 @@ When enhancing existing presentations, viewport fitting is the biggest risk:
 
 ---
 
-## Phase 1: Content Discovery (New Presentations)
+## 🎭 Phase 1: Content Discovery (New Presentations)
 
 **Ask ALL questions in a single AskUserQuestion call** so the user fills everything out at once:
 
@@ -133,7 +133,7 @@ If user provides an image folder:
 
 ---
 
-## Phase 2: Style Discovery
+## 🎭 Phase 2: Style Discovery
 
 **This is the "show, don't tell" phase.** Most people can't articulate design preferences in words.
 
@@ -180,7 +180,7 @@ If "Mix elements", ask for specifics.
 
 ---
 
-## Phase 3: Generate Presentation
+## 🎭 Phase 3: Generate Presentation
 
 Generate the full presentation using content from Phase 1 (text, or text + curated images) and style from Phase 2.
 
@@ -202,7 +202,7 @@ If images were provided, the slide outline already incorporates them from Step 1
 
 ---
 
-## Phase 4: PPT Conversion
+## 🎭 Phase 4: PPT Conversion
 
 When converting PowerPoint files:
 
@@ -213,7 +213,7 @@ When converting PowerPoint files:
 
 ---
 
-## Phase 5: Delivery
+## 🎭 Phase 5: Delivery
 
 1. **Clean up** — Delete `.claude-design/slide-previews/` if it exists
 2. **Open** — Use `open [filename].html` to launch in browser

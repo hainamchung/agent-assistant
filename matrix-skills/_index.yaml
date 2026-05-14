@@ -1,45 +1,213 @@
 # ============================================================================
-# MATRIX SKILLS INDEX v1.1
+# MATRIX SKILLS INDEX v2.1
 # ============================================================================
 # Central registry for the Hybrid Skill Orchestration Layer (HSOL).
 #
+# v2.1 ENHANCEMENTS (from HSOL-V2):
+#   - Context-aware scoring with multi-factor matching
+#   - Execution history learning
+#   - Skill graph for relationship modeling
+#   - Intelligent recommendations
+#
 # ARCHITECTURE:
-#   - Static Layer: Domain files ({domain}.yaml) with pre-curated skills
+#   - Static Layer: Domain files ({category}/{domain}.yaml) with curated skills
 #   - Dynamic Layer: _dynamic.yaml with community-installed skills
-#   - Discovery: find-skills skill ({SKILLS_PATH}/find-skills/SKILL.md)
+#   - Discovery: See `rules/SKILLS.md` for HSOL resolution algorithm
 #   - Unified resolution: Matrix-first, dynamic-enhanced
 #
-# TOTAL: 1430 matrix skills across 19 domains + dynamic skills
+# HSOL v2 SCORING FORMULA:
+#   final_score = (
+#     semantic_match × 0.35 +
+#     context_fitness × 0.25 +
+#     history_momentum × 0.20 +
+#     team_pattern_fit × 0.10 +
+#     explicit_match × 0.10
+#   ) × trust_multiplier × freshness_decay
+#
+# SKILL DIRECTORY STRUCTURE (verified 2026-04-26):
+#   matrix-skills/
+#   ├── _index.yaml              ← This file (full registry)
+#   ├── foundation/               ← Tier 1: 3 .md files
+#   ├── professional/             ← Tier 2: 22 files (11 YAML + 11 .md)
+#   ├── specialized/              ← Tier 3: 8 files (3 YAML + 5 .md)
+#   └── expert/                  ← Tier 4: 6 files (2 YAML + 4 .md)
+#
+# SKILL COUNTS (from domain YAML files):
+#   professional/: backend, frontend, quality, research, planning, devops, data, cloud,
+#                 design, mobile, gaming, languages, tools, management, orchestration
+#   specialized/: architecture, security, performance
+#   expert/: ai-ml, mcp
+#   (see individual domain YAML files for exact per-domain skill counts)
+#
+# ADDITIONAL SKILL SOURCES:
+#   - skills/ directory: Framework skills (fresh-context, confidence-research, etc.)
+#   - _dynamic.yaml: Community and custom skills
+#   - Plugin ecosystem: supabase, prisma, sentry, figma, linear, visual-testing
 #
 # USAGE:
 #   1. Agent declares profile in frontmatter (e.g., "backend:execution")
 #   2. HSOL loads relevant domain files based on agent's inherit_from
 #   3. Matrix skills are injected based on relevance_mapping and priority
-#   4. Dynamic discovery via find-skills runs async for potential enhancements
+#   4. Dynamic discovery via `_dynamic.yaml` for potential enhancements
 #   5. Superior dynamic skills are surfaced as recommendations
 #
-# REFERENCE: 
-#   - documents/SMART-SKILL-ORCHESTRATION-BLUEPRINT.md
+# REFERENCE:
 #   - rules/SKILLS.md
-#   - {SKILLS_PATH}/find-skills/SKILL.md
+#   - {MATRIX_SKILLS}/_dynamic.yaml
 # ============================================================================
 
-version: "1.1"
-last_updated: "2026-01-30"
-total_matrix_skills: 1430
+version: "2.1"
+last_updated: "2026-04-26"
 
 # ============================================================================
 # HYBRID SKILL ORCHESTRATION LAYER (HSOL) CONFIGURATION
 # ============================================================================
+# v2.1: Enhanced with context-aware scoring, execution history, skill graph
+# ============================================================================
 hsol:
   enabled: true
-  version: "1.1"
+  version: "2.1"
   
-  # Dynamic skill discovery via find-skills
+  # v2 Context-Aware Scoring (REPLACES v1 static scoring)
+  context_aware_scoring:
+    enabled: true
+    
+    # Scoring Formula Components
+    components:
+      semantic_match:
+        weight: 0.35
+        source: "Task description via TF-IDF similarity"
+      context_fitness:
+        weight: 0.25
+        source: "Project tech stack, patterns, conventions match"
+      history_momentum:
+        weight: 0.20
+        source: "Recent successful usage patterns"
+      team_pattern_fit:
+        weight: 0.10
+        source: "Domain-appropriate skill combinations"
+      explicit_match:
+        weight: 0.10
+        source: "Directly mentioned technologies in request"
+    
+    # Trust Multiplier (ENFORCED in v8.1)
+    trust_multiplier:
+      # ENFORCEMENT: These multipliers are applied automatically based on execution history
+      success_rate >= 0.9: 1.2   # Highly trusted — boost priority
+      success_rate >= 0.7: 1.0   # Normal — standard priority
+      success_rate >= 0.5: 0.8   # Caution — reduce priority, recommend review
+      success_rate < 0.5:  0.5   # Risky — block auto-selection, require manual override
+      no_history:         0.9   # Unknown — neutral with slight caution
+
+    # Freshness Decay (ENFORCED in v8.1)
+    freshness_decay:
+      days <= 7:   1.0   # Current — full score
+      days <= 30:  0.95  # Recent — minor decay
+      days <= 90:  0.85  # Aging — moderate decay
+      days > 90:   0.7   # Stale — significant decay, recommend review
+      days > 180:  0.5   # Deprecated — block auto-selection
+
+  # TRUST DECAY ENFORCEMENT (NEW v8.1)
+  trust_decay_enforcement:
+    enabled: true
+    version: "8.1"
+
+    # Auto-deprecation rules
+    deprecation:
+      auto_deprecate_after_days: 180  # Skills not used in 6 months
+      warn_after_days: 90            # Skills unused for 3 months
+      require_review_after_days: 365  # Yearly skill review required
+
+    # Trust score enforcement
+    enforcement_rules:
+      trust_score_below_0.3:
+        action: "BLOCK_AUTO_SELECTION"
+        require: "Manual override from orchestrator"
+        notify: "Log warning + surface to user"
+
+      trust_score_0.3_to_0.5:
+        action: "REDUCE_PRIORITY"
+        display: "⚠️ Low trust — verify effectiveness"
+        allow_override: true
+
+      trust_score_0.5_to_0.7:
+        action: "STANDARD_PRIORITY"
+        display: "Normal trust"
+
+      trust_score_above_0.7:
+        action: "BOOST_PRIORITY"
+        display: "✅ High trust"
+
+      trust_score_above_0.9:
+        action: "PROMOTE_SKILL"
+        display: "🌟 Top performer"
+        auto_suggest: "Use for similar tasks"
+
+    # Trust decay schedule
+    decay_schedule:
+      daily_decay_rate: 0.001  # 0.1% per day
+      weekly_decay_check: true
+      monthly_review: true
+
+    # Trust recovery
+    trust_recovery:
+      successful_execution:
+        trust_boost: 0.05  # +5% per successful use
+        max_trust: 1.0
+
+      failed_execution:
+        trust_penalty: 0.10  # -10% per failure
+        consecutive_failures_threshold: 3  # Alert after 3 consecutive failures
+
+      manual_override:
+        orchestrator_can_reset: true
+        require_documentation: true
+  
+  # Skill Graph for Relationship Modeling (NEW v2)
+  skill_graph:
+    enabled: true
+    storage: "./reports/{topic}/meta/hsol-v2/skill-graph.yaml"
+    
+    # Edge Types
+    edge_types:
+      complementary:
+        description: "High effectiveness when combined"
+        threshold: 0.7
+      sequential:
+        description: "Planning enables execution"
+        threshold: 0.6
+      exclusive:
+        description: "Prevents need for other skill"
+        threshold: 0.3
+  
+  # Intelligent Recommendations (NEW v2)
+  recommendations:
+    enabled: true
+    
+    triggers:
+      NEW_DOMAIN:
+        condition: "Task involves unfamiliar domain"
+        action: "Recommend top 3 skills for domain"
+      HIGH_COMPLEXITY:
+        condition: "Complexity score >= 4"
+        action: "Recommend specialized skills (tier 3+)"
+      LOW_CONFIDENCE:
+        condition: "Agent confidence < 0.85"
+        action: "Recommend expert skills"
+    
+    thresholds:
+      auto_load: 0.7
+      recommend: 0.5
+      minimum: 0.3
+  
+  # Dynamic skill discovery via _dynamic.yaml registry
+  # Community and custom skills registered in matrix-skills/_dynamic.yaml
+  # skill to be installed from skills.sh. See https://skills.sh/
+  # If the skills package is not installed, this is gracefully skipped.
+  # Skills are auto-discovered from the skills/ and matrix-skills/ directories
   find_skills:
-    skill_path: "{SKILLS_PATH}/find-skills/SKILL.md"
+    skill_path: "{MATRIX_SKILLS}/_dynamic.yaml"
     browse_url: "https://skills.sh/"
-    # install = global for CURRENT TOOL only, skip confirmation; do not install to all tools
     cli_commands:
       search: "npx skills find [query]"
       install: "npx skills add <owner/repo@skill> -g -y"
@@ -55,7 +223,7 @@ hsol:
     timeout_ms: 5000
     cache_ttl_seconds: 3600
     async_threshold: 0.8  # Matrix fitness above this skips discovery
-    # Only run dynamic discovery (find-skills) for these variants; "fast" skips discovery so fast stays fast
+    # Only run dynamic discovery for these variants; "fast" skips discovery so fast stays fast
     apply_for_variants: ["hard", "team"]
     
   # Fitness scoring weights
@@ -72,13 +240,24 @@ hsol:
     matrix_adequate: 0.75     # Below this: blocking discovery (use for current task); 0.75–0.8: async only
     superiority_delta: 0.15    # Dynamic must exceed matrix by this
     
-  # Trust progression
+  # Trust progression (ENFORCED in v8.1)
   trust:
+    # Initial trust levels based on skill tier
     new_skill: 0.3
     after_3_executions: 0.5
     after_10_executions: 0.7
+    after_25_executions: 0.85
+    after_50_executions: 0.95
     matrix_promoted: 1.0
-    decay_after_days: 90
+
+    # ENFORCEMENT: Decay settings
+    decay_after_days: 90      # Start decay after 90 days of inactivity
+    decay_rate_per_day: 0.002 # 0.2% decay per day
+    min_trust_floor: 0.3      # Never decay below 0.3
+
+    # Trust validation before use
+    validate_before_use: true
+    log_trust_decisions: true
     
   # Promotion to matrix-skills — automatic when criteria met (no queue)
   promotion:
@@ -101,128 +280,390 @@ hsol:
       - freshness
       - installed_at
       - last_execution
+    checksum:
+      algorithm: "SHA-256"
+      computed_from:
+        - skill_file_content
+        - file_path
+        - timestamp
+      command: "if command -v sha256sum &>/dev/null; then sha256sum {file} | cut -d' ' -f1; elif command -v shasum &>/dev/null; then shasum -a 256 {file} | cut -d' ' -f1; elif command -v openssl &>/dev/null; then openssl dgst -sha256 {file} | awk '{print $2}'; else echo 'ERROR: no sha256 tool found'; fi"
+      # Cross-platform: sha256sum (Linux), shasum -a 256 (macOS), openssl (fallback)
+      purpose: "Ensure skill integrity, detect tampering, validate version"
 
 # ============================================================================
 # DOMAIN REGISTRY
+# NOTE: Each domain file must exist at `matrix-skills/{category}/{file}`.
+# If a domain YAML is missing, HSOL logs a warning and skips that domain.
 # ============================================================================
 domains:
   backend:
-    file: "backend.yaml"
+    file: "professional/backend.yaml"
+    category: "professional"
     name: "Backend Development"
     description: "Server-side logic, APIs, data access"
-    skill_count: 208
+    skill_count: 12
 
   frontend:
-    file: "frontend.yaml"
+    file: "professional/frontend.yaml"
+    category: "professional"
     name: "Frontend Development"
     description: "UI/UX, web applications, client-side"
-    skill_count: 109
+    skill_count: 12
 
   architecture:
-    file: "architecture.yaml"
+    file: "specialized/architecture.yaml"
+    category: "specialized"
     name: "System Architecture"
     description: "Design patterns, system design, ADRs"
-    skill_count: 22
+    skill_count: 12
 
   quality:
-    file: "quality.yaml"
+    file: "professional/quality.yaml"
+    category: "professional"
     name: "Quality Assurance"
     description: "Testing, code review, validation"
-    skill_count: 61
+    skill_count: 15
 
   security:
-    file: "security.yaml"
+    file: "specialized/security.yaml"
+    category: "specialized"
     name: "Security Engineering"
     description: "Threat modeling, secure coding, compliance"
-    skill_count: 102
+    skill_count: 13
 
   design:
-    file: "design.yaml"
+    file: "professional/design.yaml"
+    category: "professional"
     name: "UI/UX Design"
     description: "Visual design, user experience, accessibility"
-    skill_count: 28
+    skill_count: 11
 
   planning:
-    file: "planning.yaml"
+    file: "professional/planning.yaml"
+    category: "professional"
     name: "Planning & Analysis"
     description: "Requirements, task breakdown, roadmaps"
-    skill_count: 38
+    skill_count: 11
 
   devops:
-    file: "devops.yaml"
+    file: "professional/devops.yaml"
+    category: "professional"
     name: "DevOps & Deployment"
     description: "CI/CD, infrastructure, containerization"
-    skill_count: 66
+    skill_count: 12
 
   data:
-    file: "data.yaml"
+    file: "professional/data.yaml"
+    category: "professional"
     name: "Data & Database"
     description: "Schema design, queries, migrations"
-    skill_count: 33
+    skill_count: 10
 
   performance:
-    file: "performance.yaml"
+    file: "specialized/performance.yaml"
+    category: "specialized"
     name: "Performance Engineering"
     description: "Profiling, optimization, benchmarking"
-    skill_count: 22
+    skill_count: 10
 
   research:
-    file: "research.yaml"
+    file: "professional/research.yaml"
+    category: "professional"
     name: "Research & Documentation"
     description: "Technical research, documentation"
-    skill_count: 83
-
-  mobile:
-    file: "mobile.yaml"
-    name: "Mobile Development"
-    description: "iOS, Android, cross-platform apps"
-    skill_count: 27
-
-  gaming:
-    file: "gaming.yaml"
-    name: "Game Development"
-    description: "Game engines, graphics, game loop"
     skill_count: 14
 
+  mobile:
+    file: "professional/mobile.yaml"
+    category: "professional"
+    name: "Mobile Development"
+    description: "iOS, Android, cross-platform apps"
+    skill_count: 10
+
+  gaming:
+    file: "professional/gaming.yaml"
+    category: "professional"
+    name: "Game Development"
+    description: "Game engines, graphics, game loop, physics, audio, multiplayer"
+    skill_count: 15
+
   management:
-    file: "management.yaml"
+    file: "professional/management.yaml"
+    category: "professional"
     name: "Project Management"
     description: "Delivery, risk management, agile"
-    skill_count: 21
+    skill_count: 10
 
-  ai_ml:
-    file: "ai-ml.yaml"
+  ai-ml:
+    file: "expert/ai-ml.yaml"
+    category: "expert"
     name: "AI/ML Engineering"
     description: "Machine learning, LLMs, data science"
-    skill_count: 229
+    skill_count: 12
 
   cloud:
-    file: "cloud.yaml"
+    file: "professional/cloud.yaml"
+    category: "professional"
     name: "Cloud & Infrastructure"
     description: "AWS, Azure, GCP, serverless"
-    skill_count: 67
+    skill_count: 10
 
   languages:
-    file: "languages.yaml"
+    file: "professional/languages.yaml"
+    category: "professional"
     name: "Programming Languages"
-    description: "Language-specific patterns and expertise"
-    skill_count: 57
+    description: "Language-specific patterns, idiomatic code, performance"
+    skill_count: 12
 
   tools:
-    file: "tools.yaml"
+    file: "professional/tools.yaml"
+    category: "professional"
     name: "Tools & Utilities"
-    description: "Productivity tools, document processing"
-    skill_count: 234
+    description: "Productivity tools, editors, CLI utilities"
+    skill_count: 12
 
   mcp:
-    file: "mcp.yaml"
+    file: "expert/mcp.yaml"
+    category: "expert"
     name: "MCP & Agents"
-    description: "Model Context Protocol, agent frameworks"
-    skill_count: 9
+    description: "Model Context Protocol, agent frameworks, tool integration"
+    skill_count: 12
+
+  orchestration:
+    file: "professional/orchestration.yaml"
+    category: "professional"
+    name: "Agent Orchestration"
+    description: "Multi-agent workflows, team collaboration, skill orchestration"
+    skill_count: 10
+
+# ============================================================================
+# ORPHAN SKILL FILES (.md — NOT registered in domain YAMLs)
+# These .md skill files exist in the matrix-skills directory but are not
+# included in the domain YAML registries above. They are registered here
+# so HSOL can discover and inject them. All are verified as existing files.
+# Last verified: 2026-04-24
+# ============================================================================
+skills:
+  # Foundation tier (.md files in foundation/)
+  - skill_id: "backend-foundation"
+    file: "foundation/backend.md"
+    category: "foundation"
+    name: "Backend Foundation"
+    description: "Simple backend changes, single-endpoint fixes, small logic updates"
+    priority_score: 7
+    tier: 1
+
+  - skill_id: "frontend-foundation"
+    file: "foundation/frontend.md"
+    category: "foundation"
+    name: "Frontend Foundation"
+    description: "Simple UI changes, single-component fixes, CSS tweaks"
+    priority_score: 7
+    tier: 1
+
+  - skill_id: "debugging-foundation"
+    file: "foundation/debugging.md"
+    category: "foundation"
+    name: "Debugging Foundation"
+    description: "Bug fix, regression, unexpected behavior investigation"
+    priority_score: 8
+    tier: 1
+
+  # Professional tier (.md files in professional/)
+  - skill_id: "ai-assist"
+    file: "professional/ai-assist.md"
+    category: "professional"
+    name: "AI-Assist"
+    description: "AI pair programming, code generation, AI review"
+    priority_score: 7
+    tier: 2
+
+  - skill_id: "api-design-pro"
+    file: "professional/api-design.md"
+    category: "professional"
+    name: "API Design Professional"
+    description: "New API endpoints, REST APIs, GraphQL, WebSocket design"
+    priority_score: 8
+    tier: 2
+
+  - skill_id: "code-quality"
+    file: "professional/code-quality.md"
+    category: "professional"
+    name: "Code Quality"
+    description: "Code review, refactoring, technical debt, code style"
+    priority_score: 7
+    tier: 2
+
+  - skill_id: "database-pro"
+    file: "professional/database.md"
+    category: "professional"
+    name: "Database Professional"
+    description: "Schema design, query optimization, migration planning"
+    priority_score: 8
+    tier: 2
+
+  - skill_id: "devops-pro"
+    file: "professional/devops.md"
+    category: "professional"
+    name: "DevOps Professional"
+    description: "CI/CD pipeline, containerization, deployment strategy"
+    priority_score: 7
+    tier: 2
+
+  - skill_id: "feature-design"
+    file: "professional/feature-design.md"
+    category: "professional"
+    name: "Feature Design"
+    description: "New feature addition, feature architecture"
+    priority_score: 8
+    tier: 2
+
+  - skill_id: "mobile-pro"
+    file: "professional/mobile.md"
+    category: "professional"
+    name: "Mobile Professional"
+    description: "Mobile app development, React Native, Flutter, iOS, Android"
+    priority_score: 8
+    tier: 2
+
+  - skill_id: "regression-testing"
+    file: "professional/regression-testing.md"
+    category: "professional"
+    name: "Regression Testing"
+    description: "Bug fixes, refactoring, dependency updates"
+    priority_score: 7
+    tier: 2
+
+  - skill_id: "testing-pro"
+    file: "professional/testing.md"
+    category: "professional"
+    name: "Testing Professional"
+    description: "Test strategy, coverage, test types, automation"
+    priority_score: 8
+    tier: 2
+
+  # Specialized tier (.md files in specialized/)
+  - skill_id: "architecture-spec"
+    file: "specialized/architecture.md"
+    category: "specialized"
+    name: "Architecture Specialized"
+    description: "New system design, major refactor, cross-cutting changes"
+    priority_score: 9
+    tier: 3
+
+  - skill_id: "cross-cutting"
+    file: "specialized/cross-cutting.md"
+    category: "specialized"
+    name: "Cross-Cutting Concerns"
+    description: "Logging, observability, auth, caching across system layers"
+    priority_score: 8
+    tier: 3
+
+  - skill_id: "performance-spec"
+    file: "specialized/performance.md"
+    category: "specialized"
+    name: "Performance Specialized"
+    description: "Performance optimization, profiling, bottleneck identification"
+    priority_score: 9
+    tier: 3
+
+  - skill_id: "security-spec"
+    file: "specialized/security.md"
+    category: "specialized"
+    name: "Security Specialized"
+    description: "Auth systems, input validation, secure API design"
+    priority_score: 9
+    tier: 3
+
+  # Expert tier (.md files in expert/)
+  - skill_id: "distributed-systems"
+    file: "expert/distributed-systems.md"
+    category: "expert"
+    name: "Distributed Systems"
+    description: "Multi-service coordination, consensus, global consistency"
+    priority_score: 9
+    tier: 4
+
+  - skill_id: "llm-integration"
+    file: "expert/llm-integration.md"
+    category: "expert"
+    name: "LLM Integration"
+    description: "LLM API integration, RAG systems, agentic AI"
+    priority_score: 9
+    tier: 4
+
+  - skill_id: "security-audit"
+    file: "expert/security-audit.md"
+    category: "expert"
+    name: "Security Audit"
+    description: "Security-critical systems, compliance, vulnerability assessment"
+    priority_score: 9
+    tier: 4
+
+  - skill_id: "system-design-expert"
+    file: "expert/system-design.md"
+    category: "expert"
+    name: "System Design Expert"
+    description: "Novel systems, no prior art, research-grade complexity"
+    priority_score: 9
+    tier: 4
+
+  # Skills that don't belong to a domain YAML (orphan skills)
+  # These are registered here so HSOL can discover and inject them.
+  # Paths are relative to the agent-assistant root (e.g., skills/fresh-context/SKILL.md).
+  # They resolve via the platform BASE path: {BASE}/skills/fresh-context/SKILL.md
+  - skill_id: "fresh-context"
+    file: "skills/fresh-context/SKILL.md"
+    category: "professional"
+    name: "Fresh Context Subagent Pattern"
+    description: "Subagent context isolation pattern for quality maintenance. Prevents context pollution during multi-agent workflows."
+    priority_score: 9
+    tier: 2
+
+  - skill_id: "confidence-research"
+    file: "skills/confidence-research/SKILL.md"
+    category: "professional"
+    name: "Confidence-Weighted Research"
+    description: "Confidence-weighted research with explicit source hierarchy and verification discipline. Halts hallucination propagation."
+    priority_score: 8
+    tier: 2
+
+  - skill_id: "brainstorming"
+    file: "skills/brainstorming/SKILL.md"
+    category: "professional"
+    name: "Creative Brainstorming"
+    description: "Structured ideation and creative problem-solving workflow with design approval gates."
+    priority_score: 7
+    tier: 2
+
+  - skill_id: "dispatching-parallel-agents"
+    file: "skills/dispatching-parallel-agents/SKILL.md"
+    category: "professional"
+    name: "Parallel Agent Dispatching"
+    description: "Dependency-aware parallel execution for speed optimization. Use when implementing plans with multiple independent tasks."
+    priority_score: 8
+    tier: 2
+
+  - skill_id: "subagent-driven-development"
+    file: "skills/subagent-driven-development/SKILL.md"
+    category: "professional"
+    name: "Subagent-Driven Development"
+    description: "Implementation plans with fresh subagent per task plus two-stage review. Spec compliance then code quality."
+    priority_score: 8
+    tier: 2
+
+  - skill_id: "wave-execution"
+    file: "skills/wave-execution/SKILL.md"
+    category: "professional"
+    name: "Wave Execution"
+    description: "Dependency-aware parallel execution for speed optimization. Groups tasks into waves of parallel execution."
+    priority_score: 8
+    tier: 2
 
 # ============================================================================
 # AGENT PROFILES
-# Maps agent ID to profile and inherited domains
+# Maps agent ID to profile and inherited domains.
+# The domain files are loaded from matrix-skills/{category}/{domain}.yaml
 # ============================================================================
 agent_profiles:
   backend-engineer:
@@ -237,12 +678,12 @@ agent_profiles:
 
   tech-lead:
     profile: "architecture:orchestration"
-    inherit_from: ["architecture", "quality", "planning"]
+    inherit_from: ["architecture", "quality", "planning", "orchestration"]
     primary_domain: "architecture"
 
   researcher:
     profile: "research:analysis"
-    inherit_from: ["research", "planning"]
+    inherit_from: ["research", "planning", "orchestration"]
     primary_domain: "research"
 
   debugger:
@@ -287,7 +728,7 @@ agent_profiles:
 
   scouter:
     profile: "research:exploration"
-    inherit_from: ["research", "architecture"]
+    inherit_from: ["research", "architecture", "orchestration"]
     primary_domain: "research"
 
   reviewer:
@@ -329,6 +770,34 @@ agent_profiles:
     profile: "management:orchestration"
     inherit_from: ["management", "planning"]
     primary_domain: "management"
+
+  # === NEW AGENTS v8.1 ===
+
+  sre-engineer:
+    profile: "devops:execution"
+    inherit_from: ["devops", "performance", "cloud"]
+    primary_domain: "devops"
+
+  release-engineer:
+    profile: "devops:execution"
+    inherit_from: ["devops", "cloud"]
+    primary_domain: "devops"
+
+  data-engineer:
+    profile: "data:execution"
+    inherit_from: ["data", "backend", "devops"]
+    primary_domain: "data"
+
+  office-hours:
+    profile: "planning:analysis"
+    inherit_from: ["planning", "research"]
+    primary_domain: "planning"
+
+  # === v2.2: WIKI-MANAGER (llm-wiki integration) ===
+  wiki-manager:
+    profile: "research:documentation"
+    inherit_from: ["research", "planning", "tools", "quality"]
+    primary_domain: "research"
 
 # ============================================================================
 # RESOLUTION RULES

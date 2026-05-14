@@ -1,0 +1,127 @@
+# =============================================================================
+# Domain: Backend Development
+# Skills: 12 | TIER: Professional/Expert
+# Purpose: Server-side logic, APIs, data access, middleware, concurrency
+# Version: 1.0 | Updated: 2026-04-25
+# =============================================================================
+
+skills:
+  - skill_id: backend-api-design
+    version: "1.0"
+    last_updated: "2026-04-25"
+    category: professional
+    priority_score: 8
+    relevance_mapping:
+      agents: [backend-engineer, tech-lead]
+      profiles: [backend:execution, architecture:orchestration]
+    description: Design RESTful/GraphQL APIs with versioning, pagination, auth, rate limiting
+
+  - skill_id: backend-async-patterns
+    version: "1.0"
+    last_updated: "2026-04-25"
+    category: specialized
+    priority_score: 7
+    relevance_mapping:
+      agents: [backend-engineer, performance-engineer]
+      profiles: [backend:execution, performance:validation]
+    description: Implement async workers, queues, event-driven architecture, background jobs
+
+  - skill_id: backend-caching
+    version: "1.0"
+    last_updated: "2026-04-25"
+    category: professional
+    priority_score: 7
+    relevance_mapping:
+      agents: [backend-engineer, performance-engineer]
+      profiles: [backend:execution, performance:validation]
+    description: Redis/memcached strategies, cache invalidation, distributed caching patterns
+
+  - skill_id: backend-middleware
+    version: "1.0"
+    last_updated: "2026-04-25"
+    category: professional
+    priority_score: 6
+    relevance_mapping:
+      agents: [backend-engineer]
+      profiles: [backend:execution]
+    description: Middleware chains, request/response transformation, cross-cutting concerns
+
+  - skill_id: backend-graphql
+    version: "1.0"
+    last_updated: "2026-04-25"
+    category: professional
+    priority_score: 7
+    relevance_mapping:
+      agents: [backend-engineer, frontend-engineer]
+      profiles: [backend:execution, frontend:execution]
+    description: GraphQL schema design, resolvers, subscriptions, N+1 prevention, federation
+
+  - skill_id: backend-websocket
+    version: "1.0"
+    last_updated: "2026-04-25"
+    category: professional
+    priority_score: 6
+    relevance_mapping:
+      agents: [backend-engineer, frontend-engineer]
+      profiles: [backend:execution]
+    description: Real-time bidirectional communication, pub/sub, connection management
+
+  - skill_id: backend-error-handling
+    version: "1.0"
+    last_updated: "2026-04-25"
+    category: professional
+    priority_score: 7
+    relevance_mapping:
+      agents: [backend-engineer, reviewer]
+      profiles: [backend:execution, quality:review]
+    description: Graceful error handling, circuit breakers, retry logic, dead letter queues
+
+  - skill_id: backend-file-processing
+    version: "1.0"
+    last_updated: "2026-04-25"
+    category: professional
+    priority_score: 6
+    relevance_mapping:
+      agents: [backend-engineer]
+      profiles: [backend:execution]
+    description: Large file uploads, streaming, S3/storage integration, virus scanning
+
+  - skill_id: backend-auth-implementation
+    version: "1.0"
+    last_updated: "2026-04-25"
+    category: specialized
+    priority_score: 8
+    relevance_mapping:
+      agents: [backend-engineer, security-engineer]
+      profiles: [backend:execution, security:validation]
+    description: OAuth2, JWT, session management, token refresh, mTLS, SSO integration
+
+  - skill_id: backend-rate-limiting
+    version: "1.0"
+    last_updated: "2026-04-25"
+    category: professional
+    priority_score: 6
+    relevance_mapping:
+      agents: [backend-engineer, security-engineer]
+      profiles: [backend:execution, security:validation]
+    description: Rate limiting algorithms, quota management, API throttling strategies
+
+  - skill_id: backend-search
+    version: "1.0"
+    last_updated: "2026-04-25"
+    category: professional
+    priority_score: 7
+    relevance_mapping:
+      agents: [backend-engineer, database-architect]
+      profiles: [backend:execution, data:execution]
+    description: Full-text search (Elasticsearch, Algolia), query optimization, relevance tuning
+
+  - skill_id: backend-api-versioning
+    version: "1.0"
+    last_updated: "2026-04-25"
+    category: professional
+    priority_score: 6
+    relevance_mapping:
+      agents: [backend-engineer, tech-lead]
+      profiles: [backend:execution, architecture:orchestration]
+    description: API versioning strategies, deprecation policies, contract testing

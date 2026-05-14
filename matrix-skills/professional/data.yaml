@@ -1,0 +1,84 @@
+# Domain: Data & Database
+# Skills: 10 | TIER: Professional/Specialized
+# Purpose: Schema design, queries, migrations, data modeling, ORMs
+
+skills:
+  - skill_id: data-schema-design
+    category: professional
+    priority_score: 8
+    relevance_mapping:
+      agents: [database-architect, backend-engineer]
+      profiles: [data:execution, backend:execution]
+    description: Normalization, denormalization, entity relationships, indexing strategy
+
+  - skill_id: data-query-optimization
+    category: specialized
+    priority_score: 8
+    relevance_mapping:
+      agents: [database-architect, backend-engineer, performance-engineer]
+      profiles: [data:execution, backend:execution, performance:validation]
+    description: Query analysis, EXPLAIN plans, index selection, query rewriting, connection pooling
+
+  - skill_id: data-migration
+    category: professional
+    priority_score: 8
+    relevance_mapping:
+      agents: [database-architect, backend-engineer]
+      profiles: [data:execution, backend:execution]
+    description: Zero-downtime migrations, backward compatibility, rollback strategies
+
+  - skill_id: data-nosql-patterns
+    category: specialized
+    priority_score: 7
+    relevance_mapping:
+      agents: [database-architect, backend-engineer]
+      profiles: [data:execution, backend:execution]
+    description: Document stores, key-value, wide-column, graph databases, CAP theorem trade-offs
+
+  - skill_id: data-replication
+    category: expert
+    priority_score: 8
+    relevance_mapping:
+      agents: [database-architect, devops-engineer]
+      profiles: [data:execution, devops:execution]
+    description: Master-slave, multi-master, eventual consistency, conflict resolution, CRDT
+
+  - skill_id: data-backup-recovery
+    category: professional
+    priority_score: 8
+    relevance_mapping:
+      agents: [database-architect, devops-engineer]
+      profiles: [data:execution, devops:execution]
+    description: Backup strategies, point-in-time recovery, disaster recovery, RPO/RTO
+
+  - skill_id: data-orm-patterns
+    category: professional
+    priority_score: 7
+    relevance_mapping:
+      agents: [backend-engineer, database-architect]
+      profiles: [backend:execution, data:execution]
+    description: ORM best practices, N+1 prevention, eager/lazy loading, query optimization
+
+  - skill_id: data-streaming
+    category: expert
+    priority_score: 8
+    relevance_mapping:
+      agents: [database-architect, backend-engineer]
+      profiles: [data:execution, backend:execution]
+    description: CDC, change data capture, streaming pipelines, Flink, Kafka Streams, watermarks
+
+  - skill_id: data-warehouse
+    category: expert
+    priority_score: 7
+    relevance_mapping:
+      agents: [database-architect, data-engineer]
+      profiles: [data:execution]
+    description: OLAP, dimensional modeling, ETL/ELT, star schema, data lake integration
+
+  - skill_id: data-mesh
+    category: expert
+    priority_score: 7
+    relevance_mapping:
+      agents: [database-architect, tech-lead]
+      profiles: [data:execution, architecture:orchestration]
+    description: Data mesh architecture, domain ownership, data products, federated governance

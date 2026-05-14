@@ -1,0 +1,161 @@
+# =============================================================================
+# Domain: Quality Assurance
+# Skills: 15 | TIER: Professional/Specialized/Expert
+# Purpose: Testing, code review, validation, quality gates
+# Version: 1.1 | Updated: 2026-04-25
+# =============================================================================
+
+skills:
+  - skill_id: quality-unit-testing
+    version: "1.0"
+    last_updated: "2026-04-25"
+    category: professional
+    priority_score: 8
+    relevance_mapping:
+      agents: [tester, reviewer, backend-engineer, frontend-engineer]
+      profiles: [quality:validation, backend:execution, frontend:execution]
+    description: Unit test design, mocking, assertion strategies, coverage thresholds
+
+  - skill_id: quality-integration-testing
+    version: "1.0"
+    last_updated: "2026-04-25"
+    category: professional
+    priority_score: 8
+    relevance_mapping:
+      agents: [tester, backend-engineer]
+      profiles: [quality:validation, backend:execution]
+    description: Service integration, contract testing, API testing, database integration
+
+  - skill_id: quality-e2e-testing
+    version: "1.0"
+    last_updated: "2026-04-25"
+    category: professional
+    priority_score: 7
+    relevance_mapping:
+      agents: [tester, frontend-engineer]
+      profiles: [quality:validation, frontend:execution]
+    description: End-to-end test design, Playwright/Cypress, cross-browser, critical paths
+
+  - skill_id: quality-contract-testing
+    version: "1.0"
+    last_updated: "2026-04-25"
+    category: specialized
+    priority_score: 7
+    relevance_mapping:
+      agents: [tester, backend-engineer]
+      profiles: [quality:validation, backend:execution]
+    description: API contract validation, Pact, consumer-driven contracts, schema validation
+
+  - skill_id: quality-performance-testing
+    version: "1.0"
+    last_updated: "2026-04-25"
+    category: specialized
+    priority_score: 8
+    relevance_mapping:
+      agents: [tester, performance-engineer]
+      profiles: [quality:validation, performance:validation]
+    description: Load testing, stress testing, profiling, benchmark design, regression detection
+
+  - skill_id: quality-security-testing
+    version: "1.0"
+    last_updated: "2026-04-25"
+    category: specialized
+    priority_score: 9
+    relevance_mapping:
+      agents: [tester, security-engineer]
+      profiles: [quality:validation, security:validation]
+    description: Penetration testing, OWASP Top 10, vulnerability scanning, SAST/DAST
+
+  - skill_id: quality-test-automation
+    version: "1.0"
+    last_updated: "2026-04-25"
+    category: professional
+    priority_score: 7
+    relevance_mapping:
+      agents: [tester, devops-engineer]
+      profiles: [quality:validation, devops:execution]
+    description: CI/CD test pipelines, test parallelization, flaky test management, test reporting
+
+  - skill_id: quality-test-strategy
+    version: "1.0"
+    last_updated: "2026-04-25"
+    category: specialized
+    priority_score: 8
+    relevance_mapping:
+      agents: [tester, tech-lead]
+      profiles: [quality:validation, architecture:orchestration]
+    description: Test pyramid, coverage strategy, risk-based testing, test selection
+
+  - skill_id: quality-code-review
+    version: "1.0"
+    last_updated: "2026-04-25"
+    category: professional
+    priority_score: 8
+    relevance_mapping:
+      agents: [reviewer, tech-lead]
+      profiles: [quality:review, architecture:orchestration]
+    description: Code review checklists, feedback techniques, style enforcement, PR quality gates
+
+  - skill_id: quality-chaos-engineering
+    version: "1.0"
+    last_updated: "2026-04-25"
+    category: expert
+    priority_score: 7
+    relevance_mapping:
+      agents: [performance-engineer, devops-engineer]
+      profiles: [performance:validation, devops:execution]
+    description: Chaos experiments, fault injection, resilience validation, game days
+
+  - skill_id: quality-visual-regression
+    version: "1.0"
+    last_updated: "2026-04-25"
+    category: professional
+    priority_score: 6
+    relevance_mapping:
+      agents: [tester, frontend-engineer]
+      profiles: [quality:validation, frontend:execution]
+    description: Visual comparison, screenshot testing, design system regression detection
+
+  - skill_id: quality-mutation-testing
+    version: "1.0"
+    last_updated: "2026-04-25"
+    category: expert
+    priority_score: 7
+    relevance_mapping:
+      agents: [tester, reviewer]
+      profiles: [quality:validation, quality:review]
+    description: Stryker, pitest, test quality measurement, killing mutants, coverage illusions
+
+  # === 2026-04-21: Subagent-Driven Two-Stage Review ===
+  - skill_id: quality-subagent-dispatch
+    version: "1.0"
+    last_updated: "2026-04-25"
+    category: specialized
+    priority_score: 8
+    relevance_mapping:
+      agents: [reviewer, tech-lead]
+      profiles: [quality:review, architecture:orchestration]
+    description: Dispatch fresh subagent per task with isolated context — avoids context pollution
+    source: "skills/subagent-driven-development/SKILL.md"
+
+  - skill_id: quality-two-stage-review
+    version: "1.0"
+    last_updated: "2026-04-25"
+    category: specialized
+    priority_score: 9
+    relevance_mapping:
+      agents: [reviewer, tester]
+      profiles: [quality:review, quality:validation]
+    description: Two-stage review — SPEC COMPLIANCE first, then CODE QUALITY — prevents spec drift
+    source: "skills/subagent-driven-development/SKILL.md"
+
+  - skill_id: quality-review-defense
+    version: "1.0"
+    last_updated: "2026-04-25"
+    category: professional
+    priority_score: 7
+    relevance_mapping:
+      agents: [reviewer, tech-lead]
+      profiles: [quality:review]
+    description: Handle FAIL reviews — Executor defense loop, max 3 rounds, escalation to Tech Lead arbitration
+    source: "skills/subagent-driven-development/SKILL.md"

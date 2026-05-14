@@ -1,0 +1,100 @@
+# Domain: Tools & Utilities
+# Skills: 12 | TIER: Professional/Specialized
+# Purpose: Productivity tools, editors, CLI utilities, document processing
+
+skills:
+  - skill_id: tools-git
+    category: professional
+    priority_score: 8
+    relevance_mapping:
+      agents: [devops-engineer]
+      profiles: [devops:execution]
+    description: Git workflows, branching strategies, rebasing, bisect, hooks
+
+  - skill_id: tools-editor
+    category: professional
+    priority_score: 7
+    relevance_mapping:
+      agents: [frontend-engineer, backend-engineer]
+      profiles: [frontend:execution, backend:execution]
+    description: IDE configuration, editor plugins, LSP, formatting, linting
+
+  - skill_id: tools-debugging
+    category: professional
+    priority_score: 8
+    relevance_mapping:
+      agents: [debugger, backend-engineer]
+      profiles: [quality:debugging, backend:execution]
+    description: Debugger usage, breakpoint strategies, memory profiling, network inspection
+
+  - skill_id: tools-package-managers
+    category: professional
+    priority_score: 6
+    relevance_mapping:
+      agents: [frontend-engineer, backend-engineer]
+      profiles: [frontend:execution, backend:execution]
+    description: npm, yarn, pnpm, pip, cargo, dependency resolution, lock files
+
+  - skill_id: tools-cli
+    category: professional
+    priority_score: 7
+    relevance_mapping:
+      agents: [devops-engineer]
+      profiles: [devops:execution]
+    description: CLI design, argument parsing, shell integration, autocomplete
+
+  - skill_id: tools-logging
+    category: professional
+    priority_score: 7
+    relevance_mapping:
+      agents: [backend-engineer, devops-engineer]
+      profiles: [backend:execution, devops:execution]
+    description: Structured logging, log levels, correlation IDs, log aggregation
+
+  - skill_id: tools-observability
+    category: specialized
+    priority_score: 8
+    relevance_mapping:
+      agents: [devops-engineer, performance-engineer]
+      profiles: [devops:execution, performance:validation]
+    description: OpenTelemetry, distributed tracing, metrics, dashboards, alerting
+
+  - skill_id: tools-search
+    category: professional
+    priority_score: 7
+    relevance_mapping:
+      agents: [backend-engineer]
+      profiles: [backend:execution]
+    description: grep, sed, awk, ripgrep, Elasticsearch, full-text search
+
+  - skill_id: tools-markdown
+    category: professional
+    priority_score: 6
+    relevance_mapping:
+      agents: [docs-manager]
+      profiles: [research:documentation]
+    description: Markdown authoring, tables, diagrams (Mermaid), frontmatter, templating
+
+  - skill_id: tools-regex
+    category: professional
+    priority_score: 7
+    relevance_mapping:
+      agents: [backend-engineer]
+      profiles: [backend:execution]
+    description: Regular expressions, greedy vs lazy, lookahead/lookbehind, performance
+
+  - skill_id: tools-api-clients
+    category: professional
+    priority_score: 7
+    relevance_mapping:
+      agents: [backend-engineer, tester]
+      profiles: [backend:execution, quality:validation]
+    description: curl, Postman, Insomnia, HTTP clients, API testing, contract testing
+
+  - skill_id: tools-container
+    category: professional
+    priority_score: 8
+    relevance_mapping:
+      agents: [devops-engineer]
+      profiles: [devops:execution]
+    description: Docker, docker-compose, container debugging, multi-stage builds, registries

@@ -22,7 +22,7 @@ Master modern Angular development with Signals, Standalone Components, Zoneless 
 
 ## Do Not Use This Skill When
 
-- Migrating from AngularJS (1.x) → use `angular-migration` skill
+- Migrating from AngularJS (1.x) → consult external migration guides
 - Working with legacy Angular apps that cannot upgrade
 - General TypeScript issues → use `typescript-expert` skill
 
@@ -43,11 +43,14 @@ Master modern Angular development with Signals, Standalone Components, Zoneless 
 
 ## Angular Version Timeline
 
+> **Status as of April 2026**
+
 | Version        | Release | Key Features                                           |
 | -------------- | ------- | ------------------------------------------------------ |
 | **Angular 20** | Q2 2025 | Signals stable, Zoneless stable, Incremental hydration |
 | **Angular 21** | Q4 2025 | Signals-first default, Enhanced SSR                    |
-| **Angular 22** | Q2 2026 | Signal Forms, Selectorless components                  |
+| **Angular 22**  | Q2 2026 | Signal Forms, Selectorless components, View Transitions |
+| **Angular 23**  | Q4 2026 | (Upcoming) Further zoneless improvements              |
 
 ---
 

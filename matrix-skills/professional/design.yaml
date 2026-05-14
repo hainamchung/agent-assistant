@@ -1,0 +1,92 @@
+# Domain: UI/UX Design
+# Skills: 11 | TIER: Professional/Specialized
+# Purpose: Visual design, user experience, accessibility, design systems
+
+skills:
+  - skill_id: design-system
+    category: specialized
+    priority_score: 8
+    relevance_mapping:
+      agents: [designer, frontend-engineer]
+      profiles: [design:creative, frontend:execution]
+    description: Design tokens, component library, theming, documentation, Storybook
+
+  - skill_id: design-ux-research
+    category: professional
+    priority_score: 7
+    relevance_mapping:
+      agents: [designer, business-analyst]
+      profiles: [design:creative, planning:business]
+    description: User interviews, usability testing, journey mapping, persona development
+
+  - skill_id: design-wireframing
+    category: professional
+    priority_score: 6
+    relevance_mapping:
+      agents: [designer]
+      profiles: [design:creative]
+    description: Low-fidelity wireframes, information architecture, layout grids
+
+  - skill_id: design-prototyping
+    category: professional
+    priority_score: 7
+    relevance_mapping:
+      agents: [designer]
+      profiles: [design:creative]
+    description: High-fidelity prototypes, Figma, interactive prototypes, micro-interactions
+
+  - skill_id: design-typography
+    category: professional
+    priority_score: 6
+    relevance_mapping:
+      agents: [designer, frontend-engineer]
+      profiles: [design:creative, frontend:execution]
+    description: Type hierarchy, font pairing, responsive typography, RTL support
+
+  - skill_id: design-color
+    category: professional
+    priority_score: 6
+    relevance_mapping:
+      agents: [designer, frontend-engineer]
+      profiles: [design:creative, frontend:execution]
+    description: Color theory, palettes, contrast ratios, dark mode, accessibility
+
+  - skill_id: design-responsive
+    category: professional
+    priority_score: 7
+    relevance_mapping:
+      agents: [designer, frontend-engineer]
+      profiles: [design:creative, frontend:execution]
+    description: Responsive breakpoints, mobile-first, adaptive layouts, gesture support
+
+  - skill_id: design-animation
+    category: professional
+    priority_score: 6
+    relevance_mapping:
+      agents: [designer, frontend-engineer]
+      profiles: [design:creative, frontend:execution]
+    description: Micro-interactions, transitions, motion principles, reduced motion
+
+  - skill_id: design-accessibility
+    category: specialized
+    priority_score: 8
+    relevance_mapping:
+      agents: [designer, frontend-engineer, reviewer]
+      profiles: [design:creative, frontend:execution, quality:review]
+    description: WCAG compliance, inclusive design, assistive technology, color blindness
+
+  - skill_id: design-ios-guidelines
+    category: professional
+    priority_score: 7
+    relevance_mapping:
+      agents: [designer, mobile-engineer]
+      profiles: [design:creative, mobile:execution]
+    description: Apple HIG, iOS design patterns, iPadOS, visionOS
+
+  - skill_id: design-android-guidelines
+    category: professional
+    priority_score: 7
+    relevance_mapping:
+      agents: [designer, mobile-engineer]
+      profiles: [design:creative, mobile:execution]
+    description: Material Design, Material You, Android design patterns, platform conventions

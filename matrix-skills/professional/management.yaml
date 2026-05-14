@@ -1,0 +1,84 @@
+# Domain: Project Management
+# Skills: 10 | TIER: Professional/Specialized
+# Purpose: Delivery, risk management, agile, stakeholder management
+
+skills:
+  - skill_id: mgmt-agile
+    category: professional
+    priority_score: 7
+    relevance_mapping:
+      agents: [project-manager, planner]
+      profiles: [management:orchestration, planning:analysis]
+    description: Scrum, Kanban, sprint ceremonies, backlog management, agile estimation
+
+  - skill_id: mgmt-risk
+    category: professional
+    priority_score: 8
+    relevance_mapping:
+      agents: [project-manager, planner]
+      profiles: [management:orchestration, planning:analysis]
+    description: Risk identification, risk matrix, mitigation planning, risk escalation
+
+  - skill_id: mgmt-stakeholder
+    category: professional
+    priority_score: 7
+    relevance_mapping:
+      agents: [project-manager, business-analyst]
+      profiles: [management:orchestration, planning:business]
+    description: Stakeholder communication, expectation management, status reporting
+
+  - skill_id: mgmt-delivery
+    category: professional
+    priority_score: 8
+    relevance_mapping:
+      agents: [project-manager]
+      profiles: [management:orchestration]
+    description: Delivery planning, milestone tracking, dependency management, blockers resolution
+
+  - skill_id: mgmt-retrospective
+    category: professional
+    priority_score: 6
+    relevance_mapping:
+      agents: [project-manager]
+      profiles: [management:orchestration]
+    description: Team retrospectives, continuous improvement, action tracking
+
+  - skill_id: mgmt-budget
+    category: specialized
+    priority_score: 7
+    relevance_mapping:
+      agents: [project-manager]
+      profiles: [management:orchestration]
+    description: Budget tracking, resource allocation, cost estimation, burn rate monitoring
+
+  - skill_id: mgmt-communication
+    category: professional
+    priority_score: 7
+    relevance_mapping:
+      agents: [project-manager, business-analyst]
+      profiles: [management:orchestration, planning:business]
+    description: Status reporting, escalation, team communication, executive updates
+
+  - skill_id: mgmt-dependency-tracking
+    category: professional
+    priority_score: 8
+    relevance_mapping:
+      agents: [project-manager, planner]
+      profiles: [management:orchestration, planning:analysis]
+    description: Cross-team dependencies, API contracts, external blockers, dependency risk management
+
+  - skill_id: mgmt-onboarding
+    category: professional
+    priority_score: 7
+    relevance_mapping:
+      agents: [project-manager]
+      profiles: [management:orchestration]
+    description: Team onboarding, ramp-up planning, knowledge transfer, first-week deliverables
+
+  - skill_id: mgmt-okr
+    category: professional
+    priority_score: 7
+    relevance_mapping:
+      agents: [project-manager, business-analyst]
+      profiles: [management:orchestration, planning:business]
+    description: OKR alignment, objective tracking, key results measurement, quarterly planning

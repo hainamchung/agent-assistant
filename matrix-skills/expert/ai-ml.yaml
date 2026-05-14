@@ -1,0 +1,100 @@
+# Domain: AI/ML Engineering
+# Skills: 12 | TIER: Specialized/Expert
+# Purpose: Machine learning, LLMs, data science, AI systems, MLOps
+
+skills:
+  - skill_id: llm-integration
+    category: expert
+    priority_score: 9
+    relevance_mapping:
+      agents: [backend-engineer, tech-lead]
+      profiles: [backend:execution, architecture:orchestration]
+    description: LLM API integration, prompt engineering, function calling, context management, RAG
+
+  - skill_id: llm-observability
+    category: specialized
+    priority_score: 8
+    relevance_mapping:
+      agents: [backend-engineer, performance-engineer]
+      profiles: [backend:execution, performance:validation]
+    description: LLM tracing, cost tracking, latency monitoring, output quality evaluation
+
+  - skill_id: llm-evals
+    category: specialized
+    priority_score: 8
+    relevance_mapping:
+      agents: [tester, reviewer]
+      profiles: [quality:validation, quality:review]
+    description: LLM evaluation frameworks, benchmark design, golden datasets, regression testing
+
+  - skill_id: llm-finetuning
+    category: expert
+    priority_score: 8
+    relevance_mapping:
+      agents: [researcher, backend-engineer]
+      profiles: [research:analysis, backend:execution]
+    description: Model fine-tuning, LoRA, RLHF, dataset curation, evaluation metrics
+
+  - skill_id: llm-security
+    category: expert
+    priority_score: 9
+    relevance_mapping:
+      agents: [security-engineer, backend-engineer]
+      profiles: [security:validation, backend:execution]
+    description: Prompt injection, prompt leakage, jailbreaking, output filtering, PII detection
+
+  - skill_id: llm-cost-optimization
+    category: specialized
+    priority_score: 8
+    relevance_mapping:
+      agents: [backend-engineer, performance-engineer]
+      profiles: [backend:execution, performance:validation]
+    description: Token optimization, caching, batch processing, model routing, cost budgets
+
+  - skill_id: llm-multiagent
+    category: expert
+    priority_score: 9
+    relevance_mapping:
+      agents: [tech-lead, backend-engineer]
+      profiles: [architecture:orchestration, backend:execution]
+    description: Multi-agent orchestration, agent communication, role assignment, consensus
+
+  - skill_id: llm-rag
+    category: specialized
+    priority_score: 8
+    relevance_mapping:
+      agents: [backend-engineer, researcher]
+      profiles: [backend:execution, research:analysis]
+    description: Retrieval-augmented generation, vector search, chunking strategies, re-ranking
+
+  - skill_id: ml-pipeline
+    category: expert
+    priority_score: 8
+    relevance_mapping:
+      agents: [backend-engineer, devops-engineer]
+      profiles: [backend:execution, devops:execution]
+    description: MLOps pipelines, feature stores, model versioning, A/B testing models
+
+  - skill_id: ml-monitoring
+    category: specialized
+    priority_score: 8
+    relevance_mapping:
+      agents: [performance-engineer, devops-engineer]
+      profiles: [performance:validation, devops:execution]
+    description: Model drift detection, data quality monitoring, performance degradation alerts
+
+  - skill_id: llm-prompt-engineering
+    category: professional
+    priority_score: 8
+    relevance_mapping:
+      agents: [backend-engineer, researcher]
+      profiles: [backend:execution, research:analysis]
+    description: System prompts, few-shot examples, chain-of-thought, output parsing
+
+  - skill_id: llm-tool-use
+    category: specialized
+    priority_score: 8
+    relevance_mapping:
+      agents: [backend-engineer]
+      profiles: [backend:execution]
+    description: Tool definitions, function calling, parallel tool execution, error handling

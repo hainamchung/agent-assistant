@@ -1,0 +1,127 @@
+# =============================================================================
+# Domain: Frontend Development
+# Skills: 12 | TIER: Professional/Foundation
+# Purpose: UI/UX, web applications, client-side rendering, accessibility
+# Version: 1.0 | Updated: 2026-04-25
+# =============================================================================
+
+skills:
+  - skill_id: frontend-component-architecture
+    version: "1.0"
+    last_updated: "2026-04-25"
+    category: professional
+    priority_score: 8
+    relevance_mapping:
+      agents: [frontend-engineer, designer]
+      profiles: [frontend:execution, design:creative]
+    description: Component libraries, atomic design, composition patterns, stateful vs stateless
+
+  - skill_id: frontend-state-management
+    version: "1.0"
+    last_updated: "2026-04-25"
+    category: professional
+    priority_score: 8
+    relevance_mapping:
+      agents: [frontend-engineer]
+      profiles: [frontend:execution]
+    description: Global state, local state, server state, optimistic updates, cache invalidation
+
+  - skill_id: frontend-routing
+    version: "1.0"
+    last_updated: "2026-04-25"
+    category: professional
+    priority_score: 7
+    relevance_mapping:
+      agents: [frontend-engineer]
+      profiles: [frontend:execution]
+    description: Client-side routing, nested routes, lazy loading, route guards, SEO
+
+  - skill_id: frontend-forms
+    version: "1.0"
+    last_updated: "2026-04-25"
+    category: professional
+    priority_score: 7
+    relevance_mapping:
+      agents: [frontend-engineer]
+      profiles: [frontend:execution]
+    description: Form validation, complex state, multi-step forms, accessibility, autofill
+
+  - skill_id: frontend-data-fetching
+    version: "1.0"
+    last_updated: "2026-04-25"
+    category: professional
+    priority_score: 8
+    relevance_mapping:
+      agents: [frontend-engineer]
+      profiles: [frontend:execution]
+    description: REST/GraphQL clients, caching strategies, infinite scroll, pagination, SWR patterns
+
+  - skill_id: frontend-performance
+    version: "1.0"
+    last_updated: "2026-04-25"
+    category: specialized
+    priority_score: 8
+    relevance_mapping:
+      agents: [frontend-engineer, performance-engineer]
+      profiles: [frontend:execution, performance:validation]
+    description: Bundle optimization, code splitting, lazy loading, Core Web Vitals, LCP/CLS/FID
+
+  - skill_id: frontend-accessibility
+    version: "1.0"
+    last_updated: "2026-04-25"
+    category: specialized
+    priority_score: 8
+    relevance_mapping:
+      agents: [frontend-engineer, designer, reviewer]
+      profiles: [frontend:execution, quality:review]
+    description: WCAG 2.1 AA/AAA, ARIA, keyboard navigation, screen reader testing
+
+  - skill_id: frontend-testing
+    version: "1.0"
+    last_updated: "2026-04-25"
+    category: professional
+    priority_score: 7
+    relevance_mapping:
+      agents: [frontend-engineer, tester]
+      profiles: [frontend:execution, quality:validation]
+    description: Component testing, E2E testing, visual regression, accessibility testing
+
+  - skill_id: frontend-animation
+    version: "1.0"
+    last_updated: "2026-04-25"
+    category: professional
+    priority_score: 6
+    relevance_mapping:
+      agents: [frontend-engineer, designer]
+      profiles: [frontend:execution, design:creative]
+    description: CSS animations, Framer Motion, performance optimization, reduced motion
+
+  - skill_id: frontend-pwa
+    version: "1.0"
+    last_updated: "2026-04-25"
+    category: professional
+    priority_score: 6
+    relevance_mapping:
+      agents: [frontend-engineer]
+      profiles: [frontend:execution]
+    description: Service workers, offline support, push notifications, manifest, installability
+
+  - skill_id: frontend-i18n
+    version: "1.0"
+    last_updated: "2026-04-25"
+    category: professional
+    priority_score: 6
+    relevance_mapping:
+      agents: [frontend-engineer]
+      profiles: [frontend:execution]
+    description: Internationalization, RTL support, pluralization, date/number formatting
+
+  - skill_id: frontend-seo
+    version: "1.0"
+    last_updated: "2026-04-25"
+    category: professional
+    priority_score: 7
+    relevance_mapping:
+      agents: [frontend-engineer, tech-lead]
+      profiles: [frontend:execution, architecture:orchestration]
+    description: SSR/SSG, meta tags, structured data, sitemap, robots.txt, Core Web Vitals

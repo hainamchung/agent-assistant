@@ -14,7 +14,7 @@ If haven't completed Phase 1, cannot propose fixes.
 
 Must complete each phase before proceeding to next.
 
-### Phase 1: Root Cause Investigation
+### 🎭 Phase 1: Root Cause Investigation
 
 **BEFORE attempting ANY fix:**
 
@@ -27,7 +27,7 @@ Must complete each phase before proceeding to next.
    - THEN analyze to identify failing component
 5. **Trace Data Flow** - Where does bad value originate? Trace up call stack until finding source (see root-cause-tracing.md)
 
-### Phase 2: Pattern Analysis
+### 🎭 Phase 2: Pattern Analysis
 
 **Find pattern before fixing:**
 
@@ -36,7 +36,7 @@ Must complete each phase before proceeding to next.
 3. **Identify Differences** - List every difference however small, don't assume "that can't matter"
 4. **Understand Dependencies** - What other components, settings, config, environment needed?
 
-### Phase 3: Hypothesis and Testing
+### 🎭 Phase 3: Hypothesis and Testing
 
 **Scientific method:**
 
@@ -45,7 +45,7 @@ Must complete each phase before proceeding to next.
 3. **Verify Before Continuing** - Worked? → Phase 4. Didn't work? → NEW hypothesis. DON'T add more fixes
 4. **When Don't Know** - Say "I don't understand X", don't pretend, ask for help
 
-### Phase 4: Implementation
+### 🎭 Phase 4: Implementation
 
 **Fix root cause, not symptom:**
 

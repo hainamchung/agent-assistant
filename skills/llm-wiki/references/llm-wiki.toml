@@ -1,0 +1,32 @@
+[wiki]
+name = "{wiki_name}"
+version = "1.0.0"
+language = "{language}"
+root = "{root}"
+
+[paths]
+sources = "sources"
+wiki = "wiki"
+scripts = "scripts"
+index = "index.md"
+log = "log.md"
+schema = "AGENTS.md"
+
+[frontmatter]
+required_fields = ["title", "type", "tags", "created", "updated"]
+page_types = ["summary", "entity", "concept", "comparison", "synthesis", "chronicle", "adr", "runbook", "postmortem"]
+confidence_levels = ["high", "medium", "low"]
+
+[lint]
+stale_days = 30
+require_backlinks = true
+require_sources = true
+
+[freshness]
+half_life_days = 90       # days until source weight halves (exponential decay)
+warn_threshold = 30       # lint warns on pages below this freshness score (0-100)
+
+[qmd]
+enabled = false
+collection_name = "wiki"
+auto_embed = false

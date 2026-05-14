@@ -1,0 +1,84 @@
+# Domain: Mobile Development
+# Skills: 10 | TIER: Professional/Specialized
+# Purpose: iOS, Android, cross-platform apps, mobile-specific patterns
+
+skills:
+  - skill_id: mobile-cross-platform
+    category: professional
+    priority_score: 8
+    relevance_mapping:
+      agents: [mobile-engineer]
+      profiles: [mobile:execution]
+    description: React Native, Flutter, cross-platform patterns, native bridge optimization
+
+  - skill_id: mobile-native-ios
+    category: professional
+    priority_score: 8
+    relevance_mapping:
+      agents: [mobile-engineer]
+      profiles: [mobile:execution]
+    description: Swift/Objective-C, UIKit, SwiftUI, iOS patterns, App Store submission
+
+  - skill_id: mobile-native-android
+    category: professional
+    priority_score: 8
+    relevance_mapping:
+      agents: [mobile-engineer]
+      profiles: [mobile:execution]
+    description: Kotlin/Java, Jetpack Compose, Android patterns, Play Store submission
+
+  - skill_id: mobile-offline
+    category: specialized
+    priority_score: 8
+    relevance_mapping:
+      agents: [mobile-engineer]
+      profiles: [mobile:execution]
+    description: Offline-first architecture, local storage, sync strategies, conflict resolution
+
+  - skill_id: mobile-push-notifications
+    category: professional
+    priority_score: 7
+    relevance_mapping:
+      agents: [mobile-engineer]
+      profiles: [mobile:execution]
+    description: APNs, FCM, notification strategies, permission handling, rich notifications
+
+  - skill_id: mobile-performance
+    category: specialized
+    priority_score: 8
+    relevance_mapping:
+      agents: [mobile-engineer, performance-engineer]
+      profiles: [mobile:execution, performance:validation]
+    description: Cold starts, memory management, battery optimization, ANR prevention
+
+  - skill_id: mobile-security
+    category: specialized
+    priority_score: 9
+    relevance_mapping:
+      agents: [mobile-engineer, security-engineer]
+      profiles: [mobile:execution, security:validation]
+    description: Mobile app attestation, secure storage, SSL pinning, biometric auth, code obfuscation
+
+  - skill_id: mobile-ci-cd
+    category: professional
+    priority_score: 7
+    relevance_mapping:
+      agents: [mobile-engineer, devops-engineer]
+      profiles: [mobile:execution, devops:execution]
+    description: Fastlane, CI/CD for mobile, TestFlight, internal distribution, code signing
+
+  - skill_id: mobile-deep-linking
+    category: professional
+    priority_score: 7
+    relevance_mapping:
+      agents: [mobile-engineer]
+      profiles: [mobile:execution]
+    description: Universal links, app links, URI schemes, deep link routing, deferred deep linking
+
+  - skill_id: mobile-testing
+    category: professional
+    priority_score: 8
+    relevance_mapping:
+      agents: [mobile-engineer, tester]
+      profiles: [mobile:execution, quality:validation]
+    description: Mobile UI testing, XCTest, Espresso, Detox, device matrix testing, accessibility testing

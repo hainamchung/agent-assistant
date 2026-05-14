@@ -143,25 +143,25 @@ AWS / Azure / GCP
 
 ## Migration Strategy
 
-### Phase 1: Assessment
+### 🎭 Phase 1: Assessment
 - Inventory current infrastructure
 - Identify dependencies
 - Assess cloud compatibility
 - Estimate costs
 
-### Phase 2: Pilot
+### 🎭 Phase 2: Pilot
 - Select pilot workload
 - Implement in target cloud
 - Test thoroughly
 - Document learnings
 
-### Phase 3: Migration
+### 🎭 Phase 3: Migration
 - Migrate workloads incrementally
 - Maintain dual-run period
 - Monitor performance
 - Validate functionality
 
-### Phase 4: Optimization
+### 🎭 Phase 4: Optimization
 - Right-size resources
 - Implement cloud-native services
 - Optimize costs

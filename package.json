@@ -1,6 +1,6 @@
 {
   "name": "@namch/agent-assistant",
-  "version": "1.3.2",
+  "version": "4.0.0",
   "description": "Multi-agent orchestration framework for AI coding assistants (Cursor, Copilot, Antigravity, Claude Code, Codex) with Hybrid Skill Orchestration Layer (HSOL).",
   "main": "cli/install.js",
   "bin": {

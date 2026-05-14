@@ -1,0 +1,127 @@
+# =============================================================================
+# Domain: System Architecture
+# Skills: 12 | TIER: Specialized/Expert
+# Purpose: Design patterns, system design, ADRs, architectural decisions
+# Version: 1.0 | Updated: 2026-04-25
+# =============================================================================
+
+skills:
+  - skill_id: arch-microservices
+    version: "1.0"
+    last_updated: "2026-04-25"
+    category: specialized
+    priority_score: 8
+    relevance_mapping:
+      agents: [tech-lead, backend-engineer]
+      profiles: [architecture:orchestration, backend:execution]
+    description: Service decomposition, inter-service communication, Saga pattern, event sourcing
+
+  - skill_id: arch-event-driven
+    version: "1.0"
+    last_updated: "2026-04-25"
+    category: specialized
+    priority_score: 8
+    relevance_mapping:
+      agents: [tech-lead, backend-engineer]
+      profiles: [architecture:orchestration, backend:execution]
+    description: Event sourcing, CQRS, message queues, Kafka, pub/sub patterns
+
+  - skill_id: arch-domain-driven-design
+    version: "1.0"
+    last_updated: "2026-04-25"
+    category: expert
+    priority_score: 9
+    relevance_mapping:
+      agents: [tech-lead, database-architect]
+      profiles: [architecture:orchestration, data:execution]
+    description: Bounded contexts, aggregates, repositories, domain events, strategic design
+
+  - skill_id: arch-api-gateway
+    version: "1.0"
+    last_updated: "2026-04-25"
+    category: specialized
+    priority_score: 7
+    relevance_mapping:
+      agents: [tech-lead, backend-engineer]
+      profiles: [architecture:orchestration, backend:execution]
+    description: API gateway patterns, BFF, authentication aggregation, rate limiting at edge
+
+  - skill_id: arch-cqrs
+    version: "1.0"
+    last_updated: "2026-04-25"
+    category: expert
+    priority_score: 8
+    relevance_mapping:
+      agents: [tech-lead, database-architect]
+      profiles: [architecture:orchestration, data:execution]
+    description: Command Query Responsibility Segregation, read/write model separation
+
+  - skill_id: arch-hexagonal
+    version: "1.0"
+    last_updated: "2026-04-25"
+    category: specialized
+    priority_score: 7
+    relevance_mapping:
+      agents: [tech-lead, backend-engineer]
+      profiles: [architecture:orchestration, backend:execution]
+    description: Ports and adapters, dependency inversion, testability, pluggable infrastructure
+
+  - skill_id: arch-saga
+    version: "1.0"
+    last_updated: "2026-04-25"
+    category: expert
+    priority_score: 8
+    relevance_mapping:
+      agents: [tech-lead, backend-engineer]
+      profiles: [architecture:orchestration, backend:execution]
+    description: Distributed saga coordination, choreography vs orchestration, compensation logic
+
+  - skill_id: arch-circuit-breaker
+    version: "1.0"
+    last_updated: "2026-04-25"
+    category: specialized
+    priority_score: 7
+    relevance_mapping:
+      agents: [tech-lead, backend-engineer, performance-engineer]
+      profiles: [architecture:orchestration, backend:execution]
+    description: Resilience patterns, bulkhead, timeout strategies, graceful degradation
+
+  - skill_id: arch-adrs
+    version: "1.0"
+    last_updated: "2026-04-25"
+    category: professional
+    priority_score: 7
+    relevance_mapping:
+      agents: [tech-lead, planner]
+      profiles: [architecture:orchestration, planning:analysis]
+    description: Architecture Decision Records, decision logging, context, consequences, alternatives
+
+  - skill_id: arch-adr-template
+    version: "1.0"
+    last_updated: "2026-04-25"
+    category: professional
+    priority_score: 6
+    relevance_mapping:
+      agents: [tech-lead, planner]
+      profiles: [architecture:orchestration, planning:analysis]
+    description: Standard ADR format, title, status, context, decision, consequences
+
+  - skill_id: arch-multi-tenancy
+    version: "1.0"
+    last_updated: "2026-04-25"
+    category: expert
+    priority_score: 8
+    relevance_mapping:
+      agents: [tech-lead, database-architect]
+      profiles: [architecture:orchestration, data:execution]
+    description: Tenant isolation, shared vs dedicated schemas, row-level security, billing integration
+
+  - skill_id: arch-cache-strategies
+    version: "1.0"
+    last_updated: "2026-04-25"
+    category: specialized
+    priority_score: 7
+    relevance_mapping:
+      agents: [tech-lead, backend-engineer, performance-engineer]
+      profiles: [architecture:orchestration, backend:execution]
+    description: Cache patterns, invalidation, write-through, write-behind, cache warming

@@ -1,0 +1,97 @@
+# Domain: Planning & Analysis
+# Skills: 11 | TIER: Professional
+# Purpose: Requirements, task breakdown, roadmaps, strategic planning
+# Updated: 2026-04-21 — Added brainstorming, design-approval skills
+
+skills:
+  - skill_id: planning-requirements
+    category: professional
+    priority_score: 8
+    relevance_mapping:
+      agents: [planner, business-analyst]
+      profiles: [planning:analysis, planning:business]
+    description: Requirements gathering, user stories, acceptance criteria, traceability
+
+  - skill_id: planning-task-breakdown
+    category: professional
+    priority_score: 8
+    relevance_mapping:
+      agents: [planner, project-manager]
+      profiles: [planning:analysis, management:orchestration]
+    description: WBS, task decomposition, dependencies, estimation techniques, critical path
+
+  - skill_id: planning-risk-management
+    category: professional
+    priority_score: 8
+    relevance_mapping:
+      agents: [planner, project-manager, tech-lead]
+      profiles: [planning:analysis, management:orchestration]
+    description: Risk identification, mitigation strategies, risk register, contingency planning
+
+  - skill_id: planning-estimation
+    category: professional
+    priority_score: 7
+    relevance_mapping:
+      agents: [planner, project-manager]
+      profiles: [planning:analysis, management:orchestration]
+    description: Story points, T-shirt sizing, PERT, three-point estimation, planning poker
+
+  - skill_id: planning-roadmapping
+    category: specialized
+    priority_score: 7
+    relevance_mapping:
+      agents: [planner, project-manager, tech-lead]
+      profiles: [planning:analysis, management:orchestration]
+    description: Product roadmap, milestone planning, quarter planning, dependency mapping
+
+  - skill_id: planning-sprint
+    category: professional
+    priority_score: 6
+    relevance_mapping:
+      agents: [planner, project-manager]
+      profiles: [planning:analysis, management:orchestration]
+    description: Sprint planning, backlog grooming, capacity planning, velocity tracking
+
+  - skill_id: planning-tradeoff
+    category: specialized
+    priority_score: 8
+    relevance_mapping:
+      agents: [planner, tech-lead]
+      profiles: [planning:analysis, architecture:orchestration]
+    description: Decision matrices, weighted scoring, feasibility analysis, scope trade-offs
+
+  - skill_id: planning-retrospective
+    category: professional
+    priority_score: 6
+    relevance_mapping:
+      agents: [project-manager, planner]
+      profiles: [management:orchestration, planning:analysis]
+    description: Retrospective facilitation, action items, continuous improvement, team health
+
+  # === 2026-04-21: Brainstorming & Design Approval ===
+  - skill_id: planning-brainstorm-ideas
+    category: professional
+    priority_score: 9
+    relevance_mapping:
+      agents: [brainstormer, planner, tech-lead]
+      profiles: [planning:discovery, architecture:orchestration]
+    description: Turn ideas into designs via collaborative dialogue — one question at a time, propose approaches, get approval
+    source: "skills/brainstorming/SKILL.md"
+
+  - skill_id: planning-design-approval
+    category: specialized
+    priority_score: 9
+    relevance_mapping:
+      agents: [brainstormer, tech-lead, planner]
+      profiles: [planning:discovery]
+    description: HARD-GATE design approval workflow — mandatory design review before any implementation
+    source: "skills/brainstorming/SKILL.md"
+
+  - skill_id: planning-golden-triangle
+    category: specialized
+    priority_score: 8
+    relevance_mapping:
+      agents: [tech-lead, planner]
+      profiles: [architecture:orchestration, planning:analysis]
+    description: Golden Triangle adversarial collaboration — Tech Lead + Executor + Reviewer debate mechanism
+    source: "rules/TEAMS.md"

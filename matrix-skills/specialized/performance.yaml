@@ -1,0 +1,84 @@
+# Domain: Performance Engineering
+# Skills: 10 | TIER: Specialized/Expert
+# Purpose: Profiling, optimization, benchmarking, capacity planning, performance testing
+
+skills:
+  - skill_id: perf-profiling
+    category: specialized
+    priority_score: 9
+    relevance_mapping:
+      agents: [performance-engineer, backend-engineer]
+      profiles: [performance:validation, backend:execution]
+    description: CPU profiling, memory profiling, flame graphs, async tracing, bottleneck identification
+
+  - skill_id: perf-database-optimization
+    category: specialized
+    priority_score: 8
+    relevance_mapping:
+      agents: [performance-engineer, database-architect]
+      profiles: [performance:validation, data:execution]
+    description: Query optimization, index design, connection pooling, partition strategies
+
+  - skill_id: perf-caching-architecture
+    category: specialized
+    priority_score: 8
+    relevance_mapping:
+      agents: [performance-engineer, backend-engineer]
+      profiles: [performance:validation, backend:execution]
+    description: Multi-layer caching, CDN, edge caching, cache warming, TTL optimization
+
+  - skill_id: perf-concurrency
+    category: expert
+    priority_score: 8
+    relevance_mapping:
+      agents: [performance-engineer, backend-engineer]
+      profiles: [performance:validation, backend:execution]
+    description: Thread pools, async patterns, connection limits, backpressure, concurrency limits
+
+  - skill_id: perf-benchmarking
+    category: specialized
+    priority_score: 8
+    relevance_mapping:
+      agents: [performance-engineer]
+      profiles: [performance:validation]
+    description: Load testing, stress testing, JMeter, k6, latency/throughput measurement
+
+  - skill_id: perf-scalability
+    category: expert
+    priority_score: 8
+    relevance_mapping:
+      agents: [performance-engineer, tech-lead]
+      profiles: [performance:validation, architecture:orchestration]
+    description: Horizontal/vertical scaling, auto-scaling policies, capacity planning, load balancing
+
+  - skill_id: perf-network
+    category: specialized
+    priority_score: 7
+    relevance_mapping:
+      agents: [performance-engineer, backend-engineer]
+      profiles: [performance:validation, backend:execution]
+    description: HTTP/2/3, keep-alive, connection reuse, gzip, HTTP multiplexing, latency optimization
+
+  - skill_id: perf-frontend
+    category: specialized
+    priority_score: 8
+    relevance_mapping:
+      agents: [performance-engineer, frontend-engineer]
+      profiles: [performance:validation, frontend:execution]
+    description: Core Web Vitals, LCP/CLS/FID, bundle size, image optimization, lazy loading
+
+  - skill_id: perf-cost-optimization
+    category: specialized
+    priority_score: 7
+    relevance_mapping:
+      agents: [performance-engineer, devops-engineer]
+      profiles: [performance:validation, devops:execution]
+    description: Performance per dollar, resource optimization, cold start reduction, spot instances
+
+  - skill_id: perf-regression
+    category: specialized
+    priority_score: 8
+    relevance_mapping:
+      agents: [performance-engineer, tester]
+      profiles: [performance:validation, quality:validation]
+    description: Performance regression detection, baseline comparison, performance test CI gates

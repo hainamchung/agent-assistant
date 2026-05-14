@@ -791,7 +791,7 @@ async def test_list_posts(client, auth_headers, db_session):
 
 ## Incremental Migration Strategy
 
-### Phase 1: Parallel API (Strangler Pattern)
+### 🎭 Phase 1: Parallel API (Strangler Pattern)
 
 Run Django and FastAPI side-by-side, migrating endpoints incrementally.
 
@@ -813,7 +813,7 @@ location /api/ {
 4. Validate data consistency
 5. Switch traffic gradually (feature flags)
 
-### Phase 2: Shared Database Migration
+### 🎭 Phase 2: Shared Database Migration
 
 ```python
 # FastAPI with existing Django database
@@ -829,7 +829,7 @@ class User(Base):
     # Map to Django's column names
 ```
 
-### Phase 3: Database Schema Modernization
+### 🎭 Phase 3: Database Schema Modernization
 
 After traffic migration, modernize schema:
 - Remove Django-specific fields (`content_type`, `permissions`)
@@ -837,7 +837,7 @@ After traffic migration, modernize schema:
 - Add database-level constraints
 - Optimize indexes for async queries
 
-### Phase 4: Complete Cutover
+### 🎭 Phase 4: Complete Cutover
 
 ```python
 # Decommission Django

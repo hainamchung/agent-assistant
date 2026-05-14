@@ -1,0 +1,84 @@
+# Domain: Cloud & Infrastructure
+# Skills: 10 | TIER: Professional/Specialized
+# Purpose: AWS, Azure, GCP, serverless, cloud-native patterns, multi-cloud
+
+skills:
+  - skill_id: cloud-aws
+    category: professional
+    priority_score: 8
+    relevance_mapping:
+      agents: [devops-engineer, backend-engineer]
+      profiles: [devops:execution, backend:execution]
+    description: AWS services, Lambda, ECS/EKS, RDS, S3, CloudFormation, CDK
+
+  - skill_id: cloud-azure
+    category: professional
+    priority_score: 7
+    relevance_mapping:
+      agents: [devops-engineer, backend-engineer]
+      profiles: [devops:execution, backend:execution]
+    description: Azure services, Functions, AKS, Cosmos DB, Blob storage, ARM templates
+
+  - skill_id: cloud-gcp
+    category: professional
+    priority_score: 7
+    relevance_mapping:
+      agents: [devops-engineer, backend-engineer]
+      profiles: [devops:execution, backend:execution]
+    description: GCP services, Cloud Functions, GKE, Cloud SQL, BigQuery, Terraform
+
+  - skill_id: cloud-serverless
+    category: specialized
+    priority_score: 8
+    relevance_mapping:
+      agents: [devops-engineer, backend-engineer]
+      profiles: [devops:execution, backend:execution]
+    description: Serverless patterns, cold starts, stateless design, function composition
+
+  - skill_id: cloud-cdn
+    category: professional
+    priority_score: 7
+    relevance_mapping:
+      agents: [devops-engineer, frontend-engineer]
+      profiles: [devops:execution, frontend:execution]
+    description: CDN configuration, cache policies, edge computing, origin shielding
+
+  - skill_id: cloud-serverless-observability
+    category: specialized
+    priority_score: 7
+    relevance_mapping:
+      agents: [devops-engineer, performance-engineer]
+      profiles: [devops:execution, performance:validation]
+    description: Distributed tracing, cold start monitoring, cost tracking, log aggregation
+
+  - skill_id: cloud-migration
+    category: specialized
+    priority_score: 8
+    relevance_mapping:
+      agents: [devops-engineer, tech-lead]
+      profiles: [devops:execution, architecture:orchestration]
+    description: Cloud migration strategies, lift-and-shift, re-platforming, re-architecting
+
+  - skill_id: cloud-multi-cloud
+    category: expert
+    priority_score: 7
+    relevance_mapping:
+      agents: [devops-engineer, tech-lead]
+      profiles: [devops:execution, architecture:orchestration]
+    description: Multi-cloud architecture, portability, vendor lock-in mitigation, unified tooling
+
+  - skill_id: cloud-edge
+    category: specialized
+    priority_score: 7
+    relevance_mapping:
+      agents: [devops-engineer, backend-engineer]
+      profiles: [devops:execution, backend:execution]
+    description: Edge computing, Cloudflare Workers, Lambda@Edge, regional deployment
+
+  - skill_id: cloud-cost-governance
+    category: professional
+    priority_score: 7
+    relevance_mapping:
+      agents: [devops-engineer, project-manager]
+      profiles: [devops:execution, management:orchestration]
+    description: Cloud cost optimization, reserved instances, savings plans, budget alerts

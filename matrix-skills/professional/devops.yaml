@@ -1,0 +1,100 @@
+# Domain: DevOps & Deployment
+# Skills: 12 | TIER: Professional/Specialized
+# Purpose: CI/CD, infrastructure, containerization, monitoring, SRE
+
+skills:
+  - skill_id: devops-cicd
+    category: professional
+    priority_score: 8
+    relevance_mapping:
+      agents: [devops-engineer]
+      profiles: [devops:execution]
+    description: Pipeline design, GitOps, multi-environment deployments, artifact management
+
+  - skill_id: devops-containers
+    category: professional
+    priority_score: 8
+    relevance_mapping:
+      agents: [devops-engineer, backend-engineer]
+      profiles: [devops:execution, backend:execution]
+    description: Docker, multi-stage builds, container security, image optimization, distroless
+
+  - skill_id: devops-orchestration
+    category: specialized
+    priority_score: 8
+    relevance_mapping:
+      agents: [devops-engineer]
+      profiles: [devops:execution]
+    description: Kubernetes, Helm, operators, auto-scaling, pod disruption budgets, rolling updates
+
+  - skill_id: devops-iac
+    category: professional
+    priority_score: 8
+    relevance_mapping:
+      agents: [devops-engineer]
+      profiles: [devops:execution]
+    description: Terraform, Pulumi, Ansible, state management, drift detection, module reuse
+
+  - skill_id: devops-monitoring
+    category: professional
+    priority_score: 8
+    relevance_mapping:
+      agents: [devops-engineer, performance-engineer]
+      profiles: [devops:execution, performance:validation]
+    description: Prometheus, Grafana, alerting, SLIs/SLOs/SLAs, dashboards, on-call runbooks
+
+  - skill_id: devops-logging
+    category: professional
+    priority_score: 7
+    relevance_mapping:
+      agents: [devops-engineer, backend-engineer]
+      profiles: [devops:execution, backend:execution]
+    description: Structured logging, log aggregation, ELK/Loki, correlation IDs, log sampling
+
+  - skill_id: devops-gitops
+    category: specialized
+    priority_score: 7
+    relevance_mapping:
+      agents: [devops-engineer]
+      profiles: [devops:execution]
+    description: GitOps workflows, ArgoCD, Flux, declarative infrastructure, drift reconciliation
+
+  - skill_id: devops-service-mesh
+    category: expert
+    priority_score: 7
+    relevance_mapping:
+      agents: [devops-engineer, backend-engineer]
+      profiles: [devops:execution, backend:execution]
+    description: Istio, Linkerd, mTLS, traffic management, observability, canary deployments
+
+  - skill_id: devops-database-deployments
+    category: specialized
+    priority_score: 7
+    relevance_mapping:
+      agents: [devops-engineer, database-architect]
+      profiles: [devops:execution, data:execution]
+    description: Zero-downtime migrations, blue-green databases, replication, backup/restore
+
+  - skill_id: devops-incident-management
+    category: professional
+    priority_score: 7
+    relevance_mapping:
+      agents: [devops-engineer, performance-engineer]
+      profiles: [devops:execution, performance:validation]
+    description: Incident response, postmortems, SLA management, on-call rotation, alerting fatigue
+
+  - skill_id: devops-feature-flags
+    category: professional
+    priority_score: 7
+    relevance_mapping:
+      agents: [devops-engineer, backend-engineer, frontend-engineer]
+      profiles: [devops:execution, backend:execution, frontend:execution]
+    description: Feature flag systems, A/B testing, gradual rollouts, kill switches, targeting
+
+  - skill_id: devops-cost-optimization
+    category: professional
+    priority_score: 7
+    relevance_mapping:
+      agents: [devops-engineer, tech-lead]
+      profiles: [devops:execution, architecture:orchestration]
+    description: Cloud cost modeling, reserved capacity, spot instances, right-sizing, finops

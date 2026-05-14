@@ -1,0 +1,100 @@
+# Domain: MCP & Agent Frameworks
+# Skills: 12 | TIER: Specialized/Expert
+# Purpose: Model Context Protocol, agent frameworks, tool integration
+
+skills:
+  - skill_id: mcp-protocol
+    category: expert
+    priority_score: 9
+    relevance_mapping:
+      agents: [tech-lead, backend-engineer]
+      profiles: [architecture:orchestration, backend:execution]
+    description: MCP protocol, resource management, tool definitions, prompts, sampling
+
+  - skill_id: mcp-client
+    category: expert
+    priority_score: 9
+    relevance_mapping:
+      agents: [backend-engineer]
+      profiles: [backend:execution]
+    description: MCP client implementation, session management, request/response handling
+
+  - skill_id: mcp-server
+    category: expert
+    priority_score: 9
+    relevance_mapping:
+      agents: [backend-engineer]
+      profiles: [backend:execution]
+    description: MCP server development, tool exposure, resource providers, prompt templates
+
+  - skill_id: mcp-tools
+    category: specialized
+    priority_score: 8
+    relevance_mapping:
+      agents: [backend-engineer]
+      profiles: [backend:execution]
+    description: Tool schema design, type safety, error handling, tool composition
+
+  - skill_id: mcp-testing
+    category: specialized
+    priority_score: 8
+    relevance_mapping:
+      agents: [tester, backend-engineer]
+      profiles: [quality:validation, backend:execution]
+    description: MCP integration testing, protocol compliance, mock servers
+
+  - skill_id: mcp-security
+    category: expert
+    priority_score: 9
+    relevance_mapping:
+      agents: [security-engineer, backend-engineer]
+      profiles: [security:validation, backend:execution]
+    description: MCP security model, capability scoping, resource isolation, prompt injection
+
+  - skill_id: mcp-streaming
+    category: specialized
+    priority_score: 8
+    relevance_mapping:
+      agents: [backend-engineer]
+      profiles: [backend:execution]
+    description: Server-Sent Events, bidirectional streaming, progress notifications, real-time responses
+
+  - skill_id: mcp-pagination
+    category: professional
+    priority_score: 7
+    relevance_mapping:
+      agents: [backend-engineer]
+      profiles: [backend:execution]
+    description: Cursor-based pagination, list parameters, result batching, cursor persistence
+
+  - skill_id: mcp-error-handling
+    category: professional
+    priority_score: 7
+    relevance_mapping:
+      agents: [backend-engineer]
+      profiles: [backend:execution]
+    description: MCP error codes, error recovery strategies, retry logic, graceful degradation
+
+  - skill_id: mcp-auth
+    category: specialized
+    priority_score: 8
+    relevance_mapping:
+      agents: [security-engineer, backend-engineer]
+      profiles: [security:validation, backend:execution]
+    description: MCP authentication, bearer tokens, API keys, OAuth2 flows, permission scopes
+
+  - skill_id: mcp-resources
+    category: professional
+    priority_score: 7
+    relevance_mapping:
+      agents: [backend-engineer]
+      profiles: [backend:execution]
+    description: Resource templates, URI patterns, binary resources, resource lifecycle management
+
+  - skill_id: mcp-sampling
+    category: expert
+    priority_score: 8
+    relevance_mapping:
+      agents: [backend-engineer, tech-lead]
+      profiles: [backend:execution, architecture:orchestration]
+    description: Sampling protocols, model selection, cost control, latency budgets, sampling strategies

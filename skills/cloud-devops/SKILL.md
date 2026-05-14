@@ -25,7 +25,7 @@ Use this workflow when:
 
 ## Workflow Phases
 
-### Phase 1: Cloud Infrastructure Setup
+### 🎭 Phase 1: Cloud Infrastructure Setup
 
 #### Skills to Invoke
 - `cloud-architect` - Cloud architecture
@@ -51,7 +51,7 @@ Use @cloud-architect to design multi-cloud architecture
 Use @terraform-skill to provision AWS infrastructure
 ```
 
-### Phase 2: Container Orchestration
+### 🎭 Phase 2: Container Orchestration
 
 #### Skills to Invoke
 - `kubernetes-architect` - Kubernetes architecture
@@ -81,7 +81,7 @@ Use @docker-expert to containerize application
 Use @helm-chart-scaffolding to create Helm chart
 ```
 
-### Phase 3: CI/CD Implementation
+### 🎭 Phase 3: CI/CD Implementation
 
 #### Skills to Invoke
 - `deployment-engineer` - Deployment engineering
@@ -107,7 +107,7 @@ Use @cicd-automation-workflow-automate to set up CI/CD pipeline
 Use @github-actions-templates to create GitHub Actions workflow
 ```
 
-### Phase 4: Monitoring and Observability
+### 🎭 Phase 4: Monitoring and Observability
 
 #### Skills to Invoke
 - `observability-engineer` - Observability engineering
@@ -133,7 +133,7 @@ Use @observability-engineer to set up observability stack
 Use @grafana-dashboards to create monitoring dashboards
 ```
 
-### Phase 5: Cloud Security
+### 🎭 Phase 5: Cloud Security
 
 #### Skills to Invoke
 - `cloud-penetration-testing` - Cloud pentesting
@@ -159,7 +159,7 @@ Use @cloud-penetration-testing to assess cloud security
 Use @secrets-management to configure secrets
 ```
 
-### Phase 6: Cost Optimization
+### 🎭 Phase 6: Cost Optimization
 
 #### Skills to Invoke
 - `cost-optimization` - Cloud cost optimization
@@ -178,7 +178,7 @@ Use @secrets-management to configure secrets
 Use @cost-optimization to reduce cloud costs
 ```
 
-### Phase 7: Disaster Recovery
+### 🎭 Phase 7: Disaster Recovery
 
 #### Skills to Invoke
 - `incident-responder` - Incident response

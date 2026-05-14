@@ -1,0 +1,100 @@
+# Domain: Programming Languages
+# Skills: 12 | TIER: Professional/Specialized
+# Purpose: Language-specific patterns, idiomatic code, performance characteristics
+
+skills:
+  - skill_id: lang-javascript
+    category: professional
+    priority_score: 8
+    relevance_mapping:
+      agents: [frontend-engineer, backend-engineer]
+      profiles: [frontend:execution, backend:execution]
+    description: Modern JavaScript, ES2024+, async patterns, modules, TypeScript integration
+
+  - skill_id: lang-typescript
+    category: professional
+    priority_score: 9
+    relevance_mapping:
+      agents: [frontend-engineer, backend-engineer]
+      profiles: [frontend:execution, backend:execution]
+    description: TypeScript patterns, generics, decorators, type inference, strict mode
+
+  - skill_id: lang-python
+    category: professional
+    priority_score: 8
+    relevance_mapping:
+      agents: [backend-engineer, data-engineer, researcher]
+      profiles: [backend:execution, research:analysis]
+    description: Python idioms, async, type hints, performance, data processing
+
+  - skill_id: lang-go
+    category: professional
+    priority_score: 8
+    relevance_mapping:
+      agents: [backend-engineer, devops-engineer]
+      profiles: [backend:execution, devops:execution]
+    description: Go patterns, goroutines, channels, error handling, concurrency
+
+  - skill_id: lang-rust
+    category: expert
+    priority_score: 8
+    relevance_mapping:
+      agents: [backend-engineer, performance-engineer]
+      profiles: [backend:execution, performance:validation]
+    description: Rust patterns, ownership, lifetimes, async, zero-cost abstractions
+
+  - skill_id: lang-java
+    category: professional
+    priority_score: 7
+    relevance_mapping:
+      agents: [backend-engineer]
+      profiles: [backend:execution]
+    description: Java idioms, streams, concurrency, JVM tuning, Spring patterns
+
+  - skill_id: lang-kotlin
+    category: professional
+    priority_score: 7
+    relevance_mapping:
+      agents: [backend-engineer, mobile-engineer]
+      profiles: [backend:execution, mobile:execution]
+    description: Kotlin patterns, coroutines, null safety, extension functions
+
+  - skill_id: lang-swift
+    category: professional
+    priority_score: 7
+    relevance_mapping:
+      agents: [mobile-engineer]
+      profiles: [mobile:execution]
+    description: Swift patterns, async/await, value types, protocol-oriented programming
+
+  - skill_id: lang-sql
+    category: professional
+    priority_score: 8
+    relevance_mapping:
+      agents: [backend-engineer, database-architect]
+      profiles: [backend:execution, data:execution]
+    description: SQL patterns, window functions, CTEs, query optimization, dialect differences
+
+  - skill_id: lang-bash
+    category: professional
+    priority_score: 6
+    relevance_mapping:
+      agents: [devops-engineer]
+      profiles: [devops:execution]
+    description: Bash scripting, shell patterns, process management, text processing
+
+  - skill_id: lang-css
+    category: professional
+    priority_score: 7
+    relevance_mapping:
+      agents: [frontend-engineer, designer]
+      profiles: [frontend:execution, design:creative]
+    description: Modern CSS, flexbox, grid, animations, CSS-in-JS, design tokens
+
+  - skill_id: lang-html
+    category: professional
+    priority_score: 6
+    relevance_mapping:
+      agents: [frontend-engineer, designer]
+      profiles: [frontend:execution, design:creative]
+    description: Semantic HTML, accessibility, SEO, web components, templates

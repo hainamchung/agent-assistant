@@ -1,0 +1,213 @@
+# All 9 page type templates + glossary in one file.
+# init-wiki.py reads this to generate _template.md files.
+
+summary:
+  dir: summaries
+  frontmatter: |
+    title: "{title}"
+    type: summary
+    tags: []
+    sources: ["{source_path}"]
+    citations: []  # [{source: "path", section: "heading", confidence: "high|medium|low"}]
+    confidence: medium
+    created: "{date}"
+    updated: "{date}"
+  body: |
+    # {title}
+
+    ## Key Points
+    -
+
+    ## Details
+
+    ## Related
+    <!-- Add [[wikilinks]] to related pages -->
+
+entity:
+  dir: entities
+  frontmatter: |
+    title: "{title}"
+    type: entity
+    tags: []
+    entity_type: ""  # person | system | tool | service | team | org
+    citations: []  # [{source: "path", section: "heading", confidence: "high|medium|low"}]
+    confidence: medium
+    created: "{date}"
+    updated: "{date}"
+  body: |
+    # {title}
+
+    ## Overview
+
+    ## Attributes
+
+    ## Relationships
+    <!-- [[wikilinks]] to related entities -->
+
+concept:
+  dir: concepts
+  frontmatter: |
+    title: "{title}"
+    type: concept
+    tags: []
+    citations: []  # [{source: "path", section: "heading", confidence: "high|medium|low"}]
+    confidence: medium
+    created: "{date}"
+    updated: "{date}"
+  body: |
+    # {title}
+
+    ## Definition
+
+    ## Context
+
+    ## Examples
+
+    ## Related
+    <!-- [[wikilinks]] -->
+
+comparison:
+  dir: comparisons
+  frontmatter: |
+    title: "{title}"
+    type: comparison
+    tags: []
+    subjects: []  # items being compared
+    citations: []  # [{source: "path", section: "heading", confidence: "high|medium|low"}]
+    confidence: medium
+    created: "{date}"
+    updated: "{date}"
+  body: |
+    # {title}
+
+    ## Subjects
+
+    ## Criteria
+
+    | Criterion | A | B |
+    |-----------|---|---|
+
+    ## Recommendation
+
+synthesis:
+  dir: syntheses
+  frontmatter: |
+    title: "{title}"
+    type: synthesis
+    tags: []
+    sources: []
+    citations: []  # [{source: "path", section: "heading", confidence: "high|medium|low"}]
+    confidence: medium
+    created: "{date}"
+    updated: "{date}"
+  body: |
+    # {title}
+
+    ## Sources Analyzed
+
+    ## Key Findings
+
+    ## Patterns
+
+    ## Contradictions
+
+    ## Gaps
+
+chronicle:
+  dir: chronicles
+  frontmatter: |
+    title: "{title}"
+    type: chronicle
+    tags: []
+    date_range: ""  # YYYY-MM-DD to YYYY-MM-DD
+    citations: []  # [{source: "path", section: "heading", confidence: "high|medium|low"}]
+    confidence: medium
+    created: "{date}"
+    updated: "{date}"
+  body: |
+    # {title}
+
+    ## Timeline
+
+    | Date | Event | Impact |
+    |------|-------|--------|
+
+    ## Context
+
+adr:
+  dir: decisions
+  frontmatter: |
+    title: "{title}"
+    type: adr
+    tags: []
+    status: proposed  # proposed | accepted | deprecated | superseded
+    deciders: []
+    citations: []  # [{source: "path", section: "heading", confidence: "high|medium|low"}]
+    confidence: high
+    created: "{date}"
+    updated: "{date}"
+  body: |
+    # {title}
+
+    ## Status
+    Proposed
+
+    ## Context
+
+    ## Decision
+
+    ## Consequences
+
+    ### Positive
+
+    ### Negative
+
+runbook:
+  dir: runbooks
+  frontmatter: |
+    title: "{title}"
+    type: runbook
+    tags: []
+    citations: []  # [{source: "path", section: "heading", confidence: "high|medium|low"}]
+    confidence: high
+    created: "{date}"
+    updated: "{date}"
+  body: |
+    # {title}
+
+    ## Prerequisites
+
+    ## Steps
+
+    1.
+
+    ## Verification
+
+    ## Rollback
+
+postmortem:
+  dir: postmortems
+  frontmatter: |
+    title: "{title}"
+    type: postmortem
+    tags: []
+    incident_date: ""
+    severity: ""  # critical | major | minor
+    citations: []  # [{source: "path", section: "heading", confidence: "high|medium|low"}]
+    confidence: high
+    created: "{date}"
+    updated: "{date}"
+  body: |
+    # {title}
+
+    ## Summary
+
+    ## Timeline
+
+    ## Root Cause
+
+    ## Impact
+
+    ## Action Items
+
+    - [ ]
