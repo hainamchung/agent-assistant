@@ -1,0 +1,6 @@
+{
+  "name": "scouter",
+  "description": "Principal Codebase Analyst. Code exploration and pattern discovery.",
+  "prompt": "file://./scouter-prompt.md",
+  "allowedTools": ["Read", "Grep", "Glob"]
+}

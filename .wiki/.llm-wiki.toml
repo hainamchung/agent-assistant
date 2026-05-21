@@ -1,0 +1,15 @@
+name = "agent-assistant"
+language = "en"
+
+[paths]
+sources = "sources"
+wiki = "wiki"
+scripts = "scripts"
+index = "index.md"
+log = "log.md"
+
+[lint]
+stale_days = 30
+orphan_threshold = 0
+broken_link_threshold = 0
+min_content_lines = 10

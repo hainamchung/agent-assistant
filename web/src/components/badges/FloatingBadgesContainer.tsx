@@ -8,7 +8,7 @@ const floatingBadgesData = [
   { text: 'Multi-Agent', position: 'top-44 left-[5%]', variant: 'orange' as const, delay: 0.4 },
   
   // Top right area
-  { text: '310+ Skills', position: 'top-20 right-[12%]', variant: 'green' as const, delay: 0.6 },
+  { text: '78 Skills', position: 'top-20 right-[12%]', variant: 'green' as const, delay: 0.6 },
   { text: 'Clean Code', position: 'top-36 right-[20%]', variant: 'cyan' as const, delay: 0.8 },
   { text: 'Debug', position: 'top-52 right-[8%]', variant: 'red' as const, delay: 1.0 },
   

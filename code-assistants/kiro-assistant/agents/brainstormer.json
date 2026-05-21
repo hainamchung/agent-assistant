@@ -1,0 +1,6 @@
+{
+  "name": "brainstormer",
+  "description": "Principal Requirements Architect. Requirements discovery, Socratic clarification, ideation.",
+  "prompt": "file://./brainstormer-prompt.md",
+  "allowedTools": ["Read", "Write", "Bash", "Grep", "Glob"]
+}

@@ -1,0 +1,6 @@
+{
+  "name": "researcher",
+  "description": "Principal Research Analyst. Technical research, documentation discovery, best practices.",
+  "prompt": "file://./researcher-prompt.md",
+  "allowedTools": ["Read", "Write", "Bash", "Grep", "Glob"]
+}

@@ -9,6 +9,8 @@
  * - Antigravity (Gemini)
  * - Claude Code
  * - Codex
+ * - Kiro
+ * - Qwen (Alibaba Cloud)
  * 
  * Usage:
  *   npx agent-assistant install [tool]
@@ -164,6 +166,50 @@ const TOOLS = {
             agentTomlDir: path.join(ROOT, 'code-assistants', 'codex-assistant', 'agents'),
             commandSkillsDir: path.join(ROOT, 'code-assistants', 'codex-assistant', 'skills'),
         }
+    },
+    kiro: {
+        name: 'Kiro',
+        description: 'Kiro AI Editor',
+        paths: {
+            home: path.join(HOME, '.kiro'),
+            prompts: path.join(HOME, '.kiro', 'prompts'),
+            agents: path.join(HOME, '.kiro', 'agents'),
+            skills: path.join(HOME, '.kiro', 'skills'),
+            agentAssistant: path.join(HOME, '.kiro', 'skills', 'agent-assistant'),
+        },
+        replacements: {
+            '~/.{TOOL}/skills/agent-assistant/': '~/.kiro/skills/agent-assistant/',
+            '{TOOL}/agent-assistant/': 'kiro/skills/agent-assistant/',
+            '{TOOL}': 'kiro',
+            '{HOME}': '~',
+            '~/.agent/': '~/.kiro/skills/agent-assistant/'
+        },
+        assets: {
+            kiroMd: path.join(ROOT, 'code-assistants', 'kiro-assistant', 'KIRO.md'),
+            agentsDir: path.join(ROOT, 'code-assistants', 'kiro-assistant', 'agents'),
+        }
+    },
+    qwen: {
+        name: 'Qwen',
+        description: 'Alibaba Qwen Code CLI',
+        paths: {
+            home: path.join(HOME, '.qwen'),
+            skills: path.join(HOME, '.qwen', 'skills'),
+            commands: path.join(HOME, '.qwen', 'commands'),
+            agents: path.join(HOME, '.qwen', 'agents'),
+            agentAssistant: path.join(HOME, '.qwen', 'skills', 'agent-assistant'),
+        },
+        replacements: {
+            '~/.{TOOL}/skills/agent-assistant/': '~/.qwen/skills/agent-assistant/',
+            '{TOOL}/agent-assistant/': 'qwen/skills/agent-assistant/',
+            '{TOOL}': 'qwen',
+            '{HOME}': '~',
+            '~/.agent/': '~/.qwen/skills/agent-assistant/'
+        },
+        assets: {
+            qwenMd: path.join(ROOT, 'code-assistants', 'qwen-assistant', 'QWEN.md'),
+            agentsDir: path.join(ROOT, 'code-assistants', 'qwen-assistant', 'agents'),
+        }
     }
 };
 
@@ -191,12 +237,16 @@ const BUNDLED_AGENTS = [
     'performance-engineer.md',
     'planner.md',
     'project-manager.md',
+    'reporter.md',
     'researcher.md',
     'reviewer.md',
     'scouter.md',
     'security-engineer.md',
     'tech-lead.md',
     'tester.md',
+    'wiki-architect.md',
+    'wiki-extractor.md',
+    'wiki-reviewer.md',
 ];
 
 // ============================================================================
@@ -1174,6 +1224,177 @@ function installCodex() {
     return total;
 }
 
+function installKiro() {
+    const tool = TOOLS.kiro;
+
+    resetProgress();
+    progressState.total = estimateInstallFiles();
+
+    console.log(`\n📦 Installing Agent Assistant for ${tool.name}...`);
+    console.log(`   Estimated files: ~${formatNumber(progressState.total)}\n`);
+
+    let total = 0;
+
+    // --- 1. INSTALL GLOBAL PROMPTS (~/.kiro/prompts) ---
+    ensureDir(tool.paths.prompts);
+
+    // 1.1 KIRO.md (primary instruction file)
+    if (tool.assets.kiroMd && fs.existsSync(tool.assets.kiroMd)) {
+        const destFile = path.join(tool.paths.prompts, 'agent-assistant.KIRO.md');
+        if (copyFileWithReplace(tool.assets.kiroMd, destFile, tool.replacements)) total++;
+    }
+
+    // 1.2 Global Config Files (AGENT.md, CLAUDE.md)
+    const globalFiles = ['AGENT.md', 'CLAUDE.md'];
+    for (const file of globalFiles) {
+        const src = path.join(ROOT, file);
+        const dest = path.join(tool.paths.home, file);
+        if (fs.existsSync(src)) {
+            if (copyFileWithReplace(src, dest, tool.replacements)) total++;
+        }
+    }
+
+    // --- 2. INSTALL AGENTS (~/.kiro/agents) ---
+    // Kiro supports both JSON agent configs and markdown prompts
+    ensureDir(tool.paths.agents);
+    if (tool.assets.agentsDir && fs.existsSync(tool.assets.agentsDir)) {
+        // Copy JSON agent configs
+        total += copyWithReplace(tool.assets.agentsDir, tool.paths.agents, tool.replacements);
+        console.log(`   ✅ Installed Kiro agent configurations (JSON + prompts)`);
+    }
+
+    // --- 3. INSTALL CORE FRAMEWORK (~/.kiro/skills/agent-assistant) ---
+    if (fs.existsSync(tool.paths.agentAssistant)) {
+        fs.rmSync(tool.paths.agentAssistant, { recursive: true, force: true });
+    }
+    ensureDir(tool.paths.agentAssistant);
+
+    for (const dir of CORE_DIRS) {
+        const srcDir = path.join(ROOT, dir);
+        if (fs.existsSync(srcDir)) {
+            total += copyWithReplace(srcDir, path.join(tool.paths.agentAssistant, dir), tool.replacements);
+        }
+    }
+
+    // Copy backward compat workflows
+    const commandsSrc = path.join(ROOT, 'commands');
+    if (fs.existsSync(commandsSrc)) {
+        total += copyWithReplace(commandsSrc, path.join(tool.paths.agentAssistant, 'workflows'), tool.replacements);
+    }
+
+    for (const file of ROOT_FILES) {
+        const srcFile = path.join(ROOT, file);
+        if (fs.existsSync(srcFile)) {
+            if (copyFileWithReplace(srcFile, path.join(tool.paths.agentAssistant, file), tool.replacements)) total++;
+        }
+    }
+
+    // --- 4. INSTALL SKILLS (~/.kiro/skills) ---
+    total += copyWithReplace(path.join(ROOT, 'skills'), tool.paths.skills, tool.replacements);
+
+    // --- 5. INSTALL NATIVE SUBAGENTS (~/.kiro/agents) ---
+    total += copyWithReplace(path.join(ROOT, 'agents'), tool.paths.agents, tool.replacements);
+
+    completeProgress();
+    printSummary(tool.name, 'install');
+
+    console.log(`\n   📁 Paths:`);
+    console.log(`      Home:      ${tool.paths.home}`);
+    console.log(`      Prompts:  ${tool.paths.prompts}`);
+    console.log(`      Agents:   ${tool.paths.agents}`);
+    console.log(`      Skills:   ${tool.paths.skills}`);
+    console.log(`      Framework: ${tool.paths.agentAssistant}`);
+
+    return total;
+}
+
+function installQwen() {
+    const tool = TOOLS.qwen;
+
+    resetProgress();
+    progressState.total = estimateInstallFiles();
+
+    console.log(`\n📦 Installing Agent Assistant for ${tool.name}...`);
+    console.log(`   Estimated files: ~${formatNumber(progressState.total)}\n`);
+
+    let total = 0;
+
+    // --- 1. INSTALL GLOBAL CONFIG (~/.qwen) ---
+    ensureDir(tool.paths.home);
+
+    // 1.1 QWEN.md (primary instruction file)
+    if (tool.assets.qwenMd && fs.existsSync(tool.assets.qwenMd)) {
+        const destFile = path.join(tool.paths.home, 'QWEN.md');
+        if (copyFileWithReplace(tool.assets.qwenMd, destFile, tool.replacements)) total++;
+    }
+
+    // 1.2 Global Config Files (AGENT.md, CLAUDE.md)
+    const globalFiles = ['AGENT.md', 'CLAUDE.md'];
+    for (const file of globalFiles) {
+        const src = path.join(ROOT, file);
+        const dest = path.join(tool.paths.home, file);
+        if (fs.existsSync(src)) {
+            if (copyFileWithReplace(src, dest, tool.replacements)) total++;
+        }
+    }
+
+    // 1.3 Commands (~/.qwen/commands)
+    ensureDir(tool.paths.commands);
+    total += copyWithReplace(path.join(ROOT, 'commands'), tool.paths.commands, tool.replacements);
+
+    // --- 2. INSTALL AGENTS (~/.qwen/agents) ---
+    // Qwen supports markdown agents with YAML frontmatter
+    ensureDir(tool.paths.agents);
+    if (tool.assets.agentsDir && fs.existsSync(tool.assets.agentsDir)) {
+        total += copyWithReplace(tool.assets.agentsDir, tool.paths.agents, tool.replacements);
+        console.log(`   ✅ Installed Qwen agent definitions (Markdown + YAML frontmatter)`);
+    }
+
+    // --- 3. INSTALL CORE FRAMEWORK (~/.qwen/skills/agent-assistant) ---
+    if (fs.existsSync(tool.paths.agentAssistant)) {
+        fs.rmSync(tool.paths.agentAssistant, { recursive: true, force: true });
+    }
+    ensureDir(tool.paths.agentAssistant);
+
+    for (const dir of CORE_DIRS) {
+        const srcDir = path.join(ROOT, dir);
+        if (fs.existsSync(srcDir)) {
+            total += copyWithReplace(srcDir, path.join(tool.paths.agentAssistant, dir), tool.replacements);
+        }
+    }
+
+    // Copy backward compat workflows
+    const commandsSrc = path.join(ROOT, 'commands');
+    if (fs.existsSync(commandsSrc)) {
+        total += copyWithReplace(commandsSrc, path.join(tool.paths.agentAssistant, 'workflows'), tool.replacements);
+    }
+
+    for (const file of ROOT_FILES) {
+        const srcFile = path.join(ROOT, file);
+        if (fs.existsSync(srcFile)) {
+            if (copyFileWithReplace(srcFile, path.join(tool.paths.agentAssistant, file), tool.replacements)) total++;
+        }
+    }
+
+    // --- 4. INSTALL SKILLS (~/.qwen/skills) ---
+    total += copyWithReplace(path.join(ROOT, 'skills'), tool.paths.skills, tool.replacements);
+
+    // --- 5. INSTALL NATIVE SUBAGENTS (~/.qwen/agents) ---
+    total += copyWithReplace(path.join(ROOT, 'agents'), tool.paths.agents, tool.replacements);
+
+    completeProgress();
+    printSummary(tool.name, 'install');
+
+    console.log(`\n   📁 Paths:`);
+    console.log(`      Home:      ${tool.paths.home}`);
+    console.log(`      Commands: ${tool.paths.commands}`);
+    console.log(`      Agents:   ${tool.paths.agents}`);
+    console.log(`      Skills:   ${tool.paths.skills}`);
+    console.log(`      Framework: ${tool.paths.agentAssistant}`);
+
+    return total;
+}
+
 // ============================================================================
 // Uninstall Functions
 // ============================================================================
@@ -1470,6 +1691,110 @@ function uninstallCodex() {
     return removed;
 }
 
+function uninstallKiro() {
+    const tool = TOOLS.kiro;
+
+    resetProgress();
+    progressState.total = 8;
+
+    console.log(`\n🗑️  Uninstalling Agent Assistant from ${tool.name}...`);
+    console.log(`   This will remove the framework while preserving user skills.\n`);
+
+    let removed = 0;
+
+    // 1. Remove Global Prompts
+    const promptFile = path.join(tool.paths.prompts, 'agent-assistant.KIRO.md');
+    if (removeFile(promptFile)) {
+        removed++;
+    }
+
+    // 2. Remove Global Config Files
+    const globalFiles = ['AGENT.md', 'CLAUDE.md'];
+    for (const file of globalFiles) {
+        const filePath = path.join(tool.paths.home, file);
+        if (removeFile(filePath)) {
+            removed++;
+        }
+    }
+
+    // 3. Remove Commands
+    if (removeDir(tool.paths.commands)) {
+        removed++;
+    }
+
+    // 4. Remove Native Agents (Entire folder)
+    if (removeDir(tool.paths.agents)) {
+        removed++;
+    }
+
+    // 5. Remove Core Framework
+    if (removeDir(tool.paths.agentAssistant)) {
+        removed++;
+    }
+
+    // Complete progress bar
+    completeProgress();
+
+    // Print summary
+    printSummary(tool.name, 'uninstall');
+
+    console.log(`\n   ℹ️  User skills preserved at: ${tool.paths.skills}`);
+
+    return removed;
+}
+
+function uninstallQwen() {
+    const tool = TOOLS.qwen;
+
+    resetProgress();
+    progressState.total = 8;
+
+    console.log(`\n🗑️  Uninstalling Agent Assistant from ${tool.name}...`);
+    console.log(`   This will remove the framework while preserving user skills.\n`);
+
+    let removed = 0;
+
+    // 1. Remove Global Config
+    const qwenMd = path.join(tool.paths.home, 'QWEN.md');
+    if (removeFile(qwenMd)) {
+        removed++;
+    }
+
+    // 2. Remove Global Config Files
+    const globalFiles = ['AGENT.md', 'CLAUDE.md'];
+    for (const file of globalFiles) {
+        const filePath = path.join(tool.paths.home, file);
+        if (removeFile(filePath)) {
+            removed++;
+        }
+    }
+
+    // 3. Remove Commands
+    if (removeDir(tool.paths.commands)) {
+        removed++;
+    }
+
+    // 4. Remove Native Agents (Entire folder)
+    if (removeDir(tool.paths.agents)) {
+        removed++;
+    }
+
+    // 5. Remove Core Framework
+    if (removeDir(tool.paths.agentAssistant)) {
+        removed++;
+    }
+
+    // Complete progress bar
+    completeProgress();
+
+    // Print summary
+    printSummary(tool.name, 'uninstall');
+
+    console.log(`\n   ℹ️  User skills preserved at: ${tool.paths.skills}`);
+
+    return removed;
+}
+
 // ============================================================================
 // CLI Interface
 // ============================================================================
@@ -1491,7 +1816,7 @@ function printUsage() {
 Usage: npx agent-assistant <command> [options]
 
 Commands:
-  install [tool]     Install for a specific tool (cursor, copilot, antigravity, claude, codex)
+  install [tool]     Install for a specific tool (cursor, copilot, antigravity, claude, codex, kiro, qwen)
   install --all      Install for all supported tools
   uninstall [tool]   Uninstall from a specific tool
   list               List supported tools and installation status
@@ -1550,6 +1875,22 @@ function listTools() {
                     details.push('CODEX.md');
                 }
             }
+            if (key === 'kiro') {
+                if (fs.existsSync(path.join(tool.paths.prompts, 'agent-assistant.KIRO.md'))) {
+                    details.push('KIRO.md');
+                }
+                if (fs.existsSync(path.join(tool.paths.agents, 'backend-engineer.json'))) {
+                    details.push('agents');
+                }
+            }
+            if (key === 'qwen') {
+                if (fs.existsSync(path.join(tool.paths.home, 'QWEN.md'))) {
+                    details.push('QWEN.md');
+                }
+                if (fs.existsSync(path.join(tool.paths.agents, 'backend-engineer.md'))) {
+                    details.push('agents');
+                }
+            }
             if (details.length > 0) {
                 console.log(`               ${' '.padEnd(25)} (${details.join(', ')})`);
             }
@@ -1571,10 +1912,12 @@ async function promptToolSelection() {
         console.log('  3. Antigravity (Gemini)');
         console.log('  4. Claude Code');
         console.log('  5. Codex');
-        console.log('  6. All tools');
+        console.log('  6. Kiro');
+        console.log('  7. Qwen');
+        console.log('  8. All tools');
         console.log('  0. Cancel\n');
 
-        rl.question('Enter your choice (0-6): ', (answer) => {
+        rl.question('Enter your choice (0-8): ', (answer) => {
             rl.close();
             resolve(answer.trim());
         });
@@ -1601,17 +1944,25 @@ async function interactiveInstall() {
             installCodex();
             break;
         case '6':
+            installKiro();
+            break;
+        case '7':
+            installQwen();
+            break;
+        case '8':
             installCursor();
             installCopilot();
             installAntigravity();
             installClaude();
             installCodex();
+            installKiro();
+            installQwen();
             break;
         case '0':
             console.log('\n❌ Installation cancelled.\n');
             break;
         default:
-            console.log('\n❌ Invalid choice. Please enter 0-6.\n');
+            console.log('\n❌ Invalid choice. Please enter 0-8.\n');
     }
 }
 
@@ -1644,7 +1995,9 @@ async function main() {
                 totalFiles += installAntigravity();
                 totalFiles += installClaude();
                 totalFiles += installCodex();
-                
+                totalFiles += installKiro();
+                totalFiles += installQwen();
+
                 const duration = ((Date.now() - startTime) / 1000).toFixed(2);
                 console.log('\n' + '═'.repeat(60));
                 console.log('🎉 All installations complete!');
@@ -1661,11 +2014,15 @@ async function main() {
                 installClaude();
             } else if (target === 'codex') {
                 installCodex();
+            } else if (target === 'kiro') {
+                installKiro();
+            } else if (target === 'qwen') {
+                installQwen();
             } else if (!target) {
                 await interactiveInstall();
             } else {
                 console.log(`❌ Unknown tool: ${target}`);
-                console.log('   Supported tools: cursor, copilot, antigravity, claude, codex');
+                console.log('   Supported tools: cursor, copilot, antigravity, claude, codex, kiro, qwen');
             }
             break;
 
@@ -1677,7 +2034,9 @@ async function main() {
                 uninstallAntigravity();
                 uninstallClaude();
                 uninstallCodex();
-                
+                uninstallKiro();
+                uninstallQwen();
+
                 const duration = ((Date.now() - startTime) / 1000).toFixed(2);
                 console.log('\n' + '═'.repeat(60));
                 console.log('✅ All uninstallations complete!');
@@ -1693,8 +2052,12 @@ async function main() {
                 uninstallClaude();
             } else if (target === 'codex') {
                 uninstallCodex();
+            } else if (target === 'kiro') {
+                uninstallKiro();
+            } else if (target === 'qwen') {
+                uninstallQwen();
             } else {
-                console.log(`❌ Please specify a tool: cursor, copilot, antigravity, claude, codex, or --all`);
+                console.log(`❌ Please specify a tool: cursor, copilot, antigravity, claude, codex, kiro, qwen, or --all`);
             }
             break;
 

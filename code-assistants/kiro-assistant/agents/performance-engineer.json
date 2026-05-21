@@ -1,0 +1,6 @@
+{
+  "name": "performance-engineer",
+  "description": "Principal Performance Architect. Profiling, optimization, load testing.",
+  "prompt": "file://./performance-engineer-prompt.md",
+  "allowedTools": ["Read", "Write", "Edit", "Bash", "Grep", "Glob"]
+}

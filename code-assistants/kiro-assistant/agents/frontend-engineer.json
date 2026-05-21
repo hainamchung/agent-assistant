@@ -1,0 +1,6 @@
+{
+  "name": "frontend-engineer",
+  "description": "Principal Frontend Architect. Implements UI components, React, accessibility, and web performance.",
+  "prompt": "file://./frontend-engineer-prompt.md",
+  "allowedTools": ["Read", "Write", "Edit", "Bash", "Grep", "Glob"]
+}

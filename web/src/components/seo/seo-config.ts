@@ -4,14 +4,17 @@
  */
 
 export const SITE_URL = 'https://agent-assistant-ten.vercel.app'
+// TODO: Add og:image social card (1200x630px)
+// Recommended: /assets/social-card.png (1200x630, <5MB)
+// See: reports/github-growth-strategy/visual-asset-specs.md for specs
 export const DEFAULT_IMAGE = '/assets/logo.png'
 export const SITE_NAME = 'Agent Assistant'
 
 // Pre-configured SEO for common pages
 export const pageSEO = {
   home: {
-    title: 'Agent Assistant',
-    description: 'Multi-agent orchestration for AI coding assistants with 21 specialist agents, 310+ skills, and 50+ workflows. Multi-agent orchestration for AI coding assistants.',
+    title: 'Agent Assistant — One AI. A Full Engineering Team.',
+    description: 'Turn Claude Code, Cursor, or GitHub Copilot into 21 specialist agents. 85% fewer tokens. 70% fewer bugs. Ship features in hours, not days. Auto-generates wiki documentation from any codebase.',
     pathname: '/',
   },
   installation: {
@@ -26,7 +29,7 @@ export const pageSEO = {
   },
   specialistAgents: {
     title: 'Specialist Agents',
-    description: '21 pre-built specialist agents including backend engineers, frontend developers, testers, debuggers, reporter, and more. Each with unique expertise and thinking protocols.',
+    description: '20 pre-built specialist agents including backend engineers, frontend developers, testers, debuggers, reporter, and more. Each with unique expertise and thinking protocols.',
     pathname: '/features/specialist-agents',
   },
   commands: {
@@ -36,7 +39,7 @@ export const pageSEO = {
   },
   matrixSkills: {
     title: 'Hybrid Skill Orchestration (HSOL)',
-    description: 'Matrix + dynamic skills: 310+ curated skills across 19 domains plus on-demand community skills via find-skills. Variant-aware discovery, fitness thresholds, deep knowledge on demand.',
+    description: 'Matrix + dynamic skills: 78 curated skills across 8 domains plus on-demand community skills via find-skills. Variant-aware discovery, fitness thresholds, deep knowledge on demand.',
     pathname: '/features/matrix-skills',
   },
   multiPlatform: {
@@ -61,12 +64,22 @@ export const pageSEO = {
   },
   workflow: {
     title: 'System Architecture',
-    description: 'Interactive architecture diagram showing how Agent Assistant orchestrates 21 specialist agents, 310+ skills, and tiered execution through the Orchestrator Pattern.',
+    description: 'Interactive architecture diagram showing how Agent Assistant orchestrates 21 specialist agents, 78 skills, and tiered execution through the Orchestrator Pattern.',
     pathname: '/features/workflow',
   },
   agentTeams: {
     title: 'Agent Teams — Golden Triangle',
-    description: 'Adversarial collaboration with 17 specialized teams. Each team has a Tech Lead, Executor, and Reviewer working through structured debate for maximum quality output.',
+    description: 'Adversarial collaboration with 18 specialized teams. Each team has a Tech Lead, Executor, and Reviewer working through structured debate for maximum quality output.',
     pathname: '/features/agent-teams',
+  },
+  wikiDocumentation: {
+    title: 'AI-Powered Wiki Documentation',
+    description: 'Turn any codebase into a comprehensive, machine-readable wiki. Three quality tiers, three specialized agents, and adversarial review ensure every page is accurate, complete, and always current.',
+    pathname: '/features/wiki-documentation',
+  },
+  community: {
+    title: 'Community — Agent Assistant',
+    description: 'Join the multi-agent orchestration community. Contribute skills, agents, and ideas. Built by developers, for developers.',
+    pathname: '/community',
   },
 } as const

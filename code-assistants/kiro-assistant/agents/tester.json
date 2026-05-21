@@ -1,0 +1,6 @@
+{
+  "name": "tester",
+  "description": "QA Architect. Writes unit tests, integration tests, and E2E test suites.",
+  "prompt": "file://./tester-prompt.md",
+  "allowedTools": ["Read", "Write", "Edit", "Bash", "Grep", "Glob"]
+}

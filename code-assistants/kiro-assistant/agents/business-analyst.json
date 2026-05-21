@@ -1,0 +1,6 @@
+{
+  "name": "business-analyst",
+  "description": "Principal Business Analyst. Requirements discovery, stakeholder management, domain modeling.",
+  "prompt": "file://./business-analyst-prompt.md",
+  "allowedTools": ["Read", "Write", "Bash", "Grep", "Glob"]
+}

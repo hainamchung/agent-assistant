@@ -1,0 +1,6 @@
+{
+  "name": "database-architect",
+  "description": "Principal Database Architect. Schema design, query optimization, data integrity.",
+  "prompt": "file://./database-architect-prompt.md",
+  "allowedTools": ["Read", "Write", "Edit", "Bash", "Grep", "Glob"]
+}

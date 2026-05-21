@@ -1,0 +1,8 @@
+{
+  "name": "agent-assistant-orchestrator",
+  "description": "Central Orchestration Brain for Agent Assistant. Delegates through Commands → Agents → Skills. Spawns specialist agents for each phase.",
+  "prompt": "file://./agents/agent-assistant-orchestrator-prompt.md",
+  "model": "kiro",
+  "keyboardShortcut": "cmd+shift+a",
+  "welcomeMessage": "Agent Assistant ready. Use /cook, /fix, /plan, /test, /review, /debug, /docs, /design, /deploy, /report to start workflows."
+}

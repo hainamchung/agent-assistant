@@ -139,16 +139,66 @@ export const platforms: Platform[] = [
       'agent-assistant uninstall codex',
     ]
   },
+  {
+    id: 'kiro',
+    name: 'Kiro',
+    icon: '⚡',
+    description: 'Full support for Kiro AI through KIRO.md and JSON agent configurations.',
+    status: 'full',
+    configFile: 'KIRO.md + agents/*.json',
+    installPath: '~/.kiro/skills/agent-assistant/',
+    features: [
+      'Kiro integration',
+      'KIRO.md configuration',
+      'JSON agent configs with file:// prompts',
+      'Full skill library',
+    ],
+    steps: [
+      'Install Agent Assistant globally',
+      'KIRO.md is auto-detected in prompts folder',
+      'Agent configs copied to ~/.kiro/agents',
+      'Use all commands and workflows',
+    ],
+    setup: [
+      'agent-assistant install kiro',
+      'agent-assistant uninstall kiro',
+    ]
+  },
+  {
+    id: 'qwen',
+    name: 'Qwen',
+    icon: '🐉',
+    description: 'Full support for Alibaba Qwen Code through QWEN.md and Markdown agents with YAML frontmatter.',
+    status: 'full',
+    configFile: 'QWEN.md + agents/*.md',
+    installPath: '~/.qwen/skills/agent-assistant/',
+    features: [
+      'Qwen Code integration',
+      'QWEN.md configuration',
+      'Markdown agents with YAML frontmatter',
+      'Full skill library',
+    ],
+    steps: [
+      'Install Agent Assistant globally',
+      'QWEN.md is auto-detected in home folder',
+      'Agent definitions copied to ~/.qwen/agents',
+      'Use all commands and workflows',
+    ],
+    setup: [
+      'agent-assistant install qwen',
+      'agent-assistant uninstall qwen',
+    ]
+  },
 ]
 
 // Platform comparison features
 export const platformComparisonFeatures = [
-  { feature: 'Agent Orchestration', cursor: true, claude: true, copilot: true, antigravity: true, codex: true },
-  { feature: 'Skill Injection', cursor: true, claude: true, copilot: true, antigravity: true, codex: true },
-  { feature: 'Command Workflows', cursor: true, claude: true, copilot: true, antigravity: true, codex: true },
-  { feature: 'Quality Gates', cursor: true, claude: true, copilot: true, antigravity: true, codex: true },
-  { feature: 'Global Config', cursor: true, claude: true, copilot: true, antigravity: true, codex: true },
-  { feature: 'Sub-agent Invocation', cursor: true, claude: true, copilot: true, antigravity: true, codex: true },
+  { feature: 'Agent Orchestration', cursor: true, claude: true, copilot: true, antigravity: true, codex: true, kiro: true, qwen: true },
+  { feature: 'Skill Injection', cursor: true, claude: true, copilot: true, antigravity: true, codex: true, kiro: true, qwen: true },
+  { feature: 'Command Workflows', cursor: true, claude: true, copilot: true, antigravity: true, codex: true, kiro: true, qwen: true },
+  { feature: 'Quality Gates', cursor: true, claude: true, copilot: true, antigravity: true, codex: true, kiro: true, qwen: true },
+  { feature: 'Global Config', cursor: true, claude: true, copilot: true, antigravity: true, codex: true, kiro: true, qwen: true },
+  { feature: 'Sub-agent Invocation', cursor: true, claude: true, copilot: true, antigravity: true, codex: true, kiro: true, qwen: true },
 ]
 
 // Simplified platform data for badges

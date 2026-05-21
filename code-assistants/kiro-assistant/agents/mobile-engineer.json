@@ -1,0 +1,6 @@
+{
+  "name": "mobile-engineer",
+  "description": "Principal Mobile Architect. iOS, Android, React Native, Flutter.",
+  "prompt": "file://./mobile-engineer-prompt.md",
+  "allowedTools": ["Read", "Write", "Edit", "Bash", "Grep", "Glob"]
+}

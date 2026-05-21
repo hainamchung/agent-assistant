@@ -1,0 +1,6 @@
+{
+  "name": "reporter",
+  "description": "Documentation & Reporting Specialist. Transforms data into structured insights.",
+  "prompt": "file://./reporter-prompt.md",
+  "allowedTools": ["Read", "Write", "Edit", "Bash", "Grep", "Glob"]
+}

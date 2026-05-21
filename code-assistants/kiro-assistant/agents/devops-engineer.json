@@ -1,0 +1,6 @@
+{
+  "name": "devops-engineer",
+  "description": "Principal DevOps Architect. CI/CD, infrastructure as code, deployment automation.",
+  "prompt": "file://./devops-engineer-prompt.md",
+  "allowedTools": ["Read", "Write", "Edit", "Bash", "Grep", "Glob"]
+}

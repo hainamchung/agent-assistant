@@ -1,0 +1,6 @@
+{
+  "name": "debugger",
+  "description": "Root Cause Analyst. Investigates bugs, traces errors, and identifies root causes.",
+  "prompt": "file://./debugger-prompt.md",
+  "allowedTools": ["Read", "Write", "Bash", "Grep", "Glob"]
+}

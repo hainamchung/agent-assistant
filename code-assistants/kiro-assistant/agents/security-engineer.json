@@ -1,0 +1,6 @@
+{
+  "name": "security-engineer",
+  "description": "Principal Security Architect. Threat modeling, secure coding, vulnerability assessment.",
+  "prompt": "file://./security-engineer-prompt.md",
+  "allowedTools": ["Read", "Write", "Edit", "Bash", "Grep", "Glob"]
+}

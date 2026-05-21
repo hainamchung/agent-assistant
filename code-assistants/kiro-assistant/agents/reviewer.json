@@ -1,0 +1,6 @@
+{
+  "name": "reviewer",
+  "description": "Code Quality Guardian. Reviews code for best practices, security, and performance.",
+  "prompt": "file://./reviewer-prompt.md",
+  "allowedTools": ["Read", "Grep", "Glob"]
+}

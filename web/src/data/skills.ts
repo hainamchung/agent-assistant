@@ -5,44 +5,31 @@ export interface SkillDomain {
   examples: string[]
 }
 
-// 19 domains from matrix-skills/_index.yaml v1.1 — total 1400 skills
+// 8 real domains from ~/.{TOOL}/skills-cursor/ + ~/.{TOOL}/skills/ — total 78 skills
 export const skillDomains: SkillDomain[] = [
-  { name: 'Backend', count: 32, icon: '⚙️', examples: ['fastapi-expert', 'django-expert', 'nodejs-best-practices'] },
-  { name: 'Frontend', count: 22, icon: '🎨', examples: ['react-expert', 'vue-expert', 'nextjs-developer'] },
-  { name: 'Architecture', count: 9, icon: '🏗️', examples: ['microservices-architect', 'api-designer', 'database-optimizer'] },
-  { name: 'Quality', count: 21, icon: '✅', examples: ['playwright-expert', 'code-review', 'debugging'] },
-  { name: 'Security', count: 35, icon: '🔒', examples: ['api-security-best-practices', 'secure-code-guardian', 'vulnerability-scanner'] },
-  { name: 'Design', count: 10, icon: '🎯', examples: ['ui-design-system', 'frontend-design', 'aesthetic'] },
-  { name: 'Planning', count: 12, icon: '📑', examples: ['brainstorming', 'plan-writing', 'sequential-thinking'] },
-  { name: 'DevOps', count: 22, icon: '🔧', examples: ['docker-expert', 'kubernetes-specialist', 'terraform-engineer'] },
-  { name: 'Data', count: 7, icon: '📊', examples: ['pandas-pro', 'sql-pro', 'postgres-pro'] },
-  { name: 'Performance', count: 1, icon: '⚡', examples: ['performance-profiling'] },
-  { name: 'Research', count: 11, icon: '🔍', examples: ['docs-seeker', 'research', 'tavily-web'] },
-  { name: 'Mobile', count: 8, icon: '📱', examples: ['react-native-expert', 'flutter-expert', 'swift-expert'] },
-  { name: 'Gaming', count: 3, icon: '🎮', examples: ['game-developer', '2d-games', '3d-games'] },
-  { name: 'Management', count: 4, icon: '📋', examples: ['agile-product-owner', 'product-manager-toolkit', 'jira-issues'] },
-  { name: 'AI/ML', count: 40, icon: '🤖', examples: ['prompt-engineering', 'rag-implementation', 'llm-app-patterns'] },
-  { name: 'Cloud', count: 11, icon: '☁️', examples: ['aws-serverless-eda', 'azure-functions', 'gcp-cloud-run'] },
-  { name: 'Languages', count: 17, icon: '📝', examples: ['typescript-pro', 'python-pro', 'golang-pro'] },
-  { name: 'Tools', count: 41, icon: '🛠️', examples: ['git-pushing', 'chrome-devtools', 'repomix'] },
-  { name: 'MCP & Agents', count: 8, icon: '🔌', examples: ['mcp-builder', 'langgraph', 'crewai'] },
+  { name: 'Frontend', count: 10, icon: '🎨', examples: ['react-expert', 'nextjs-developer', 'angular', 'ui-ux-pro-max'] },
+  { name: 'Backend', count: 9, icon: '⚙️', examples: ['fastapi-expert', 'django-pro', 'nodejs-best-practices', 'java-pro'] },
+  { name: 'Architecture', count: 6, icon: '🏗️', examples: ['backend-architect', 'database-architect', 'c4-architecture'] },
+  { name: 'Quality & DevOps', count: 11, icon: '✅', examples: ['debugging', 'devops-engineer', 'docker-expert', 'security-auditor'] },
+  { name: 'Cloud & Infrastructure', count: 8, icon: '☁️', examples: ['cloud-devops', 'cloudflare-expert', 'kubernetes-architect'] },
+  { name: 'AI/ML & Data', count: 10, icon: '🤖', examples: ['ai-engineer', 'rag-architect', 'langchain-architecture', 'sql-pro'] },
+  { name: 'Productivity & Meta', count: 8, icon: '🛠️', examples: ['app-builder', 'git-pushing', 'wave-execution', 'brainstorming'] },
+  { name: 'Cursor Tools', count: 16, icon: '🔌', examples: ['canvas', 'babysit', 'create-skill', 'sdk', 'shell'] },
 ]
 
 // Skill injection example (backend-engineer) — matrix + optional dynamic
 export const skillInjectionExample = {
   agent: 'backend-engineer',
   profile: 'backend:execution',
-  domains: ['backend', 'architecture', 'quality', 'data', 'languages'],
+  domains: ['backend', 'architecture', 'quality', 'data'],
   injectedSkills: [
     'fastapi-expert',
-    'django-expert',
-    'nodejs-best-practices',
     'python-pro',
-    'typescript-pro',
-    'postgres-pro',
-    'prisma-expert',
-    'api-designer',
-    'database-optimizer',
+    'typescript-expert',
+    'sql-pro',
+    'docker-expert',
+    'cloud-devops',
+    'database-architect',
   ],
 }
 
@@ -131,7 +118,7 @@ export const hsolUniqueFeatures: HsolUniqueFeature[] = [
   {
     icon: '♾️',
     title: 'Infinite Ceiling',
-    description: 'Matrix (1400+) plus community skills at skills.sh — no cap on capability.',
+    description: '78 curated skills (13 cursor-builtin + 65 custom) plus community skills at skills.sh — no cap on capability.',
   },
 ]
 
@@ -163,7 +150,8 @@ export const skillBenefits = [
   },
 ]
 
+// Computed: sum of per-domain counts across 8 real domains
 export const getTotalSkills = () => skillDomains.reduce((acc, d) => acc + d.count, 0)
-// Framework total from matrix-skills/_index.yaml
-export const totalSkills = 1400
-export const totalDomains = 19
+// Real skill total — 78 skills across 8 domains (13 cursor-builtin + 65 custom)
+export const totalSkills = 78
+export const totalDomains = 8

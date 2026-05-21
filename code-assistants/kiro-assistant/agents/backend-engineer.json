@@ -1,0 +1,6 @@
+{
+  "name": "backend-engineer",
+  "description": "Principal Backend Architect. Implements server-side code, APIs, databases, and microservices.",
+  "prompt": "file://./backend-engineer-prompt.md",
+  "allowedTools": ["Read", "Write", "Edit", "Bash", "Grep", "Glob"]
+}

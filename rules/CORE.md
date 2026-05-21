@@ -1,6 +1,6 @@
 # ⚡ CORE RULES — ORCHESTRATOR PROTOCOL
 
-> **VERSION**: 4.1 | **LOAD**: MANDATORY — Always first | **PURPOSE**: Single source of truth
+> **VERSION**: 4.2 | **LOAD**: MANDATORY — Always first | **PURPOSE**: Single source of truth
 >
 > ⛔ **THIS FILE DEFINES YOUR OPERATING SYSTEM. VIOLATIONS ARE FORBIDDEN.**
 
@@ -54,6 +54,7 @@ REPORTS  = ./reports/{topic}/
 | `/brainstorm` | `commands/brainstorm.md` → variant |
 | `/ask` | `commands/ask.md` → variant |
 | `/code` | `commands/code.md` → variant |
+| `/wiki`, `/wiki:fast`, `/wiki:hard`, `/wiki:team` | `commands/wiki.md` → `commands/wiki/{variant}.md` |
 
 **Natural language detection**:
 - "implement/build/create" → `/cook` or `/code`
@@ -65,6 +66,7 @@ REPORTS  = ./reports/{topic}/
 - "Investigate/research/look up" → `/ask` or `/report`
 - "design/ui/ux/mockup" → `/design`
 - "document/docs/readme/spec" → `/docs`
+- "wiki/knowledge base/generate docs from code" → `/wiki`
 
 **Variant syntax**: `/cmd:variant` or `/cmd/variant` both work.
 **Team variant baseline**: `:team` is supported only where `commands/{cmd}/team.md` exists. Deploy uses specialized variants (`check`, `preview`, `production`, `rollback`).
@@ -178,6 +180,9 @@ IF requirement is ambiguous:
 | tester | `./reports/{topic}/tests/TEST-{feature}.md` | `./reports/{topic}/tests/{feature}/00-index.md` |
 | business-analyst | `./reports/{topic}/requirements/REQ-{feature}.md` | `./reports/{topic}/requirements/{feature}/00-index.md` |
 | performance-engineer | `./reports/{topic}/performance/PERF-{component}.md` | `./reports/{topic}/performance/{component}/00-index.md` |
+| wiki-architect | `./reports/{topic}/plans/PLAN-WIKI-{project}.md` | `./reports/{topic}/plans/PLAN-WIKI-{project}/00-index.md` |
+| wiki-extractor | `./reports/{topic}/wikis/WIKI-{variant}-{project}/` | `./reports/{topic}/wikis/WIKI-{variant}-{project}/` (chunked) |
+| wiki-reviewer | `./reports/{topic}/wikis/WIKI-{variant}-{project}/review.md` | `./reports/{topic}/wikis/WIKI-{variant}-{project}/review.md` |
 
 > **Size rule**: ≤ 150 lines → single file | > 150 lines OR ≥ 4 sections → chunked folder. See `PHASES.md § DELIVERABLE SIZE MANAGEMENT`.
 
@@ -190,7 +195,16 @@ IF requirement is ambiguous:
 | Running phases | `PHASES.md` |
 | Delegating to agent | `AGENTS.md` |
 | Skill resolution | `SKILLS.md` |
+| Wiki evaluation | `WIKI.md` |
 | Error occurred | `ERRORS.md` |
 | Quick lookup | `REFERENCE.md` |
 
 **Do NOT pre-load all files.**
+
+---
+
+**Version**: 4.2 | **Change**: Extracted Wiki Awareness to `rules/WIKI.md`
+
+---
+
+*This file is the single source of truth. All other rules reference it.*

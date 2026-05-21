@@ -38,7 +38,7 @@ Visual testing captures the actual rendered output of UI components across diffe
 npm install -g @anthropic/mcp-server-chrome-devtools
 
 # Configure in your MCP settings
-# ~/.cursor/mcp_settings.json or equivalent
+# ~/.{TOOL}/mcp_settings.json or equivalent
 {
   "mcpServers": {
     "chrome-devtools": {

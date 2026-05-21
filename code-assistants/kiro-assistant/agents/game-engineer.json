@@ -1,0 +1,6 @@
+{
+  "name": "game-engineer",
+  "description": "Principal Game Architect. Game development, Three.js, game engines.",
+  "prompt": "file://./game-engineer-prompt.md",
+  "allowedTools": ["Read", "Write", "Edit", "Bash", "Grep", "Glob"]
+}

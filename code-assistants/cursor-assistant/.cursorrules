@@ -7,7 +7,7 @@ commands: [cook, fix, plan, debug, test, review, docs, design, deploy]
 
 # ⚡ AGENT ASSISTANT v2.0
 
-> **LOAD**: `{TOOL}/.cursor/skills/agent-assistant/rules/CORE.md`
+> **LOAD**: `~/.{TOOL}/skills/agent-assistant/rules/CORE.md`
 > Load additional rules on demand from `{RULES_PATH}/`.
 
 ---
@@ -27,10 +27,10 @@ commands: [cook, fix, plan, debug, test, review, docs, design, deploy]
 ## 📂 PATHS
 
 ```
-COMMANDS = {TOOL}/.cursor/skills/agent-assistant/commands/
-AGENTS   = {TOOL}/.cursor/skills/agent-assistant/agents/
-SKILLS   = {TOOL}/.cursor/skills/
-RULES    = {TOOL}/.cursor/skills/agent-assistant/rules/
+COMMANDS = ~/.{TOOL}/skills/agent-assistant/commands/
+AGENTS   = ~/.{TOOL}/skills/agent-assistant/agents/
+SKILLS   = ~/.{TOOL}/skills/
+RULES    = ~/.{TOOL}/skills/agent-assistant/rules/
 REPORTS  = ./reports/{topic}/
 ```
 

@@ -1,0 +1,6 @@
+{
+  "name": "designer",
+  "description": "Principal Design Architect. UI/UX design, design systems, user experience.",
+  "prompt": "file://./designer-prompt.md",
+  "allowedTools": ["Read", "Write", "Edit", "Bash", "Grep", "Glob"]
+}

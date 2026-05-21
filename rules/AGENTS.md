@@ -102,10 +102,10 @@ result:
 
 | Category | Agents | Purpose |
 |----------|--------|---------|
-| **meta** | tech-lead, planner | Coordinate, never implement |
+| **meta** | tech-lead, planner, wiki-architect | Coordinate, plan — never implement |
 | **execution** | backend-engineer, frontend-engineer, mobile-engineer, game-engineer, database-architect | Implementation |
-| **validation** | tester, reviewer, security-engineer, performance-engineer, debugger | QA |
-| **research** | researcher, scouter, brainstormer, designer | Investigation |
+| **validation** | tester, reviewer, security-engineer, performance-engineer, debugger, wiki-reviewer | QA |
+| **research** | researcher, scouter, brainstormer, designer, wiki-extractor | Investigation |
 | **support** | docs-manager, devops-engineer, business-analyst, project-manager, reporter | Support |
 
 ---
@@ -137,6 +137,7 @@ result:
 | `docs-team` | `docs-manager` | `researcher` | `reviewer` (accuracy + completeness) | Technical writing, API docs, architecture docs |
 | `project-team` | `project-manager` | `business-analyst` | `tech-lead` (feasibility critic) | Project planning, risk, delivery |
 | `report-team` | `reporter` | `scouter` | `reviewer` (data accuracy + insight) | Status reports, metrics, analytics |
+| `wiki-team` | `wiki-architect` | `wiki-extractor` | `wiki-reviewer` | Wiki generation, entity extraction, documentation quality |
 
 ### Golden Triangle vs Single Agent
 
@@ -154,6 +155,12 @@ agents/teams/{team-name}/
 ├── techlead.md    # Coordinator, decomposer, arbitrator
 ├── executor.md    # Builder, implementer, defender
 └── reviewer.md    # Devil's advocate, quality gatekeeper
+
+# Wiki Team definitions:
+agents/teams/wiki-team/
+├── techlead.md    # Wiki Architect role — decomposes, coordinates, arbitrates
+├── executor.md    # Wiki Extractor role — extracts, writes, defends
+└── reviewer.md    # Wiki Reviewer role — validates accuracy, completeness, coverage
 ```
 
 ### Communication Protocol
@@ -189,6 +196,7 @@ agents/teams/{team-name}/
 | Game development | `game-engineer` |
 | Mobile development | `mobile-engineer` |
 | Technical leadership | `tech-lead` |
+| Wiki generation | `wiki-architect`, `wiki-extractor`, `wiki-reviewer` |
 
 ---
 

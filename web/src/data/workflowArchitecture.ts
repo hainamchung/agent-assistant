@@ -203,7 +203,7 @@ export const workflowNodes: Node<WorkflowNodeData>[] = [
       description: 'Domain experts execute tasks',
       type: 'agent',
       icon: '👥',
-      items: ['tech-lead', 'backend-engineer', 'frontend-engineer', 'tester', 'reviewer', '+16 more'],
+      items: ['tech-lead', 'backend-engineer', 'frontend-engineer', 'tester', 'reviewer', '+15 more'],
     },
   },
   {
@@ -211,11 +211,11 @@ export const workflowNodes: Node<WorkflowNodeData>[] = [
     type: 'custom',
     position: { x: COL.RIGHT, y: ROW.R7 },
     data: {
-      label: '1400+ Matrix Skills',
+      label: '78 Matrix Skills',
       description: 'Injected into agents at runtime',
       type: 'skill',
       icon: '📚',
-      items: ['19 domains', 'backend, frontend, security', 'ai-ml, devops, quality', '+more...'],
+      items: ['8 domains', 'cursor tools, frontend, backend', 'ai-ml, cloud, quality', '+more...'],
     },
   },
 
@@ -468,13 +468,13 @@ export const nodeTypeLegend: { type: WorkflowNodeType; label: string; color: str
     type: 'agent',
     label: 'Specialist Agent',
     color: '#ff8844',
-    description: '21 domain experts (backend, frontend, tester, etc.)',
+    description: '20 domain experts (backend, frontend, tester, etc.)',
   },
   {
     type: 'skill',
     label: 'Matrix Skills',
     color: '#8844ff',
-    description: '1400+ skills across 19 domains injected at runtime',
+    description: '78 skills across 8 domains injected at runtime',
   },
   {
     type: 'phase',
@@ -509,7 +509,7 @@ export const architectureConcepts = [
   },
   {
     title: 'Matrix Skill Discovery',
-    description: 'Instead of hardcoded skills, agents declare profiles. System resolves and injects 1400+ skills at runtime.',
+    description: 'Instead of hardcoded skills, agents declare profiles. System resolves and injects 78 skills at runtime from 8 curated domains.',
     icon: '🎯',
   },
 ]

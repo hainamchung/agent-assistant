@@ -4,6 +4,46 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+## [4.1.0] - 2026-05-21
+
+### Added
+
+- **Wiki Generation System** (`/wiki`) — Full AI-powered wiki documentation suite powered by `llm-wiki` skill
+  - **3 Variants**: `/wiki:fast` (2-phase, essential), `/wiki:hard` (5-phase, comprehensive), `/wiki:team` (7-phase, Golden Triangle adversarial review)
+  - **3 Specialized Agents**: `wiki-architect` (planning), `wiki-extractor` (code analysis + page creation), `wiki-reviewer` (quality validation)
+  - **54+ Wiki Pages** across 9 categories: summaries, entities, concepts, decisions, chronicles, runbooks, comparisons, syntheses, and postmortems
+  - **Knowledge Graph**: Auto-generated Mermaid graph with 42 nodes and ~175 edges
+  - **Wiki Team**: `wiki-team` with Golden Triangle protocol (TechLead + Executor + Reviewer across 7 phases)
+  - **New Rule**: `rules/WIKI.md` — Wiki Awareness evaluation protocol for conditional wiki consultation
+  - **Web Feature Page**: `/features/wiki-documentation` showcasing the full wiki generation system
+
+- **Kiro Platform Support** — Full integration for Kiro AI (`~/.kiro/`)
+  - `code-assistants/kiro-assistant/KIRO.md` (orchestrator entry point)
+  - 19 JSON agent configs with `file://` prompt references
+  - 19 prompt markdown files with YAML frontmatter
+  - Platform-specific install path and agent discovery
+
+- **Qwen Platform Support** — Full integration for Alibaba Qwen Code (`~/.qwen/`)
+  - `code-assistants/qwen-assistant/QWEN.md` (orchestrator entry point)
+  - 19 Markdown agents with YAML frontmatter
+  - Platform-specific install path and agent discovery
+
+- **Community Page** — New React page `web/src/pages/Community.tsx` for community hub
+
+- **Open Source Infrastructure**: `CODE_OF_CONDUCT.md`, `CONTRIBUTING.md`, `SECURITY.md`
+
+- **Skills README**: `skills/README.md` for skills directory documentation
+
+### Changed
+
+- **README.md** — Major rewrite with updated messaging, feature highlights, and architecture overview
+- **Platform Expansion**: Project now supports **7 platforms** (previously 5) — Claude Code, Cursor, Copilot, Antigravity, Codex, Kiro, Qwen — all with full integration status
+- **Web UI Updates**: SEO config improvements, navigation updates, platform data refresh, skills data update, metrics refresh, workflow architecture updates
+- **CLI Enhancements** (`cli/install.js`): Path resolution improvements, platform-specific install paths for Kiro and Qwen
+- **Rule Updates**: `rules/CORE.md` and `rules/AGENTS.md` updated with wiki team definitions and platform paths
+- **Knowledge Documentation** — Comprehensive updates across 20+ documents in `documents/` covering knowledge architecture, domain, overview, source-base, and standards
+- **Business Documentation** — Full refresh of business features, glossary, PRD, and workflows documents
+
 ## [4.0.0] - 2026-05-14
 
 ### Revert

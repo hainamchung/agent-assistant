@@ -121,6 +121,10 @@ All agent communication flows through two shared artifacts:
 - All agents read the full Mailbox to maintain shared context
 - Tech Lead manages the Shared Task List; Executor and Reviewer read it
 - One Mailbox per phase execution, timestamped by date
+- **Size management**: If Mailbox exceeds 500 lines, Tech Lead creates a new segment per phase:
+  - Current phase: `./reports/{topic}/MAILBOX-{date}-P{n}.md`
+  - Archived phase: `./reports/{topic}/MAILBOX-{date}-P{n}-FINAL.md`
+  - Each phase starts with a fresh, focused Mailbox
 
 ---
 
@@ -202,6 +206,7 @@ Output is released **ONLY** when one of these conditions is met:
 | `docs` | `docs-manager` | `researcher` | `reviewer` — accuracy + completeness + clarity |
 | `project` | `project-manager` | `business-analyst` | `tech-lead` — technical feasibility |
 | `report` | `reporter` | `scouter` | `reviewer` — data accuracy + insight validity |
+| `wiki` | `wiki-architect` | `wiki-extractor` | `wiki-reviewer` — adversarial accuracy + completeness + coverage |
 
 ### Team Selection
 
@@ -495,6 +500,8 @@ NEVER spawn 4+ agents in one triangle
 □ Is the consensus stamp present before phase output is released?
 □ Does the final deliverable meet all exit criteria?
 □ Are all Mailbox exchanges preserved (append-only, no deletions)?
+□ If Mailbox exceeded 500 lines, was it rotated per phase?
+□ Was WIKI.md consulted for Wiki Awareness before proceeding?
 ```
 
 ---

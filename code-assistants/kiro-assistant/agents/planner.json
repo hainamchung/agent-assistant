@@ -1,0 +1,6 @@
+{
+  "name": "planner",
+  "description": "Implementation Strategist. Creates task breakdowns, milestones, and implementation plans.",
+  "prompt": "file://./planner-prompt.md",
+  "allowedTools": ["Read", "Write", "Edit"]
+}

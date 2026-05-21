@@ -20,6 +20,8 @@ const Commands = lazy(() => import('./pages/features/Commands'))
 const QualityGates = lazy(() => import('./pages/features/QualityGates'))
 const Workflow = lazy(() => import('./pages/features/Workflow'))
 const AgentTeams = lazy(() => import('./pages/features/AgentTeams'))
+const WikiDocumentation = lazy(() => import('./pages/features/WikiDocumentation'))
+const Community = lazy(() => import('./pages/Community'))
 
 function App() {
   return (
@@ -47,10 +49,12 @@ function App() {
             <Route path="/features/quality-gates" element={<QualityGates />} />
             <Route path="/features/workflow" element={<Workflow />} />
             <Route path="/features/agent-teams" element={<AgentTeams />} />
+            <Route path="/features/wiki-documentation" element={<WikiDocumentation />} />
             
             {/* Other pages */}
             <Route path="/installation" element={<Installation />} />
             <Route path="/docs" element={<Docs />} />
+            <Route path="/community" element={<Community />} />
             
             {/* 404 fallback */}
             <Route path="*" element={<NotFound />} />

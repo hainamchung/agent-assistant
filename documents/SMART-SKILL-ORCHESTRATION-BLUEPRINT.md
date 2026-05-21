@@ -37,7 +37,7 @@ The solution is a **Hybrid Skill Orchestration Layer** (HSOL) that:
 
 ## Prerequisites
 
-Before HSOL can function, the **find-skills** skill must exist at `{SKILLS_PATH}/find-skills/SKILL.md`, where **{SKILLS_PATH}** is the skills path for the **tool the user is currently using** (e.g. Cursor: `~/.cursor/skills/`, Copilot: `~/.copilot/skills/`, Codex: `~/.codex/skills/`, Antigravity: `~/.gemini/antigravity/skills/`). All verify and install actions apply **only to the current tool**; do not verify or install for all tools unless the user explicitly runs `install --all`.
+Before HSOL can function, the **find-skills** skill must exist at `{SKILLS_PATH}/find-skills/SKILL.md`, where **{SKILLS_PATH}** is the skills path for the **tool the user is currently using** (e.g. Cursor: `~/.{TOOL}/skills/`, Copilot: `~/.copilot/skills/`, Codex: `~/.codex/skills/`, Antigravity: `~/.gemini/antigravity/skills/`). All verify and install actions apply **only to the current tool**; do not verify or install for all tools unless the user explicitly runs `install --all`.
 
 **Installation (current tool only, skip confirmation when using npx):**
 
@@ -48,7 +48,7 @@ Before HSOL can function, the **find-skills** skill must exist at `{SKILLS_PATH}
 
 # Option 2: Manual copy to CURRENT TOOL's path only
 # For Cursor:
-cp -r skills/find-skills ~/.cursor/skills/
+cp -r skills/find-skills ~/.{TOOL}/skills/
 # For Copilot:
 cp -r skills/find-skills ~/.copilot/skills/
 # For Codex:
@@ -66,7 +66,7 @@ npx skills add vercel-labs/skills@find-skills -g -y
 ```bash
 # Check at the current tool's SKILLS_PATH (resolve from context)
 ls "{SKILLS_PATH}/find-skills/SKILL.md"
-# Examples: ~/.cursor/skills/find-skills/SKILL.md (Cursor)
+# Examples: ~/.{TOOL}/skills/find-skills/SKILL.md (Cursor)
 #           ~/.copilot/skills/find-skills/SKILL.md (Copilot)
 ```
 
@@ -680,7 +680,7 @@ installation_tiers:
       1. When promotion criteria met (executions, success_rate, recency), skill is auto-promoted
       2. System adds skill entry to ~/.{TOOL}/skills/agent-assistant/matrix-skills/{domain}.yaml (no promotion queue, no human review)
       3. Write target: the GLOBAL tool path the main agent already reads from
-         (e.g. ~/.cursor/skills/agent-assistant/matrix-skills/ for Cursor)
+         (e.g. ~/.{TOOL}/skills/agent-assistant/matrix-skills/ for Cursor)
       4. Same files the orchestrator loaded at session start — we update those on disk
       5. Next resolution cycle (or cache invalidation / hot-reload) picks up the new skill
          — no tool restart required; available to all agents on next request

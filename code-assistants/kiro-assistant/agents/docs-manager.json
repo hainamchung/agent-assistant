@@ -1,0 +1,6 @@
+{
+  "name": "docs-manager",
+  "description": "Principal Documentation Architect. Technical writing, API docs, architecture docs.",
+  "prompt": "file://./docs-manager-prompt.md",
+  "allowedTools": ["Read", "Write", "Edit", "Bash", "Grep", "Glob"]
+}

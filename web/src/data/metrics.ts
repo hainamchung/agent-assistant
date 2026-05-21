@@ -37,7 +37,7 @@ export const featureCards = [
   {
     emoji: '🔌',
     title: 'Multi-Platform',
-    description: 'Works seamlessly with Cursor, Claude Code, GitHub Copilot, Codex, and Antigravity.',
+    description: 'Works seamlessly with Cursor, Claude Code, GitHub Copilot, Antigravity, Codex, Kiro, and Qwen.',
     href: '/features/multi-platform-support',
     badge: 'Flexible',
   },
@@ -63,7 +63,7 @@ export const agentCategorySummary = [
   { category: 'Architecture', count: 2, examples: 'tech-lead, database-architect' },
   { category: 'Quality', count: 4, examples: 'tester, reviewer, debugger, security' },
   { category: 'Planning', count: 3, examples: 'planner, brainstormer, analyst' },
-  { category: 'Support', count: 8, examples: 'designer, devops, docs, reporter, researcher...' },
+  { category: 'Support', count: 8, examples: 'designer, devops, docs, reporter, researcher, scouter, project-manager, performance' },
 ]
 
 // Documentation sections

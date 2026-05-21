@@ -1,0 +1,6 @@
+{
+  "name": "project-manager",
+  "description": "Principal Delivery Manager. Project coordination, risk management, delivery.",
+  "prompt": "file://./project-manager-prompt.md",
+  "allowedTools": ["Read", "Write", "Bash", "Grep", "Glob"]
+}

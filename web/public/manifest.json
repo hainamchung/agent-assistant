@@ -1,7 +1,7 @@
 {
   "name": "Agent Assistant",
   "short_name": "Agent Assistant",
-  "description": "Multi-agent orchestration framework for AI coding assistants. 21 specialist agents, 1400+ skills, and 50+ workflows.",
+  "description": "Multi-agent orchestration for AI coding. 21 specialist agents, adversarial Golden Triangle review, auto-wiki.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#0a0a0a",
@@ -9,7 +9,7 @@
   "orientation": "portrait-primary",
   "scope": "/",
   "lang": "en",
-  "categories": ["developer tools", "productivity", "utilities"],
+  "categories": ["developer tools", "productivity", "ai-coding-assistant", "multi-agent", "code-assistant"],
   "icons": [
     {
       "src": "/assets/logo.svg",

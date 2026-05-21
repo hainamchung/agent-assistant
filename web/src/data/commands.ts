@@ -207,6 +207,32 @@ export const commandCategories: CommandCategory[] = [
       },
     ],
   },
+  {
+    name: 'Wiki',
+    description: 'AI-powered wiki documentation generation',
+    icon: '📚',
+    color: 'cyan',
+    commands: [
+      {
+        name: '/wiki:fast',
+        description: 'Streamlined 2-phase generation for small projects. Get essential wiki coverage in minutes.',
+        variants: [],
+        example: '/wiki:fast bootstrap documentation',
+      },
+      {
+        name: '/wiki:hard',
+        description: 'Deep analysis with 5 structured phases and single-pass review. Thorough coverage for medium-to-large projects.',
+        variants: [],
+        example: '/wiki:hard analyze entire codebase',
+      },
+      {
+        name: '/wiki:team',
+        description: 'Adversarial collaboration through 7 phases with Golden Triangle. Maximum quality for mission-critical documentation.',
+        variants: [],
+        example: '/wiki:team document full architecture',
+      },
+    ],
+  },
 ]
 
 // Quick reference commands for docs page
