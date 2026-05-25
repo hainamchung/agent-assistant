@@ -59,13 +59,13 @@ ALWAYS:
 ### Step 0: CONTEXT & PLAN CHECK (MANDATORY)
 
 ```
-1. CHECK PROJECT DOCS (if ./documents/ exists):
+1. CHECK PROJECT DOCS (if ./.documents/ exists):
    - knowledge-standards/00-index.md → Enforce these (drill into sub-files as needed)
    - knowledge-architecture/00-index.md → Architecture constraints (drill into sub-files as needed)
    - knowledge-domain/00-index.md → Data/API constraints (drill into sub-files as needed)
    → VERIFY all work aligns with project standards
 
-2. IF ./reports/{topic}/plans/PLAN-{feature} exists:
+2. IF ./.reports/{topic}/plans/PLAN-{feature} exists:
    - READ completely
    - EXTRACT phases and tasks
    - TREAT as HARD CONSTRAINT

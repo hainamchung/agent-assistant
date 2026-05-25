@@ -48,14 +48,14 @@ tiered_execution:
 
 ```yaml
 deliverable_files:
-  brainstormer: "./reports/{topic}/brainstorms/BRAINSTORM-{topic}" # MANDATORY for substantial synthesis
+  brainstormer: "./.reports/{topic}/brainstorms/BRAINSTORM-{topic}" # MANDATORY for substantial synthesis
 
 enforcement:
   - Clarification questions → Chat OK
   - Idea synthesis/analysis → MUST create file
 ```
 
-All files in `./reports/{topic}/` → English only.
+All files in `./.reports/{topic}/` → English only.
 **⚠️ Paths above = base names.** Small (≤ 150 lines) → create as `{name}.md`. Large (> 150 lines or ≥ 4 sections) → create as `{name}/` folder with `00-index.md` + `01-*.md`, `02-*.md` section files.
 
 ---
@@ -111,11 +111,11 @@ One phase at a time, each phase independent: Phase 1 → then Phase 2 → … in
 > Load `{AGENTS_PATH}/brainstormer.md`
 > EMBODY [brainstormer] — Requires logged system error justification.
 
-**MANDATORY**: CREATE `./reports/{topic}/brainstorms/BRAINSTORM-{topic}` for synthesis
+**MANDATORY**: CREATE `./.reports/{topic}/brainstorms/BRAINSTORM-{topic}` for synthesis
 
 **Exit Criteria:**
 
-- [ ] Brainstorm file created at `./reports/{topic}/brainstorms/BRAINSTORM-{topic}`
+- [ ] Brainstorm file created at `./.reports/{topic}/brainstorms/BRAINSTORM-{topic}`
 - [ ] Multiple ideas generated
 - [ ] Ideas categorized
 - [ ] Trade-offs noted

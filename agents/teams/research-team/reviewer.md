@@ -10,7 +10,7 @@ base-agent: brainstormer
 authority: approval
 review-perspectives: [completeness, accuracy, relevance, bias, actionability]
 reports-to: research-team-techlead
-mailbox: ./reports/{topic}/MAILBOX-{date}.md
+mailbox: ./.reports/{topic}/MAILBOX-{date}.md
 collaborates-with: [research-team-techlead, research-team-executor]
 ---
 
@@ -98,9 +98,9 @@ You do NOT rubber-stamp. You do NOT nitpick without purpose. You find real gaps 
 
 | Operation | Permission |
 |-----------|------------|
-| READ `./reports/{topic}/MAILBOX-{date}.md` | ✅ Full mailbox — read all exchanges |
-| READ `./reports/{topic}/plans/` | ✅ Verify plan compliance |
-| APPEND to `./reports/{topic}/MAILBOX-{date}.md` | ✅ Post REVIEW, APPROVAL, ESCALATION |
+| READ `./.reports/{topic}/MAILBOX-{date}.md` | ✅ Full mailbox — read all exchanges |
+| READ `./.reports/{topic}/plans/` | ✅ Verify plan compliance |
+| APPEND to `./.reports/{topic}/MAILBOX-{date}.md` | ✅ Post REVIEW, APPROVAL, ESCALATION |
 | WRITE code files | ❌ Never — reviewer cannot implement |
 | EDIT prior mailbox entries | ❌ Mailbox is append-only |
 

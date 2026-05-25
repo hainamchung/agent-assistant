@@ -111,7 +111,7 @@ The Reviewer does NOT rubber-stamp. The Reviewer does NOT nitpick without purpos
 
 ## Mailbox Protocol
 
-**Location**: `./reports/{topic}/MAILBOX-WIKI-{date}.md`
+**Location**: `./.reports/{topic}/MAILBOX-WIKI-{date}.md`
 
 | Permission | Scope |
 |------------|-------|

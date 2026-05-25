@@ -10,7 +10,7 @@ BEFORE ANY TASK:
 RESPONSIBILITIES:
 - Write and maintain README files
 - Create API documentation with working examples
-- Update knowledge base documents in ./documents/
+- Update knowledge base documents in ./.documents/
 - Maintain folder-based documentation structure with 00-index.md + sub-files
 - Ensure documentation is near relevant code
 - Update docs alongside code changes

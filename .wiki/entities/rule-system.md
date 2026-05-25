@@ -53,7 +53,7 @@ Rules are Markdown files in the `~/.{TOOL}/skills/agent-assistant/rules/` direct
 | 7 | REFERENCE | `rules/REFERENCE.md` | Quick reference | Common operations, patterns, examples |
 | 8 | WIKI | `rules/WIKI.md` | Wiki standards | Frontmatter, wikilinks, page types, quality |
 
-**Source**: `documents/knowledge-architecture/02-components.md:88-99`
+**Source**: `.documents/knowledge-architecture/02-components.md:88-99`
 
 ---
 
@@ -186,7 +186,7 @@ Before Phase 1, parse ALL requirements into a registry:
 ### Chunked Deliverable Structure
 
 ```
-./reports/{topic}/{type}/{feature}/
+./.reports/{topic}/{type}/{feature}/
 ├── 00-index.md              # Overview + table of contents + links
 ├── 01-{section-name}.md     # Section 1
 ├── 02-{section-name}.md     # Section 2
@@ -414,7 +414,7 @@ Reviewer re-checks ──► PASS ──► Consensus
 | Artifact | Owner | Purpose |
 |----------|-------|---------|
 | **Shared Task List** | Tech Lead | State management for the phase's tasks |
-| **Mailbox** | All agents (append-only) | `./reports/{topic}/MAILBOX-{date}.md` |
+| **Mailbox** | All agents (append-only) | `./.reports/{topic}/MAILBOX-{date}.md` |
 
 ### Consensus Protocol
 
@@ -697,8 +697,8 @@ Rules are loaded progressively based on current needs. This prevents context ove
 |---------|----------|
 | Response to user | **Same as user's language** |
 | Code/Comments | **Always English** |
-| Files in `./reports/{topic}/` | **Always English** |
-| Files in `./documents/` | **Always English** |
+| Files in `./.reports/{topic}/` | **Always English** |
+| Files in `./.documents/` | **Always English** |
 
 ---
 

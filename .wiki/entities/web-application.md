@@ -10,7 +10,7 @@ updated: 2026-05-21
 
 The Web Application is a React 19 documentation site that provides a visual interface for exploring Agent Assistant's agents, teams, and documentation. It is built with modern frontend tooling and includes interactive visualizations for understanding the system's architecture.
 
-**Source**: `documents/knowledge-overview/02-tech-stack.md:213-226`, `documents/knowledge-source-base/02-entry-points.md:82-140`
+**Source**: `.documents/knowledge-overview/02-tech-stack.md:213-226`, `.documents/knowledge-source-base/02-entry-points.md:82-140`
 
 ---
 
@@ -27,7 +27,7 @@ The Web Application is a React 19 documentation site that provides a visual inte
 - **Entry Point**: `web/src/main.tsx`
 - **Hosting**: Vercel (production URL: https://agent-assistant-ten.vercel.app)
 
-**Source**: `documents/knowledge-source-base/03-key-modules.md`
+**Source**: `.documents/knowledge-source-base/03-key-modules.md`
 
 ---
 
@@ -435,7 +435,7 @@ Framer Motion 12 for:
 | vite | ^6.0.0 | Build tool |
 | typescript | ^5.0.0 | Type safety |
 
-**Source**: `documents/knowledge-source-base/03-key-modules.md`
+**Source**: `.documents/knowledge-source-base/03-key-modules.md`
 
 ---
 

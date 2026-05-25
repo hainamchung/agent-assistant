@@ -21,7 +21,7 @@ The Workflow Catalog documents all 20 workflows in the Agent Assistant framework
 
 This catalog serves as the authoritative reference for workflow execution, enabling consistent behavior across all command invocations. The Workflow System operates under the [[Tiered Orchestration]] architecture, which enforces strict phase ordering and prevents shortcuts that bypass quality gates. Every workflow follows its defined phases in sequence, with explicit entry and exit criteria at each transition point.
 
-**Source**: `documents/business/business-workflows/02-workflow-catalog.md:8-10`
+**Source**: `.documents/business/business-workflows/02-workflow-catalog.md:8-10`
 
 ---
 
@@ -31,7 +31,7 @@ The Agent Assistant framework organizes its 20 workflows into four primary categ
 
 The variant system enables workflows to scale their complexity, agent count, and review depth based on task requirements. Three variants are available: :fast for simple single-domain tasks with minimal review, :hard for complex multi-domain tasks with full quality gates, and :team for critical deliverables requiring adversarial quality assurance through the [[Golden Triangle]] pattern.
 
-**Source**: `documents/business/business-workflows/02-workflow-catalog.md:8-34`
+**Source**: `.documents/business/business-workflows/02-workflow-catalog.md:8-34`
 
 ---
 
@@ -71,8 +71,8 @@ The primary feature development workflow and the most complex command in the sys
 2. **Phase 2: Implementation** — Select agent based on task type, analyze skills (Complex → resolve, Simple → skip), inject relevant skills, delegate to TIER 1 (sub-agent) or TIER 2 (embody), implement feature, verify implementation against requirements
 3. **Phase 3: Delivery** — Format output per agent format, include deliverable path, verify scope compliance, complete workflow
 
-**Source**: `documents/business/business-workflows/02-workflow-catalog.md:16-33`
-**Source**: `documents/business/business-workflows/03-detailed-workflows.md:10-47`
+**Source**: `.documents/business/business-workflows/02-workflow-catalog.md:16-33`
+**Source**: `.documents/business/business-workflows/03-detailed-workflows.md:10-47`
 
 ---
 
@@ -99,7 +99,7 @@ Lightweight code generation workflow for snippets, small implementations, and ta
 1. **Phase 1: Requirements Capture** — Parse code request, identify language and framework, determine file location and integration point
 2. **Phase 2: Generation** — Generate code according to specification, verify syntax, format output
 
-**Source**: `documents/business/business-workflows/02-workflow-catalog.md:37-47`
+**Source**: `.documents/business/business-workflows/02-workflow-catalog.md:37-47`
 
 ---
 
@@ -129,8 +129,8 @@ Systematic bug investigation and resolution workflow with root cause analysis. F
 
 **Exit Criteria**: Root cause identified → Fix implemented, root cause addressed → Issue resolved, tests passing
 
-**Source**: `documents/business/business-workflows/02-workflow-catalog.md:51-61`
-**Source**: `documents/business/business-workflows/03-detailed-workflows.md:191-226`
+**Source**: `.documents/business/business-workflows/02-workflow-catalog.md:51-61`
+**Source**: `.documents/business/business-workflows/03-detailed-workflows.md:191-226`
 
 ---
 
@@ -157,7 +157,7 @@ UI/UX and technical design creation workflow from concept requirements. Produces
 1. **Phase 1: Research** — Analyze feature concept, gather context, identify design patterns, explore alternatives
 2. **Phase 2: Design** — Create design specification, document decisions, include visual mockups or diagrams, define acceptance criteria
 
-**Source**: `documents/business/business-workflows/02-workflow-catalog.md:65-75`
+**Source**: `.documents/business/business-workflows/02-workflow-catalog.md:65-75`
 
 ---
 
@@ -184,7 +184,7 @@ Generate multiple solution alternatives with trade-off analysis. Enables informe
 1. **Phase 1: Exploration** — Analyze problem, identify solution approaches, explore alternatives, evaluate trade-offs
 2. **Phase 2: Documentation** — Document alternatives, summarize trade-offs, provide recommendations
 
-**Source**: `documents/business/business-workflows/02-workflow-catalog.md:79-89`
+**Source**: `.documents/business/business-workflows/02-workflow-catalog.md:79-89`
 
 ---
 
@@ -223,8 +223,8 @@ Create comprehensive test suites with coverage targets. Supports both :fast (60%
 2. **Phase 2: Test Generation** — Generate tests per plan, include edge cases, document test rationale, verify test syntax
 3. **Phase 3: Review + Execution** — Execute tests, review coverage report, if coverage < target add tests, complete workflow
 
-**Source**: `documents/business/business-workflows/02-workflow-catalog.md:95-105`
-**Source**: `documents/business/business-workflows/03-detailed-workflows.md:230-265`
+**Source**: `.documents/business/business-workflows/02-workflow-catalog.md:95-105`
+**Source**: `.documents/business/business-workflows/03-detailed-workflows.md:230-265`
 
 ---
 
@@ -251,8 +251,8 @@ Structured code review workflow against quality and security standards. Produces
 1. **Phase 1: Review** — Parse code to review, analyze for correctness, security vulnerabilities, performance issues, standards compliance, edge cases, document findings
 2. **Phase 2: Report** — Compile findings, prioritize by severity, provide recommendations, complete workflow
 
-**Source**: `documents/business/business-workflows/02-workflow-catalog.md:109-119`
-**Source**: `documents/business/business-workflows/03-detailed-workflows.md:310-338`
+**Source**: `.documents/business/business-workflows/02-workflow-catalog.md:109-119`
+**Source**: `.documents/business/business-workflows/03-detailed-workflows.md:310-338`
 
 ---
 
@@ -280,8 +280,8 @@ Systematic root cause investigation workflow for errors and failures. Follows a 
 2. **Phase 2: Analysis** — Identify root cause, trace backward to source, document failure chain, propose fix strategy
 3. **Phase 3: Report** — Document root cause, provide fix proposal, suggest prevention measures, complete workflow
 
-**Source**: `documents/business/business-workflows/02-workflow-catalog.md:123-133`
-**Source**: `documents/business/business-workflows/03-detailed-workflows.md:342-377`
+**Source**: `.documents/business/business-workflows/02-workflow-catalog.md:123-133`
+**Source**: `.documents/business/business-workflows/03-detailed-workflows.md:342-377`
 
 ---
 
@@ -309,7 +309,7 @@ Automated or manual security vulnerability assessment workflow. Produces compreh
 2. **Phase 2: Analysis** — Analyze findings, assess severity, identify attack vectors
 3. **Phase 3: Report** — Compile security findings, provide remediation recommendations, complete workflow
 
-**Source**: `documents/business/business-workflows/02-workflow-catalog.md:137-147`
+**Source**: `.documents/business/business-workflows/02-workflow-catalog.md:137-147`
 
 ---
 
@@ -341,8 +341,8 @@ Create detailed implementation plans with milestones and estimates. Enables syst
 2. **Phase 2: Planning** — Create implementation plan, break into milestones with dependencies, estimate effort per milestone, identify risks and mitigations, define acceptance criteria per milestone
 3. **Phase 3: Review** — Review plan against requirements, verify feasibility, refine if needed, complete workflow
 
-**Source**: `documents/business/business-workflows/02-workflow-catalog.md:153-163`
-**Source**: `documents/business/business-workflows/03-detailed-workflows.md:269-306`
+**Source**: `.documents/business/business-workflows/02-workflow-catalog.md:153-163`
+**Source**: `.documents/business/business-workflows/03-detailed-workflows.md:269-306`
 
 ---
 
@@ -369,7 +369,7 @@ Direct question answering or research-based response workflow. Provides immediat
 1. **Phase 1: Answer** — Parse question, determine if direct answer possible, if yes provide answer
 2. **Phase 2: Research** (if needed) — If question requires investigation, conduct research, synthesize findings, provide research report
 
-**Source**: `documents/business/business-workflows/02-workflow-catalog.md:167-177`
+**Source**: `.documents/business/business-workflows/02-workflow-catalog.md:167-177`
 
 ---
 
@@ -399,7 +399,7 @@ Generate status reports and project summaries. Supports three variants for diffe
 | `:hard` | 1 | Comprehensive analysis |
 | `:team` | 3 | In-depth project summaries |
 
-**Source**: `documents/business/business-workflows/02-workflow-catalog.md:181-191`
+**Source**: `.documents/business/business-workflows/02-workflow-catalog.md:181-191`
 
 ---
 
@@ -427,7 +427,7 @@ Create and maintain project documentation workflow. Produces comprehensive docum
 2. **Phase 2: Generation** — Generate documentation content, follow project documentation standards, ensure consistency
 3. **Phase 3: Review** — Verify accuracy, check links and references, complete workflow
 
-**Source**: `documents/business/business-workflows/02-workflow-catalog.md:195-205`
+**Source**: `.documents/business/business-workflows/02-workflow-catalog.md:195-205`
 
 ---
 
@@ -467,8 +467,8 @@ Deployment execution and verification workflow across environments. Supports thr
 2. **Phase 2: Deployment** — Execute deployment per variant (:check → verify readiness, :preview → deploy to preview, :production → deploy to production)
 3. **Phase 3: Verification** — Verify deployment successful, run smoke tests, monitor for errors, complete workflow
 
-**Source**: `documents/business/business-workflows/02-workflow-catalog.md:211-221`
-**Source**: `documents/business/business-workflows/03-detailed-workflows.md:421-455`
+**Source**: `.documents/business/business-workflows/02-workflow-catalog.md:211-221`
+**Source**: `.documents/business/business-workflows/03-detailed-workflows.md:421-455`
 
 ---
 
@@ -504,8 +504,8 @@ Generate project wikis from source code and documentation. Extracts entities, re
 2. **Phase 2: Organization** — Design wiki structure, create folder hierarchy, define navigation, plan content per section
 3. **Phase 3: Generation** — Generate index pages (00-index.md pattern), generate content pages, ensure cross-references valid, verify links and navigation
 
-**Source**: `documents/business/business-workflows/02-workflow-catalog.md:225-235`
-**Source**: `documents/business/business-workflows/03-detailed-workflows.md:381-417`
+**Source**: `.documents/business/business-workflows/02-workflow-catalog.md:225-235`
+**Source**: `.documents/business/business-workflows/03-detailed-workflows.md:381-417`
 
 ---
 
@@ -532,7 +532,7 @@ Automated workflow for installing and configuring the Agent Assistant CLI. Runs 
 1. **Phase 1: Detection** — Detect platform, check prerequisites, verify system compatibility
 2. **Phase 2: Configuration** — Install CLI, configure environment, set up initial configuration, verify installation
 
-**Source**: `documents/business/business-workflows/02-workflow-catalog.md:239-249`
+**Source**: `.documents/business/business-workflows/02-workflow-catalog.md:239-249`
 
 ---
 
@@ -559,7 +559,7 @@ Automated workflow for removing the Agent Assistant CLI and its configuration. C
 1. **Phase 1: Detection** — Detect installed components, identify configuration files, check for shared resources
 2. **Phase 2: Removal** — Remove CLI binary, clean configuration files, verify complete removal
 
-**Source**: `documents/business/business-workflows/02-workflow-catalog.md:253-263`
+**Source**: `.documents/business/business-workflows/02-workflow-catalog.md:253-263`
 
 ---
 
@@ -586,7 +586,7 @@ Automated workflow triggered when matrix fitness falls below threshold. Identifi
 1. **Phase 1: Search** — Analyze current context, search available skills, evaluate skill relevance, identify best matches
 2. **Phase 2: Installation** — Download and install identified skills, update skill registry, verify installation
 
-**Source**: `documents/business/business-workflows/02-workflow-catalog.md:267-277`
+**Source**: `.documents/business/business-workflows/02-workflow-catalog.md:267-277`
 
 ---
 
@@ -612,7 +612,7 @@ Automated workflow for transitioning between workflow phases. Ensures context is
 
 1. **Phase 1: Transition** — Verify prior phase exit criteria, lock prior deliverable, update requirements registry, initialize next phase with locked context
 
-**Source**: `documents/business/business-workflows/02-workflow-catalog.md:281-291`
+**Source**: `.documents/business/business-workflows/02-workflow-catalog.md:281-291`
 
 ---
 
@@ -651,8 +651,8 @@ Round 3: Review PASS → proceed
 Round 3: Review FAIL → Tech Lead arbitration (binding)
 ```
 
-**Source**: `documents/business/business-workflows/02-workflow-catalog.md:295-305`
-**Source**: `documents/business/business-workflows/05-sla-and-handoffs.md:670-677`
+**Source**: `.documents/business/business-workflows/02-workflow-catalog.md:295-305`
+**Source**: `.documents/business/business-workflows/05-sla-and-handoffs.md:670-677`
 
 ---
 
@@ -683,7 +683,7 @@ The following table provides a quick reference for all 20 workflows, enabling ra
 | W19 | Phase Transition | N/A | Support | Low | 1 | Auto | 1 |
 | W20 | Team Consensus | N/A | Support | Medium | 3 | Auto | 1-3 |
 
-**Source**: `documents/business/business-workflows/02-workflow-catalog.md:309-332`
+**Source**: `.documents/business/business-workflows/02-workflow-catalog.md:309-332`
 
 ---
 
@@ -707,7 +707,7 @@ Commands support three variants that scale complexity, agent count, and review d
 - **:hard** — Multiple domains, complex dependencies, full review required
 - **:team** — Critical deliverables, high stakes, adversarial quality assurance required
 
-**Source**: `documents/business/business-workflows/02-workflow-catalog.md:28-33`
+**Source**: `.documents/business/business-workflows/02-workflow-catalog.md:28-33`
 
 ---
 
@@ -717,8 +717,8 @@ The following source documents provide authoritative definitions for the workflo
 
 | Source | Content |
 |--------|---------|
-| `documents/business/business-workflows/02-workflow-catalog.md` | Complete catalogue of all 20 workflows with triggers and outcomes |
-| `documents/business/business-workflows/03-detailed-workflows.md` | Step-by-step flows for all commands plus implicit workflows |
+| `.documents/business/business-workflows/02-workflow-catalog.md` | Complete catalogue of all 20 workflows with triggers and outcomes |
+| `.documents/business/business-workflows/03-detailed-workflows.md` | Step-by-step flows for all commands plus implicit workflows |
 | `rules/CORE.md` | Command routing, workflow triggers |
 | `rules/PHASES.md` | Phase execution patterns |
 | `rules/TEAMS.md` | Team workflow patterns |

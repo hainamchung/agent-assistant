@@ -56,7 +56,7 @@ execution-mode: execute
 
 ## 📬 MAILBOX — Central Communication Hub
 
-**Location**: `./reports/{topic}/MAILBOX-{date}.md`
+**Location**: `./.reports/{topic}/MAILBOX-{date}.md`
 
 All 3 triangle agents READ from and APPEND to this file. Never overwrite — append only.
 
@@ -91,14 +91,14 @@ All 3 triangle agents READ from and APPEND to this file. Never overwrite — app
 
 | Phase / Team       | Output                                            |
 | ------------------ | ------------------------------------------------- |
-| Phase 1 (Research) | `./reports/{topic}/researchers/RESEARCH-{request}`     |
-| Phase 1 (Research) | `./reports/{topic}/scouts/SCOUT-{request}`             |
-| Phase 2 (Spec)     | `./reports/{topic}/designs/DESIGN-{request}`           |
-| Phase 3 (Impl.)    | `./reports/{topic}/designs/DESIGN-SPEC-{request}`      |
-| Phase 4 (Handoff)  | `./reports/{topic}/reviews/REVIEW-{request}`           |
-| ALL Phases         | `./reports/{topic}/MAILBOX-{date}.md`                     |
+| Phase 1 (Research) | `./.reports/{topic}/researchers/RESEARCH-{request}`     |
+| Phase 1 (Research) | `./.reports/{topic}/scouts/SCOUT-{request}`             |
+| Phase 2 (Spec)     | `./.reports/{topic}/designs/DESIGN-{request}`           |
+| Phase 3 (Impl.)    | `./.reports/{topic}/designs/DESIGN-SPEC-{request}`      |
+| Phase 4 (Handoff)  | `./.reports/{topic}/reviews/REVIEW-{request}`           |
+| ALL Phases         | `./.reports/{topic}/MAILBOX-{date}.md`                     |
 
-All files in `./reports/{topic}/` → English only.
+All files in `./.reports/{topic}/` → English only.
 **⚠️ Paths above = base names.** Small (≤ 150 lines) → create as `{name}.md`. Large (> 150 lines or ≥ 4 sections) → create as `{name}/` folder with `00-index.md` + `01-*.md`, `02-*.md` section files.
 
 ---
@@ -205,7 +205,7 @@ Format: rules/PHASES.md § Phase output structure + rules/TEAMS.md § Golden Tri
 7. `brainstormer` re-reviews → max 3 rounds → ESCALATION to `designer` if unresolved
 8. `designer` synthesizes all approved findings into unified design research document
 
-**Deliverable**: `./reports/{topic}/researchers/RESEARCH-{request}` + `./reports/{topic}/scouts/SCOUT-{request}`
+**Deliverable**: `./.reports/{topic}/researchers/RESEARCH-{request}` + `./.reports/{topic}/scouts/SCOUT-{request}`
 **Exit Criteria**: User needs validated, existing design system audited, competitive patterns identified, accessibility constraints mapped, research gaps challenged
 **Consensus**: ✅ CONSENSUS: designer ✓ | researcher+scouter ✓ | brainstormer ✓
 
@@ -363,7 +363,7 @@ Format: rules/PHASES.md § Phase output structure + rules/TEAMS.md § Golden Tri
 ╚══════════════════════════════════════════════════════════════════════╝
 ```
 
-**Deliverable**: `./reports/{topic}/designs/DESIGN-{request}` containing:
+**Deliverable**: `./.reports/{topic}/designs/DESIGN-{request}` containing:
 - Visual design specs (layout, typography, color, spacing)
 - Design token definitions
 - Component hierarchy with props, variants, and composition
@@ -386,7 +386,7 @@ Format: rules/PHASES.md § Phase output structure + rules/TEAMS.md § Golden Tri
 | Executor  | `frontend-engineer`                  | Execute: write DESIGN-SPEC-{request}.md with component API, props, states |
 | Reviewer  | `designer`                           | Challenge: spec matches design intent? Missing interactions? Visual fidelity? |
 
-**Prerequisite**: **READ** `./reports/{topic}/designs/DESIGN-{request}` before starting.
+**Prerequisite**: **READ** `./.reports/{topic}/designs/DESIGN-{request}` before starting.
 
 **Triangle Loop**:
 1. `tech-lead` reads DESIGN file → decomposes into implementation specification areas:
@@ -415,7 +415,7 @@ Format: rules/PHASES.md § Phase output structure + rules/TEAMS.md § Golden Tri
 6. `designer` re-reviews → max 3 rounds → ESCALATION to `tech-lead` if unresolved
 7. `tech-lead` synthesizes all approved specs into unified implementation specification
 
-**Deliverable**: `./reports/{topic}/designs/DESIGN-SPEC-{request}` containing:
+**Deliverable**: `./.reports/{topic}/designs/DESIGN-SPEC-{request}` containing:
 - Component API contracts (TypeScript interfaces)
 - State machine definitions
 - Design token → code mapping
@@ -460,7 +460,7 @@ Format: rules/PHASES.md § Phase output structure + rules/TEAMS.md § Golden Tri
 6. `tech-lead` re-reviews → max 3 rounds → ESCALATION to `designer` if unresolved
 7. `designer` performs final design system compliance check across all deliverables
 
-**Deliverable**: `./reports/{topic}/reviews/REVIEW-{request}` containing:
+**Deliverable**: `./.reports/{topic}/reviews/REVIEW-{request}` containing:
 - Design system compliance audit results
 - Component catalog entries
 - Usage guidelines and documentation
@@ -494,14 +494,14 @@ Present final design report with consensus stamps from ALL phases:
 - Arbitrations needed: {count}
 
 ## Mailbox Reference
-Full debate history: `./reports/{topic}/MAILBOX-{date}.md`
+Full debate history: `./.reports/{topic}/MAILBOX-{date}.md`
 
 ## Deliverables
-- `./reports/{topic}/researchers/RESEARCH-{request}`
-- `./reports/{topic}/scouts/SCOUT-{request}`
-- `./reports/{topic}/designs/DESIGN-{request}`
-- `./reports/{topic}/designs/DESIGN-SPEC-{request}`
-- `./reports/{topic}/reviews/REVIEW-{request}`
+- `./.reports/{topic}/researchers/RESEARCH-{request}`
+- `./.reports/{topic}/scouts/SCOUT-{request}`
+- `./.reports/{topic}/designs/DESIGN-{request}`
+- `./.reports/{topic}/designs/DESIGN-SPEC-{request}`
+- `./.reports/{topic}/reviews/REVIEW-{request}`
 
 ## Next Actions
 1. ✅ **Done** — Design complete (triangle-validated across all phases)

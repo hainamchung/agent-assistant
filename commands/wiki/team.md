@@ -68,7 +68,7 @@ execution-mode: execute
 
 ## 📬 MAILBOX — Central Communication Hub
 
-**Location**: `./reports/{topic}/MAILBOX-WIKI-{date}.md`
+**Location**: `./.reports/{topic}/MAILBOX-WIKI-{date}.md`
 
 All 3 triangle agents READ from and APPEND to this file. Never overwrite — append only.
 
@@ -76,7 +76,7 @@ All 3 triangle agents READ from and APPEND to this file. Never overwrite — app
 ```
 MAILBOX ROTATION RULE:
   - If Mailbox exceeds 200 lines, Tech Lead creates a new segment:
-    → ./reports/{topic}/MAILBOX-WIKI-{date}-P{phase}.md for current phase
+    → ./.reports/{topic}/MAILBOX-WIKI-{date}-P{phase}.md for current phase
   - Archive prior phase Mailboxes: rename to MAILBOX-WIKI-{date}-P{phase}-FINAL.md
   - Each phase starts with a fresh, focused Mailbox
   - Archive files remain readable for full debate history
@@ -115,16 +115,16 @@ MAILBOX ROTATION RULE:
 
 | Phase / Team       | Output                                                           |
 | ------------------ | ---------------------------------------------------------------- |
-| P1: Architecture   | `./reports/{topic}/scouts/SCOUT-{project}/`                      |
-| P2: Extraction    | `./reports/{topic}/wikis/WIKI-TEAM-{project}/00-catalog.md`     |
-| P3: Taxonomy      | `./reports/{topic}/wikis/WIKI-TEAM-{project}/00-taxonomy.md`    |
-| P4: Plan          | `./reports/{topic}/plans/PLAN-WIKI-{project}/`                  |
-| P5: Generation    | `.wiki/` (user's project) + `./reports/{topic}/wikis/WIKI-TEAM-{project}/generation-log.md` |
-| P6: Review        | `./reports/{topic}/wikis/WIKI-TEAM-{project}/review.md`         |
-| P7: Refinement    | `./reports/{topic}/wikis/WIKI-TEAM-{project}/refinement.md`    |
-| ALL Phases         | `./reports/{topic}/MAILBOX-WIKI-{date}.md`                        |
+| P1: Architecture   | `./.reports/{topic}/scouts/SCOUT-{project}/`                      |
+| P2: Extraction    | `./.reports/{topic}/wikis/WIKI-TEAM-{project}/00-catalog.md`     |
+| P3: Taxonomy      | `./.reports/{topic}/wikis/WIKI-TEAM-{project}/00-taxonomy.md`    |
+| P4: Plan          | `./.reports/{topic}/plans/PLAN-WIKI-{project}/`                  |
+| P5: Generation    | `.wiki/` (user's project) + `./.reports/{topic}/wikis/WIKI-TEAM-{project}/generation-log.md` |
+| P6: Review        | `./.reports/{topic}/wikis/WIKI-TEAM-{project}/review.md`         |
+| P7: Refinement    | `./.reports/{topic}/wikis/WIKI-TEAM-{project}/refinement.md`    |
+| ALL Phases         | `./.reports/{topic}/MAILBOX-WIKI-{date}.md`                        |
 
-All files in `./reports/{topic}/` → English only.
+All files in `./.reports/{topic}/` → English only.
 **Size rule**: ≤ 150 lines = single file; > 150 lines or ≥ 4 sections = chunked folder with `00-index.md` + section files.
 **Paths above = base names.** Small (≤ 150 lines) → create as `{name}.md`. Large (> 150 lines or ≥ 4 sections) → create as `{name}/` folder with `00-index.md` + section files.
 
@@ -229,7 +229,7 @@ One phase at a time. Within each phase:
 6. `wiki-reviewer` re-reviews → max 3 rounds → ESCALATION to `wiki-architect` if unresolved
 7. `wiki-architect` synthesizes all approved findings into unified scout report
 
-**Deliverable**: `./reports/{topic}/scouts/SCOUT-{project}/` (chunked: 00-index + per-layer files)
+**Deliverable**: `./.reports/{topic}/scouts/SCOUT-{project}/` (chunked: 00-index + per-layer files)
 **Exit Criteria**: All architecture layers mapped, patterns identified, entities catalogued, integration points documented
 **Consensus**: ✅ CONSENSUS: wiki-architect ✓ | wiki-extractor ✓ | wiki-reviewer ✓
 
@@ -259,7 +259,7 @@ One phase at a time. Within each phase:
 4. Debate loop if FAIL → fix or defend → max 3 rounds
 5. `wiki-architect` synthesizes approved extractions
 
-**Deliverable**: `./reports/{topic}/wikis/WIKI-TEAM-{project}/00-catalog.md`
+**Deliverable**: `./.reports/{topic}/wikis/WIKI-TEAM-{project}/00-catalog.md`
 **Exit Criteria**: Every entity documented, source references verified, relationships mapped, accuracy HIGH
 **Consensus**: ✅ CONSENSUS: wiki-architect ✓ | wiki-extractor ✓ | wiki-reviewer ✓
 
@@ -284,7 +284,7 @@ One phase at a time. Within each phase:
 4. Debate loop → refinements → consensus
 5. `wiki-architect` finalizes taxonomy
 
-**Deliverable**: `./reports/{topic}/wikis/WIKI-TEAM-{project}/00-taxonomy.md`
+**Deliverable**: `./.reports/{topic}/wikis/WIKI-TEAM-{project}/00-taxonomy.md`
 **Exit Criteria**: Every knowledge domain has a page plan, cross-references defined, generation order set
 **Consensus**: ✅ CONSENSUS: wiki-architect ✓ | wiki-extractor ✓ | wiki-reviewer ✓
 
@@ -311,7 +311,7 @@ One phase at a time. Within each phase:
 4. Debate loop → refinements → consensus
 5. `wiki-architect` synthesizes into final PLAN file
 
-**Deliverable**: `./reports/{topic}/plans/PLAN-WIKI-{project}/` (chunked)
+**Deliverable**: `./.reports/{topic}/plans/PLAN-WIKI-{project}/` (chunked)
 **Exit Criteria**: Every page has a generation plan, sources mapped, order defined, risks identified
 **Consensus**: ✅ CONSENSUS: wiki-architect ✓ | wiki-extractor ✓ | wiki-reviewer ✓
 
@@ -325,7 +325,7 @@ One phase at a time. Within each phase:
 | Executor  | `wiki-extractor`                     | Follow plan → generate each wiki page → submit via Mailbox    |
 | Reviewer  | `wiki-reviewer`                      | Review EVERY page → check accuracy, completeness, structure   |
 
-**Prerequisite**: **READ and FOLLOW** `./reports/{topic}/plans/PLAN-WIKI-{project}/`
+**Prerequisite**: **READ and FOLLOW** `./.reports/{topic}/plans/PLAN-WIKI-{project}/`
 
 ### GOLDEN TRIANGLE IMPLEMENTATION LOOP
 
@@ -471,7 +471,7 @@ One phase at a time. Within each phase:
 4. Debate loop → fix or defend → max 3 rounds
 5. `wiki-architect` synthesizes final review report
 
-**Deliverable**: `./reports/{topic}/wikis/WIKI-TEAM-{project}/review.md`
+**Deliverable**: `./.reports/{topic}/wikis/WIKI-TEAM-{project}/review.md`
 **Exit Criteria**: 100% entity coverage, all pages accuracy HIGH, no broken links, no unexplained code
 **Consensus**: ✅ CONSENSUS: wiki-architect ✓ | wiki-extractor ✓ | wiki-reviewer ✓
 
@@ -492,7 +492,7 @@ One phase at a time. Within each phase:
 4. Debate loop → fixes → consensus
 5. `wiki-architect` posts final DECISION with full consensus stamp
 
-**Deliverable**: `./reports/{topic}/wikis/WIKI-TEAM-{project}/refinement.md` + final `.wiki/` state
+**Deliverable**: `./.reports/{topic}/wikis/WIKI-TEAM-{project}/refinement.md` + final `.wiki/` state
 **Exit Criteria**: All review findings addressed, all pages meet quality bar, full consensus achieved
 **Consensus**: ✅ CONSENSUS: wiki-architect ✓ | wiki-extractor ✓ | wiki-reviewer ✓
 
@@ -537,7 +537,7 @@ Present Golden Triangle wiki generation report:
 - **Accuracy**: 100% HIGH confidence
 
 ## Mailbox Reference
-Full debate history: `./reports/{topic}/MAILBOX-WIKI-{date}.md`
+Full debate history: `./.reports/{topic}/MAILBOX-WIKI-{date}.md`
 
 ## Next Actions
 1. ✅ **Done** — Wiki complete (triangle-validated across all phases)

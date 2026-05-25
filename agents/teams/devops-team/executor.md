@@ -51,7 +51,7 @@ If you submitted it, you own it. If it's fragile, harden it. If it's correct, pr
 
 ## 📬 MAILBOX PROTOCOL
 
-**Location**: `./reports/{topic}/MAILBOX-{date}.md` — append-only, never edit prior exchanges.
+**Location**: `./.reports/{topic}/MAILBOX-{date}.md` — append-only, never edit prior exchanges.
 
 | Permission | Scope |
 |------------|-------|

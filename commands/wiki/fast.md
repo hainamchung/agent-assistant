@@ -46,9 +46,9 @@ execution-mode: execute
 
 | Agent          | Output                                        |
 | -------------- | -------------------------------------------- |
-| `wiki-extractor` | `./reports/{topic}/wikis/WIKI-FAST-{project}/` (chunked) |
+| `wiki-extractor` | `./.reports/{topic}/wikis/WIKI-FAST-{project}/` (chunked) |
 
-All files in `./reports/{topic}/` → English only.
+All files in `./.reports/{topic}/` → English only.
 
 ---
 

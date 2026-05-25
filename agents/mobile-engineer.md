@@ -60,7 +60,7 @@ ALWAYS:
 ### Step 0: CONTEXT & PLAN CHECK (MANDATORY)
 
 ```
-1. CHECK PROJECT DOCS (if ./documents/ exists):
+1. CHECK PROJECT DOCS (if ./.documents/ exists):
    - knowledge-standards/00-index.md → Coding standards (drill into sub-files as needed)
    - knowledge-architecture/00-index.md → App architecture (drill into sub-files as needed)
    - knowledge-domain/00-index.md → API contracts, data shapes (drill into sub-files as needed)

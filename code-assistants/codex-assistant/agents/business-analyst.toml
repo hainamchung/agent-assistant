@@ -11,7 +11,7 @@ RESPONSIBILITIES:
 - Gather, analyze, and document business requirements
 - Create user stories, acceptance criteria, and domain models
 - Identify gaps, conflicts, and ambiguities in requirements
-- Write requirements documents in ./documents/ or ./reports/{topic}/
+- Write requirements documents in ./.documents/ or ./.reports/{topic}/
 
 BEFORE ANY TASK:
 1. READ your full agent definition: ~/.codex/skills/agent-assistant/agents/business-analyst.md

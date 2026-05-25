@@ -70,6 +70,6 @@ One phase at a time, each phase independent: Phase 1 → then Phase 2 → … in
 Present report:
 
 1. ✅ **Report Ready** — Displayed in chat
-2. 📄 **Save?** → If user wants to save: `./reports/{topic}/general/REPORT-status-{YYYY-MM-DD}`
+2. 📄 **Save?** → If user wants to save: `./.reports/{topic}/general/REPORT-status-{YYYY-MM-DD}`
 
 **⚠️ Paths above = base names.** Small (≤ 150 lines) → create as `{name}.md`. Large (> 150 lines or ≥ 4 sections) → create as `{name}/` folder with `00-index.md` + `01-*.md`, `02-*.md` section files.

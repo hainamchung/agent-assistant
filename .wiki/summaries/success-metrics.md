@@ -19,7 +19,7 @@ updated: 2026-05-20
 
 This page documents the complete measurement framework for the Agent Assistant framework, comprising 20 Key Performance Indicators (KPIs) across 5 categories. Each metric is specified with its ID, name, definition, baseline, target, measurement method, frequency, and ownership. The framework enables systematic tracking of adoption, quality, performance, engagement, and financial outcomes.
 
-**Source**: `documents/business/business-features/05-success-metrics.md:1-18`
+**Source**: `.documents/business/business-features/05-success-metrics.md:1-18`
 
 ---
 
@@ -35,7 +35,7 @@ The Success Metrics framework provides a balanced scorecard approach to measurin
 | Engagement | 4 | E1-E4 | Usage patterns, feature adoption, skill injection |
 | Financial | 3 | F1-F3 | Cost savings, ROI, efficiency gains |
 
-**Source**: `documents/business/business-features/05-success-metrics.md:8-18`
+**Source**: `.documents/business/business-features/05-success-metrics.md:8-18`
 
 ### Metric Categories at a Glance
 
@@ -47,7 +47,7 @@ The Success Metrics framework provides a balanced scorecard approach to measurin
 | Engagement Metrics (E1-E4) | Usage patterns, feature adoption |
 | Financial Metrics (F1-F3) | Cost savings, ROI, efficiency gains |
 
-**Source**: `documents/business/business-features/05-success-metrics.md:8-18`
+**Source**: `.documents/business/business-features/05-success-metrics.md:8-18`
 
 ---
 
@@ -55,7 +55,7 @@ The Success Metrics framework provides a balanced scorecard approach to measurin
 
 Adoption metrics measure how effectively users discover, install, activate, and continue using the Agent Assistant. These metrics track the user journey from initial installation through sustained engagement.
 
-**Source**: `documents/business/business-features/05-success-metrics.md:20-72`
+**Source**: `.documents/business/business-features/05-success-metrics.md:20-72`
 
 ### A1: User Activation Rate
 
@@ -77,7 +77,7 @@ The User Activation Rate measures the percentage of users who complete their fir
 Activation Rate = (Users with ≥1 completed workflow) / (Total installs) × 100
 ```
 
-**Source**: `documents/business/business-features/05-success-metrics.md:22-36`
+**Source**: `.documents/business/business-features/05-success-metrics.md:22-36`
 
 ### A2: Command Usage Distribution
 
@@ -96,7 +96,7 @@ The Command Usage Distribution metric tracks the breadth of command adoption acr
 
 **Rationale**: The framework supports 14 distinct commands including `/cook`, `/fix`, `/code`, `/plan`, `/debug`, `/test`, `/review`, `/docs`, `/design`, `/brainstorm`, `/ask`, `/report`, `/deploy`, and `/wiki`. Users who engage with multiple commands demonstrate deeper system understanding and derive greater value from the framework.
 
-**Source**: `documents/business/business-features/05-success-metrics.md:39-48`
+**Source**: `.documents/business/business-features/05-success-metrics.md:39-48`
 
 ### A3: Platform Distribution
 
@@ -115,7 +115,7 @@ The Platform Distribution metric ensures healthy adoption across all supported p
 
 **Supported Platforms**: Cursor, Claude Code, GitHub Copilot, Antigravity/Gemini, Codex, Kiro, and Qwen. The CLI Installer handles cross-platform installation for all seven platforms.
 
-**Source**: `documents/business/business-features/05-success-metrics.md:51-60`
+**Source**: `.documents/business/business-features/05-success-metrics.md:51-60`
 
 ### A4: User Retention
 
@@ -136,7 +136,7 @@ User Retention measures the percentage of activated users who continue using the
 - 30-day retention: 60% of users who activated should still be active
 - 90-day retention: 40% of users who activated should still be active
 
-**Source**: `documents/business/business-features/05-success-metrics.md:63-72`
+**Source**: `.documents/business/business-features/05-success-metrics.md:63-72`
 
 ---
 
@@ -144,7 +144,7 @@ User Retention measures the percentage of activated users who continue using the
 
 Quality metrics measure the effectiveness of the [[Golden Triangle]] team approach and the framework's impact on code quality, security, and process compliance. These metrics validate that the framework produces higher-quality outputs than manual development.
 
-**Source**: `documents/business/business-features/05-success-metrics.md:75-139`
+**Source**: `.documents/business/business-features/05-success-metrics.md:75-139`
 
 ### Q1: Bug Rate Reduction
 
@@ -166,7 +166,7 @@ Bug Rate Reduction measures the decrease in production bugs for features develop
 Bug Reduction = (Baseline bugs - Current bugs) / Baseline bugs × 100
 ```
 
-**Source**: `documents/business/business-features/05-success-metrics.md:77-91`
+**Source**: `.documents/business/business-features/05-success-metrics.md:77-91`
 
 ### Q2: Golden Triangle Pass Rate
 
@@ -185,7 +185,7 @@ The Golden Triangle Pass Rate measures the effectiveness of the team-based quali
 
 **Consensus Mechanism**: The [[Golden Triangle]] requires agreement from all three roles before output release. The consensus stamp format is: "✅ CONSENSUS: TechLead ✓ | Executor ✓ | Reviewer ✓". Debate rounds are capped at 3 iterations before escalation to the tech-lead for final arbitration.
 
-**Source**: `documents/business/business-features/05-success-metrics.md:94-103`
+**Source**: `.documents/business/business-features/05-success-metrics.md:94-103`
 
 ### Q3: Code Review Coverage
 
@@ -204,7 +204,7 @@ Code Review Coverage measures the percentage of AI-generated code that receives 
 
 **Scope**: This metric applies specifically to `/cook/:hard` and `/cook/:team` command variants, which produce the most complex and impactful outputs. Simpler `/cook/:fast` outputs have different review requirements based on their lower risk profile.
 
-**Source**: `documents/business/business-features/05-success-metrics.md:106-115`
+**Source**: `.documents/business/business-features/05-success-metrics.md:106-115`
 
 ### Q4: Security Finding Rate
 
@@ -223,7 +223,7 @@ Security Finding Rate measures the density of security issues discovered per wor
 
 **Security Integration**: The security-engineer agent is invoked as part of the [[Golden Triangle]] validation phase for sensitive workflows. This ensures security review is integrated into the standard quality workflow rather than being a separate concern.
 
-**Source**: `documents/business/business-features/05-success-metrics.md:118-128`
+**Source**: `.documents/business/business-features/05-success-metrics.md:118-128`
 
 ### Q5: Phase Exit Criteria Compliance
 
@@ -242,7 +242,7 @@ Phase Exit Criteria Compliance measures adherence to the [[Tiered Orchestration]
 
 **Phase Protocol**: Each phase in the execution protocol has defined exit criteria that must be verified before phase completion. This includes artifact verification, consistency checks, and quality gate confirmation. The Phase Execution Protocol (F3) mandates that Phase N completes before Phase N+1 begins.
 
-**Source**: `documents/business/business-features/05-success-metrics.md:130-139`
+**Source**: `.documents/business/business-features/05-success-metrics.md:130-139`
 
 ---
 
@@ -250,7 +250,7 @@ Phase Exit Criteria Compliance measures adherence to the [[Tiered Orchestration]
 
 Performance metrics measure the efficiency gains delivered by the Agent Assistant framework. These metrics validate the speed and resource efficiency improvements that form a core part of the value proposition.
 
-**Source**: `documents/business/business-features/05-success-metrics.md:142-203`
+**Source**: `.documents/business/business-features/05-success-metrics.md:142-203`
 
 ### P1: Time-to-Production
 
@@ -272,7 +272,7 @@ Time-to-Production measures the total duration from feature request to productio
 Time Improvement = (Baseline time - Current time) / Baseline time × 100
 ```
 
-**Source**: `documents/business/business-features/05-success-metrics.md:144-158`
+**Source**: `.documents/business/business-features/05-success-metrics.md:144-158`
 
 ### P2: Token Cost Reduction
 
@@ -291,7 +291,7 @@ Token Cost Reduction measures the efficiency of the [[HSOL Skill Injection]] sys
 
 **Token Efficiency**: The HSOL Matrix Resolution algorithm optimizes token usage by selecting the most relevant skills upfront, reducing redundant context and improving prompt efficiency. The fitness calculation includes semantic match, specificity, trust level, freshness score, and success rate.
 
-**Source**: `documents/business/business-features/05-success-metrics.md:161-170`
+**Source**: `.documents/business/business-features/05-success-metrics.md:161-170`
 
 ### P3: Phase Execution Time
 
@@ -316,7 +316,7 @@ Phase Execution Time measures the duration for completing each command variant. 
 | :hard | 5 minutes | 15 minutes |
 | :team | 15 minutes | 45 minutes |
 
-**Source**: `documents/business/business-features/05-success-metrics.md:173-190`
+**Source**: `.documents/business/business-features/05-success-metrics.md:173-190`
 
 ### P4: Workflow Success Rate
 
@@ -335,7 +335,7 @@ Workflow Success Rate measures the percentage of workflows that complete without
 
 **Error Handling Integration**: The Error Handling Framework (F5) provides graceful degradation when issues occur. Errors are classified by severity (Warning, Error, Critical) and propagated through the chain with defined recovery paths. High success rates depend on effective error handling.
 
-**Source**: `documents/business/business-features/05-success-metrics.md:193-203`
+**Source**: `.documents/business/business-features/05-success-metrics.md:193-203`
 
 ---
 
@@ -343,7 +343,7 @@ Workflow Success Rate measures the percentage of workflows that complete without
 
 Engagement metrics measure how actively users are leveraging the framework's capabilities. These metrics track adoption of advanced features and the depth of system usage.
 
-**Source**: `documents/business/business-features/05-success-metrics.md:205-252`
+**Source**: `.documents/business/business-features/05-success-metrics.md:205-252`
 
 ### E1: Daily Active Users (DAU)
 
@@ -362,7 +362,7 @@ Daily Active Users measures the number of unique users who execute at least one 
 
 **Growth Trajectory**: The DAU target of 100 users at the 6-month mark represents aggressive but achievable growth. This metric should be tracked on a weekly basis to identify trends early and adjust go-to-market strategies accordingly.
 
-**Source**: `documents/business/business-features/05-success-metrics.md:207-216`
+**Source**: `.documents/business/business-features/05-success-metrics.md:207-216`
 
 ### E2: Command Variant Usage
 
@@ -381,7 +381,7 @@ Command Variant Usage tracks the distribution of workflows across the three comm
 
 **Distribution Rationale**: The 60/30/10 split reflects expected usage patterns where most tasks are quick fixes (:fast), significant work requires deeper analysis (:hard), and only complex cross-cutting concerns need full team collaboration (:team). Deviations from this distribution may indicate user education needs or shifting use cases.
 
-**Source**: `documents/business/business-features/05-success-metrics.md:219-228`
+**Source**: `.documents/business/business-features/05-success-metrics.md:219-228`
 
 ### E3: Skill Injection Rate
 
@@ -400,7 +400,7 @@ Skill Injection Rate measures the percentage of complex workflows that utilize t
 
 **Skill Discovery**: The HSOL Matrix Resolution algorithm automatically selects relevant skills from the 1400+ skill repository. The fitness calculation determines when additional dynamic discovery is needed (fitness < 0.75 threshold triggers on-demand discovery).
 
-**Source**: `documents/business/business-features/05-success-metrics.md:231-240`
+**Source**: `.documents/business/business-features/05-success-metrics.md:231-240`
 
 ### E4: Wiki Generation Usage
 
@@ -419,7 +419,7 @@ Wiki Generation Usage tracks the adoption of the automatic documentation generat
 
 **Wiki System**: The `/wiki` command utilizes the wiki-architect and wiki-extractor agents to analyze code and produce navigable project documentation. This is part of the Developer Experience features (F18) that enhance productivity through automation.
 
-**Source**: `documents/business/business-features/05-success-metrics.md:243-252`
+**Source**: `.documents/business/business-features/05-success-metrics.md:243-252`
 
 ---
 
@@ -427,7 +427,7 @@ Wiki Generation Usage tracks the adoption of the automatic documentation generat
 
 Financial metrics translate the framework's operational improvements into monetary terms. These metrics enable clear ROI communication to stakeholders and justify continued investment.
 
-**Source**: `documents/business/business-features/05-success-metrics.md:255-296`
+**Source**: `.documents/business/business-features/05-success-metrics.md:255-296`
 
 ### F1: Development Cost Savings
 
@@ -450,7 +450,7 @@ Savings = Baseline cost per feature - Agent Assistant cost per feature
 ROI = (Savings - Agent Assistant cost) / Agent Assistant cost × 100
 ```
 
-**Source**: `documents/business/business-features/05-success-metrics.md:257-272`
+**Source**: `.documents/business/business-features/05-success-metrics.md:257-272`
 
 ### F2: Token Cost Savings
 
@@ -469,7 +469,7 @@ Token Cost Savings measures the reduction in API token costs achieved through th
 
 **Token Optimization**: The 85% token cost reduction target aligns with the P2 metric. This is achieved through pre-loading relevant skills, reducing redundant context, and optimizing prompt efficiency through the fitness-based skill selection process.
 
-**Source**: `documents/business/business-features/05-success-metrics.md:275-284`
+**Source**: `.documents/business/business-features/05-success-metrics.md:275-284`
 
 ### F3: Quality Assurance Cost Reduction
 
@@ -488,7 +488,7 @@ Quality Assurance Cost Reduction measures the savings in QA effort through autom
 
 **Automated Review Integration**: The reviewer agent performs automated code review as part of the Golden Triangle validation phase. This reduces manual review effort while maintaining or improving review quality through consistent application of quality criteria.
 
-**Source**: `documents/business/business-features/05-success-metrics.md:287-296`
+**Source**: `.documents/business/business-features/05-success-metrics.md:287-296`
 
 ---
 
@@ -519,7 +519,7 @@ The following table provides a consolidated view of all 20 success metrics with 
 | F2 | Token Cost | Financial | Naive prompting | -85% | — |
 | F3 | QA Cost | Financial | Manual hours | -60% | — |
 
-**Source**: `documents/business/business-features/05-success-metrics.md:299-323`
+**Source**: `.documents/business/business-features/05-success-metrics.md:299-323`
 
 ---
 
@@ -527,7 +527,7 @@ The following table provides a consolidated view of all 20 success metrics with 
 
 This section describes the governance structure and processes for collecting, validating, and reporting on the success metrics.
 
-**Source**: `documents/business/business-features/05-success-metrics.md:324-332`
+**Source**: `.documents/business/business-features/05-success-metrics.md:324-332`
 
 ### Data Collection Architecture
 
@@ -539,7 +539,7 @@ The measurement framework relies on three primary data sources:
 | Quality Gates | Q1-Q5 | Automated quality checks |
 | Financial Systems | F1-F3 | Integrated cost tracking |
 
-**Source**: `documents/business/business-features/05-success-metrics.md:324-332`
+**Source**: `.documents/business/business-features/05-success-metrics.md:324-332`
 
 ### Reporting Cadence
 
@@ -578,7 +578,7 @@ The success metrics framework draws from multiple authoritative sources within t
 | `rules/TEAMS.md` | Golden Triangle configurations (Q2) |
 | `rules/SKILLS.md` | HSOL Matrix Resolution (P2, E3) |
 
-**Source**: `documents/business/business-features/05-success-metrics.md:326-332`
+**Source**: `.documents/business/business-features/05-success-metrics.md:326-332`
 
 ---
 

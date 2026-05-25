@@ -55,17 +55,17 @@ execution-mode: execute
 
 ## 📬 MAILBOX & DELIVERABLES
 
-**Mailbox**: `./reports/{topic}/MAILBOX-{date}.md` — All triangle agents READ/APPEND. Never overwrite.
+**Mailbox**: `./.reports/{topic}/MAILBOX-{date}.md` — All triangle agents READ/APPEND. Never overwrite.
 **Protocol**: See TEAMS.md § Mailbox Message Types (TASK_ASSIGNMENT, SUBMISSION, REVIEW, DEFENSE, RESUBMISSION, APPROVAL, ESCALATION, ARBITRATION, DECISION).
 
 | Phase / Team     | Output                                          |
 | ---------------- | ----------------------------------------------- |
-| Phase 1 (Scope)  | `./reports/{topic}/scouts/SCOUT-{scope}`             |
+| Phase 1 (Scope)  | `./.reports/{topic}/scouts/SCOUT-{scope}`             |
 | Phase 2 (Review) | Review findings in Mailbox                      |
-| Phase 3 (Plan)   | `./reports/{topic}/reviews/REVIEW-REPORT-{scope}`    |
-| Phase 4 (Summary)| `./reports/{topic}/reviews/REVIEW-{scope}`           |
+| Phase 3 (Plan)   | `./.reports/{topic}/reviews/REVIEW-REPORT-{scope}`    |
+| Phase 4 (Summary)| `./.reports/{topic}/reviews/REVIEW-{scope}`           |
 
-All files in `./reports/{topic}/` → English only.
+All files in `./.reports/{topic}/` → English only.
 **⚠️ Paths above = base names.** Small (≤ 150 lines) → create as `{name}.md`. Large (> 150 lines or ≥ 4 sections) → create as `{name}/` folder with `00-index.md` + `01-*.md`, `02-*.md` section files.
 
 ---
@@ -100,7 +100,7 @@ One phase at a time. Within each phase follow the Golden Triangle Loop (TEAMS.md
 
 **Consensus Stamp** (required per phase): `✅ CONSENSUS: {TechLead} ✓ | {Executor} ✓ | {Reviewer} ✓`
 
-**Plan Compliance**: If `./reports/{topic}/plans/PLAN-{scope}` exists → verify code matches plan, flag deviations.
+**Plan Compliance**: If `./.reports/{topic}/plans/PLAN-{scope}` exists → verify code matches plan, flag deviations.
 
 ---
 
@@ -130,7 +130,7 @@ One phase at a time. Within each phase follow the Golden Triangle Loop (TEAMS.md
 6. Max 3 rounds → ESCALATION to `reviewer` if unresolved
 7. `reviewer` synthesizes approved findings into unified scope document
 
-**Deliverable**: `./reports/{topic}/scouts/SCOUT-{scope}`
+**Deliverable**: `./.reports/{topic}/scouts/SCOUT-{scope}`
 **Exit Criteria**: Review scope mapped, blast radius assessed, dependencies traced, focus areas flagged
 **Consensus**: ✅ CONSENSUS: reviewer ✓ | scouter ✓ | tech-lead ✓
 
@@ -146,7 +146,7 @@ One phase at a time. Within each phase follow the Golden Triangle Loop (TEAMS.md
 | Executor  | `reviewer` (self-implements deep review)                  | Execute: line-by-line code review across ALL dimensions    |
 | Reviewer  | `security-engineer` + `performance-engineer` (combined)   | Challenge: security vulnerabilities? Performance concerns? Code standards? |
 
-**Prerequisite**: **READ** `./reports/{topic}/scouts/SCOUT-{scope}`
+**Prerequisite**: **READ** `./.reports/{topic}/scouts/SCOUT-{scope}`
 
 ### 5 REVIEW DIMENSIONS (ALL MANDATORY)
 
@@ -266,7 +266,7 @@ FOR EACH phase in PLAN-{scope}.md:
 5. Debate loop if FAIL → `planner` adjusts or defends → max 3 rounds
 6. `tech-lead` synthesizes final improvement plan
 
-**Deliverable**: `./reports/{topic}/reviews/REVIEW-REPORT-{scope}`
+**Deliverable**: `./.reports/{topic}/reviews/REVIEW-REPORT-{scope}`
 **Exit Criteria**: All findings prioritized, fix recommendations documented, effort estimated, nothing dropped
 **Consensus**: ✅ CONSENSUS: tech-lead ✓ | planner ✓ | reviewer ✓
 
@@ -280,7 +280,7 @@ FOR EACH phase in PLAN-{scope}.md:
 | Executor  | `reporter`                           | Execute: executive summary, risk assessment, recommended actions |
 | Reviewer  | `business-analyst`                   | Challenge: business impact? Stakeholder communication? Actionable? |
 
-**Prerequisite**: **READ** `./reports/{topic}/reviews/REVIEW-REPORT-{scope}`
+**Prerequisite**: **READ** `./.reports/{topic}/reviews/REVIEW-REPORT-{scope}`
 
 **Triangle Loop**:
 1. `tech-lead` decomposes summary: verdict, risk matrix, actions, stakeholder brief
@@ -316,7 +316,7 @@ FOR EACH phase in PLAN-{scope}.md:
 5. Debate loop if FAIL → `reporter` adjusts or defends → max 3 rounds
 6. `tech-lead` approves final report
 
-**Deliverable**: `./reports/{topic}/reviews/REVIEW-{scope}`
+**Deliverable**: `./.reports/{topic}/reviews/REVIEW-{scope}`
 **Exit Criteria**: Executive summary complete, verdict issued, all findings actionable, stakeholder-ready
 **Consensus**: ✅ CONSENSUS: tech-lead ✓ | reporter ✓ | business-analyst ✓
 
@@ -344,7 +344,7 @@ Present final review report with consensus stamps from ALL phases:
 - Arbitrations needed: {count}
 
 ## Mailbox Reference
-Full debate history: `./reports/{topic}/MAILBOX-{date}.md`
+Full debate history: `./.reports/{topic}/MAILBOX-{date}.md`
 ```
 
 **Verdict Routing**:

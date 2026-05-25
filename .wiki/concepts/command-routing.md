@@ -7,7 +7,7 @@ updated: 2026-05-20
 sources:
   - rules/CORE.md
   - rules/AGENTS.md
-  - documents/business/business-features/03-feature-specifications.md
+  - .documents/business/business-features/03-feature-specifications.md
   - commands/wiki.md
 ---
 
@@ -24,7 +24,7 @@ A three-tier variant execution system where each command (`/cook`, `/fix`, `/pla
 - **Pattern Type**: Execution Pattern
 - **Variants**: fast (2–3 agents), hard (5–8 agents), team (Golden Triangle)
 - **Selection**: Automatic based on task complexity, or explicit via `/command:variant`
-- **Source**: `rules/CORE.md`, `documents/knowledge-architecture/03-data-flow.md:72-79`, `documents/knowledge-architecture/04-design-patterns.md:220-297`
+- **Source**: `rules/CORE.md`, `.documents/knowledge-architecture/03-data-flow.md:72-79`, `.documents/knowledge-architecture/04-design-patterns.md:220-297`
 
 ---
 
@@ -60,7 +60,7 @@ Command Routing works across multiple AI coding platforms. The base paths resolv
 - `AGENTS` = `~/.{TOOL}/skills/agent-assistant/agents/`
 - `SKILLS` = `~/.{TOOL}/skills/`
 - `RULES` = `~/.{TOOL}/skills/agent-assistant/rules/`
-- `REPORTS` = `./reports/{topic}/`
+- `REPORTS` = `./.reports/{topic}/`
 
 ---
 
@@ -420,7 +420,7 @@ Command Routing operates under the [[Tiered Orchestration]] framework governed b
 
 ## Feature Specification Reference
 
-This concept implements the following feature specifications from `documents/business/business-features/03-feature-specifications.md`:
+This concept implements the following feature specifications from `.documents/business/business-features/03-feature-specifications.md`:
 
 ### F1: Command Routing System
 

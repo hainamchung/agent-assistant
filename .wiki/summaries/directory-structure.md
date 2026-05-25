@@ -27,7 +27,7 @@ agent-assistant/
 ├── web/                      # React documentation site
 ├── schema/                   # Schema definitions
 ├── reports/                  # Report outputs
-├── documents/                # Project documentation
+├── .documents/                # Project documentation
 ├── .releaserc.json          # Semantic release config
 ├── package.json             # NPM package manifest
 ├── README.md               # Project readme
@@ -41,7 +41,7 @@ agent-assistant/
 └── CODEX.md               # Codex instructions
 ```
 
-**Source**: `documents/knowledge-source-base/01-directory-structure.md:1-35`
+**Source**: `.documents/knowledge-source-base/01-directory-structure.md:1-35`
 
 ---
 
@@ -435,12 +435,12 @@ web/
 
 ---
 
-## documents/
+## .documents/
 
 **Purpose**: Project documentation organized by knowledge category.
 
 ```
-documents/
+.documents/
 ├── knowledge-overview/       # High-level project knowledge
 │   ├── 00-index.md
 │   ├── 01-project-identity.md
@@ -520,7 +520,7 @@ documents/
 | `code-assistants/` | 7 platform configs | AI tool integration |
 | `cli/` | CLI installer | Platform setup |
 | `web/` | React application | Documentation site |
-| `documents/` | Source documentation | Project knowledge base |
+| `.documents/` | Source documentation | Project knowledge base |
 
 ---
 

@@ -55,7 +55,7 @@ execution-mode: execute
 
 ## 📬 MAILBOX & DELIVERABLES
 
-**Mailbox Location**: `./reports/{topic}/MAILBOX-{date}.md` — All agents APPEND only, never overwrite.
+**Mailbox Location**: `./.reports/{topic}/MAILBOX-{date}.md` — All agents APPEND only, never overwrite.
 **Message Types**: TASK_ASSIGNMENT | SUBMISSION | REVIEW | DEFENSE | RESUBMISSION | APPROVAL | ESCALATION | ARBITRATION | DECISION
 **Full protocol**: See TEAMS.md § Mailbox Protocol
 
@@ -63,13 +63,13 @@ execution-mode: execute
 
 | Phase              | Output                                         |
 | ------------------ | ---------------------------------------------- |
-| P1: Symptoms       | `./reports/{topic}/debugs/SYMPTOMS-{issue}`         |
-| P2: Hypotheses     | `./reports/{topic}/debugs/HYPOTHESES-{issue}`       |
-| P3: Evidence       | `./reports/{topic}/debugs/EVIDENCE-{issue}`         |
-| P4: Final Report   | `./reports/{topic}/debugs/DEBUG-REPORT-{issue}`     |
-| ALL Phases         | `./reports/{topic}/MAILBOX-{date}.md`                  |
+| P1: Symptoms       | `./.reports/{topic}/debugs/SYMPTOMS-{issue}`         |
+| P2: Hypotheses     | `./.reports/{topic}/debugs/HYPOTHESES-{issue}`       |
+| P3: Evidence       | `./.reports/{topic}/debugs/EVIDENCE-{issue}`         |
+| P4: Final Report   | `./.reports/{topic}/debugs/DEBUG-REPORT-{issue}`     |
+| ALL Phases         | `./.reports/{topic}/MAILBOX-{date}.md`                  |
 
-All files in `./reports/{topic}/` → English only.
+All files in `./.reports/{topic}/` → English only.
 **⚠️ Paths above = base names.** Small (≤ 150 lines) → create as `{name}.md`. Large (> 150 lines or ≥ 4 sections) → create as `{name}/` folder with `00-index.md` + `01-*.md`, `02-*.md` section files.
 
 ---
@@ -133,7 +133,7 @@ One phase at a time. Within each phase follow the **Golden Triangle Loop** (per 
 5. If FAIL → `scouter` collects additional data or defends → RESUBMISSION/DEFENSE → max 3 rounds
 6. `debugger` synthesizes approved symptom data into unified symptom catalog
 
-**Deliverable**: `./reports/{topic}/debugs/SYMPTOMS-{issue}`
+**Deliverable**: `./.reports/{topic}/debugs/SYMPTOMS-{issue}`
 **Exit Criteria**: All symptoms documented, reproduction confirmed, environment captured, data sources exhausted
 **Consensus**: ✅ CONSENSUS: debugger ✓ | scouter ✓ | researcher ✓
 
@@ -147,7 +147,7 @@ One phase at a time. Within each phase follow the **Golden Triangle Loop** (per 
 | Executor  | `researcher`                         | Execute: research similar issues, known bugs, pattern matching    |
 | Reviewer  | `brainstormer` (Devil's Advocate)    | Challenge: are hypotheses sufficient? What if root cause is elsewhere? Propose alternatives |
 
-**Prerequisite**: **READ** `./reports/{topic}/debugs/SYMPTOMS-{issue}`
+**Prerequisite**: **READ** `./.reports/{topic}/debugs/SYMPTOMS-{issue}`
 
 **Triangle Loop**:
 1. `debugger` reads symptoms → decomposes into areas: primary suspects, secondary suspects, environmental causes, interaction effects, known bug patterns
@@ -167,7 +167,7 @@ One phase at a time. Within each phase follow the **Golden Triangle Loop** (per 
 5. If FAIL → `researcher` expands research or defends → RESUBMISSION/DEFENSE → max 3 rounds
 6. `debugger` synthesizes approved hypotheses into prioritized hypothesis tree
 
-**Deliverable**: `./reports/{topic}/debugs/HYPOTHESES-{issue}`
+**Deliverable**: `./.reports/{topic}/debugs/HYPOTHESES-{issue}`
 **Exit Criteria**: Hypothesis tree complete, alternatives explored, priorities assigned, investigation paths defined
 **Consensus**: ✅ CONSENSUS: debugger ✓ | researcher ✓ | brainstormer ✓
 
@@ -183,7 +183,7 @@ One phase at a time. Within each phase follow the **Golden Triangle Loop** (per 
 | Executor  | `scouter` + `backend-engineer`                  | Execute: trace code paths, add logging, test hypotheses with evidence |
 | Reviewer  | `reviewer`                                      | Challenge: is evidence conclusive? Correlation vs causation? Solving the right problem? |
 
-**Prerequisite**: **READ** `./reports/{topic}/debugs/HYPOTHESES-{issue}`
+**Prerequisite**: **READ** `./.reports/{topic}/debugs/HYPOTHESES-{issue}`
 
 ### GOLDEN TRIANGLE EVIDENCE LOOP (CRITICAL — Step by Step)
 
@@ -289,7 +289,7 @@ One phase at a time. Within each phase follow the **Golden Triangle Loop** (per 
    Severity: CRITICAL | Action: "Provide evidence or downgrade to INCONCLUSIVE"
 ```
 
-**Deliverable**: `./reports/{topic}/debugs/EVIDENCE-{issue}`
+**Deliverable**: `./.reports/{topic}/debugs/EVIDENCE-{issue}`
 **Exit Criteria**: All hypotheses tested with evidence, verdicts debated and consensus-approved, root cause identified or narrowed
 **Consensus**: ✅ CONSENSUS: debugger ✓ | scouter/backend-engineer ✓ | reviewer ✓
 
@@ -325,7 +325,7 @@ One phase at a time. Within each phase follow the **Golden Triangle Loop** (per 
 5. Debate loop if FAIL → `reporter` revises or defends → max 3 rounds
 6. `debugger` synthesizes approved sections into final report
 
-**Deliverable**: `./reports/{topic}/debugs/DEBUG-REPORT-{issue}`
+**Deliverable**: `./.reports/{topic}/debugs/DEBUG-REPORT-{issue}`
 **Exit Criteria**: Root cause documented, evidence chain complete, fix approaches recommended, impact assessed, report validated
 **Consensus**: ✅ CONSENSUS: debugger ✓ | reporter ✓ | tech-lead ✓
 
@@ -353,11 +353,11 @@ Present final investigation report with consensus stamps from ALL phases:
 - Arbitrations needed: {count}
 
 ## Mailbox Reference
-Full debate history: `./reports/{topic}/MAILBOX-{date}.md`
+Full debate history: `./.reports/{topic}/MAILBOX-{date}.md`
 
 ## Next Actions
 1. ✅ **Root Cause** — Identified (triangle-validated across all phases)
-2. 📊 **Report** — `./reports/{topic}/debugs/DEBUG-REPORT-{issue}`
+2. 📊 **Report** — `./.reports/{topic}/debugs/DEBUG-REPORT-{issue}`
 3. 🔧 **Fix** → `/fix:team` or `/fix:hard`
 4. 📝 **Document** → `/docs:core`
 ```

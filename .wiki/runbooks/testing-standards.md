@@ -25,7 +25,7 @@ The testing approach is pragmatic: lint first, type check, then test what matter
 
 **Web Philosophy**: The React application has more surface area. Tests cover critical paths, component behavior, and integration points.
 
-**Source**: `documents/knowledge-standards/04-testing-standards.md:1-200`
+**Source**: `.documents/knowledge-standards/04-testing-standards.md:1-200`
 
 ---
 

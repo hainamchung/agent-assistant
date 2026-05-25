@@ -56,7 +56,7 @@ execution-mode: execute
 
 ## 📬 MAILBOX — Central Communication Hub
 
-**Location**: `./reports/{topic}/MAILBOX-{date}.md`
+**Location**: `./.reports/{topic}/MAILBOX-{date}.md`
 
 All 3 triangle agents READ from and APPEND to this file. Never overwrite — append only.
 
@@ -91,13 +91,13 @@ All 3 triangle agents READ from and APPEND to this file. Never overwrite — app
 
 | Phase / Team       | Output                                         |
 | ------------------ | ---------------------------------------------- |
-| Phase 1 (Invest.)  | `./reports/{topic}/debugs/INVESTIGATION-{issue}`    |
-| Phase 2 (RCA)      | `./reports/{topic}/debugs/DEBUG-{issue}`            |
-| Phase 3 (Plan)     | `./reports/{topic}/plans/PLAN-{issue}`              |
-| Phase 5 (Test)     | `./reports/{topic}/qa/QA-{issue}`                   |
-| ALL Phases         | `./reports/{topic}/MAILBOX-{date}.md`                  |
+| Phase 1 (Invest.)  | `./.reports/{topic}/debugs/INVESTIGATION-{issue}`    |
+| Phase 2 (RCA)      | `./.reports/{topic}/debugs/DEBUG-{issue}`            |
+| Phase 3 (Plan)     | `./.reports/{topic}/plans/PLAN-{issue}`              |
+| Phase 5 (Test)     | `./.reports/{topic}/qa/QA-{issue}`                   |
+| ALL Phases         | `./.reports/{topic}/MAILBOX-{date}.md`                  |
 
-All files in `./reports/{topic}/` → English only.
+All files in `./.reports/{topic}/` → English only.
 **⚠️ Paths above = base names.** Small (≤ 150 lines) → create as `{name}.md`. Large (> 150 lines or ≥ 4 sections) → create as `{name}/` folder with `00-index.md` + `01-*.md`, `02-*.md` section files.
 
 ---
@@ -208,7 +208,7 @@ Format: rules/PHASES.md § Phase output structure + rules/TEAMS.md § Golden Tri
 6. `researcher` re-reviews → max 3 rounds → ESCALATION to `debugger` if unresolved
 7. `debugger` synthesizes all approved findings into unified investigation report
 
-**Deliverable**: `./reports/{topic}/debugs/INVESTIGATION-{issue}`
+**Deliverable**: `./.reports/{topic}/debugs/INVESTIGATION-{issue}`
 **Exit Criteria**: Bug reproduced, error paths traced, root cause candidates identified, hypotheses challenged, evidence chain documented
 **Consensus**: ✅ CONSENSUS: debugger ✓ | scouter ✓ | researcher ✓
 
@@ -229,7 +229,7 @@ IF bug is in UI rendering, state, events, client logic → frontend-engineer
 IF unclear → debugger (Tech Lead) decides based on P1 investigation findings
 ```
 
-**Prerequisite**: **READ** `./reports/{topic}/debugs/INVESTIGATION-{issue}`
+**Prerequisite**: **READ** `./.reports/{topic}/debugs/INVESTIGATION-{issue}`
 
 **Triangle Loop**:
 1. `debugger` reads investigation report → selects top root cause candidate(s) → decomposes validation tasks:
@@ -252,7 +252,7 @@ IF unclear → debugger (Tech Lead) decides based on P1 investigation findings
 5. Debate loop if FAIL → executor defends or deepens analysis → max 3 rounds
 6. `debugger` synthesizes confirmed root cause into authoritative debug report
 
-**Deliverable**: `./reports/{topic}/debugs/DEBUG-{issue}`
+**Deliverable**: `./.reports/{topic}/debugs/DEBUG-{issue}`
 **Exit Criteria**: Root cause confirmed with code evidence, impact scope documented, regression risk assessed, related issues cataloged
 **Consensus**: ✅ CONSENSUS: debugger ✓ | {executor} ✓ | reviewer ✓
 
@@ -266,7 +266,7 @@ IF unclear → debugger (Tech Lead) decides based on P1 investigation findings
 | Executor  | `researcher`                         | Execute: research fix approaches, evaluate trade-offs, draft plan sections |
 | Reviewer  | `tech-lead` (feasibility critic)     | Challenge: question approach, verify no side effects, check regression risk |
 
-**Prerequisite**: **READ** `./reports/{topic}/debugs/DEBUG-{issue}`
+**Prerequisite**: **READ** `./.reports/{topic}/debugs/DEBUG-{issue}`
 
 **Triangle Loop**:
 1. `planner` reads debug report → decomposes fix planning into sections:
@@ -292,7 +292,7 @@ IF unclear → debugger (Tech Lead) decides based on P1 investigation findings
 5. Debate loop if FAIL → `researcher` adjusts or defends → max 3 rounds
 6. `planner` synthesizes all approved sections into final fix plan
 
-**Deliverable**: `./reports/{topic}/plans/PLAN-{issue}`
+**Deliverable**: `./.reports/{topic}/plans/PLAN-{issue}`
 **Exit Criteria**: Fix approach selected, implementation steps defined, rollback strategy verified, acceptance criteria set, risks mitigated
 **Consensus**: ✅ CONSENSUS: planner ✓ | researcher ✓ | tech-lead ✓
 
@@ -341,7 +341,7 @@ IF other domain → Consult TEAMS.md roster for correct triangle
 | Executor  | `backend-engineer` / `frontend-engineer` / `game-engineer` / `mobile-engineer` | Implement fix EXACTLY per plan → submit via Mailbox        |
 | Reviewer  | `reviewer`                               | Review EVERY change: correctness, no regression, security, plan compliance |
 
-**Prerequisite**: **READ and FOLLOW** `./reports/{topic}/plans/PLAN-{issue}`
+**Prerequisite**: **READ and FOLLOW** `./.reports/{topic}/plans/PLAN-{issue}`
 
 ### GOLDEN TRIANGLE IMPLEMENTATION LOOP (CRITICAL — Step by Step)
 
@@ -529,7 +529,7 @@ FOR EACH affected component in DEBUG-{issue}.md:
   → Document: "Component X → Regression Test: {test name} → Status: {pass/fail}"
 ```
 
-**Deliverable**: `./reports/{topic}/qa/QA-{issue}`
+**Deliverable**: `./.reports/{topic}/qa/QA-{issue}`
 **Exit Criteria**: Fix verified against root cause, regression tests pass, security validated, edge cases covered, no new vulnerabilities
 **Consensus**: ✅ CONSENSUS: tester ✓ | tester(exec) ✓ | security-engineer ✓
 
@@ -563,7 +563,7 @@ Present final issue resolution report with consensus stamps from ALL phases:
 - Arbitrations needed: {count}
 
 ## Mailbox Reference
-Full debate history: `./reports/{topic}/MAILBOX-{date}.md`
+Full debate history: `./.reports/{topic}/MAILBOX-{date}.md`
 
 ## Next Actions
 1. ✅ **Fixed** — Issue resolved (triangle-validated across all phases)

@@ -30,7 +30,7 @@ COMMANDS = ~/.{TOOL}/skills/agent-assistant/commands/
 AGENTS   = ~/.{TOOL}/skills/agent-assistant/agents/
 SKILLS   = ~/.{TOOL}/skills/
 RULES    = ~/.{TOOL}/skills/agent-assistant/rules/
-REPORTS  = ./reports/{topic}/
+REPORTS  = ./.reports/{topic}/
 ```
 
 **Platform Resolution** (replace `{TOOL}` with):
@@ -106,7 +106,7 @@ REPORTS  = ./reports/{topic}/
 
 - Response → **Same as user's language**
 - Code/comments → **Always English**
-- Files in `./reports/{topic}/`, `./documents/` → **Always English**
+- Files in `./.reports/{topic}/`, `./.documents/` → **Always English**
 
 ---
 
@@ -170,19 +170,19 @@ IF requirement is ambiguous:
 
 | Agent | Single File | Chunked (> 150 lines) |
 |-------|-------------|----------------------|
-| brainstormer | `./reports/{topic}/brainstorms/BRAINSTORM-{feature}.md` | `./reports/{topic}/brainstorms/{feature}/00-index.md` |
-| researcher | `./reports/{topic}/researchers/RESEARCH-{feature}.md` | `./reports/{topic}/researchers/{feature}/00-index.md` |
-| scouter | `./reports/{topic}/scouts/SCOUT-{feature}.md` | `./reports/{topic}/scouts/{feature}/00-index.md` |
-| designer | `./reports/{topic}/designs/DESIGN-{feature}.md` | `./reports/{topic}/designs/{feature}/00-index.md` |
-| planner | `./reports/{topic}/plans/PLAN-{feature}.md` | `./reports/{topic}/plans/{feature}/00-index.md` |
-| reporter | `./reports/{topic}/general/REPORT-{type}-{date}.md` | `./reports/{topic}/general/{type}-{date}/00-index.md` |
-| debugger | `./reports/{topic}/debugs/DEBUG-{issue}.md` | `./reports/{topic}/debugs/{issue}/00-index.md` |
-| tester | `./reports/{topic}/tests/TEST-{feature}.md` | `./reports/{topic}/tests/{feature}/00-index.md` |
-| business-analyst | `./reports/{topic}/requirements/REQ-{feature}.md` | `./reports/{topic}/requirements/{feature}/00-index.md` |
-| performance-engineer | `./reports/{topic}/performance/PERF-{component}.md` | `./reports/{topic}/performance/{component}/00-index.md` |
-| wiki-architect | `./reports/{topic}/plans/PLAN-WIKI-{project}.md` | `./reports/{topic}/plans/PLAN-WIKI-{project}/00-index.md` |
-| wiki-extractor | `./reports/{topic}/wikis/WIKI-{variant}-{project}/` | `./reports/{topic}/wikis/WIKI-{variant}-{project}/` (chunked) |
-| wiki-reviewer | `./reports/{topic}/wikis/WIKI-{variant}-{project}/review.md` | `./reports/{topic}/wikis/WIKI-{variant}-{project}/review.md` |
+| brainstormer | `./.reports/{topic}/brainstorms/BRAINSTORM-{feature}.md` | `./.reports/{topic}/brainstorms/{feature}/00-index.md` |
+| researcher | `./.reports/{topic}/researchers/RESEARCH-{feature}.md` | `./.reports/{topic}/researchers/{feature}/00-index.md` |
+| scouter | `./.reports/{topic}/scouts/SCOUT-{feature}.md` | `./.reports/{topic}/scouts/{feature}/00-index.md` |
+| designer | `./.reports/{topic}/designs/DESIGN-{feature}.md` | `./.reports/{topic}/designs/{feature}/00-index.md` |
+| planner | `./.reports/{topic}/plans/PLAN-{feature}.md` | `./.reports/{topic}/plans/{feature}/00-index.md` |
+| reporter | `./.reports/{topic}/general/REPORT-{type}-{date}.md` | `./.reports/{topic}/general/{type}-{date}/00-index.md` |
+| debugger | `./.reports/{topic}/debugs/DEBUG-{issue}.md` | `./.reports/{topic}/debugs/{issue}/00-index.md` |
+| tester | `./.reports/{topic}/tests/TEST-{feature}.md` | `./.reports/{topic}/tests/{feature}/00-index.md` |
+| business-analyst | `./.reports/{topic}/requirements/REQ-{feature}.md` | `./.reports/{topic}/requirements/{feature}/00-index.md` |
+| performance-engineer | `./.reports/{topic}/performance/PERF-{component}.md` | `./.reports/{topic}/performance/{component}/00-index.md` |
+| wiki-architect | `./.reports/{topic}/plans/PLAN-WIKI-{project}.md` | `./.reports/{topic}/plans/PLAN-WIKI-{project}/00-index.md` |
+| wiki-extractor | `./.reports/{topic}/wikis/WIKI-{variant}-{project}/` | `./.reports/{topic}/wikis/WIKI-{variant}-{project}/` (chunked) |
+| wiki-reviewer | `./.reports/{topic}/wikis/WIKI-{variant}-{project}/review.md` | `./.reports/{topic}/wikis/WIKI-{variant}-{project}/review.md` |
 
 > **Size rule**: ≤ 150 lines → single file | > 150 lines OR ≥ 4 sections → chunked folder. See `PHASES.md § DELIVERABLE SIZE MANAGEMENT`.
 

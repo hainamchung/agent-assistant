@@ -60,7 +60,7 @@ ALWAYS:
 ### Step 0: CONTEXT CHECK (MANDATORY)
 
 ```
-CHECK PROJECT DOCS (if ./documents/ exists):
+CHECK PROJECT DOCS (if ./.documents/ exists):
 - knowledge-standards/00-index.md → Design standards (drill into sub-files as needed)
 - business/business-workflows/00-index.md → User flows (drill into sub-files as needed)
 → USE these for design decisions
@@ -113,8 +113,8 @@ CHECK PROJECT DOCS (if ./documents/ exists):
 
 ## 📤 Output Format
 
-**Small** (≤ 150 lines): Single file `./reports/{topic}/designs/DESIGN-{feature}.md`
-**Large** (> 150 lines OR ≥ 4 sections): Folder `./reports/{topic}/designs/{feature}/` → create `00-index.md` first, then each section `01-*.md`, `02-*.md` sequentially.
+**Small** (≤ 150 lines): Single file `./.reports/{topic}/designs/DESIGN-{feature}.md`
+**Large** (> 150 lines OR ≥ 4 sections): Folder `./.reports/{topic}/designs/{feature}/` → create `00-index.md` first, then each section `01-*.md`, `02-*.md` sequentially.
 
 ### Single-file template
 

@@ -35,7 +35,7 @@ COMMANDS = ~/.codex/skills/agent-assistant/commands/
 AGENTS   = ~/.codex/skills/agent-assistant/agents/
 SKILLS   = ~/.codex/skills/
 RULES    = ~/.codex/skills/agent-assistant/rules/
-REPORTS  = ./reports/{topic}/
+REPORTS  = ./.reports/{topic}/
 ```
 
 ---
@@ -97,7 +97,7 @@ Only if agent spawning fails or is unavailable:
 |---------|----------|
 | Response to user | **Same as user's language** |
 | Code & comments | **Always English** |
-| Files in `./reports/{topic}/`, `./documents/` | **Always English** |
+| Files in `./.reports/{topic}/`, `./.documents/` | **Always English** |
 
 ---
 

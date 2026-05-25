@@ -48,12 +48,12 @@ tiered_execution:
 > **MUST CREATE OR UPDATE ALL 4 FOLDERS** with `00-index.md` and sub-files. Incomplete = FAILED execution.
 
 > **DOCUMENT LANGUAGE - NON-NEGOTIABLE**
-> Every file under `./documents/` must be written in **English only**. Do not use the user's language for file content. (CORE LAW 6.)
+> Every file under `./.documents/` must be written in **English only**. Do not use the user's language for file content. (CORE LAW 6.)
 
 ### Folder Structure
 
 ```
-./documents/audit/
+./.documents/audit/
   audit-security/
     00-index.md
     01-attack-surface.md
@@ -186,10 +186,10 @@ One phase at a time, each phase independent: Phase 1 -> Phase 2 -> Phase 3 -> Ph
 ### Required Work
 
 1. Detect current audit docs state (folder-level mode per area):
-   - `./documents/audit/audit-security/`
-   - `./documents/audit/audit-compliance/`
-   - `./documents/audit/audit-dataflow/`
-   - `./documents/audit/audit-recommendations/`
+   - `./.documents/audit/audit-security/`
+   - `./.documents/audit/audit-compliance/`
+   - `./.documents/audit/audit-dataflow/`
+   - `./.documents/audit/audit-recommendations/`
 
    Mode rules:
    - Folder exists with sub-files -> UPDATE
@@ -566,7 +566,7 @@ Before completion, verify folder existence and quality:
 ### Folder Existence
 
 ```
-./documents/audit/
+./.documents/audit/
   [ ] audit-security/         (00-index.md + 01~04)
   [ ] audit-compliance/       (00-index.md + 01~04)
   [ ] audit-dataflow/         (00-index.md + 01~04)
@@ -639,5 +639,5 @@ Report status:
 2. {action with finding ID}
 3. {action with finding ID}
 
-**Total: 4 folders (20+ files) in `./documents/audit/`**
+**Total: 4 folders (20+ files) in `./.documents/audit/`**
 ```

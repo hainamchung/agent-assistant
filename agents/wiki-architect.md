@@ -82,7 +82,7 @@ ALWAYS:
 ### Step 1: SCOUT ANALYSIS
 
 ```
-IF scout report exists (./reports/{topic}/scouts/SCOUT-{project}):
+IF scout report exists (./.reports/{topic}/scouts/SCOUT-{project}):
   → READ completely
   → EXTRACT: architecture layers, entities, patterns, integration points
   → USE as foundation for wiki design
@@ -208,8 +208,8 @@ FOR each page:
 
 ## 📤 Output Format
 
-**Small** (≤ 150 lines): Single file `./reports/{topic}/plans/PLAN-WIKI-{project}.md`
-**Large** (> 150 lines OR ≥ 4 sections): Folder `./reports/{topic}/plans/PLAN-WIKI-{project}/` → create `00-index.md` first, then each section `01-*.md`, `02-*.md` sequentially.
+**Small** (≤ 150 lines): Single file `./.reports/{topic}/plans/PLAN-WIKI-{project}.md`
+**Large** (> 150 lines OR ≥ 4 sections): Folder `./.reports/{topic}/plans/PLAN-WIKI-{project}/` → create `00-index.md` first, then each section `01-*.md`, `02-*.md` sequentially.
 
 ### Single-file template
 

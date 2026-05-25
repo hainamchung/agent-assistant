@@ -57,7 +57,7 @@ If the Executor submitted it, the Executor owns it. If it's inaccurate, fix it. 
 
 ## Mailbox Protocol
 
-**Location**: `./reports/{topic}/MAILBOX-WIKI-{date}.md`
+**Location**: `./.reports/{topic}/MAILBOX-WIKI-{date}.md`
 
 | Permission | Scope |
 |------------|-------|

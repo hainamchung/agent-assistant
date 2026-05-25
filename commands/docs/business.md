@@ -48,12 +48,12 @@ tiered_execution:
 > **MUST CREATE OR UPDATE ALL 4 FOLDERS** with `00-index.md` and sub-files. Incomplete = FAILED execution.
 
 > **DOCUMENT LANGUAGE - NON-NEGOTIABLE**
-> Every file under `./documents/` must be written in **English only**. Do not use the user's language for file content. (CORE LAW 6.)
+> Every file under `./.documents/` must be written in **English only**. Do not use the user's language for file content. (CORE LAW 6.)
 
 ### Folder Structure
 
 ```
-./documents/business/
+./.documents/business/
   business-prd/
     00-index.md
     01-executive-summary.md
@@ -152,10 +152,10 @@ One phase at a time, each phase independent: Phase 1 -> Phase 2 -> Phase 3 -> Ph
 ### Required Work
 
 1. Detect current business docs state (folder-level mode per area):
-   - `./documents/business/business-prd/`
-   - `./documents/business/business-features/`
-   - `./documents/business/business-workflows/`
-   - `./documents/business/business-glossary/`
+   - `./.documents/business/business-prd/`
+   - `./.documents/business/business-features/`
+   - `./.documents/business/business-workflows/`
+   - `./.documents/business/business-glossary/`
 
    Mode rules:
    - Folder exists with sub-files -> UPDATE
@@ -446,7 +446,7 @@ Before completion, verify folder existence and quality:
 ### Folder Existence
 
 ```
-./documents/business/
+./.documents/business/
   [ ] business-prd/         (00-index.md + 01~04)
   [ ] business-features/    (00-index.md + 01~05)
   [ ] business-workflows/   (00-index.md + 01~05)

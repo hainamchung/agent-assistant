@@ -94,7 +94,7 @@ Publish the Shared Task List **BEFORE** any Executor work begins. Decompose alon
 
 ## Mailbox Protocol
 
-**Location**: `./reports/{topic}/MAILBOX-WIKI-{date}.md`
+**Location**: `./.reports/{topic}/MAILBOX-WIKI-{date}.md`
 
 | Permission | Scope |
 |------------|-------|

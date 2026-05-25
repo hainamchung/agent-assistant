@@ -59,7 +59,7 @@ execution-mode: execute
 
 ## 📬 MAILBOX — Central Communication Hub
 
-**Location**: `./reports/{topic}/MAILBOX-{date}.md`
+**Location**: `./.reports/{topic}/MAILBOX-{date}.md`
 
 All 3 triangle agents READ from and APPEND to this file. Never overwrite — append only.
 
@@ -96,10 +96,10 @@ All 3 triangle agents READ from and APPEND to this file. Never overwrite — app
 | ----------------- | ----------------------------------------------- |
 | Phase 1 (Scope)   | Shared Task List in Mailbox                     |
 | Phase 2 (Impl.)   | Code changes + review trail in Mailbox          |
-| Phase 3 (Verify)  | `./reports/{topic}/reviews/REVIEW-{task}`            |
-| ALL Phases         | `./reports/{topic}/MAILBOX-{date}.md`                  |
+| Phase 3 (Verify)  | `./.reports/{topic}/reviews/REVIEW-{task}`            |
+| ALL Phases         | `./.reports/{topic}/MAILBOX-{date}.md`                  |
 
-All files in `./reports/{topic}/` → English only.
+All files in `./.reports/{topic}/` → English only.
 **⚠️ Paths above = base names.** Small (≤ 150 lines) → create as `{name}.md`. Large (> 150 lines or ≥ 4 sections) → create as `{name}/` folder with `00-index.md` + `01-*.md`, `02-*.md` section files.
 
 ---
@@ -418,7 +418,7 @@ IF other domain → Consult TEAMS.md roster for correct triangle
 5. Debate loop if FAIL → `tester` fixes gaps or defends → max 3 rounds
 6. `tester` (as Tech Lead) synthesizes final verification report
 
-**Deliverable**: `./reports/{topic}/reviews/REVIEW-{task}`
+**Deliverable**: `./.reports/{topic}/reviews/REVIEW-{task}`
 **Exit Criteria**: All tests pass, changed code covered, security validated, no regressions detected
 **Consensus**: ✅ CONSENSUS: tester ✓ | tester(exec) ✓ | security-engineer ✓
 
@@ -448,7 +448,7 @@ Present final code implementation report with consensus stamps from ALL phases:
 {list of all files created/modified}
 
 ## Mailbox Reference
-Full debate history: `./reports/{topic}/MAILBOX-{date}.md`
+Full debate history: `./.reports/{topic}/MAILBOX-{date}.md`
 
 ## Next Actions
 1. ✅ **Done** — Code complete (triangle-validated across all phases)

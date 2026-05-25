@@ -20,7 +20,7 @@ This runbook defines the Service Level Agreement (SLA) framework for all workflo
 
 The SLA framework applies uniformly across all 20 workflows, from lightweight single-agent operations like `/ask` to complex multi-agent team workflows like `/cook:team`. Every workflow has defined response targets, completion maximums, and quality criteria that must be satisfied before a workflow is considered complete.
 
-**Source**: `documents/business/business-workflows/05-sla-and-handoffs.md:1-6`
+**Source**: `.documents/business/business-workflows/05-sla-and-handoffs.md:1-6`
 
 ---
 
@@ -32,7 +32,7 @@ These definitions are not aspirational targets — they are enforced operational
 
 The framework distinguishes between three execution modes: single-agent fast, single-agent hard, and multi-agent team. Each mode has proportionally scaled SLAs that reflect the increased coordination overhead and review depth required for more complex execution. Fast variants prioritize speed, hard variants prioritize thoroughness, and team variants prioritize adversarial quality assurance through the [[Golden Triangle]] pattern.
 
-**Source**: `documents/business/business-workflows/05-sla-and-handoffs.md:1-18`
+**Source**: `.documents/business/business-workflows/05-sla-and-handoffs.md:1-18`
 
 ---
 
@@ -57,7 +57,7 @@ The SLA Framework defines four core metrics that apply universally across all wo
 
 **Quality Score** measures the percentage of exit criteria satisfied for a given workflow execution. Unlike Success Rate (binary complete/failed), Quality Score captures the degree of compliance with quality standards. A workflow that completes on time but fails three of ten exit criteria has a 70% Quality Score.
 
-**Source**: `documents/business/business-workflows/05-sla-and-handoffs.md:10-18`
+**Source**: `.documents/business/business-workflows/05-sla-and-handoffs.md:10-18`
 
 ---
 
@@ -69,7 +69,7 @@ This section provides complete SLA definitions for all 11 primary workflows acro
 
 Build workflows create new functionality from requirements. They range from simple code generation to full-stack feature development with comprehensive review. Build workflows account for the highest SLA complexity due to their dependency chains and multi-phase execution.
 
-**Source**: `documents/business/business-workflows/05-sla-and-handoffs.md:21-91`
+**Source**: `.documents/business/business-workflows/05-sla-and-handoffs.md:21-91`
 
 ---
 
@@ -95,7 +95,7 @@ The `/cook` workflow is the primary feature development workflow in Agent Assist
 
 The :fast variant targets single-domain features with well-understood requirements, executing a minimal 3-phase flow. The :hard variant targets complex features requiring full 6-phase execution with comprehensive review. The :team variant targets critical deliverables requiring adversarial quality assurance through the [[Golden Triangle]] pattern.
 
-**Source**: `documents/business/business-workflows/05-sla-and-handoffs.md:25-37`
+**Source**: `.documents/business/business-workflows/05-sla-and-handoffs.md:25-37`
 
 ---
 
@@ -123,7 +123,7 @@ The `/fix` workflow performs systematic bug investigation and resolution. It fol
 
 The `/fix` workflow is distinguished from `/debug` by its emphasis on implementation and verification. Where `/debug` produces analysis reports, `/fix` produces working solutions.
 
-**Source**: `documents/business/business-workflows/05-sla-and-handoffs.md:41-56`
+**Source**: `.documents/business/business-workflows/05-sla-and-handoffs.md:41-56`
 
 ---
 
@@ -149,7 +149,7 @@ The `/design` workflow creates UI/UX and technical design specifications from co
 
 4. **Examples provided** — The design specification must include concrete examples for all non-trivial UI components, data structures, and API contracts.
 
-**Source**: `documents/business/business-workflows/05-sla-and-handoffs.md:59-74`
+**Source**: `.documents/business/business-workflows/05-sla-and-handoffs.md:59-74`
 
 ---
 
@@ -172,7 +172,7 @@ The `/brainstorm` workflow generates multiple solution alternatives with trade-o
 
 3. **Recommendation with rationale** — The workflow must include a clear recommendation among the alternatives, supported by documented rationale that justifies the recommendation over other options.
 
-**Source**: `documents/business/business-workflows/05-sla-and-handoffs.md:77-90`
+**Source**: `.documents/business/business-workflows/05-sla-and-handoffs.md:77-90`
 
 ---
 
@@ -180,7 +180,7 @@ The `/brainstorm` workflow generates multiple solution alternatives with trade-o
 
 Quality workflows validate deliverables and ensure they meet standards before release. These workflows operate on outputs from other workflows and must maintain independence and objectivity in their assessments.
 
-**Source**: `documents/business/business-workflows/05-sla-and-handoffs.md:93-142`
+**Source**: `.documents/business/business-workflows/05-sla-and-handoffs.md:93-142`
 
 ---
 
@@ -205,7 +205,7 @@ The `/test` workflow creates comprehensive test suites with defined coverage tar
 
 The `/test` workflow may be invoked independently or as part of a larger workflow (such as `/cook:hard`). When invoked as part of another workflow, its SLA is subordinated to the parent workflow's timing.
 
-**Source**: `documents/business/business-workflows/05-sla-and-handoffs.md:95-107`
+**Source**: `.documents/business/business-workflows/05-sla-and-handoffs.md:95-107`
 
 ---
 
@@ -230,7 +230,7 @@ The `/review` workflow performs structured code review against quality and secur
 
 4. **Standards compliance checked** — The review must explicitly verify compliance with applicable coding standards, style guides, and architectural conventions.
 
-**Source**: `documents/business/business-workflows/05-sla-and-handoffs.md:110-124`
+**Source**: `.documents/business/business-workflows/05-sla-and-handoffs.md:110-124`
 
 ---
 
@@ -258,7 +258,7 @@ The `/debug` workflow performs systematic root cause investigation for errors an
 
 The `/debug` workflow is distinguished from `/fix` by its emphasis on investigation and analysis. `/debug` produces diagnostic reports; `/fix` produces working solutions.
 
-**Source**: `documents/business/business-workflows/05-sla-and-handoffs.md:127-142`
+**Source**: `.documents/business/business-workflows/05-sla-and-handoffs.md:127-142`
 
 ---
 
@@ -266,7 +266,7 @@ The `/debug` workflow is distinguished from `/fix` by its emphasis on investigat
 
 Planning workflows prepare for execution by gathering context, creating roadmaps, and organizing requirements. These workflows establish the foundation for subsequent execution workflows.
 
-**Source**: `documents/business/business-workflows/05-sla-and-handoffs.md:145-177`
+**Source**: `.documents/business/business-workflows/05-sla-and-handoffs.md:145-177`
 
 ---
 
@@ -292,7 +292,7 @@ The `/plan` workflow creates detailed implementation plans with milestones and e
 
 4. **Estimates provided** — The plan must include time estimates for each task and milestone, with appropriate confidence levels and assumption documentation.
 
-**Source**: `documents/business/business-workflows/05-sla-and-handoffs.md:147-162`
+**Source**: `.documents/business/business-workflows/05-sla-and-handoffs.md:147-162`
 
 ---
 
@@ -314,7 +314,7 @@ The `/ask` workflow provides direct question answering or research-based respons
 
 3. **Examples provided** — The answer must include concrete examples where appropriate to illustrate concepts or demonstrate solutions.
 
-**Source**: `documents/business/business-workflows/05-sla-and-handoffs.md:165-177`
+**Source**: `.documents/business/business-workflows/05-sla-and-handoffs.md:165-177`
 
 ---
 
@@ -322,7 +322,7 @@ The `/ask` workflow provides direct question answering or research-based respons
 
 Support workflows handle deployment, team coordination, and system maintenance. These workflows operate on completed deliverables and infrastructure.
 
-**Source**: `documents/business/business-workflows/05-sla-and-handoffs.md:180-211`
+**Source**: `.documents/business/business-workflows/05-sla-and-handoffs.md:180-211`
 
 ---
 
@@ -348,7 +348,7 @@ The `/deploy` workflow executes deployment and verification across environments.
 
 The `:check` variant performs pre-deployment validation without executing deployment. The `:preview` variant deploys to a preview environment for review. The `:production` variant executes full production deployment.
 
-**Source**: `documents/business/business-workflows/05-sla-and-handoffs.md:182-195`
+**Source**: `.documents/business/business-workflows/05-sla-and-handoffs.md:182-195`
 
 ---
 
@@ -372,7 +372,7 @@ The `/wiki` workflow generates project wikis from source code and documentation.
 
 4. **Cross-references valid** — All cross-references between wiki pages must be valid links that resolve correctly.
 
-**Source**: `documents/business/business-workflows/05-sla-and-handoffs.md:198-211`
+**Source**: `.documents/business/business-workflows/05-sla-and-handoffs.md:198-211`
 
 ---
 
@@ -380,7 +380,7 @@ The `/wiki` workflow generates project wikis from source code and documentation.
 
 Handoff contracts define the precise inputs, outputs, timing, and failure modes for each transition point in the workflow system. These contracts ensure that information is preserved across boundaries and that failures are handled consistently. Violation of any handoff contract prevents workflow progression until the contract is satisfied.
 
-**Source**: `documents/business/business-workflows/05-sla-and-handoffs.md:214-216`
+**Source**: `.documents/business/business-workflows/05-sla-and-handoffs.md:214-216`
 
 ---
 
@@ -428,7 +428,7 @@ Contract:
 - On retry failure, the agent escalates to the Orchestrator with full context and error documentation.
 - The Orchestrator may reassign to a different agent of the same type or abort the workflow.
 
-**Source**: `documents/business/business-workflows/05-sla-and-handoffs.md:216-240`
+**Source**: `.documents/business/business-workflows/05-sla-and-handoffs.md:216-240`
 
 ---
 
@@ -473,7 +473,7 @@ Contract:
 - The reviewer must provide specific evidence for every finding, not merely subjective impressions.
 - Reviews that fail to identify obvious issues trigger review of the reviewer's effectiveness.
 
-**Source**: `documents/business/business-workflows/05-sla-and-handoffs.md:242-264`
+**Source**: `.documents/business/business-workflows/05-sla-and-handoffs.md:242-264`
 
 ---
 
@@ -524,7 +524,7 @@ Contract:
 - Round 3 without agreement triggers automatic escalation to Tech Lead.
 - The Tech Lead's decision is binding and not subject to further appeal.
 
-**Source**: `documents/business/business-workflows/05-sla-and-handoffs.md:266-289`
+**Source**: `.documents/business/business-workflows/05-sla-and-handoffs.md:266-289`
 
 ---
 
@@ -566,7 +566,7 @@ Contract:
 - The consensus stamp confirms that all parties accept the decision.
 - Workflow progression is only permitted with a valid consensus stamp.
 
-**Source**: `documents/business/business-workflows/05-sla-and-handoffs.md:291-310`
+**Source**: `.documents/business/business-workflows/05-sla-and-handoffs.md:291-310`
 
 ---
 
@@ -611,7 +611,7 @@ Contract:
 - The workflow cannot proceed to Phase N+1 until Phase N criteria are satisfied.
 - Persistent failure triggers the E3: Phase Escalation path.
 
-**Source**: `documents/business/business-workflows/05-sla-and-handoffs.md:312-331`
+**Source**: `.documents/business/business-workflows/05-sla-and-handoffs.md:312-331`
 
 ---
 
@@ -619,7 +619,7 @@ Contract:
 
 This section provides detailed timing expectations for phase execution and agent categories. These expectations inform capacity planning, performance optimization, and SLA compliance monitoring.
 
-**Source**: `documents/business/business-workflows/05-sla-and-handoffs.md:335-356`
+**Source**: `.documents/business/business-workflows/05-sla-and-handoffs.md:335-356`
 
 ---
 
@@ -648,7 +648,7 @@ The following table provides typical and maximum timing for each phase type acro
 
 **Delivery** phase timing is consistently short as it primarily involves output formatting and final verification.
 
-**Source**: `documents/business/business-workflows/05-sla-and-handoffs.md:337-346`
+**Source**: `.documents/business/business-workflows/05-sla-and-handoffs.md:337-346`
 
 ---
 
@@ -671,7 +671,7 @@ The following table provides typical timing for each agent category by execution
 - Validation agents have moderate execution times with systematic analysis patterns.
 - Research agents have lower execution times due to the exploratory nature of their work.
 
-**Source**: `documents/business/business-workflows/05-sla-and-handoffs.md:348-356`
+**Source**: `.documents/business/business-workflows/05-sla-and-handoffs.md:348-356`
 
 ---
 
@@ -679,7 +679,7 @@ The following table provides typical timing for each agent category by execution
 
 The system defines four escalation paths for handling failures at different levels. Each path has defined trigger conditions, escalation levels, and termination conditions. Escalation is never optional — when a trigger condition is met, the system must escalate following the defined path.
 
-**Source**: `documents/business/business-workflows/05-sla-and-handoffs.md:359-397`
+**Source**: `.documents/business/business-workflows/05-sla-and-handoffs.md:359-397`
 
 ---
 
@@ -719,7 +719,7 @@ E1: Execution Escalation
 - Document the reason for escalation at each level
 - Preserve all context for potential Level 4 user intervention
 
-**Source**: `documents/business/business-workflows/05-sla-and-handoffs.md:361-368`
+**Source**: `.documents/business/business-workflows/05-sla-and-handoffs.md:361-368`
 
 ---
 
@@ -760,7 +760,7 @@ E2: Quality Escalation
 - Level 3 arbitration considers both evidence sets impartially
 - Level 4 user decision is final and not subject to appeal
 
-**Source**: `documents/business/business-workflows/05-sla-and-handoffs.md:370-377`
+**Source**: `.documents/business/business-workflows/05-sla-and-handoffs.md:370-377`
 
 ---
 
@@ -800,7 +800,7 @@ E3: Phase Escalation
 - The scope reduction must be explicitly documented and acknowledged
 - Level 3 output is only acceptable when full completion is demonstrably impossible
 
-**Source**: `documents/business/business-workflows/05-sla-and-handoffs.md:379-386`
+**Source**: `.documents/business/business-workflows/05-sla-and-handoffs.md:379-386`
 
 ---
 
@@ -836,7 +836,7 @@ E4: Team Escalation
 - Tech Lead issues consensus stamp confirming all parties accept the decision
 - Workflow cannot proceed without valid consensus stamp
 
-**Source**: `documents/business/business-workflows/05-sla-and-handoffs.md:388-397`
+**Source**: `.documents/business/business-workflows/05-sla-and-handoffs.md:388-397`
 
 ---
 
@@ -889,7 +889,7 @@ Every SLA breach must be documented with:
 - Corrective actions taken
 - Systemic implications for SLA targets
 
-**Source**: `documents/business/business-workflows/05-sla-and-handoffs.md:8-18` (SLA Framework), `documents/business/business-workflows/05-sla-and-handoffs.md:337-356` (Timing Expectations)
+**Source**: `.documents/business/business-workflows/05-sla-and-handoffs.md:8-18` (SLA Framework), `.documents/business/business-workflows/05-sla-and-handoffs.md:337-356` (Timing Expectations)
 
 ---
 
@@ -915,7 +915,7 @@ Escalation triggers are specific conditions that initiate escalation procedures.
 | T12: SLA Major | SLA maximum exceeded | E1: Level 2 |
 | T13: SLA Critical | >150% of SLA maximum | E1: Level 3, User |
 
-**Source**: `documents/business/business-workflows/05-sla-and-handoffs.md:359-397` (Escalation Paths)
+**Source**: `.documents/business/business-workflows/05-sla-and-handoffs.md:359-397` (Escalation Paths)
 
 ---
 
@@ -965,7 +965,7 @@ Every handoff must pass validation before the receiving entity accepts the hando
 | H4 failure | Reviewer must complete summary before arbitration |
 | H5 failure | Prior phase must complete before transition |
 
-**Source**: `documents/business/business-workflows/05-sla-and-handoffs.md:214-331` (Handoff Contracts)
+**Source**: `.documents/business/business-workflows/05-sla-and-handoffs.md:214-331` (Handoff Contracts)
 
 ---
 
@@ -992,7 +992,7 @@ Every handoff must pass validation before the receiving entity accepts the hando
 | `/wiki` | :hard | 15s | 30min | 60min |
 | `/wiki` | :team | 30s | 45min | 90min |
 
-**Source**: `documents/business/business-workflows/05-sla-and-handoffs.md:21-211` (Workflow SLAs)
+**Source**: `.documents/business/business-workflows/05-sla-and-handoffs.md:21-211` (Workflow SLAs)
 
 ---
 

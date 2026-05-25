@@ -88,7 +88,7 @@ skills:
 | `skills.required` | list | No | Required skill identifiers |
 | `skills.preferred` | list | No | Preferred skill identifiers |
 
-**Source**: `documents/knowledge-standards/02-conventions.md:89-157`
+**Source**: `.documents/knowledge-standards/02-conventions.md:89-157`
 
 ### Command Frontmatter Fields
 

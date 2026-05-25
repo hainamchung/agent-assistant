@@ -12,7 +12,7 @@ The Skill Tier Reference documents the 4-tier skill classification system used b
 
 HSOL solves the **Scalability Paradox** — the tension between maintaining a stable, low-latency skill library (1400+ skills) and the need for dynamic, on-demand skill discovery. It selects skills based on task relevance while respecting context window constraints.
 
-**Source**: `documents/SMART-SKILL-ORCHESTRATION-BLUEPRINT.md:1-22`, `documents/HSOL-ASSESSMENT.md`
+**Source**: `.documents/SMART-SKILL-ORCHESTRATION-BLUEPRINT.md:1-22`, `.documents/HSOL-ASSESSMENT.md`
 
 ---
 
@@ -25,7 +25,7 @@ HSOL solves the **Scalability Paradox** — the tension between maintaining a st
 | specialized | ~500 | Technology-specific | When explicitly matched | react-hooks, docker-compose, postgresql-tuning |
 | expert | ~300 | Advanced/niche | Only when requested | compiler-design, security-auditing, ml-deployment |
 
-**Source**: `documents/knowledge-architecture/04-design-patterns.md:187-195`, `documents/knowledge-domain/04-business-rules.md:96-138`
+**Source**: `.documents/knowledge-architecture/04-design-patterns.md:187-195`, `.documents/knowledge-domain/04-business-rules.md:96-138`
 
 ---
 
@@ -59,7 +59,7 @@ Foundation skills are loaded first because they provide essential context for in
 | security | Security Basics | Common vulnerability patterns and mitigations | SQL injection prevention, XSS protection, auth best practices |
 | performance | Performance | Profiling, benchmarking, and optimization strategies | Load testing, memory leaks, query optimization |
 
-**Source**: `documents/SMART-SKILL-ORCHESTRATION-BLUEPRINT.md:76-93`
+**Source**: `.documents/SMART-SKILL-ORCHESTRATION-BLUEPRINT.md:76-93`
 
 ---
 
@@ -105,7 +105,7 @@ Professional skills are injected based on task domain matching. When a user requ
 | Security | secure-coding | Secure Coding | Input validation, output encoding, security headers |
 | Security | vulnerability-assessment | Vulnerability Assessment | Scanning, penetration testing, patch management |
 
-**Source**: `documents/SMART-SKILL-ORCHESTRATION-BLUEPRINT.md:76-93`
+**Source**: `.documents/SMART-SKILL-ORCHESTRATION-BLUEPRINT.md:76-93`
 
 ---
 
@@ -152,7 +152,7 @@ This tier's depth makes it invaluable for technology-specific guidance. The reac
 | AWS | cloudformation | CloudFormation | Templates, stacks, drift detection, nested stacks |
 | AWS | iam | IAM | Roles, policies, permission boundaries, service control |
 
-**Source**: `documents/SMART-SKILL-ORCHESTRATION-BLUEPRINT.md:76-93`
+**Source**: `.documents/SMART-SKILL-ORCHESTRATION-BLUEPRINT.md:76-93`
 
 ---
 
@@ -195,7 +195,7 @@ This tier serves as a "expert mode" for the skill system. When a task requires c
 | Architecture | event-driven-architecture | Event-Driven Architecture | Event sourcing, CQRS, message queues, Kafka |
 | Architecture | cqrs | CQRS | Command query separation, event sourcing, read optimization |
 
-**Source**: `documents/SMART-SKILL-ORCHESTRATION-BLUEPRINT.md:76-93`
+**Source**: `.documents/SMART-SKILL-ORCHESTRATION-BLUEPRINT.md:76-93`
 
 ---
 
@@ -276,7 +276,7 @@ Based on comparison:
 - If matrix is adequate: continue with matrix skills
 - If no suitable skill found: report capability gap
 
-**Source**: `documents/SMART-SKILL-ORCHESTRATION-BLUEPRINT.md:187-251`, `documents/HSOL-ASSESSMENT.md`
+**Source**: `.documents/SMART-SKILL-ORCHESTRATION-BLUEPRINT.md:187-251`, `.documents/HSOL-ASSESSMENT.md`
 
 ---
 
@@ -316,7 +316,7 @@ SKILL_FITNESS = (
 | FRESHNESS_SCORE | Last update recency | Always 1.0 (community-current) |
 | SUCCESS_RATE | Historical execution success | Community rating / reviews |
 
-**Source**: `documents/SMART-SKILL-ORCHESTRATION-BLUEPRINT.md:366-385`
+**Source**: `.documents/SMART-SKILL-ORCHESTRATION-BLUEPRINT.md:366-385`
 
 ---
 
@@ -349,7 +349,7 @@ The decision matrix determines which skills to execute based on fitness scores.
 
 **Async Mode** (Fitness 0.75-0.8): Do not wait for discovery. Execute with matrix skills immediately. Surface recommendation for future use. Does not improve accuracy for current task.
 
-**Source**: `documents/SMART-SKILL-ORCHESTRATION-BLUEPRINT.md:1274-1292`, `documents/HSOL-ASSESSMENT.md:29-34`
+**Source**: `.documents/SMART-SKILL-ORCHESTRATION-BLUEPRINT.md:1274-1292`, `.documents/HSOL-ASSESSMENT.md:29-34`
 
 ---
 
@@ -373,7 +373,7 @@ Skill selection follows a strict priority order:
 - **Tier is a soft filter**: Skills are ranked within tiers by relevance, not eliminated
 - **Expert is opt-in**: Expert skills are never auto-injected — the user or agent must request them
 
-**Source**: `documents/knowledge-domain/04-business-rules.md:96-138`
+**Source**: `.documents/knowledge-domain/04-business-rules.md:96-138`
 
 ---
 
@@ -395,7 +395,7 @@ Dynamic skills are auto-promoted to matrix when:
 - User satisfaction ≥ 80%
 - Actively used within 90 days
 
-**Source**: `documents/SMART-SKILL-ORCHESTRATION-BLUEPRINT.md:983-1030`
+**Source**: `.documents/SMART-SKILL-ORCHESTRATION-BLUEPRINT.md:983-1030`
 
 ---
 
@@ -442,7 +442,7 @@ Dynamic skills are auto-promoted to matrix when:
 └──────────┘   └──────────────┘
 ```
 
-**Source**: `documents/SMART-SKILL-ORCHESTRATION-BLUEPRINT.md:593-634`
+**Source**: `.documents/SMART-SKILL-ORCHESTRATION-BLUEPRINT.md:593-634`
 
 ---
 
@@ -458,7 +458,7 @@ The number of skills injected depends on available context:
 
 The system allocates ~5 foundation skills minimum, then fills remaining budget with higher-tier skills ranked by relevance.
 
-**Source**: `documents/knowledge-architecture/04-design-patterns.md`
+**Source**: `.documents/knowledge-architecture/04-design-patterns.md`
 
 ---
 
@@ -505,7 +505,7 @@ matrix-skills/
     └── security-auditing.md
 ```
 
-**Source**: `documents/knowledge-domain/01-entities.md:208-238`
+**Source**: `.documents/knowledge-domain/01-entities.md:208-238`
 
 ---
 
@@ -566,7 +566,7 @@ unified_skill_index:
       version: "v1.2.0"
 ```
 
-**Source**: `documents/SMART-SKILL-ORCHESTRATION-BLUEPRINT.md:824-860`
+**Source**: `.documents/SMART-SKILL-ORCHESTRATION-BLUEPRINT.md:824-860`
 
 ---
 
@@ -579,7 +579,7 @@ unified_skill_index:
 | **Capability Duplication** | Fitness scoring determines winner |
 | **Version Incompatibility** | Block installation, notify user |
 
-**Source**: `documents/SMART-SKILL-ORCHESTRATION-BLUEPRINT.md:741-751`
+**Source**: `.documents/SMART-SKILL-ORCHESTRATION-BLUEPRINT.md:741-751`
 
 ---
 
@@ -600,7 +600,7 @@ If find-skills is not installed or `npx skills find` fails:
 2. Surface message: "Dynamic skill discovery unavailable. Using built-in skills."
 3. Queue background retry for later
 
-**Source**: `documents/SMART-SKILL-ORCHESTRATION-BLUEPRINT.md:863-941`, `documents/HSOL-ASSESSMENT.md:61-66`
+**Source**: `.documents/SMART-SKILL-ORCHESTRATION-BLUEPRINT.md:863-941`, `.documents/HSOL-ASSESSMENT.md:61-66`
 
 ---
 

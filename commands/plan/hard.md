@@ -40,11 +40,11 @@ execution-mode: execute
 
 | Agent      | Output                                                                                                                                                                   |
 | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| researcher | `./reports/{topic}/researchers/RESEARCH-{task}`                                                                                                                               |
-| scouter    | `./reports/{topic}/scouts/SCOUT-{task}`                                                                                                                                       |
-| planner    | **One** `./reports/{topic}/plans/PLAN-{task}` **OR** multiple `./reports/{topic}/plans/PLAN-{task}-phase1`, `PLAN-{task}-phase2`, … (see **Complexity & plan splitting** below) |
+| researcher | `./.reports/{topic}/researchers/RESEARCH-{task}`                                                                                                                               |
+| scouter    | `./.reports/{topic}/scouts/SCOUT-{task}`                                                                                                                                       |
+| planner    | **One** `./.reports/{topic}/plans/PLAN-{task}` **OR** multiple `./.reports/{topic}/plans/PLAN-{task}-phase1`, `PLAN-{task}-phase2`, … (see **Complexity & plan splitting** below) |
 
-**Plans are source of truth for implementation.** All files in `./reports/{topic}/` → English only.
+**Plans are source of truth for implementation.** All files in `./.reports/{topic}/` → English only.
 **⚠️ Paths above = base names.** Small (≤ 150 lines) → create as `{name}.md`. Large (> 150 lines or ≥ 4 sections) → create as `{name}/` folder with `00-index.md` + `01-*.md`, `02-*.md` section files.
 
 ---
@@ -78,7 +78,7 @@ One phase at a time, each phase independent: Phase 1 → then Phase 2 → … in
 | Agent  | `researcher`                                  |
 | ------ | --------------------------------------------- |
 | Goal   | Research best practices and patterns          |
-| Output | `./reports/{topic}/researchers/RESEARCH-{task}`    |
+| Output | `./.reports/{topic}/researchers/RESEARCH-{task}`    |
 | Exit   | Best practices identified, sources documented |
 
 ---
@@ -88,7 +88,7 @@ One phase at a time, each phase independent: Phase 1 → then Phase 2 → … in
 | Agent  | `scouter`                                    |
 | ------ | -------------------------------------------- |
 | Goal   | Full architecture mapping                    |
-| Output | `./reports/{topic}/scouts/SCOUT-{task}`           |
+| Output | `./.reports/{topic}/scouts/SCOUT-{task}`           |
 | Exit   | Architecture understood, dependencies mapped |
 
 ---
@@ -109,7 +109,7 @@ One phase at a time, each phase independent: Phase 1 → then Phase 2 → … in
 | ------------ | --------------------------------------------------------------------------------------------------------------------------- |
 | Prerequisite | **READ** RESEARCH + SCOUT files (and DESIGN if Phase 3 ran)                                                                 |
 | Goal         | Create detailed implementation plan as **one file** or **multiple phase files** (see **Complexity & plan splitting** above) |
-| Output       | One `./reports/{topic}/plans/PLAN-{task}` **or** multiple `./reports/{topic}/plans/PLAN-{task}-phase1`, `PLAN-{task}-phase2`, …    |
+| Output       | One `./.reports/{topic}/plans/PLAN-{task}` **or** multiple `./.reports/{topic}/plans/PLAN-{task}-phase1`, `PLAN-{task}-phase2`, …    |
 
 **Directive to planner:** If the task decomposes into **> 3 phases** or **> 3 days** effort, produce **multiple plan files** (one per phase/milestone), each executable in sequence. Otherwise produce a single `PLAN-{task}.md`.
 
@@ -130,5 +130,5 @@ Plan(s) MUST reference prior phases:
 
 Present plan with:
 
-1. ✅ **Plan Ready** — `./reports/{topic}/plans/PLAN-{task}` (single) **or** `PLAN-{task}-phase1`, `PLAN-{task}-phase2`, … (multi-phase, execute in order)
+1. ✅ **Plan Ready** — `./.reports/{topic}/plans/PLAN-{task}` (single) **or** `PLAN-{task}-phase1`, `PLAN-{task}-phase2`, … (multi-phase, execute in order)
 2. 🍳 **Implement** → `/cook:hard` (run phase-by-phase when multiple plan files exist)

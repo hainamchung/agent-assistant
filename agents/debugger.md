@@ -120,8 +120,8 @@ SYMPTOM → immediate cause → deeper cause → ROOT CAUSE
 
 ## 📤 Output Format
 
-**Small** (≤ 150 lines): Single file `./reports/{topic}/debugs/DEBUG-{issue}.md`
-**Large** (> 150 lines OR ≥ 4 sections): Folder `./reports/{topic}/debugs/{issue}/` → create `00-index.md` first, then each section `01-*.md`, `02-*.md` sequentially.
+**Small** (≤ 150 lines): Single file `./.reports/{topic}/debugs/DEBUG-{issue}.md`
+**Large** (> 150 lines OR ≥ 4 sections): Folder `./.reports/{topic}/debugs/{issue}/` → create `00-index.md` first, then each section `01-*.md`, `02-*.md` sequentially.
 
 ### Single-file template
 

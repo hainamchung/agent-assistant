@@ -51,7 +51,7 @@ If you submitted it, you own the evidence chain. If the evidence is weak, collec
 
 ## 📬 MAILBOX PROTOCOL
 
-**Location**: `./reports/{topic}/MAILBOX-{date}.md` — append-only, never edit prior exchanges.
+**Location**: `./.reports/{topic}/MAILBOX-{date}.md` — append-only, never edit prior exchanges.
 
 | Permission | Scope |
 |------------|-------|

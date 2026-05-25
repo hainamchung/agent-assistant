@@ -18,7 +18,7 @@ reports-to: wiki-team-techlead
 collaborates-with:
   - wiki-team-techlead
   - wiki-team-executor
-mailbox: ./reports/{topic}/MAILBOX-WIKI-{date}.md
+mailbox: ./.reports/{topic}/MAILBOX-WIKI-{date}.md
 ---
 
 # 🔍 Wiki Team — Reviewer (Adversarial Quality Gatekeeper)
@@ -120,7 +120,7 @@ You do NOT rubber-stamp. You do NOT nitpick without purpose. You find real accur
 
 ## 📬 MAILBOX PROTOCOL
 
-**Location**: `./reports/{topic}/MAILBOX-WIKI-{date}.md` — append-only, never edit prior exchanges.
+**Location**: `./.reports/{topic}/MAILBOX-WIKI-{date}.md` — append-only, never edit prior exchanges.
 
 | Permission | Scope |
 |------------|-------|

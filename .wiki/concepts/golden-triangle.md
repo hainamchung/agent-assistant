@@ -20,7 +20,7 @@ An adversarial 3-role team pattern where every significant deliverable is design
 - **Roles**: Tech Lead (coordinator), Executor (implementer), Reviewer (adversarial quality gate)
 - **Quality Gates**: Security (OWASP Top 10), Performance (<200ms), Testing (>80% coverage), Linting
 - **Iteration Limit**: 3 rounds maximum per task
-- **Source**: `documents/knowledge-architecture/04-design-patterns.md:69-137`
+- **Source**: `.documents/knowledge-architecture/04-design-patterns.md:69-137`
 
 ---
 
@@ -217,7 +217,7 @@ All agent communication flows through two shared artifacts:
 | Artifact | Owner | Purpose |
 |----------|-------|---------|
 | **Shared Task List** | Tech Lead | State management for the phase's tasks — assignments, status, priorities |
-| **Mailbox** | All agents (append-only) | `./reports/{topic}/MAILBOX-{date}.md` — communication log for submissions, reviews, defenses, decisions |
+| **Mailbox** | All agents (append-only) | `./.reports/{topic}/MAILBOX-{date}.md` — communication log for submissions, reviews, defenses, decisions |
 
 **Rules**:
 - Mailbox is **append-only** — no agent may edit or delete prior exchanges
@@ -225,8 +225,8 @@ All agent communication flows through two shared artifacts:
 - Tech Lead manages the Shared Task List; Executor and Reviewer read it
 - One Mailbox per phase execution, timestamped by date
 - **Size management**: If Mailbox exceeds 500 lines, Tech Lead creates a new segment per phase:
-  - Current phase: `./reports/{topic}/MAILBOX-{date}-P{n}.md`
-  - Archived phase: `./reports/{topic}/MAILBOX-{date}-P{n}-FINAL.md`
+  - Current phase: `./.reports/{topic}/MAILBOX-{date}-P{n}.md`
+  - Archived phase: `./.reports/{topic}/MAILBOX-{date}-P{n}-FINAL.md`
   - Each phase starts with a fresh, focused Mailbox
 
 ---
@@ -387,7 +387,7 @@ agents/teams/wiki-team/
 ### Communication Protocol
 
 - **Shared Task List**: Published by Tech Lead at phase start, tracks extraction status
-- **Mailbox**: `./reports/{topic}/MAILBOX-{date}.md` — append-only log of all exchanges
+- **Mailbox**: `./.reports/{topic}/MAILBOX-{date}.md` — append-only log of all exchanges
 - **Debate**: Max 3 rounds per task → Tech Lead arbitrates
 - **Consensus**: `✅ CONSENSUS: TechLead ✓ | Executor ✓ | Reviewer ✓` required to release output
 
@@ -484,7 +484,7 @@ See [[Command System]] for how the `:team` variant invokes the Golden Triangle. 
 │                                                             │
 │  ALWAYS 3 AGENTS: Tech Lead · Executor · Reviewer           │
 │  MAX 3 DEBATE ROUNDS: Implement → Review → Fix/Defend       │
-│  MAILBOX: ./reports/{topic}/MAILBOX-{date}.md (append-only) │
+│  MAILBOX: ./.reports/{topic}/MAILBOX-{date}.md (append-only) │
 │  CONSENSUS: ✅ TechLead ✓ | Executor ✓ | Reviewer ✓         │
 │                                                             │
 │  Tech Lead = FINAL AUTHORITY (arbitrates, synthesizes)       │

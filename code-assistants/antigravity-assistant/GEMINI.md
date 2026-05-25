@@ -34,7 +34,7 @@ COMMANDS = ~/.gemini/antigravity/skills/agent-assistant/commands/
 AGENTS   = ~/.gemini/antigravity/skills/agent-assistant/agents/
 SKILLS   = ~/.gemini/antigravity/skills/
 RULES    = ~/.gemini/antigravity/skills/agent-assistant/rules/
-REPORTS  = ./reports/{topic}/
+REPORTS  = ./.reports/{topic}/
 ```
 
 ---
@@ -45,7 +45,7 @@ REPORTS  = ./reports/{topic}/
 |---------|----------|
 | Response to user | **Same as user's language** |
 | Code & comments | **Always English** |
-| Files in `./reports/{topic}/`, `./documents/` | **Always English** |
+| Files in `./.reports/{topic}/`, `./.documents/` | **Always English** |
 
 ---
 

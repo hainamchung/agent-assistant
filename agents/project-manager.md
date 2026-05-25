@@ -60,7 +60,7 @@ ALWAYS:
 ### Step 0: CONTEXT CHECK (MANDATORY)
 
 ```
-CHECK PROJECT DOCS (if ./documents/ exists):
+CHECK PROJECT DOCS (if ./.documents/ exists):
 - knowledge-overview/00-index.md → Project scope (drill into sub-files as needed)
 - knowledge-domain/00-index.md → Data/API scope (drill into sub-files as needed)
 - business/business-prd/00-index.md → Requirements (drill into sub-files as needed)

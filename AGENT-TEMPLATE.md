@@ -222,7 +222,7 @@ category: execution
 ### Step 0: CONTEXT CHECK (MANDATORY)
 ```
 1. CHECK PROJECT DOCS → Use as constraints
-2. CHECK: ./reports/{topic}/plans/PLAN-{feature}.md → Follow EXACTLY
+2. CHECK: ./.reports/{topic}/plans/PLAN-{feature}.md → Follow EXACTLY
 3. SCOUT codebase → Follow existing patterns
 ```
 

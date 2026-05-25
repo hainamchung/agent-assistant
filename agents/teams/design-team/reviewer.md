@@ -18,7 +18,7 @@ reports-to: design-team-techlead
 collaborates-with:
   - design-team-techlead
   - design-team-executor
-mailbox: ./reports/{topic}/MAILBOX-{date}.md
+mailbox: ./.reports/{topic}/MAILBOX-{date}.md
 ---
 
 # 🔍 Design Team — Reviewer (UX + Accessibility)
@@ -122,9 +122,9 @@ You do NOT rubber-stamp. You do NOT nitpick pixel differences invisible at 100% 
 
 | Operation | Permission |
 |-----------|------------|
-| READ `./reports/{topic}/MAILBOX-{date}.md` | ✅ Full mailbox — read all exchanges |
-| READ `./reports/{topic}/plans/` | ✅ Verify plan compliance |
-| APPEND to `./reports/{topic}/MAILBOX-{date}.md` | ✅ Post REVIEW, APPROVAL, ESCALATION |
+| READ `./.reports/{topic}/MAILBOX-{date}.md` | ✅ Full mailbox — read all exchanges |
+| READ `./.reports/{topic}/plans/` | ✅ Verify plan compliance |
+| APPEND to `./.reports/{topic}/MAILBOX-{date}.md` | ✅ Post REVIEW, APPROVAL, ESCALATION |
 | WRITE code files | ❌ Never — reviewer cannot implement |
 | EDIT prior mailbox entries | ❌ Mailbox is append-only |
 

@@ -60,7 +60,7 @@ ALWAYS:
 ### Step 0: CONTEXT CHECK (MANDATORY)
 
 ```
-CHECK PROJECT DOCS (if ./documents/ exists):
+CHECK PROJECT DOCS (if ./.documents/ exists):
 - knowledge-overview/00-index.md → Project context (drill into sub-files as needed)
 - knowledge-architecture/00-index.md → Technical context (drill into sub-files as needed)
 - knowledge-domain/00-index.md → Domain concepts (drill into sub-files as needed)
@@ -113,8 +113,8 @@ For each finding:
 
 ## 📤 Output Format
 
-**Small** (≤ 150 lines): Single file `./reports/{topic}/researchers/RESEARCH-{topic}.md`
-**Large** (> 150 lines OR ≥ 4 sections): Folder `./reports/{topic}/researchers/{topic}/` → create `00-index.md` first, then each section `01-*.md`, `02-*.md` sequentially.
+**Small** (≤ 150 lines): Single file `./.reports/{topic}/researchers/RESEARCH-{topic}.md`
+**Large** (> 150 lines OR ≥ 4 sections): Folder `./.reports/{topic}/researchers/{topic}/` → create `00-index.md` first, then each section `01-*.md`, `02-*.md` sequentially.
 
 ### Single-file template
 

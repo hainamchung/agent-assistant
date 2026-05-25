@@ -193,7 +193,7 @@ Before installation begins, the installer estimates total file count:
 ```
 
 The `estimateInstallFiles()` function counts files across all core directories:
-- `agents/`, `rules/`, `documents/`, `commands/`, `matrix-skills/`
+- `agents/`, `rules/`, `.documents/`, `commands/`, `matrix-skills/`
 - `skills/` directory
 - Commands copied twice (for `commands/` and `workflows/` backward compatibility)
 
@@ -212,7 +212,7 @@ For each selected platform, the installer performs a clean install:
 
 2. **Extension Brain (~/.cursor/skills/agent-assistant/)**
    - Clean install: remove existing framework first
-   - Copy all core directories: `agents/`, `rules/`, `documents/`, `commands/`, `matrix-skills/`
+   - Copy all core directories: `agents/`, `rules/`, `.documents/`, `commands/`, `matrix-skills/`
    - Copy `commands/` to `workflows/` for backward compatibility
    - Copy `README.md`
 
@@ -615,7 +615,7 @@ The installer copies these directories to each platform's framework folder:
 |-----------|-------------|
 | `agents/` | Bundled agent definitions (21 agents) |
 | `rules/` | Rule files (.mdc) for Cursor |
-| `documents/` | Knowledge documentation |
+| `.documents/` | Knowledge documentation |
 | `commands/` | Command workflows and suggestions |
 | `matrix-skills/` | Skill matrix definitions |
 

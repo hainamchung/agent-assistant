@@ -19,7 +19,7 @@ Commands follow the format `/command:variant parameter`. The command layer parse
 - **Format**: `/command:variant [parameters]`
 - **Variants**: fast (2–3 agents), hard (5–8 agents), team (Golden Triangle)
 - **Default**: `fast` if no variant is specified
-- **Source**: `documents/knowledge-architecture/01-system-overview.md:121-131`
+- **Source**: `.documents/knowledge-architecture/01-system-overview.md:121-131`
 
 ---
 
@@ -42,7 +42,7 @@ Commands follow the format `/command:variant parameter`. The command layer parse
 | `/brainstorm` | Ideation and creative thinking | brainstormer | fast / hard / team |
 | `/ask` | Questions, research, and investigation | researcher | fast / hard / team |
 
-**Source**: `documents/knowledge-overview/03-features.md:16-36`
+**Source**: `.documents/knowledge-overview/03-features.md:16-36`
 
 ---
 
@@ -71,7 +71,7 @@ Each command supports three execution variants that scale with task complexity:
 - **Use Case**: High-stakes work, architectural decisions, mission-critical code
 - **Execution Time**: Slowest — maximum quality assurance
 
-**Source**: `documents/knowledge-architecture/03-data-flow.md:72-79`
+**Source**: `.documents/knowledge-architecture/03-data-flow.md:72-79`
 
 Variant selection follows business rules: fast is the default, hard is used for complex tasks, and team is reserved for high-stakes work requiring adversarial review. See [[Command Variant Matrix]] for a side-by-side comparison.
 
@@ -165,7 +165,7 @@ supported_commands:
 | `natural_language_detection` | `true` | Enable NL routing |
 | `variant_syntax` | `:` | Variant separator (`: ` or `/`) |
 
-**Source**: `documents/business/business-features/03-feature-specifications.md:10-61`
+**Source**: `.documents/business/business-features/03-feature-specifications.md:10-61`
 
 ---
 

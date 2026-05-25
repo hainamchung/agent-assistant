@@ -25,7 +25,7 @@ Architecture Decision Records (ADRs) document the significant technical decision
 | 7 | ADR-007 | File-based configuration | Accepted | 2024-01 |
 | 8 | ADR-008 | 21 specialist agents (not general) | Accepted | 2024-01 |
 
-**Source**: `documents/knowledge-architecture/05-decisions.md:1-50`
+**Source**: `.documents/knowledge-architecture/05-decisions.md:1-50`
 
 ---
 

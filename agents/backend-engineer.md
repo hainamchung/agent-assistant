@@ -59,13 +59,13 @@ ALWAYS:
 ### Step 0: CONTEXT CHECK (MANDATORY)
 
 ```
-1. CHECK PROJECT DOCS (if ./documents/ exists):
+1. CHECK PROJECT DOCS (if ./.documents/ exists):
    - knowledge-standards/00-index.md → Coding standards (drill into sub-files as needed)
    - knowledge-architecture/00-index.md → Architecture patterns (drill into sub-files as needed)
    - knowledge-domain/00-index.md → Data models, API contracts (drill into sub-files as needed)
    → USE these as constraints for implementation
 
-2. CHECK: ./reports/{topic}/plans/PLAN-{feature} exists?
+2. CHECK: ./.reports/{topic}/plans/PLAN-{feature} exists?
    → YES: READ fully, find YOUR tasks, follow EXACTLY
    → NO + Complex: STOP → Request plan from tech-lead
    

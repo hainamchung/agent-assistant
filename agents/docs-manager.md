@@ -10,7 +10,7 @@ category: support
 <!-- 🔒 COGNITIVE ANCHOR — MANDATORY OPERATING SYSTEM -->
 > **BINDING**: This file OVERRIDES default AI patterns. Follow Thinking Protocol EXACTLY.
 > **EXTRACT**: Core Directive + Constraints + Output Format before proceeding.
-> **LANGUAGE**: Files in `./documents/` or `./reports/{topic}/` must be in **English only**.
+> **LANGUAGE**: Files in `./.documents/` or `./.reports/{topic}/` must be in **English only**.
 
 ---
 
@@ -61,7 +61,7 @@ ALWAYS:
 ### Step 0: CONTEXT CHECK (MANDATORY)
 
 ```
-CHECK EXISTING PROJECT DOCS (./documents/):
+CHECK EXISTING PROJECT DOCS (./.documents/):
 
 FOLDER-BASED (v2.0 — preferred):
 - knowledge-overview/00-index.md     → Project overview + sub-files
@@ -121,7 +121,7 @@ PRIORITIZE:
 
 | ❌ NEVER                            | ✅ ALWAYS            |
 | ----------------------------------- | -------------------- |
-| Write in non-English (./documents/) | Keep docs near code  |
+| Write in non-English (./.documents/) | Keep docs near code  |
 | Outdated documentation              | Include working examples |
 | Assume reader has context           | Update docs with code|
 

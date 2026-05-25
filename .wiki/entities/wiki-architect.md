@@ -64,7 +64,7 @@ The Wiki Architect is the **meta agent** responsible for wiki generation plannin
 ### Step 1: Scout Analysis
 
 ```
-IF scout report exists (./reports/{topic}/scouts/SCOUT-{project}):
+IF scout report exists (./.reports/{topic}/scouts/SCOUT-{project}):
   → READ completely
   → EXTRACT: architecture layers, entities, patterns, integration points
   → USE as foundation for wiki design

@@ -81,13 +81,13 @@ The `/wiki:team` command uses a two-tier execution model:
 
 All 3 triangle agents communicate through a shared append-only Mailbox file:
 
-**Location**: `./reports/{topic}/MAILBOX-WIKI-{date}.md`
+**Location**: `./.reports/{topic}/MAILBOX-WIKI-{date}.md`
 
 ### Mailbox Size Management
 
 ```
 - If Mailbox exceeds 200 lines, Tech Lead creates a new segment:
-  → ./reports/{topic}/MAILBOX-WIKI-{date}-P{phase}.md for current phase
+  → ./.reports/{topic}/MAILBOX-WIKI-{date}-P{phase}.md for current phase
 - Archive prior phase Mailboxes: rename to MAILBOX-WIKI-{date}-P{phase}-FINAL.md
 - Each phase starts with a fresh, focused Mailbox
 - Archive files remain readable for full debate history
@@ -127,14 +127,14 @@ All 3 triangle agents communicate through a shared append-only Mailbox file:
 
 | Phase | Output |
 |-------|--------|
-| P1: Architecture Scout | `./reports/{topic}/scouts/SCOUT-{project}/` |
-| P2: Entity Extraction | `./reports/{topic}/wikis/WIKI-TEAM-{project}/00-catalog.md` |
-| P3: Wiki Taxonomy Design | `./reports/{topic}/wikis/WIKI-TEAM-{project}/00-taxonomy.md` |
-| P4: Wiki Generation Plan | `./reports/{topic}/plans/PLAN-WIKI-{project}/` |
-| P5: Wiki Page Generation | `.wiki/` + `./reports/{topic}/wikis/WIKI-TEAM-{project}/generation-log.md` |
-| P6: Peer Review | `./reports/{topic}/wikis/WIKI-TEAM-{project}/review.md` |
-| P7: Refinement & Consensus | `./reports/{topic}/wikis/WIKI-TEAM-{project}/refinement.md` |
-| ALL Phases | `./reports/{topic}/MAILBOX-WIKI-{date}.md` |
+| P1: Architecture Scout | `./.reports/{topic}/scouts/SCOUT-{project}/` |
+| P2: Entity Extraction | `./.reports/{topic}/wikis/WIKI-TEAM-{project}/00-catalog.md` |
+| P3: Wiki Taxonomy Design | `./.reports/{topic}/wikis/WIKI-TEAM-{project}/00-taxonomy.md` |
+| P4: Wiki Generation Plan | `./.reports/{topic}/plans/PLAN-WIKI-{project}/` |
+| P5: Wiki Page Generation | `.wiki/` + `./.reports/{topic}/wikis/WIKI-TEAM-{project}/generation-log.md` |
+| P6: Peer Review | `./.reports/{topic}/wikis/WIKI-TEAM-{project}/review.md` |
+| P7: Refinement & Consensus | `./.reports/{topic}/wikis/WIKI-TEAM-{project}/refinement.md` |
+| ALL Phases | `./.reports/{topic}/MAILBOX-WIKI-{date}.md` |
 
 **Source**: `commands/wiki/team.md:114-129`
 
@@ -206,7 +206,7 @@ OUTPUT: ✅ CONSENSUS: TechLead ✓ | Executor ✓ | Reviewer ✓
 | Executor | `wiki-extractor` | Execute: deep codebase analysis across all layers |
 | Reviewer | `wiki-reviewer` (Devil's Advocate) | Challenge: find uncovered areas, verify completeness |
 
-**Deliverable**: `./reports/{topic}/scouts/SCOUT-{project}/`
+**Deliverable**: `./.reports/{topic}/scouts/SCOUT-{project}/`
 **Exit Criteria**: All architecture layers mapped, patterns identified, entities catalogued, integration points documented
 
 ### Phase 2: Entity Extraction
@@ -217,7 +217,7 @@ OUTPUT: ✅ CONSENSUS: TechLead ✓ | Executor ✓ | Reviewer ✓
 | Executor | `wiki-extractor` | Execute: extract all entities with full metadata |
 | Reviewer | `wiki-reviewer` (Accuracy Validator) | Challenge: verify entity descriptions, source citations |
 
-**Deliverable**: `./reports/{topic}/wikis/WIKI-TEAM-{project}/00-catalog.md`
+**Deliverable**: `./.reports/{topic}/wikis/WIKI-TEAM-{project}/00-catalog.md`
 **Exit Criteria**: Every entity documented, source references verified, relationships mapped, accuracy HIGH
 
 ### Phase 3: Wiki Taxonomy Design
@@ -228,7 +228,7 @@ OUTPUT: ✅ CONSENSUS: TechLead ✓ | Executor ✓ | Reviewer ✓
 | Executor | `wiki-extractor` | Execute: design wiki structure, map entities to page types |
 | Reviewer | `wiki-reviewer` (Completeness Check) | Challenge: are all knowledge needs covered? any gaps? |
 
-**Deliverable**: `./reports/{topic}/wikis/WIKI-TEAM-{project}/00-taxonomy.md`
+**Deliverable**: `./.reports/{topic}/wikis/WIKI-TEAM-{project}/00-taxonomy.md`
 **Exit Criteria**: Every knowledge domain has a page plan, cross-references defined, generation order set
 
 ### Phase 4: Wiki Generation Plan
@@ -239,7 +239,7 @@ OUTPUT: ✅ CONSENSUS: TechLead ✓ | Executor ✓ | Reviewer ✓
 | Executor | `wiki-extractor` | Execute: write detailed generation plan per page |
 | Reviewer | `wiki-reviewer` (Feasibility Check) | Challenge: can each page be generated from sources? unrealistic plans? |
 
-**Deliverable**: `./reports/{topic}/plans/PLAN-WIKI-{project}/`
+**Deliverable**: `./.reports/{topic}/plans/PLAN-WIKI-{project}/`
 **Exit Criteria**: Every page has a generation plan, sources mapped, order defined, risks identified
 
 ### Phase 5: Wiki Page Generation
@@ -260,7 +260,7 @@ OUTPUT: ✅ CONSENSUS: TechLead ✓ | Executor ✓ | Reviewer ✓
 | Executor | `wiki-extractor` | Execute: verify every source file, cross-reference pages |
 | Reviewer | `wiki-reviewer` (Adversarial) | Challenge: find every gap, inaccuracy, missing cross-reference |
 
-**Deliverable**: `./reports/{topic}/wikis/WIKI-TEAM-{project}/review.md`
+**Deliverable**: `./.reports/{topic}/wikis/WIKI-TEAM-{project}/review.md`
 **Exit Criteria**: 100% entity coverage, all pages accuracy HIGH, no broken links, no unexplained code
 
 ### Phase 7: Refinement & Consensus
@@ -271,7 +271,7 @@ OUTPUT: ✅ CONSENSUS: TechLead ✓ | Executor ✓ | Reviewer ✓
 | Executor | `wiki-extractor` | Execute: address review findings, polish pages |
 | Reviewer | `wiki-reviewer` | Challenge: verify refinements, confirm 100% quality |
 
-**Deliverable**: `./reports/{topic}/wikis/WIKI-TEAM-{project}/refinement.md` + final `.wiki/` state
+**Deliverable**: `./.reports/{topic}/wikis/WIKI-TEAM-{project}/refinement.md` + final `.wiki/` state
 **Exit Criteria**: All review findings addressed, all pages meet quality bar, full consensus achieved
 
 **Source**: `commands/wiki/team.md:211-498`

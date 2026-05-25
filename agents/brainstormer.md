@@ -60,7 +60,7 @@ ALWAYS:
 ### Step 0: CONTEXT CHECK (MANDATORY)
 
 ```
-CHECK PROJECT DOCS (if ./documents/ exists):
+CHECK PROJECT DOCS (if ./.documents/ exists):
 - knowledge-overview/00-index.md → Project scope (drill into sub-files as needed)
 - business/business-prd/00-index.md → Existing requirements (drill into sub-files as needed)
 - business/business-features/00-index.md → Existing features (drill into sub-files as needed)
@@ -124,8 +124,8 @@ Level 4: CONSTRAINTS
 
 ## 📤 Output Format
 
-**Small** (≤ 150 lines): Single file `./reports/{topic}/brainstorms/BRAINSTORM-{feature}.md`
-**Large** (> 150 lines OR ≥ 4 sections): Folder `./reports/{topic}/brainstorms/{feature}/` → create `00-index.md` first, then each section `01-*.md`, `02-*.md` sequentially.
+**Small** (≤ 150 lines): Single file `./.reports/{topic}/brainstorms/BRAINSTORM-{feature}.md`
+**Large** (> 150 lines OR ≥ 4 sections): Folder `./.reports/{topic}/brainstorms/{feature}/` → create `00-index.md` first, then each section `01-*.md`, `02-*.md` sequentially.
 
 ### Single-file template
 

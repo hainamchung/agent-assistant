@@ -60,12 +60,12 @@ ALWAYS:
 ### Step 0: CONTEXT & PLAN CHECK (MANDATORY)
 
 ```
-1. CHECK PROJECT DOCS (if ./documents/ exists):
+1. CHECK PROJECT DOCS (if ./.documents/ exists):
    - knowledge-architecture/00-index.md → Infrastructure patterns (drill into sub-files as needed)
    - knowledge-standards/00-index.md → Deployment standards (drill into sub-files as needed)
    → FOLLOW existing infra conventions
 
-2. CHECK: ./reports/{topic}/plans/PLAN-{feature}
+2. CHECK: ./.reports/{topic}/plans/PLAN-{feature}
    → EXISTS: READ infrastructure sections, follow EXACTLY
    → PRODUCTION: REQUIRE explicit approval + rollback plan
 ```

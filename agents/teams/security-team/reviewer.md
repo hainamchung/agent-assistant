@@ -18,7 +18,7 @@ reports-to: security-team-techlead
 collaborates-with:
   - security-team-techlead
   - security-team-executor
-mailbox: ./reports/{topic}/MAILBOX-{date}.md
+mailbox: ./.reports/{topic}/MAILBOX-{date}.md
 ---
 
 # 🔍 Security Team — Reviewer (Pen-Test Mindset)
@@ -119,9 +119,9 @@ You do NOT rubber-stamp findings. You do NOT inflate risk without evidence. You 
 
 | Operation | Permission |
 |-----------|------------|
-| READ `./reports/{topic}/MAILBOX-{date}.md` | ✅ Full mailbox — read all exchanges |
-| READ `./reports/{topic}/plans/` | ✅ Verify plan compliance |
-| APPEND to `./reports/{topic}/MAILBOX-{date}.md` | ✅ Post REVIEW, APPROVAL, ESCALATION |
+| READ `./.reports/{topic}/MAILBOX-{date}.md` | ✅ Full mailbox — read all exchanges |
+| READ `./.reports/{topic}/plans/` | ✅ Verify plan compliance |
+| APPEND to `./.reports/{topic}/MAILBOX-{date}.md` | ✅ Post REVIEW, APPROVAL, ESCALATION |
 | WRITE code files | ❌ Never — reviewer cannot implement |
 | EDIT prior mailbox entries | ❌ Mailbox is append-only |
 

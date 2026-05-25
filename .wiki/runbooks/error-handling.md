@@ -22,7 +22,7 @@ Errors are classified into 3 severity levels, each with a defined response:
 | **Error** | Retry with backoff, escalate if persistent | 3 attempts (1s, 2s, stop) | Network timeout, file not found |
 | **Critical** | Stop immediately, escalate | No retry | Security vulnerability, data corruption |
 
-**Source**: `documents/knowledge-domain/04-business-rules.md:256-285`
+**Source**: `.documents/knowledge-domain/04-business-rules.md:256-285`
 
 ---
 

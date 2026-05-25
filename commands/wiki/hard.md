@@ -50,12 +50,12 @@ execution-mode: execute
 
 | Agent             | Output                                        |
 | ----------------- | -------------------------------------------- |
-| `scouter`         | `./reports/{topic}/scouts/SCOUT-{project}.md` (single ≤150 lines; chunked if >150 lines) |
-| `wiki-extractor`  | `./reports/{topic}/wikis/WIKI-HARD-{project}/` (chunked) |
-| `wiki-architect`  | `./reports/{topic}/plans/PLAN-WIKI-{project}.md` (single ≤150 lines; chunked if >150 lines) |
-| `wiki-reviewer`   | `./reports/{topic}/wikis/WIKI-HARD-{project}/review.md` |
+| `scouter`         | `./.reports/{topic}/scouts/SCOUT-{project}.md` (single ≤150 lines; chunked if >150 lines) |
+| `wiki-extractor`  | `./.reports/{topic}/wikis/WIKI-HARD-{project}/` (chunked) |
+| `wiki-architect`  | `./.reports/{topic}/plans/PLAN-WIKI-{project}.md` (single ≤150 lines; chunked if >150 lines) |
+| `wiki-reviewer`   | `./.reports/{topic}/wikis/WIKI-HARD-{project}/review.md` |
 
-All files in `./reports/{topic}/` → English only.
+All files in `./.reports/{topic}/` → English only.
 
 ---
 
@@ -134,7 +134,7 @@ One phase at a time, each phase independent. Within each phase: announce before 
 
 ### Output
 
-Full scout report at `./reports/{topic}/scouts/SCOUT-{project}.md`
+Full scout report at `./.reports/{topic}/scouts/SCOUT-{project}.md`
 
 ### Exit Criteria
 - [ ] Architecture layers mapped
@@ -200,7 +200,7 @@ contains relevant content. Do not create empty pages for types that don't apply.
 
 ### Step 3: Entity Catalog
 
-Create `./reports/{topic}/wikis/WIKI-HARD-{project}/00-catalog.md`:
+Create `./.reports/{topic}/wikis/WIKI-HARD-{project}/00-catalog.md`:
 
 ```markdown
 # Entity Catalog: {Project}
@@ -259,7 +259,7 @@ Create `./reports/{topic}/wikis/WIKI-HARD-{project}/00-catalog.md`:
 
 ### Output
 
-`./reports/{topic}/plans/PLAN-WIKI-{project}.md`
+`./.reports/{topic}/plans/PLAN-WIKI-{project}.md`
 
 ### Exit Criteria
 - [ ] All wiki pages planned
@@ -295,7 +295,7 @@ IF .wiki/ does not exist:
 ### Step 2: Read the Plan
 
 ```
-READ: ./reports/{topic}/plans/PLAN-WIKI-{project}.md
+READ: ./.reports/{topic}/plans/PLAN-WIKI-{project}.md
 → Identify all page generation tasks
 → Confirm generation order
 → Verify source mappings are correct
@@ -376,7 +376,7 @@ The hard variant uses a single-pass review (Phase 5). For adversarial, multi-rou
 
 ### Output
 
-`./reports/{topic}/wikis/WIKI-HARD-{project}/review.md`
+`./.reports/{topic}/wikis/WIKI-HARD-{project}/review.md`
 
 ```markdown
 # Wiki Review: {Project}

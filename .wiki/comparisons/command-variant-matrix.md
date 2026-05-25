@@ -43,7 +43,7 @@ Every command in Agent Assistant supports three execution variants. The variant 
 | `/brainstorm` | 1 agent, self-review | 3 agents, standard review | Golden Triangle adversarial |
 | `/ask` | 1 agent, self-review | 2 agents, standard review | Golden Triangle adversarial |
 
-**Source**: `documents/knowledge-architecture/03-data-flow.md:72-79`, `documents/knowledge-overview/03-features.md`
+**Source**: `.documents/knowledge-architecture/03-data-flow.md:72-79`, `.documents/knowledge-overview/03-features.md`
 
 ---
 

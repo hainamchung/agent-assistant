@@ -44,17 +44,17 @@ execution-mode: execute
 
 | User intent | Reporter output |
 | ----------- | ---------------- |
-| **Create report** | New file: `./reports/{topic}/general/REPORT-{type}-{date}` (or path user asks) |
+| **Create report** | New file: `./.reports/{topic}/general/REPORT-{type}-{date}` (or path user asks) |
 | **Update existing** | **Edit** related files (docs, README, etc.); do **not** create new report unless also asked |
 | **From template** | New file(s) matching user format/template (e.g. after scouting source) |
 
 | Agent      | Output (when creating)                          |
 | ---------- | ------------------------------------------------ |
-| researcher | `./reports/{topic}/researchers/RESEARCH-{task}` (optional) |
-| scouter    | `./reports/{topic}/scouts/SCOUT-{task}` (optional)    |
+| researcher | `./.reports/{topic}/researchers/RESEARCH-{task}` (optional) |
+| scouter    | `./.reports/{topic}/scouts/SCOUT-{task}` (optional)    |
 | reporter   | Per table above — create report **or** update existing **or** generate from template |
 
-All files in `./reports/{topic}/` → English only.
+All files in `./.reports/{topic}/` → English only.
 **⚠️ Paths above = base names.** Small (≤ 150 lines) → create as `{name}.md`. Large (> 150 lines or ≥ 4 sections) → create as `{name}/` folder with `00-index.md` + `01-*.md`, `02-*.md` section files.
 
 ---
@@ -70,7 +70,7 @@ One phase at a time, each phase independent: Phase 1 → then Phase 2 → … in
 | Agent  | `researcher`                                                |
 | ------ | ---------------------------------------------------------- |
 | Goal   | Research report scope, audience, and best practices for project/technical reports |
-| Output | `./reports/{topic}/researchers/RESEARCH-{task}` (optional)       |
+| Output | `./.reports/{topic}/researchers/RESEARCH-{task}` (optional)       |
 | Exit   | Report scope and criteria defined, templates identified   |
 
 ---
@@ -80,7 +80,7 @@ One phase at a time, each phase independent: Phase 1 → then Phase 2 → … in
 | Agent  | `scouter`                         |
 | ------ | --------------------------------- |
 | Goal   | Full codebase structural analysis |
-| Output | `./reports/{topic}/scouts/SCOUT-{task}` |
+| Output | `./.reports/{topic}/scouts/SCOUT-{task}` |
 | Exit   | Architecture and recent changes documented                 |
 
 ---
@@ -100,7 +100,7 @@ One phase at a time, each phase independent: Phase 1 → then Phase 2 → … in
 | Agent | `reporter`                                                                 |
 | ----- | --------------------------------------------------------------------------- |
 | Goal  | From **user intent**: (1) create new report, (2) **update** existing files, or (3) generate from template/format |
-| Output| **Create**: `./reports/{topic}/general/REPORT-{type}-{date}` or path user asked. **Update**: edit related files. **Template**: file(s) matching user format. |
+| Output| **Create**: `./.reports/{topic}/general/REPORT-{type}-{date}` or path user asked. **Update**: edit related files. **Template**: file(s) matching user format. |
 | Exit  | Deliverable matches intent — report file, updated docs, or template-based file(s). |
 
 ---
@@ -109,7 +109,7 @@ One phase at a time, each phase independent: Phase 1 → then Phase 2 → … in
 
 Deliverable per **user intent**:
 
-1. ✅ **Create report** → `./reports/{topic}/general/REPORT-{type}-{date}` (or path user asked)
+1. ✅ **Create report** → `./.reports/{topic}/general/REPORT-{type}-{date}` (or path user asked)
 2. ✅ **Update existing** → Related files edited; list what was updated
 3. ✅ **From template** → File(s) matching user format; list path(s)
 4. 📢 **Share** → `/internal-comms` (optional)

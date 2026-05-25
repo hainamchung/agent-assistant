@@ -353,8 +353,8 @@ New to the project? Complete these steps in order:
 
 | Source | Content |
 |--------|---------|
-| `documents/knowledge-overview/01-project-identity.md` | Project name, version, vision, mission |
-| `documents/knowledge-overview/03-features.md` | Complete feature system documentation |
+| `.documents/knowledge-overview/01-project-identity.md` | Project name, version, vision, mission |
+| `.documents/knowledge-overview/03-features.md` | Complete feature system documentation |
 | `package.json` | NPM package metadata (v4.0.0) |
 | `rules/CORE.md` | Core orchestration rules |
 | `agents/` | 21 agent definition files |

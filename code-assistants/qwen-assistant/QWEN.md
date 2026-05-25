@@ -28,7 +28,7 @@ COMMANDS = ~/.qwen/skills/agent-assistant/commands/
 AGENTS   = ~/.qwen/skills/agent-assistant/agents/
 SKILLS   = ~/.qwen/skills/
 RULES    = ~/.qwen/skills/agent-assistant/rules/
-REPORTS  = ./reports/{topic}/
+REPORTS  = ./.reports/{topic}/
 ```
 
 ---
@@ -39,7 +39,7 @@ REPORTS  = ./reports/{topic}/
 |---------|----------|
 | Response to user | **Same as user's language** |
 | Code & comments | **Always English** |
-| Files in `./reports/{topic}/`, `./documents/` | **Always English** |
+| Files in `./.reports/{topic}/`, `./.documents/` | **Always English** |
 
 ---
 

@@ -19,14 +19,14 @@ COMMANDS = ~/.{TOOL}/skills/agent-assistant/commands/
 AGENTS   = ~/.{TOOL}/skills/agent-assistant/agents/
 SKILLS   = ~/.{TOOL}/skills/
 RULES    = ~/.{TOOL}/skills/agent-assistant/rules/
-REPORTS  = ./reports/{topic}/
+REPORTS  = ./.reports/{topic}/
 ```
 
 ## 🌐 LANGUAGE
 
 - Response → **Same as user's language**
 - Code/comments → **Always English**
-- Files in `./reports/{topic}/`, `./documents/` → **Always English**
+- Files in `./.reports/{topic}/`, `./.documents/` → **Always English**
 
 ## 🎯 COMMAND ROUTING
 

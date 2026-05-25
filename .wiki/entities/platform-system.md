@@ -22,7 +22,7 @@ The multi-platform abstraction is built on two key mechanisms:
 - **Total Platforms**: 7 (Cursor, GitHub Copilot, Claude Code, Antigravity/Gemini, Codex, Kiro, Qwen)
 - **Configuration**: TOML format (`code-assistants/{platform}/config.toml`)
 - **Path Resolution**: Explicit config → environment variable → file markers → default
-- **Source**: `documents/knowledge-overview/02-tech-stack.md:129-138`, `documents/knowledge-domain/04-business-rules.md:141-189`
+- **Source**: `.documents/knowledge-overview/02-tech-stack.md:129-138`, `.documents/knowledge-domain/04-business-rules.md:141-189`
 
 ---
 
@@ -342,7 +342,7 @@ For each platform:
 | Antigravity | `~/.gemini/`, `~/.antigravity/`, `~/.gemini/antigravity/skills/` | Dual-path installation |
 | Codex | `~/.codex/agents/`, `~/.codex/skills/`, `~/.codex/config.toml` | TOML merge, agent registration |
 
-**Source**: `documents/knowledge-source-base/02-entry-points.md:16-80`, `cli/install.js:606-1179`
+**Source**: `.documents/knowledge-source-base/02-entry-points.md:16-80`, `cli/install.js:606-1179`
 
 ---
 

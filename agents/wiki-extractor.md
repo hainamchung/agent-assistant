@@ -80,7 +80,7 @@ ALWAYS:
    - CONFLICT RULE: If a source file is already ingested, re-ingest only if the file has been modified since the last wiki generation. If a wiki page already exists for an entity, update it in place rather than creating a duplicate. Check .wiki/log.md for the last update timestamp.
 
 4. IF wiki-architect provided a plan:
-   → READ: ./reports/{topic}/plans/PLAN-WIKI-{project}
+   → READ: ./.reports/{topic}/plans/PLAN-WIKI-{project}
    → FOLLOW generation order exactly
    → Report deviations to wiki-architect
 ```
@@ -346,7 +346,7 @@ Wiki pages are written to the user's project `.wiki/` directory:
 
 **Progress tracking** (for hard/team variants):
 ```
-./reports/{topic}/wikis/WIKI-{variant}-{project}/
+./.reports/{topic}/wikis/WIKI-{variant}-{project}/
 ├── 00-catalog.md               # Entity catalog with extraction status (chunked folder if >50 entities)
 ├── 00-taxonomy.md              # Wiki taxonomy with generation status
 └── generation-log.md           # Page-by-page generation log

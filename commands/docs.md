@@ -69,11 +69,11 @@ execution-mode: execute
 
 ### Folders to be Created (v3.0 — folder-based):
 
-- [ ] `./documents/knowledge-overview/` (00-index.md + 4 sub-files)
-- [ ] `./documents/knowledge-architecture/` (00-index.md + 5 sub-files)
-- [ ] `./documents/knowledge-domain/` (00-index.md + 4 sub-files)
-- [ ] `./documents/knowledge-source-base/` (00-index.md + 4 sub-files)
-- [ ] `./documents/knowledge-standards/` (00-index.md + 4 sub-files)
+- [ ] `./.documents/knowledge-overview/` (00-index.md + 4 sub-files)
+- [ ] `./.documents/knowledge-architecture/` (00-index.md + 5 sub-files)
+- [ ] `./.documents/knowledge-domain/` (00-index.md + 4 sub-files)
+- [ ] `./.documents/knowledge-source-base/` (00-index.md + 4 sub-files)
+- [ ] `./.documents/knowledge-standards/` (00-index.md + 4 sub-files)
 
 **⏸️ PAUSE HERE** — Do NOT proceed to Step 2 until all 5 knowledge folders with sub-files exist.
 
@@ -88,10 +88,10 @@ execution-mode: execute
 
 ### Folders to be Created (v4.0 — folder-based):
 
-- [ ] `./documents/business/business-prd/` (00-index.md + 4 sub-files)
-- [ ] `./documents/business/business-features/` (00-index.md + 5 sub-files)
-- [ ] `./documents/business/business-workflows/` (00-index.md + 5 sub-files)
-- [ ] `./documents/business/business-glossary/` (00-index.md + 4 sub-files)
+- [ ] `./.documents/business/business-prd/` (00-index.md + 4 sub-files)
+- [ ] `./.documents/business/business-features/` (00-index.md + 5 sub-files)
+- [ ] `./.documents/business/business-workflows/` (00-index.md + 5 sub-files)
+- [ ] `./.documents/business/business-glossary/` (00-index.md + 4 sub-files)
 
 **⏸️ PAUSE HERE** — Do NOT proceed to Step 3 until all 4 business folders with sub-files exist.
 
@@ -106,10 +106,10 @@ execution-mode: execute
 
 ### Folders to be Created (v4.0 - folder-based):
 
-- [ ] `./documents/audit/audit-security/` (00-index.md + 4 sub-files)
-- [ ] `./documents/audit/audit-compliance/` (00-index.md + 4 sub-files)
-- [ ] `./documents/audit/audit-dataflow/` (00-index.md + 4 sub-files)
-- [ ] `./documents/audit/audit-recommendations/` (00-index.md + 4 sub-files)
+- [ ] `./.documents/audit/audit-security/` (00-index.md + 4 sub-files)
+- [ ] `./.documents/audit/audit-compliance/` (00-index.md + 4 sub-files)
+- [ ] `./.documents/audit/audit-dataflow/` (00-index.md + 4 sub-files)
+- [ ] `./.documents/audit/audit-recommendations/` (00-index.md + 4 sub-files)
 
 ---
 
@@ -118,7 +118,7 @@ execution-mode: execute
 Before reporting "Done", verify ALL deliverables exist:
 
 ```
-./documents/
+./.documents/
 ├── Core (5 folders, 26+ files)
 │   ├── ✅ knowledge-overview/        (00-index + 01~04)
 │   ├── ✅ knowledge-architecture/    (00-index + 01~05)
@@ -154,7 +154,7 @@ Only output this when ALL deliverables are verified:
 | Business | 4 business folders (prd, features, workflows, glossary)     | ✅ 4/4 folders |
 | Audit    | 4 audit folders (security, compliance, dataflow, recommendations) | ✅ 4/4 folders |
 
-**Total: 13 folders (68+ files) created in `./documents/`**
+**Total: 13 folders (68+ files) created in `./.documents/`**
 ```
 
 ---

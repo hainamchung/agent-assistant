@@ -49,9 +49,9 @@ tiered_execution:
 ```yaml
 deliverable_files:
   brainstormer_clarify: # Chat output OK for questions
-  researcher: "./reports/{topic}/researchers/RESEARCH-{topic}"
-  scouter: "./reports/{topic}/scouts/SCOUT-{topic}"
-  brainstormer_synthesis: "./reports/{topic}/brainstorms/BRAINSTORM-{topic}" # MANDATORY OUTPUT
+  researcher: "./.reports/{topic}/researchers/RESEARCH-{topic}"
+  scouter: "./.reports/{topic}/scouts/SCOUT-{topic}"
+  brainstormer_synthesis: "./.reports/{topic}/brainstorms/BRAINSTORM-{topic}" # MANDATORY OUTPUT
 
 enforcement:
   - Research phase MUST create file
@@ -59,7 +59,7 @@ enforcement:
   - Synthesis file is the deliverable for downstream phases
 ```
 
-All files in `./reports/{topic}/` → English only.
+All files in `./.reports/{topic}/` → English only.
 **⚠️ Paths above = base names.** Small (≤ 150 lines) → create as `{name}.md`. Large (> 150 lines or ≥ 4 sections) → create as `{name}/` folder with `00-index.md` + `01-*.md`, `02-*.md` section files.
 
 ---
@@ -116,7 +116,7 @@ One phase at a time, each phase independent: Phase 1 → then Phase 2 → … in
 > Load `{AGENTS_PATH}/researcher.md`
 > EMBODY [researcher] — Requires logged system error justification.
 
-**MANDATORY**: CREATE `./reports/{topic}/researchers/RESEARCH-{topic}`
+**MANDATORY**: CREATE `./.reports/{topic}/researchers/RESEARCH-{topic}`
 
 **Exit Criteria:**
 
@@ -161,7 +161,7 @@ One phase at a time, each phase independent: Phase 1 → then Phase 2 → … in
 | ---------------- | -------------------------------------------------------------------------------------- |
 | **Agent**        | `brainstormer`                                                                         |
 | **Goal**         | Synthesize ideas with trade-off analysis                                               |
-| **Prerequisite** | READ `./reports/{topic}/researchers/RESEARCH-{topic}` + `./reports/{topic}/scouts/SCOUT-{topic}` |
+| **Prerequisite** | READ `./.reports/{topic}/researchers/RESEARCH-{topic}` + `./.reports/{topic}/scouts/SCOUT-{topic}` |
 
 ### ⚡ TIERED EXECUTION
 
@@ -177,11 +177,11 @@ One phase at a time, each phase independent: Phase 1 → then Phase 2 → … in
 **MANDATORY**:
 
 - READ all prior phase deliverables
-- CREATE `./reports/{topic}/brainstorms/BRAINSTORM-{topic}`
+- CREATE `./.reports/{topic}/brainstorms/BRAINSTORM-{topic}`
 
 **Exit Criteria:**
 
-- [ ] Brainstorm file created at `./reports/{topic}/brainstorms/BRAINSTORM-{topic}`
+- [ ] Brainstorm file created at `./.reports/{topic}/brainstorms/BRAINSTORM-{topic}`
 - [ ] Ideas synthesized incorporating research
 - [ ] Trade-offs analyzed
 - [ ] Recommendations provided

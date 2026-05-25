@@ -19,7 +19,7 @@ This PMD serves as the north star for all product decisions. Every feature, enha
 
 Agent Assistant transforms single AI coding assistants into coordinated teams of specialist agents. We enable development teams to leverage AI capabilities at scale while maintaining code quality, consistency, and architectural integrity. Our mission: **reduce the gap between AI potential and production-ready code**.
 
-**Source**: `documents/business/business-prd/01-executive-summary.md:10`
+**Source**: `.documents/business/business-prd/01-executive-summary.md:10`
 
 The mission is anchored in three core beliefs:
 
@@ -39,7 +39,7 @@ Agent Assistant delivers three measurable outcomes that directly impact developm
 | **Bug Rate** | 70% reduction | Quality gates catch issues before deployment |
 | **Token Cost** | 85% savings | Efficient skill injection reduces redundant processing |
 
-**Source**: `documents/business/business-prd/01-executive-summary.md:16-23`
+**Source**: `.documents/business/business-prd/01-executive-summary.md:16-23`
 
 ### Why These Metrics Matter
 
@@ -58,7 +58,7 @@ Agent Assistant occupies a unique position in the AI development tooling landsca
 - **More efficient than manual coordination**: Skill injection and phase management reduce overhead
 - **More auditable than black-box agents**: Mailbox and deliverable files create traceable history
 
-**Source**: `documents/business/business-prd/01-executive-summary.md:88-96`
+**Source**: `.documents/business/business-prd/01-executive-summary.md:88-96`
 
 ---
 
@@ -74,7 +74,7 @@ AI coding assistants lack coordination infrastructure. When developers use AI as
 
 **3. Quality Gaps**: AI assistants optimize for generating plausible code, not correct code. Security vulnerabilities, edge cases, and integration issues slip through. Without structured review, these defects reach production.
 
-**Source**: `documents/business/business-prd/02-problem-goals-and-scope.md:10-19`
+**Source**: `.documents/business/business-prd/02-problem-goals-and-scope.md:10-19`
 
 ### Evidence of the Problem
 
@@ -85,13 +85,13 @@ AI coding assistants lack coordination infrastructure. When developers use AI as
 | Security gaps | Security audits find AI-generated vulnerabilities monthly | Monthly |
 | Integration failures | Cross-feature bugs discovered late in development | Per release |
 
-**Source**: `documents/business/business-prd/02-problem-goals-and-scope.md:22-28`
+**Source**: `.documents/business/business-prd/02-problem-goals-and-scope.md:22-28`
 
 ### Impact
 
 Organizations waste an estimated **40% of AI-assisted development time** on coordination overhead: explaining context, fixing inconsistent outputs, and patching quality gaps. The promise of AI acceleration remains unrealized because the infrastructure layer is missing.
 
-**Source**: `documents/business/business-prd/02-problem-goals-and-scope.md:31`
+**Source**: `.documents/business/business-prd/02-problem-goals-and-scope.md:31`
 
 ---
 
@@ -108,7 +108,7 @@ Organizations waste an estimated **40% of AI-assisted development time** on coor
 
 **Measurement**: Time-to-production tracked per feature through workflow completion timestamps.
 
-**Source**: `documents/business/business-prd/02-problem-goals-and-scope.md:37-47`
+**Source**: `.documents/business/business-prd/02-problem-goals-and-scope.md:37-47`
 
 ### Goal 2: Reduce Bug Rate by 70%
 
@@ -121,7 +121,7 @@ Organizations waste an estimated **40% of AI-assisted development time** on coor
 
 **Measurement**: Bug tracking system metrics correlated with workflow usage.
 
-**Source**: `documents/business/business-prd/02-problem-goals-and-scope.md:49-58`
+**Source**: `.documents/business/business-prd/02-problem-goals-and-scope.md:49-58`
 
 ### Goal 3: Reduce Token Costs by 85%
 
@@ -134,7 +134,7 @@ Organizations waste an estimated **40% of AI-assisted development time** on coor
 
 **Measurement**: Token consumption per task compared to baseline (naive prompting).
 
-**Source**: `documents/business/business-prd/02-problem-goals-and-scope.md:60-69`
+**Source**: `.documents/business/business-prd/02-problem-goals-and-scope.md:60-69`
 
 ### Goal 4: Enable Multi-Platform Consistency
 
@@ -147,7 +147,7 @@ Organizations waste an estimated **40% of AI-assisted development time** on coor
 
 **Measurement**: Feature parity checklist across platforms, updated quarterly.
 
-**Source**: `documents/business/business-prd/02-problem-goals-and-scope.md:71-80`
+**Source**: `.documents/business/business-prd/02-problem-goals-and-scope.md:71-80`
 
 ### Goal 5: Establish Quality Standards
 
@@ -160,7 +160,7 @@ Organizations waste an estimated **40% of AI-assisted development time** on coor
 
 **Measurement**: Quality gate pass rates tracked per phase.
 
-**Source**: `documents/business/business-prd/02-problem-goals-and-scope.md:82-91`
+**Source**: `.documents/business/business-prd/02-problem-goals-and-scope.md:82-91`
 
 ### Goal 6: Automate Documentation
 
@@ -173,7 +173,7 @@ Organizations waste an estimated **40% of AI-assisted development time** on coor
 
 **Measurement**: Documentation coverage percentage (documented files / total files).
 
-**Source**: `documents/business/business-prd/02-problem-goals-and-scope.md:93-102`
+**Source**: `.documents/business/business-prd/02-problem-goals-and-scope.md:93-102`
 
 ### Goal 7: Enable Observable Processes
 
@@ -186,7 +186,7 @@ Organizations waste an estimated **40% of AI-assisted development time** on coor
 
 **Measurement**: Audit trail completeness measured by post-incident investigation time.
 
-**Source**: `documents/business/business-prd/02-problem-goals-and-scope.md:104-113`
+**Source**: `.documents/business/business-prd/02-problem-goals-and-scope.md:104-113`
 
 ---
 
@@ -204,7 +204,7 @@ The following are explicitly out of scope for this product:
 | **Real-time collaboration** | Single-user workflow; team sync features future |
 | **Custom model selection** | Fixed model per platform; custom model routing out of scope |
 
-**Source**: `documents/business/business-prd/02-problem-goals-and-scope.md:118-129`
+**Source**: `.documents/business/business-prd/02-problem-goals-and-scope.md:118-129`
 
 ---
 
@@ -219,7 +219,7 @@ The following are explicitly out of scope for this product:
 | S3 | **Engineering Managers** | Decision makers | Velocity, quality metrics, ROI | High |
 | S4 | **Tech Leads** | Architects | Code consistency, team coordination | High |
 
-**Source**: `documents/business/business-prd/03-stakeholders-and-requirements.md:12-18`
+**Source**: `.documents/business/business-prd/03-stakeholders-and-requirements.md:12-18`
 
 ### Secondary Stakeholders
 
@@ -231,7 +231,7 @@ The following are explicitly out of scope for this product:
 | S8 | **Technical Writers** | Documenters | Documentation generation, wiki quality | Medium |
 | S9 | **Product Managers** | Prioritizers | Feature delivery, roadmap input | Medium |
 
-**Source**: `documents/business/business-prd/03-stakeholders-and-requirements.md:20-28`
+**Source**: `.documents/business/business-prd/03-stakeholders-and-requirements.md:20-28`
 
 ### Tertiary Stakeholders
 
@@ -245,7 +245,7 @@ The following are explicitly out of scope for this product:
 | S15 | **Contractors** | Temporary staff | Quick onboarding, consistent patterns | Low |
 | S16 | **Executive Leadership** | Strategists | Business metrics, competitive position | Low |
 
-**Source**: `documents/business/business-prd/03-stakeholders-and-requirements.md:30-39`
+**Source**: `.documents/business/business-prd/03-stakeholders-and-requirements.md:30-39`
 
 ### Stakeholder Communication Plan
 
@@ -256,7 +256,7 @@ The following are explicitly out of scope for this product:
 | Tech Leads | Monthly sync | Monthly | Integration issues, API changes |
 | Open Source Community | GitHub, PRs | As needed | Contributions, reviews |
 
-**Source**: `documents/business/business-prd/03-stakeholders-and-requirements.md:41-48`
+**Source**: `.documents/business/business-prd/03-stakeholders-and-requirements.md:41-48`
 
 ---
 
@@ -273,7 +273,7 @@ The following are explicitly out of scope for this product:
 
 **Priority**: Critical
 
-**Source**: `documents/business/business-prd/03-stakeholders-and-requirements.md:54-64`
+**Source**: `.documents/business/business-prd/03-stakeholders-and-requirements.md:54-64`
 
 ### FR-2: Tiered Execution Engine
 
@@ -286,7 +286,7 @@ The following are explicitly out of scope for this product:
 
 **Priority**: Critical
 
-**Source**: `documents/business/business-prd/03-stakeholders-and-requirements.md:66-75`
+**Source**: `.documents/business/business-prd/03-stakeholders-and-requirements.md:66-75`
 
 ### FR-3: Agent Orchestration
 
@@ -299,7 +299,7 @@ The following are explicitly out of scope for this product:
 
 **Priority**: Critical
 
-**Source**: `documents/business/business-prd/03-stakeholders-and-requirements.md:77-86`
+**Source**: `.documents/business/business-prd/03-stakeholders-and-requirements.md:77-86`
 
 ### FR-4: Golden Triangle Teams
 
@@ -312,7 +312,7 @@ The following are explicitly out of scope for this product:
 
 **Priority**: High
 
-**Source**: `documents/business/business-prd/03-stakeholders-and-requirements.md:88-97`
+**Source**: `.documents/business/business-prd/03-stakeholders-and-requirements.md:88-97`
 
 ### FR-5: HSOL Skill Resolution
 
@@ -325,7 +325,7 @@ The following are explicitly out of scope for this product:
 
 **Priority**: High
 
-**Source**: `documents/business/business-prd/03-stakeholders-and-requirements.md:99-108`
+**Source**: `.documents/business/business-prd/03-stakeholders-and-requirements.md:99-108`
 
 ### FR-6: Phase Execution
 
@@ -338,7 +338,7 @@ The following are explicitly out of scope for this product:
 
 **Priority**: High
 
-**Source**: `documents/business/business-prd/03-stakeholders-and-requirements.md:110-119`
+**Source**: `.documents/business/business-prd/03-stakeholders-and-requirements.md:110-119`
 
 ### FR-7: Multi-Platform Support
 
@@ -351,7 +351,7 @@ The following are explicitly out of scope for this product:
 
 **Priority**: High
 
-**Source**: `documents/business/business-prd/03-stakeholders-and-requirements.md:121-130`
+**Source**: `.documents/business/business-prd/03-stakeholders-and-requirements.md:121-130`
 
 ### FR-8: CLI Installer
 
@@ -364,7 +364,7 @@ The following are explicitly out of scope for this product:
 
 **Priority**: High
 
-**Source**: `documents/business/business-prd/03-stakeholders-and-requirements.md:132-141`
+**Source**: `.documents/business/business-prd/03-stakeholders-and-requirements.md:132-141`
 
 ### FR-9: Documentation Generation
 
@@ -377,7 +377,7 @@ The following are explicitly out of scope for this product:
 
 **Priority**: Medium
 
-**Source**: `documents/business/business-prd/03-stakeholders-and-requirements.md:143-152`
+**Source**: `.documents/business/business-prd/03-stakeholders-and-requirements.md:143-152`
 
 ### FR-10: Deliverable Management
 
@@ -390,7 +390,7 @@ The following are explicitly out of scope for this product:
 
 **Priority**: Medium
 
-**Source**: `documents/business/business-prd/03-stakeholders-and-requirements.md:154-163`
+**Source**: `.documents/business/business-prd/03-stakeholders-and-requirements.md:154-163`
 
 ### FR-11: Mailbox Communication
 
@@ -403,7 +403,7 @@ The following are explicitly out of scope for this product:
 
 **Priority**: Medium
 
-**Source**: `documents/business/business-prd/03-stakeholders-and-requirements.md:165-174`
+**Source**: `.documents/business/business-prd/03-stakeholders-and-requirements.md:165-174`
 
 ### FR-12: Error Handling
 
@@ -416,7 +416,7 @@ The following are explicitly out of scope for this product:
 
 **Priority**: Medium
 
-**Source**: `documents/business/business-prd/03-stakeholders-and-requirements.md:176-185`
+**Source**: `.documents/business/business-prd/03-stakeholders-and-requirements.md:176-185`
 
 ### FR-13: Reporting
 
@@ -429,7 +429,7 @@ The following are explicitly out of scope for this product:
 
 **Priority**: Medium
 
-**Source**: `documents/business/business-prd/03-stakeholders-and-requirements.md:187-196`
+**Source**: `.documents/business/business-prd/03-stakeholders-and-requirements.md:187-196`
 
 ### FR-14: Design Workflow
 
@@ -442,7 +442,7 @@ The following are explicitly out of scope for this product:
 
 **Priority**: Low
 
-**Source**: `documents/business/business-prd/03-stakeholders-and-requirements.md:198-207`
+**Source**: `.documents/business/business-prd/03-stakeholders-and-requirements.md:198-207`
 
 ### FR-15: Brainstorming
 
@@ -455,7 +455,7 @@ The following are explicitly out of scope for this product:
 
 **Priority**: Low
 
-**Source**: `documents/business/business-prd/03-stakeholders-and-requirements.md:209-217`
+**Source**: `.documents/business/business-prd/03-stakeholders-and-requirements.md:209-217`
 
 ---
 
@@ -473,7 +473,7 @@ The following are explicitly out of scope for this product:
 
 **Measurement**: Workflow completion timestamps.
 
-**Source**: `documents/business/business-prd/03-stakeholders-and-requirements.md:223-234`
+**Source**: `.documents/business/business-prd/03-stakeholders-and-requirements.md:223-234`
 
 ### NFR-2: Reliability
 
@@ -481,7 +481,7 @@ The following are explicitly out of scope for this product:
 
 **Measurement**: Success/failure rate tracked per command.
 
-**Source**: `documents/business/business-prd/03-stakeholders-and-requirements.md:236-240`
+**Source**: `.documents/business/business-prd/03-stakeholders-and-requirements.md:236-240`
 
 ### NFR-3: Multi-Platform Consistency
 
@@ -489,7 +489,7 @@ The following are explicitly out of scope for this product:
 
 **Measurement**: Cross-platform test suite pass rate.
 
-**Source**: `documents/business/business-prd/03-stakeholders-and-requirements.md:242-246`
+**Source**: `.documents/business/business-prd/03-stakeholders-and-requirements.md:242-246`
 
 ### NFR-4: Security
 
@@ -497,7 +497,7 @@ The following are explicitly out of scope for this product:
 
 **Measurement**: Security audit findings per quarter.
 
-**Source**: `documents/business/business-prd/03-stakeholders-and-requirements.md:248-252`
+**Source**: `.documents/business/business-prd/03-stakeholders-and-requirements.md:248-252`
 
 ### NFR-5: Maintainability
 
@@ -505,7 +505,7 @@ The following are explicitly out of scope for this product:
 
 **Measurement**: Code coverage reports, lint compliance.
 
-**Source**: `documents/business/business-prd/03-stakeholders-and-requirements.md:254-258`
+**Source**: `.documents/business/business-prd/03-stakeholders-and-requirements.md:254-258`
 
 ### NFR-6: Observability
 
@@ -513,7 +513,7 @@ The following are explicitly out of scope for this product:
 
 **Measurement**: Audit trail completeness check.
 
-**Source**: `documents/business/business-prd/03-stakeholders-and-requirements.md:260-264`
+**Source**: `.documents/business/business-prd/03-stakeholders-and-requirements.md:260-264`
 
 ### NFR-7: Documentation
 
@@ -521,7 +521,7 @@ The following are explicitly out of scope for this product:
 
 **Measurement**: Documentation coverage percentage.
 
-**Source**: `documents/business/business-prd/03-stakeholders-and-requirements.md:266-270`
+**Source**: `.documents/business/business-prd/03-stakeholders-and-requirements.md:266-270`
 
 ### NFR-8: Extensibility
 
@@ -529,7 +529,7 @@ The following are explicitly out of scope for this product:
 
 **Measurement**: Time to add new agent/command/skill.
 
-**Source**: `documents/business/business-prd/03-stakeholders-and-requirements.md:272-276`
+**Source**: `.documents/business/business-prd/03-stakeholders-and-requirements.md:272-276`
 
 ---
 
@@ -549,7 +549,7 @@ The following are explicitly out of scope for this product:
 - Monitor platform changelogs for breaking changes
 - Maintain relationships with platform teams
 
-**Source**: `documents/business/business-prd/04-acceptance-risks-assumptions.md:193-206`
+**Source**: `.documents/business/business-prd/04-acceptance-risks-assumptions.md:193-206`
 
 ### Risk R2: Skill Staleness
 
@@ -565,7 +565,7 @@ The following are explicitly out of scope for this product:
 - Community contribution pathway for skill updates
 - Automated testing of skill accuracy
 
-**Source**: `documents/business/business-prd/04-acceptance-risks-assumptions.md:207-220`
+**Source**: `.documents/business/business-prd/04-acceptance-risks-assumptions.md:207-220`
 
 ### Risk R3: Context Isolation Failure
 
@@ -580,7 +580,7 @@ The following are explicitly out of scope for this product:
 - Session state monitoring
 - Isolated execution environment validation
 
-**Source**: `documents/business/business-prd/04-acceptance-risks-assumptions.md:221-233`
+**Source**: `.documents/business/business-prd/04-acceptance-risks-assumptions.md:221-233`
 
 ### Risk R4: Golden Triangle Deadlock
 
@@ -595,7 +595,7 @@ The following are explicitly out of scope for this product:
 - Clear escalation criteria defined
 - Consensus stamp format documented
 
-**Source**: `documents/business/business-prd/04-acceptance-risks-assumptions.md:234-246`
+**Source**: `.documents/business/business-prd/04-acceptance-risks-assumptions.md:234-246`
 
 ### Risk R5: Documentation Drift
 
@@ -610,7 +610,7 @@ The following are explicitly out of scope for this product:
 - CI integration for regeneration triggers
 - Clear ownership for documentation updates
 
-**Source**: `documents/business/business-prd/04-acceptance-risks-assumptions.md:247-259`
+**Source**: `.documents/business/business-prd/04-acceptance-risks-assumptions.md:247-259`
 
 ### Risk R6: Onboarding Complexity
 
@@ -625,7 +625,7 @@ The following are explicitly out of scope for this product:
 - Natural language command support
 - Interactive onboarding flow
 
-**Source**: `documents/business/business-prd/04-acceptance-risks-assumptions.md:260-272`
+**Source**: `.documents/business/business-prd/04-acceptance-risks-assumptions.md:260-272`
 
 ### Risk R7: Token Cost Unpredictability
 
@@ -640,7 +640,7 @@ The following are explicitly out of scope for this product:
 - Cost estimation before execution (future)
 - Skill optimization to reduce overhead
 
-**Source**: `documents/business/business-prd/04-acceptance-risks-assumptions.md:273-285`
+**Source**: `.documents/business/business-prd/04-acceptance-risks-assumptions.md:273-285`
 
 ### Risk R8: Multi-Platform Inconsistency
 
@@ -655,7 +655,7 @@ The following are explicitly out of scope for this product:
 - Platform-specific documentation
 - Platform capability matrix maintained
 
-**Source**: `documents/business/business-prd/04-acceptance-risks-assumptions.md:286-298`
+**Source**: `.documents/business/business-prd/04-acceptance-risks-assumptions.md:286-298`
 
 ---
 
@@ -667,7 +667,7 @@ The following are explicitly out of scope for this product:
 
 **Impact if False**: TIER 1 becomes unavailable; TIER 2 must handle all delegation.
 
-**Source**: `documents/business/business-prd/04-acceptance-risks-assumptions.md:303-308`
+**Source**: `.documents/business/business-prd/04-acceptance-risks-assumptions.md:303-308`
 
 ### Assumption A2: Token Cost Model
 
@@ -675,7 +675,7 @@ The following are explicitly out of scope for this product:
 
 **Impact if False**: Efficiency metrics (85% token savings) become irrelevant.
 
-**Source**: `documents/business/business-prd/04-acceptance-risks-assumptions.md:309-314`
+**Source**: `.documents/business/business-prd/04-acceptance-risks-assumptions.md:309-314`
 
 ### Assumption A3: Open Extensibility
 
@@ -683,7 +683,7 @@ The following are explicitly out of scope for this product:
 
 **Impact if False**: Framework becomes read-only; custom skill addition restricted.
 
-**Source**: `documents/business/business-prd/04-acceptance-risks-assumptions.md:315-320`
+**Source**: `.documents/business/business-prd/04-acceptance-risks-assumptions.md:315-320`
 
 ### Assumption A4: Developer Adoption
 
@@ -691,7 +691,7 @@ The following are explicitly out of scope for this product:
 
 **Impact if False**: Low adoption undermines business case.
 
-**Source**: `documents/business/business-prd/04-acceptance-risks-assumptions.md:321-326`
+**Source**: `.documents/business/business-prd/04-acceptance-risks-assumptions.md:321-326`
 
 ### Assumption A5: Documentation Value
 
@@ -699,7 +699,7 @@ The following are explicitly out of scope for this product:
 
 **Impact if False**: Generated docs require heavy manual correction; value proposition weakened.
 
-**Source**: `documents/business/business-prd/04-acceptance-risks-assumptions.md:327-332`
+**Source**: `.documents/business/business-prd/04-acceptance-risks-assumptions.md:327-332`
 
 ---
 
@@ -712,7 +712,7 @@ The following are explicitly out of scope for this product:
 **Status**: Undecided
 **Input Needed**: Market research, competitive analysis
 
-**Source**: `documents/business/business-prd/04-acceptance-risks-assumptions.md:337-343`
+**Source**: `.documents/business/business-prd/04-acceptance-risks-assumptions.md:337-343`
 
 ### Question O2: Custom Agent Support Timeline
 
@@ -721,7 +721,7 @@ The following are explicitly out of scope for this product:
 **Status**: Phase 2 candidate
 **Input Needed**: User demand assessment
 
-**Source**: `documents/business/business-prd/04-acceptance-risks-assumptions.md:344-350`
+**Source**: `.documents/business/business-prd/04-acceptance-risks-assumptions.md:344-350`
 
 ### Question O3: Workflow Analytics
 
@@ -730,7 +730,7 @@ The following are explicitly out of scope for this product:
 **Status**: Privacy consideration
 **Input Needed**: Legal review, opt-in mechanism design
 
-**Source**: `documents/business/business-prd/04-acceptance-risks-assumptions.md:351-357`
+**Source**: `.documents/business/business-prd/04-acceptance-risks-assumptions.md:351-357`
 
 ### Question O4: Mobile IDE Timeline
 
@@ -739,7 +739,7 @@ The following are explicitly out of scope for this product:
 **Status**: Undecided
 **Input Needed**: Market demand, engineering capacity
 
-**Source**: `documents/business/business-prd/04-acceptance-risks-assumptions.md:358-364`
+**Source**: `.documents/business/business-prd/04-acceptance-risks-assumptions.md:358-364`
 
 ### Question O5: Community Governance
 
@@ -748,7 +748,7 @@ The following are explicitly out of scope for this product:
 **Status**: Process undefined
 **Input Needed**: Contribution guidelines, quality standards
 
-**Source**: `documents/business/business-prd/04-acceptance-risks-assumptions.md:365-371`
+**Source**: `.documents/business/business-prd/04-acceptance-risks-assumptions.md:365-371`
 
 ---
 
@@ -763,7 +763,7 @@ The following are explicitly out of scope for this product:
 - Test natural language mapping ("implement" → `/cook`)
 - Verify error message for invalid commands
 
-**Source**: `documents/business/business-prd/04-acceptance-risks-assumptions.md:10-18`
+**Source**: `.documents/business/business-prd/04-acceptance-risks-assumptions.md:10-18`
 
 ### AC-2: TIER 1 Execution
 
@@ -774,7 +774,7 @@ The following are explicitly out of scope for this product:
 - Check output includes "Sub-agent" designation
 - Confirm isolated context maintained
 
-**Source**: `documents/business/business-prd/04-acceptance-risks-assumptions.md:19-27`
+**Source**: `.documents/business/business-prd/04-acceptance-risks-assumptions.md:19-27`
 
 ### AC-3: TIER 2 Fallback
 
@@ -785,7 +785,7 @@ The following are explicitly out of scope for this product:
 - Verify TIER 2 fallback activates
 - Check "EMBODY" designation in output
 
-**Source**: `documents/business/business-prd/04-acceptance-risks-assumptions.md:28-36`
+**Source**: `.documents/business/business-prd/04-acceptance-risks-assumptions.md:28-36`
 
 ### AC-4: Agent Selection
 
@@ -796,7 +796,7 @@ The following are explicitly out of scope for this product:
 - Test frontend task → `frontend-engineer`
 - Test database task → `database-architect`
 
-**Source**: `documents/business/business-prd/04-acceptance-risks-assumptions.md:37-45`
+**Source**: `.documents/business/business-prd/04-acceptance-risks-assumptions.md:37-45`
 
 ### AC-5: Golden Triangle Consensus
 
@@ -807,7 +807,7 @@ The following are explicitly out of scope for this product:
 - Verify "✅ CONSENSUS: TechLead ✓ | Executor ✓ | Reviewer ✓" present
 - Confirm debate log in Mailbox file
 
-**Source**: `documents/business/business-prd/04-acceptance-risks-assumptions.md:46-54`
+**Source**: `.documents/business/business-prd/04-acceptance-risks-assumptions.md:46-54`
 
 ### AC-6: HSOL Skill Resolution
 
@@ -818,7 +818,7 @@ The following are explicitly out of scope for this product:
 - Verify skill files loaded before execution
 - Check fitness calculation logged
 
-**Source**: `documents/business/business-prd/04-acceptance-risks-assumptions.md:55-63`
+**Source**: `.documents/business/business-prd/04-acceptance-risks-assumptions.md:55-63`
 
 ### AC-7: Phase Sequencing
 
@@ -829,7 +829,7 @@ The following are explicitly out of scope for this product:
 - Verify Phase 1 complete before Phase 2 starts
 - Confirm exit criteria checked per phase
 
-**Source**: `documents/business/business-prd/04-acceptance-risks-assumptions.md:64-72`
+**Source**: `.documents/business/business-prd/04-acceptance-risks-assumptions.md:64-72`
 
 ### AC-8: Context Isolation
 
@@ -839,7 +839,7 @@ The following are explicitly out of scope for this product:
 - Run parallel TIER 1 tasks, verify no cross-contamination
 - Run TIER 2 task, verify parent context accessible
 
-**Source**: `documents/business/business-prd/04-acceptance-risks-assumptions.md:73-80`
+**Source**: `.documents/business/business-prd/04-acceptance-risks-assumptions.md:73-80`
 
 ### AC-9: Deliverable Size Management
 
@@ -850,7 +850,7 @@ The following are explicitly out of scope for this product:
 - Verify folder created with 00-index.md
 - Confirm section files created sequentially
 
-**Source**: `documents/business/business-prd/04-acceptance-risks-assumptions.md:81-89`
+**Source**: `.documents/business/business-prd/04-acceptance-risks-assumptions.md:81-89`
 
 ### AC-10: Multi-Platform Installation
 
@@ -861,7 +861,7 @@ The following are explicitly out of scope for this product:
 - Verify platform paths created correctly
 - Test uninstall removes all traces
 
-**Source**: `documents/business/business-prd/04-acceptance-risks-assumptions.md:90-98`
+**Source**: `.documents/business/business-prd/04-acceptance-risks-assumptions.md:90-98`
 
 ### AC-11: Mailbox Append-Only
 
@@ -872,7 +872,7 @@ The following are explicitly out of scope for this product:
 - Attempt to edit prior exchange
 - Verify edit rejected or ignored
 
-**Source**: `documents/business/business-prd/04-acceptance-risks-assumptions.md:99-107`
+**Source**: `.documents/business/business-prd/04-acceptance-risks-assumptions.md:99-107`
 
 ### AC-12: Documentation Generation
 
@@ -883,7 +883,7 @@ The following are explicitly out of scope for this product:
 - Verify index created with links
 - Confirm entities extracted correctly
 
-**Source**: `documents/business/business-prd/04-acceptance-risks-assumptions.md:108-116`
+**Source**: `.documents/business/business-prd/04-acceptance-risks-assumptions.md:108-116`
 
 ### AC-13: Error Recovery
 
@@ -894,7 +894,7 @@ The following are explicitly out of scope for this product:
 - Verify recovery path executes
 - Confirm user notified with options
 
-**Source**: `documents/business/business-prd/04-acceptance-risks-assumptions.md:117-125`
+**Source**: `.documents/business/business-prd/04-acceptance-risks-assumptions.md:117-125`
 
 ### AC-14: Reporting
 
@@ -905,7 +905,7 @@ The following are explicitly out of scope for this product:
 - Verify metrics included
 - Check format matches template
 
-**Source**: `documents/business/business-prd/04-acceptance-risks-assumptions.md:126-134`
+**Source**: `.documents/business/business-prd/04-acceptance-risks-assumptions.md:126-134`
 
 ### AC-15: Design Workflow
 
@@ -916,7 +916,7 @@ The following are explicitly out of scope for this product:
 - Verify specification file created
 - Confirm implementation references spec
 
-**Source**: `documents/business/business-prd/04-acceptance-risks-assumptions.md:135-143`
+**Source**: `.documents/business/business-prd/04-acceptance-risks-assumptions.md:135-143`
 
 ### AC-16: Brainstorming
 
@@ -927,7 +927,7 @@ The following are explicitly out of scope for this product:
 - Verify 2+ alternatives
 - Check trade-offs documented
 
-**Source**: `documents/business/business-prd/04-acceptance-risks-assumptions.md:144-152`
+**Source**: `.documents/business/business-prd/04-acceptance-risks-assumptions.md:144-152`
 
 ### AC-17: Security Standards
 
@@ -938,7 +938,7 @@ The following are explicitly out of scope for this product:
 - Verify security findings reported
 - Confirm mitigation suggestions provided
 
-**Source**: `documents/business/business-prd/04-acceptance-risks-assumptions.md:153-161`
+**Source**: `.documents/business/business-prd/04-acceptance-risks-assumptions.md:153-161`
 
 ### AC-18: Performance Optimization
 
@@ -949,7 +949,7 @@ The following are explicitly out of scope for this product:
 - Verify performance issues flagged
 - Confirm optimization hints provided
 
-**Source**: `documents/business/business-prd/04-acceptance-risks-assumptions.md:162-170`
+**Source**: `.documents/business/business-prd/04-acceptance-risks-assumptions.md:162-170`
 
 ### AC-19: Constraint Propagation
 
@@ -960,7 +960,7 @@ The following are explicitly out of scope for this product:
 - Verify planner referenced scouter output
 - Confirm implementer referenced planner decisions
 
-**Source**: `documents/business/business-prd/04-acceptance-risks-assumptions.md:171-179`
+**Source**: `.documents/business/business-prd/04-acceptance-risks-assumptions.md:171-179`
 
 ### AC-20: Token Efficiency
 
@@ -971,7 +971,7 @@ The following are explicitly out of scope for this product:
 - Measure optimized usage (with skills)
 - Verify 85% reduction target met
 
-**Source**: `documents/business/business-prd/04-acceptance-risks-assumptions.md:180-188`
+**Source**: `.documents/business/business-prd/04-acceptance-risks-assumptions.md:180-188`
 
 ---
 
@@ -1003,7 +1003,7 @@ After six months of adoption:
 > "Agent Assistant didn't just improve our code quality — it changed how we think about AI collaboration. The structured workflows forced us to articulate requirements clearly, which improved human communication too."
 > — Engineering Lead, mid-sized SaaS company
 
-**Source**: `documents/business/business-prd/01-executive-summary.md:56-85`
+**Source**: `.documents/business/business-prd/01-executive-summary.md:56-85`
 
 ---
 
@@ -1020,7 +1020,7 @@ After six months of adoption:
 | **18 Golden Triangle Teams** | Adversarial collaboration for quality-critical work |
 | **7 Platforms** | Cursor, Claude Code, GitHub Copilot, Antigravity/Gemini, Codex, Kiro, Qwen |
 
-**Source**: `documents/business/business-prd/02-problem-goals-and-scope.md:134-144`
+**Source**: `.documents/business/business-prd/02-problem-goals-and-scope.md:134-144`
 
 ### Technical Scope
 
@@ -1031,7 +1031,7 @@ After six months of adoption:
 | **CLI Installer** | One-time global setup, cross-platform (Unix, Windows, macOS) |
 | **Documentation Site** | React 19 web app with Tailwind CSS 4, ReactFlow 12, Vite 6 |
 
-**Source**: `documents/business/business-prd/02-problem-goals-and-scope.md:146-153`
+**Source**: `.documents/business/business-prd/02-problem-goals-and-scope.md:146-153`
 
 ---
 
@@ -1049,7 +1049,7 @@ After six months of adoption:
 | **Code execution sandbox** | We orchestrate; execution happens in user's environment |
 | **Performance profiling** | Observability tooling not included |
 
-**Source**: `documents/business/business-prd/02-problem-goals-and-scope.md:158-169`
+**Source**: `.documents/business/business-prd/02-problem-goals-and-scope.md:158-169`
 
 ### Phase 2 Candidates
 
@@ -1060,7 +1060,7 @@ After six months of adoption:
 | Workflow analytics | Phase 2 |
 | Mobile platform support | Phase 3 |
 
-**Source**: `documents/business/business-prd/02-problem-goals-and-scope.md:171-180`
+**Source**: `.documents/business/business-prd/02-problem-goals-and-scope.md:171-180`
 
 ---
 

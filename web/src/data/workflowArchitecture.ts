@@ -247,7 +247,7 @@ export const workflowNodes: Node<WorkflowNodeData>[] = [
       description: 'All phases complete → output',
       type: 'output',
       icon: '📦',
-      items: ['Code changes', './reports/{topic}/', './documents/', 'Tests & docs'],
+      items: ['Code changes', './.reports/{topic}/', './.documents/', 'Tests & docs'],
     },
   },
 ]

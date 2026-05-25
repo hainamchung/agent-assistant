@@ -20,7 +20,7 @@ updated: 2026-05-20
 
 This catalogue documents all 20 features of the Agent Assistant framework, organized into 5 categories. Each feature is specified with its ID, name, priority, dependencies, description, and acceptance criteria. The features form a dependency graph that determines the 7-layer release sequencing.
 
-**Source**: `documents/business/business-features/01-feature-inventory.md:1-312`
+**Source**: `.documents/business/business-features/01-feature-inventory.md:1-312`
 
 ---
 
@@ -36,7 +36,7 @@ The Agent Assistant framework comprises 20 features distributed across 5 categor
 | Platform Integration | 4 | F13-F16 |
 | Developer Experience | 4 | F17-F20 |
 
-**Source**: `documents/business/business-features/01-feature-inventory.md:14-220`
+**Source**: `.documents/business/business-features/01-feature-inventory.md:14-220`
 
 ---
 
@@ -56,7 +56,7 @@ Core orchestration features provide the fundamental mechanisms for command proce
 
 These features are implemented in `rules/CORE.md` and `rules/PHASES.md`.
 
-**Source**: `documents/business/business-features/01-feature-inventory.md:14-75`
+**Source**: `.documents/business/business-features/01-feature-inventory.md:14-75`
 
 ### Agent Management
 
@@ -71,7 +71,7 @@ Agent management features enable the selection, coordination, and isolation of s
 
 These features are implemented in `rules/AGENTS.md` and `rules/TEAMS.md`.
 
-**Source**: `documents/business/business-features/01-feature-inventory.md:78-127`
+**Source**: `.documents/business/business-features/01-feature-inventory.md:78-127`
 
 ### Skill Discovery
 
@@ -85,7 +85,7 @@ Skill discovery features provide the mechanisms for matching and injecting domai
 
 These features are implemented in `rules/SKILLS.md`.
 
-**Source**: `documents/business/business-features/01-feature-inventory.md:130-167`
+**Source**: `.documents/business/business-features/01-feature-inventory.md:130-167`
 
 ### Platform Integration
 
@@ -98,7 +98,7 @@ Platform integration features enable the framework to operate across multiple AI
 | F15 | GitHub Copilot Integration | Must |
 | F16 | Codex/Gemini Integration | Must |
 
-**Source**: `documents/business/business-features/01-feature-inventory.md:170-219`
+**Source**: `.documents/business/business-features/01-feature-inventory.md:170-219`
 
 ### Developer Experience
 
@@ -111,7 +111,7 @@ Developer experience features enhance productivity through automation and toolin
 | F19 | Documentation System | Should |
 | F20 | Reporting | Could |
 
-**Source**: `documents/business/business-features/01-feature-inventory.md:222-271`
+**Source**: `.documents/business/business-features/01-feature-inventory.md:222-271`
 
 ---
 
@@ -133,7 +133,7 @@ Developer experience features enhance productivity through automation and toolin
 
 The Command Routing System provides the entry point for all user interactions. It parses explicit commands (`/command` or `/command:variant`) and natural language inputs ("implement build create" maps to `/cook`), then routes to appropriate workflow files.
 
-**Source**: `documents/business/business-features/01-feature-inventory.md:16-27`
+**Source**: `.documents/business/business-features/01-feature-inventory.md:16-27`
 
 #### Supported Commands
 
@@ -154,7 +154,7 @@ The Command Routing System provides the entry point for all user interactions. I
 | `/deploy` | check, preview, production |
 | `/wiki` | fast, hard, team |
 
-**Source**: `documents/business/business-features/03-feature-specifications.md:30-38`
+**Source**: `.documents/business/business-features/03-feature-specifications.md:30-38`
 
 #### Acceptance Criteria
 
@@ -163,7 +163,7 @@ The Command Routing System provides the entry point for all user interactions. I
 - [ ] Natural language detection maps to equivalent command
 - [ ] Invalid command returns helpful error message
 
-**Source**: `documents/business/business-features/03-feature-specifications.md:40-46`
+**Source**: `.documents/business/business-features/03-feature-specifications.md:40-46`
 
 ---
 
@@ -190,7 +190,7 @@ The Tiered Execution Engine implements a two-tier execution model:
 
 TIER 1 is always attempted first. TIER 2 is only used as fallback.
 
-**Source**: `documents/business/business-features/03-feature-specifications.md:64-92`
+**Source**: `.documents/business/business-features/03-feature-specifications.md:64-92`
 
 #### Acceptance Criteria
 
@@ -199,7 +199,7 @@ TIER 1 is always attempted first. TIER 2 is only used as fallback.
 - [ ] Execution tier logged in output
 - [ ] Anti-lazy fallback detection prevents improper TIER 2 use
 
-**Source**: `documents/business/business-features/03-feature-specifications.md:93-99`
+**Source**: `.documents/business/business-features/03-feature-specifications.md:93-99`
 
 ---
 
@@ -224,7 +224,7 @@ The Phase Execution Protocol ensures structured, verifiable delivery:
 - Verify exit criteria before phase completion
 - Prior deliverables locked as immutable constraints
 
-**Source**: `documents/business/business-features/03-feature-specifications.md:118-145`
+**Source**: `.documents/business/business-features/03-feature-specifications.md:118-145`
 
 #### Deliverable Size Management
 
@@ -233,7 +233,7 @@ The Phase Execution Protocol ensures structured, verifiable delivery:
 | ≤150 lines | Single file |
 | >150 lines OR ≥4 sections | Chunked folder |
 
-**Source**: `documents/business/business-features/03-feature-specifications.md:140-143`
+**Source**: `.documents/business/business-features/03-feature-specifications.md:140-143`
 
 #### Acceptance Criteria
 
@@ -242,7 +242,7 @@ The Phase Execution Protocol ensures structured, verifiable delivery:
 - [ ] Prior deliverables treated as immutable
 - [ ] Deliverable size management enforced
 
-**Source**: `documents/business/business-features/03-feature-specifications.md:146-152`
+**Source**: `.documents/business/business-features/03-feature-specifications.md:146-152`
 
 ---
 
@@ -275,7 +275,7 @@ The 10 Orchestration Laws define the behavioral contract for all agent operation
 | L9 | Constraint Propagation | scouter→planner→implementer chain locked |
 | L10 | Deliverable Integrity | Files created by agent define standard |
 
-**Source**: `documents/business/business-features/03-feature-specifications.md:170-212`
+**Source**: `.documents/business/business-features/03-feature-specifications.md:170-212`
 
 #### Acceptance Criteria
 
@@ -283,7 +283,7 @@ The 10 Orchestration Laws define the behavioral contract for all agent operation
 - [ ] Law violations detected and prevented
 - [ ] Self-check prompts remind of laws
 
-**Source**: `documents/business/business-features/03-feature-specifications.md:213-218`
+**Source**: `.documents/business/business-features/03-feature-specifications.md:213-218`
 
 ---
 
@@ -303,7 +303,7 @@ The 10 Orchestration Laws define the behavioral contract for all agent operation
 
 The Error Handling Framework provides graceful degradation when issues occur. Errors are classified by severity (Warning, Error, Critical) and propagated through the chain with recovery paths.
 
-**Source**: `documents/business/business-features/01-feature-inventory.md:64-75`
+**Source**: `.documents/business/business-features/01-feature-inventory.md:64-75`
 
 #### Acceptance Criteria
 
@@ -311,7 +311,7 @@ The Error Handling Framework provides graceful degradation when issues occur. Er
 - [ ] Recovery paths clear
 - [ ] User notifications helpful
 
-**Source**: `documents/business/business-features/02-prioritization-moscow.md:117-123`
+**Source**: `.documents/business/business-features/02-prioritization-moscow.md:117-123`
 
 ---
 
@@ -339,7 +339,7 @@ Agent Profiles define 21 specialist agents organized into 5 categories:
 | Planning | planner, brainstormer, business-analyst | Strategy and task planning |
 | Support | designer, devops-engineer, docs-manager, performance-engineer, researcher, scouter, project-manager, reporter, business-analyst | Specialized capabilities |
 
-**Source**: `documents/business/business-features/03-feature-specifications.md:231-270`
+**Source**: `.documents/business/business-features/03-feature-specifications.md:231-270`
 
 #### Task Mapping
 
@@ -354,7 +354,7 @@ Agent Profiles define 21 specialist agents organized into 5 categories:
 | debugging | debugger |
 | planning | planner |
 
-**Source**: `documents/business/business-features/03-feature-specifications.md:260-269`
+**Source**: `.documents/business/business-features/03-feature-specifications.md:260-269`
 
 #### Acceptance Criteria
 
@@ -362,7 +362,7 @@ Agent Profiles define 21 specialist agents organized into 5 categories:
 - [ ] Task → Agent mapping produces correct agent
 - [ ] Category purposes enforced
 
-**Source**: `documents/business/business-features/03-feature-specifications.md:271-276`
+**Source**: `.documents/business/business-features/03-feature-specifications.md:271-276`
 
 ---
 
@@ -388,7 +388,7 @@ The [[Golden Triangle]] implements adversarial 3-role team coordination:
 | executor | Build, implement, defend | Owns implementation decisions |
 | reviewer | Challenge, validate, quality gate | Can FAIL submissions |
 
-**Source**: `documents/business/business-features/03-feature-specifications.md:286-318`
+**Source**: `.documents/business/business-features/03-feature-specifications.md:286-318`
 
 #### Team Configuration
 
@@ -396,7 +396,7 @@ The [[Golden Triangle]] implements adversarial 3-role team coordination:
 - **Debate rounds**: 3 (max)
 - **Consensus stamp**: "✅ CONSENSUS: TechLead ✓ | Executor ✓ | Reviewer ✓"
 
-**Source**: `documents/business/business-features/03-feature-specifications.md:308-317`
+**Source**: `.documents/business/business-features/03-feature-specifications.md:308-317`
 
 #### Acceptance Criteria
 
@@ -405,7 +405,7 @@ The [[Golden Triangle]] implements adversarial 3-role team coordination:
 - [ ] Consensus stamp present before output release
 - [ ] All 18 team configurations available
 
-**Source**: `documents/business/business-features/03-feature-specifications.md:319-325`
+**Source**: `.documents/business/business-features/03-feature-specifications.md:319-325`
 
 ---
 
@@ -425,14 +425,14 @@ The [[Golden Triangle]] implements adversarial 3-role team coordination:
 
 Context Isolation ensures clean handoffs between agents. TIER 1 agents receive isolated (fresh) context, while TIER 2 agents share context with the parent. This prevents cross-contamination between agents.
 
-**Source**: `documents/business/business-features/01-feature-inventory.md:104-115`
+**Source**: `.documents/business/business-features/01-feature-inventory.md:104-115`
 
 #### Acceptance Criteria
 
 - [ ] TIER 1 isolated; TIER 2 shares appropriately
 - [ ] Cross-contamination prevented
 
-**Source**: `documents/business/business-features/02-prioritization-moscow.md:73-80`
+**Source**: `.documents/business/business-features/02-prioritization-moscow.md:73-80`
 
 ---
 
@@ -452,13 +452,13 @@ Context Isolation ensures clean handoffs between agents. TIER 1 agents receive i
 
 Recursive Delegation enforces that meta agents (tech-lead, planner) coordinate and delegate to specialists rather than implementing directly. This ensures expertise matching and prevents meta agents from bypassing quality gates.
 
-**Source**: `documents/business/business-features/01-feature-inventory.md:116-127`
+**Source**: `.documents/business/business-features/01-feature-inventory.md:116-127`
 
 #### Acceptance Criteria
 
 - [ ] Meta agents delegate to specialists
 
-**Source**: `documents/business/business-features/02-prioritization-moscow.md:125-132`
+**Source**: `.documents/business/business-features/02-prioritization-moscow.md:125-132`
 
 ---
 
@@ -487,7 +487,7 @@ The [[HSOL Skill Injection]] system provides the Hybrid Skill Orchestration Laye
 | 5 | Calculate fitness scores |
 | 6 | Return sorted skill set |
 
-**Source**: `documents/business/business-features/03-feature-specifications.md:345-377`
+**Source**: `.documents/business/business-features/03-feature-specifications.md:345-377`
 
 #### Fitness Calculation
 
@@ -507,7 +507,7 @@ fitness = 0.35 × SEMANTIC_MATCH
 | 0.75-0.8 | Execute + flag for discovery |
 | <0.75 | BLOCKING discovery |
 
-**Source**: `documents/business/business-features/03-feature-specifications.md:372-376`
+**Source**: `.documents/business/business-features/03-feature-specifications.md:372-376`
 
 #### Acceptance Criteria
 
@@ -516,7 +516,7 @@ fitness = 0.35 × SEMANTIC_MATCH
 - [ ] Discovery triggered at correct threshold
 - [ ] 1400+ skills available in matrix
 
-**Source**: `documents/business/business-features/03-feature-specifications.md:378-384`
+**Source**: `.documents/business/business-features/03-feature-specifications.md:378-384`
 
 ---
 
@@ -536,13 +536,13 @@ fitness = 0.35 × SEMANTIC_MATCH
 
 Dynamic Skill Discovery enables on-demand skill loading when the matrix fitness falls below 0.75. This extends the skill set beyond the 1400+ pre-loaded skills.
 
-**Source**: `documents/business/business-features/01-feature-inventory.md:144-155`
+**Source**: `.documents/business/business-features/01-feature-inventory.md:144-155`
 
 #### Acceptance Criteria
 
 - [ ] Discovery triggers when fitness < 0.75
 
-**Source**: `documents/business/business-features/02-prioritization-moscow.md:133-140`
+**Source**: `.documents/business/business-features/02-prioritization-moscow.md:133-140`
 
 ---
 
@@ -562,13 +562,13 @@ Dynamic Skill Discovery enables on-demand skill loading when the matrix fitness 
 
 Skill Injection automatically loads relevant skills before agent execution. The skills are resolved via the HSOL Matrix Resolution algorithm and injected into the agent context.
 
-**Source**: `documents/business/business-features/01-feature-inventory.md:156-167`
+**Source**: `.documents/business/business-features/01-feature-inventory.md:156-167`
 
 #### Acceptance Criteria
 
 - [ ] Skills loaded before agent execution
 
-**Source**: `documents/business/business-features/02-prioritization-moscow.md:89-96`
+**Source**: `.documents/business/business-features/02-prioritization-moscow.md:89-96`
 
 ---
 
@@ -588,7 +588,7 @@ Skill Injection automatically loads relevant skills before agent execution. The 
 
 Cursor Integration provides the Agent Assistant capabilities within the Cursor IDE, utilizing the platform-specific path `~/.cursor/skills/agent-assistant/`.
 
-**Source**: `documents/business/business-features/01-feature-inventory.md:172-183`
+**Source**: `.documents/business/business-features/01-feature-inventory.md:172-183`
 
 ---
 
@@ -608,7 +608,7 @@ Cursor Integration provides the Agent Assistant capabilities within the Cursor I
 
 Claude Code Integration provides the Agent Assistant capabilities within the Claude Code CLI, utilizing the platform-specific path `~/.claude/skills/agent-assistant/`.
 
-**Source**: `documents/business/business-features/01-feature-inventory.md:184-195`
+**Source**: `.documents/business/business-features/01-feature-inventory.md:184-195`
 
 ---
 
@@ -628,7 +628,7 @@ Claude Code Integration provides the Agent Assistant capabilities within the Cla
 
 GitHub Copilot Integration provides the Agent Assistant capabilities within GitHub Copilot, utilizing the platform-specific path `~/.copilot/skills/agent-assistant/`.
 
-**Source**: `documents/business/business-features/01-feature-inventory.md:196-207`
+**Source**: `.documents/business/business-features/01-feature-inventory.md:196-207`
 
 ---
 
@@ -648,7 +648,7 @@ GitHub Copilot Integration provides the Agent Assistant capabilities within GitH
 
 Codex and Antigravity/Gemini Integration provides the Agent Assistant capabilities across these platforms, utilizing platform-specific paths.
 
-**Source**: `documents/business/business-features/01-feature-inventory.md:208-219`
+**Source**: `.documents/business/business-features/01-feature-inventory.md:208-219`
 
 ---
 
@@ -668,7 +668,7 @@ Codex and Antigravity/Gemini Integration provides the Agent Assistant capabiliti
 
 The [[CLI Installer]] provides a one-command installation that sets up the Agent Assistant globally across all supported platforms. It handles cross-platform installation and configuration management.
 
-**Source**: `documents/business/business-features/01-feature-inventory.md:224-235`
+**Source**: `.documents/business/business-features/01-feature-inventory.md:224-235`
 
 #### Acceptance Criteria
 
@@ -676,7 +676,7 @@ The [[CLI Installer]] provides a one-command installation that sets up the Agent
 - [ ] Uninstall clean
 - [ ] Cross-platform support
 
-**Source**: `documents/business/business-features/02-prioritization-moscow.md:105-112`
+**Source**: `.documents/business/business-features/02-prioritization-moscow.md:105-112`
 
 ---
 
@@ -696,13 +696,13 @@ The [[CLI Installer]] provides a one-command installation that sets up the Agent
 
 Wiki Generation automatically produces navigable project documentation through code analysis, utilizing the wiki-architect and wiki-extractor agents.
 
-**Source**: `documents/business/business-features/01-feature-inventory.md:236-247`
+**Source**: `.documents/business/business-features/01-feature-inventory.md:236-247`
 
 #### Acceptance Criteria
 
 - [ ] Code analysis produces navigable documentation
 
-**Source**: `documents/business/business-features/02-prioritization-moscow.md:141-148`
+**Source**: `.documents/business/business-features/02-prioritization-moscow.md:141-148`
 
 ---
 
@@ -715,20 +715,20 @@ Wiki Generation automatically produces navigable project documentation through c
 | **Priority** | Should |
 | **Dependencies** | F6 (Agent Profiles) |
 | **User Value** | Structured documentation following knowledge-architecture pattern. |
-| **Technical Surface** | `documents/` — knowledge folders with 00-index.md pattern |
-| **Evidence** | `documents/knowledge-*/00-index.md` |
+| **Technical Surface** | `.documents/` — knowledge folders with 00-index.md pattern |
+| **Evidence** | `.documents/knowledge-*/00-index.md` |
 
 #### Description
 
 The Documentation System provides structured documentation following the knowledge-architecture pattern, with knowledge folders following the 00-index.md convention.
 
-**Source**: `documents/business/business-features/01-feature-inventory.md:248-259`
+**Source**: `.documents/business/business-features/01-feature-inventory.md:248-259`
 
 #### Acceptance Criteria
 
 - [ ] Knowledge folders follow 00-index.md pattern
 
-**Source**: `documents/business/business-features/02-prioritization-moscow.md:149-156`
+**Source**: `.documents/business/business-features/02-prioritization-moscow.md:149-156`
 
 ---
 
@@ -748,13 +748,13 @@ The Documentation System provides structured documentation following the knowled
 
 Reporting provides on-demand status reports and project summaries, utilizing phase outputs and template-based generation.
 
-**Source**: `documents/business/business-features/01-feature-inventory.md:260-271`
+**Source**: `.documents/business/business-features/01-feature-inventory.md:260-271`
 
 #### Acceptance Criteria
 
 - [ ] Reports generated with metrics
 
-**Source**: `documents/business/business-features/02-prioritization-moscow.md:157-164`
+**Source**: `.documents/business/business-features/02-prioritization-moscow.md:157-164`
 
 ---
 
@@ -769,7 +769,7 @@ The MoSCoW methodology categorizes features by criticality:
 | **Could** | 6 | F5, F9, F11, F18, F19, F20 |
 | **Won't** | 3 | F21, F22, F23 |
 
-**Source**: `documents/business/business-features/02-prioritization-moscow.md:195-203`
+**Source**: `.documents/business/business-features/02-prioritization-moscow.md:195-203`
 
 ### Must Have (5 Features)
 
@@ -783,7 +783,7 @@ Critical for MVP launch. Blockers without workarounds.
 | F4 | Orchestration Laws | Unpredictable behavior |
 | F6 | Agent Profiles | No task-to-agent mapping |
 
-**Source**: `documents/business/business-features/02-prioritization-moscow.md:19-60`
+**Source**: `.documents/business/business-features/02-prioritization-moscow.md:19-60`
 
 ### Should Have (9 Features)
 
@@ -801,7 +801,7 @@ Important for initial release. Significant impact if missing.
 | F16 | Codex/Gemini Integration | Single-platform product |
 | F17 | CLI Installer | Manual setup required |
 
-**Source**: `documents/business/business-features/02-prioritization-moscow.md:63-112`
+**Source**: `.documents/business/business-features/02-prioritization-moscow.md:63-112`
 
 ### Could Have (6 Features)
 
@@ -816,7 +816,7 @@ Desirable but not critical. Enhances user experience.
 | F19 | Documentation System | Unstructured documentation |
 | F20 | Reporting | Manual status tracking |
 
-**Source**: `documents/business/business-features/02-prioritization-moscow.md:115-164`
+**Source**: `.documents/business/business-features/02-prioritization-moscow.md:115-164`
 
 ### Won't Have (This Release) (3 Features)
 
@@ -828,7 +828,7 @@ Explicitly deferred. May revisit in future phases.
 | F22 | Custom Agent Templates | Phase 2 | Template system design needed |
 | F23 | Mobile IDE Integration | Phase 3 | iOS/Android SDK differences |
 
-**Source**: `documents/business/business-features/02-prioritization-moscow.md:167-192`
+**Source**: `.documents/business/business-features/02-prioritization-moscow.md:167-192`
 
 ---
 
@@ -866,7 +866,7 @@ F16 (Codex/Gemini) ←── F1, F2
 F17 (CLI Installer) ←── F13, F14, F15, F16
 ```
 
-**Source**: `documents/business/business-features/04-dependencies-and-release-sequencing.md:8-79`
+**Source**: `.documents/business/business-features/04-dependencies-and-release-sequencing.md:8-79`
 
 ### Hard Constraints
 
@@ -878,7 +878,7 @@ F17 (CLI Installer) ←── F13, F14, F15, F16
 | F13-F16 before F17 | Installer needs platform paths |
 | F1+F2 before F13-F16 | Platform integration needs routing and execution |
 
-**Source**: `documents/business/business-features/04-dependencies-and-release-sequencing.md:188-199`
+**Source**: `.documents/business/business-features/04-dependencies-and-release-sequencing.md:188-199`
 
 ### Soft Constraints
 
@@ -888,7 +888,7 @@ F17 (CLI Installer) ←── F13, F14, F15, F16
 | F10 before F11 | Dynamic discovery extends matrix |
 | F3 before F20 | Reporting uses phase outputs |
 
-**Source**: `documents/business/business-features/04-dependencies-and-release-sequencing.md:200-207`
+**Source**: `.documents/business/business-features/04-dependencies-and-release-sequencing.md:200-207`
 
 ---
 
@@ -896,7 +896,7 @@ F17 (CLI Installer) ←── F13, F14, F15, F16
 
 The 7-layer release sequence ensures features are released in dependency order:
 
-**Source**: `documents/business/business-features/04-dependencies-and-release-sequencing.md:8-106`
+**Source**: `.documents/business/business-features/04-dependencies-and-release-sequencing.md:8-106`
 
 ### Layer 1: Foundation (No Dependencies)
 
@@ -986,7 +986,7 @@ All features operate under the 10 Orchestration Laws defined in F4:
 | L9 | Constraint Propagation | scouter→planner→implementer chain locked |
 | L10 | Deliverable Integrity | Files created by agent define standard |
 
-**Source**: `documents/business/business-features/03-feature-specifications.md:170-212`
+**Source**: `.documents/business/business-features/03-feature-specifications.md:170-212`
 
 ---
 
@@ -1000,7 +1000,7 @@ All features operate under the 10 Orchestration Laws defined in F4:
 - [ ] F4: All 10 orchestration laws enforced
 - [ ] F6: 21 agents with correct selection
 
-**Source**: `documents/business/business-features/02-prioritization-moscow.md:206-215`
+**Source**: `.documents/business/business-features/02-prioritization-moscow.md:206-215`
 
 ### Enhanced Release (Should Have Added)
 
@@ -1011,7 +1011,7 @@ All features operate under the 10 Orchestration Laws defined in F4:
 - [ ] F13-F16: All 7 platforms
 - [ ] F17: CLI installer
 
-**Source**: `documents/business/business-features/02-prioritization-moscow.md:216-224`
+**Source**: `.documents/business/business-features/02-prioritization-moscow.md:216-224`
 
 ### Full Release (Could Have Added)
 
@@ -1022,7 +1022,7 @@ All features operate under the 10 Orchestration Laws defined in F4:
 - [ ] F19: Documentation system
 - [ ] F20: Reporting
 
-**Source**: `documents/business/business-features/02-prioritization-moscow.md:225-233`
+**Source**: `.documents/business/business-features/02-prioritization-moscow.md:225-233`
 
 ---
 
@@ -1040,4 +1040,4 @@ All features operate under the 10 Orchestration Laws defined in F4:
 | `cli/install.js` | F17 |
 | `README.md` | F13-F17 |
 
-**Source**: `documents/business/business-features/01-feature-inventory.md:301-312`
+**Source**: `.documents/business/business-features/01-feature-inventory.md:301-312`

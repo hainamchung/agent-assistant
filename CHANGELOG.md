@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [4.1.1] - 2026-05-25
+
+### Update
+
+- **Change router** Change router folder `reports` to `.reports` and `documents` to `.documents`
+
 ## [4.1.0] - 2026-05-21
 
 ### Added
@@ -41,7 +48,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Web UI Updates**: SEO config improvements, navigation updates, platform data refresh, skills data update, metrics refresh, workflow architecture updates
 - **CLI Enhancements** (`cli/install.js`): Path resolution improvements, platform-specific install paths for Kiro and Qwen
 - **Rule Updates**: `rules/CORE.md` and `rules/AGENTS.md` updated with wiki team definitions and platform paths
-- **Knowledge Documentation** — Comprehensive updates across 20+ documents in `documents/` covering knowledge architecture, domain, overview, source-base, and standards
+- **Knowledge Documentation** — Comprehensive updates across 20+ documents in `.documents/` covering knowledge architecture, domain, overview, source-base, and standards
 - **Business Documentation** — Full refresh of business features, glossary, PRD, and workflows documents
 
 ## [4.0.0] - 2026-05-14
@@ -111,7 +118,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - **17 Domain Teams**: backend, frontend, fullstack, database, research, planning, qa, design, debug, devops, security, game, mobile, performance, docs, project, report
   - **51 Team Agent Files**: Each team has 3 role-specific agents (`techlead.md`, `executor.md`, `reviewer.md`) under `agents/teams/{domain}-team/`
   - **Golden Triangle Protocol**: Structured debate mechanism — Tech Lead decomposes, Executor builds & defends, Reviewer challenges & validates
-  - **Mailbox Communication**: Append-only `./reports/{topic}/MAILBOX-{date}.md` for traceable inter-agent communication (TASK_ASSIGNMENT, SUBMISSION, REVIEW, DEFENSE, ARBITRATION, DECISION)
+  - **Mailbox Communication**: Append-only `./.reports/{topic}/MAILBOX-{date}.md` for traceable inter-agent communication (TASK_ASSIGNMENT, SUBMISSION, REVIEW, DEFENSE, ARBITRATION, DECISION)
   - **Consensus Protocol**: Three resolution paths — Clean Pass, Resolved Pass (after defense/fix), Arbitrated Pass (Tech Lead binding decision after max 3 rounds)
   - **`:team` Command Variants**: 9 team-enabled commands — `/cook:team`, `/fix:team`, `/debug:team`, `/test:team`, `/review:team`, `/plan:team`, `/design:team`, `/report:team`, `/deploy:team`
   - **Rules**: `rules/TEAMS.md` (530 lines) — complete Golden Triangle protocol, team roster, debate mechanism, consensus stamp format
@@ -163,10 +170,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - **5-step RELOAD_ESSENTIAL_CONTEXT**: User Request → Acceptance Criteria → Plan/Strategy → Remaining Phases → Implementation Rules
   - **Variant-aware execution**: Special handling for debug (OUTPUT_ESSENTIAL_CONTEXT handoff), design (review phase), test (strategy source)
 - **HSOL Documentation**: Added comprehensive Hybrid Skill Orchestration Layer planning documents
-  - **Blueprint**: `documents/SMART-SKILL-ORCHESTRATION-BLUEPRINT.md` — architecture for dynamic skill resolution
-  - **Assessment**: `documents/HSOL-ASSESSMENT.md` — production readiness evaluation
+  - **Blueprint**: `.documents/SMART-SKILL-ORCHESTRATION-BLUEPRINT.md` — architecture for dynamic skill resolution
+  - **Assessment**: `.documents/HSOL-ASSESSMENT.md` — production readiness evaluation
   - **Manifest**: `matrix-skills/_dynamic.yaml` — tracking for dynamically installed community skills
-  - **Knowledge base**: Updated `documents/knowledge-architecture/` folder, `documents/knowledge-source-base/` folder with HSOL references
+  - **Knowledge base**: Updated `.documents/knowledge-architecture/` folder, `.documents/knowledge-source-base/` folder with HSOL references
 
 ### Changed
 

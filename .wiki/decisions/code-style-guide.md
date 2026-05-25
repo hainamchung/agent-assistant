@@ -46,7 +46,7 @@ node --check cli/install.js
 
 Exit code 0 means no syntax errors. Exit code 1 means a syntax error was found.
 
-**Source**: `documents/knowledge-standards/01-code-style.md:17-98`
+**Source**: `.documents/knowledge-standards/01-code-style.md:17-98`
 
 ---
 
@@ -83,7 +83,7 @@ npx tsc --noEmit
 
 All TypeScript errors must be resolved before commit.
 
-**Source**: `documents/knowledge-standards/01-code-style.md:101-180`
+**Source**: `.documents/knowledge-standards/01-code-style.md:101-180`
 
 ---
 
@@ -127,7 +127,7 @@ All Markdown documentation follows these conventions:
 
 - Always include alt text: `![Description of image](path/to/image.png)`
 
-**Source**: `documents/knowledge-standards/01-code-style.md:183-249`
+**Source**: `.documents/knowledge-standards/01-code-style.md:183-249`
 
 ---
 
@@ -157,7 +157,7 @@ updated: 2026-05-20
 | Lists | Inline syntax: `[item1, item2]` |
 | Strings | Unquoted unless contains special characters |
 
-**Source**: `documents/knowledge-standards/01-code-style.md:1-20`
+**Source**: `.documents/knowledge-standards/01-code-style.md:1-20`
 
 ---
 

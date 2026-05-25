@@ -19,7 +19,7 @@ A layered command processing architecture with 5 distinct layers, where each lay
 - **Layers**: 5 (Command, Rule, Agent, Team, Skill)
 - **Pattern Type**: Architecture Pattern
 - **Benefits**: Separation of concerns, scalability, maintainability, testability
-- **Source**: `documents/knowledge-architecture/01-system-overview.md:1-249`, `documents/knowledge-architecture/04-design-patterns.md:19-66`
+- **Source**: `.documents/knowledge-architecture/01-system-overview.md:1-249`, `.documents/knowledge-architecture/04-design-patterns.md:19-66`
 
 ---
 
@@ -347,7 +347,7 @@ Large deliverables use a chunked strategy to prevent network errors and timeout 
 
 **Chunked Structure**:
 ```
-./reports/{topic}/{type}/{feature}/
+./.reports/{topic}/{type}/{feature}/
 ├── 00-index.md              # Overview + table of contents
 ├── 01-{section-name}.md     # Section 1
 ├── 02-{section-name}.md     # Section 2

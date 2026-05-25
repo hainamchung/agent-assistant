@@ -34,13 +34,13 @@ This log tracks the Golden Triangle wiki generation process — from initial cov
 
 | Phase | Deliverable | Status | Consensus |
 |-------|------------|--------|-----------|
-| P0: Pre-flight | `./reports/documents-wiki/MAILBOX-WIKI-2026-05-20.md` | ✅ | N/A |
-| P1: Architecture Scout | `./reports/documents-wiki/scouts/SCOUT-agent-assistant/00-index.md` | ✅ CONSENSUS | wiki-architect ✓ / wiki-extractor ✓ / wiki-reviewer ✓ |
-| P2: Entity Extraction | `./reports/documents-wiki/wikis/WIKI-TEAM-agent-assistant/00-catalog.md` | ✅ CONSENSUS | wiki-architect ✓ / wiki-extractor ✓ / wiki-reviewer ✓ |
-| P3: Taxonomy Design | `./reports/documents-wiki/wikis/WIKI-TEAM-agent-assistant/00-taxonomy.md` | ✅ CONSENSUS | wiki-architect ✓ / wiki-extractor ✓ / wiki-reviewer ✓ |
-| P4: Generation Plan | `./reports/documents-wiki/plans/PLAN-WIKI-agent-assistant/00-index.md` | ✅ CONSENSUS | wiki-architect ✓ / wiki-extractor ✓ / wiki-reviewer ✓ |
+| P0: Pre-flight | `./.reports/documents-wiki/MAILBOX-WIKI-2026-05-20.md` | ✅ | N/A |
+| P1: Architecture Scout | `./.reports/documents-wiki/scouts/SCOUT-agent-assistant/00-index.md` | ✅ CONSENSUS | wiki-architect ✓ / wiki-extractor ✓ / wiki-reviewer ✓ |
+| P2: Entity Extraction | `./.reports/documents-wiki/wikis/WIKI-TEAM-agent-assistant/00-catalog.md` | ✅ CONSENSUS | wiki-architect ✓ / wiki-extractor ✓ / wiki-reviewer ✓ |
+| P3: Taxonomy Design | `./.reports/documents-wiki/wikis/WIKI-TEAM-agent-assistant/00-taxonomy.md` | ✅ CONSENSUS | wiki-architect ✓ / wiki-extractor ✓ / wiki-reviewer ✓ |
+| P4: Generation Plan | `./.reports/documents-wiki/plans/PLAN-WIKI-agent-assistant/00-index.md` | ✅ CONSENSUS | wiki-architect ✓ / wiki-extractor ✓ / wiki-reviewer ✓ |
 | P5: Page Generation | `.wiki/` (45 pages) | ✅ CONSENSUS | wiki-architect ✓ / wiki-extractor ✓ / wiki-reviewer ✓ |
-| P6: Peer Review | `./reports/documents-wiki/wikis/WIKI-TEAM-agent-assistant/review.md` | ✅ CONSENSUS | wiki-reviewer ✓ / wiki-architect ✓ / wiki-extractor ✓ |
+| P6: Peer Review | `./.reports/documents-wiki/wikis/WIKI-TEAM-agent-assistant/review.md` | ✅ CONSENSUS | wiki-reviewer ✓ / wiki-architect ✓ / wiki-extractor ✓ |
 | P7: Refinement | 14 pages fixed | ✅ CONSENSUS | wiki-architect ✓ / wiki-extractor ✓ / wiki-reviewer ✓ |
 
 ---
@@ -162,10 +162,10 @@ This log tracks the Golden Triangle wiki generation process — from initial cov
 
 ## Mailbox Reference
 
-Full debate history: `./reports/documents-wiki/MAILBOX-WIKI-2026-05-20.md`
+Full debate history: `./.reports/documents-wiki/MAILBOX-WIKI-2026-05-20.md`
 
 Review reports:
-- `./reports/documents-wiki/wikis/WIKI-TEAM-agent-assistant/review.md` (business + architecture + entity reviews)
+- `./.reports/documents-wiki/wikis/WIKI-TEAM-agent-assistant/review.md` (business + architecture + entity reviews)
 
 ---
 

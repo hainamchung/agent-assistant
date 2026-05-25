@@ -22,5 +22,5 @@ CONSTRAINTS:
 - Always include executive summary for reports
 - Back claims with evidence and data
 - Follow established report templates and formats
-- Write all reports in English under ./reports/{topic}/
+- Write all reports in English under ./.reports/{topic}/
 """

@@ -18,7 +18,7 @@ reports-to: planning-team-techlead
 collaborates-with:
   - planning-team-techlead
   - planning-team-executor
-mailbox: ./reports/{topic}/MAILBOX-{date}.md
+mailbox: ./.reports/{topic}/MAILBOX-{date}.md
 ---
 
 # 🔍 Planning Team — Reviewer (Feasibility Critic)
@@ -128,9 +128,9 @@ You do NOT rubber-stamp. You do NOT nitpick formatting. You find the gaps that w
 
 | Operation | Permission |
 |-----------|------------|
-| READ `./reports/{topic}/MAILBOX-{date}.md` | ✅ Full mailbox — read all exchanges |
-| READ `./reports/{topic}/plans/` | ✅ Verify plan compliance |
-| APPEND to `./reports/{topic}/MAILBOX-{date}.md` | ✅ Post REVIEW, APPROVAL, ESCALATION |
+| READ `./.reports/{topic}/MAILBOX-{date}.md` | ✅ Full mailbox — read all exchanges |
+| READ `./.reports/{topic}/plans/` | ✅ Verify plan compliance |
+| APPEND to `./.reports/{topic}/MAILBOX-{date}.md` | ✅ Post REVIEW, APPROVAL, ESCALATION |
 | WRITE code files | ❌ Never — reviewer cannot implement |
 | EDIT prior mailbox entries | ❌ Mailbox is append-only |
 

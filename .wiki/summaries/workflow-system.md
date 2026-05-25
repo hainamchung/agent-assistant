@@ -27,11 +27,11 @@ The Workflow System is the execution backbone of Agent Assistant, defining how w
 
 The Workflow System operates on a fundamental principle: every user request follows a structured path through phases, each with explicit entry and exit criteria. This structured approach ensures reproducibility, quality, and accountability throughout the execution lifecycle. The system distinguishes between single-agent workflows (fast, hard) and multi-agent team workflows (team) to match execution complexity to task complexity.
 
-**Source**: `documents/business/business-workflows/02-workflow-catalog.md:8-10`
+**Source**: `.documents/business/business-workflows/02-workflow-catalog.md:8-10`
 
 The system is governed by the [[Tiered Orchestration]] architecture, which enforces strict phase ordering and prevents shortcuts that bypass quality gates. No workflow may skip phases, and no actor may perform actions outside their defined boundaries. This rigidity is intentional — it prevents the kind of ad-hoc execution that leads to quality failures in production systems.
 
-**Source**: `documents/business/business-workflows/03-detailed-workflows.md:4-5`
+**Source**: `.documents/business/business-workflows/03-detailed-workflows.md:4-5`
 
 ---
 
@@ -39,7 +39,7 @@ The system is governed by the [[Tiered Orchestration]] architecture, which enfor
 
 The 20 workflows are organized into 4 categories based on their primary purpose: Build workflows for feature development, Quality workflows for validation, Planning workflows for strategy and research, and Support workflows for infrastructure and team coordination.
 
-**Source**: `documents/business/business-workflows/02-workflow-catalog.md:8-10`
+**Source**: `.documents/business/business-workflows/02-workflow-catalog.md:8-10`
 
 ### Category 1: Build Workflows (W1–W5)
 
@@ -59,7 +59,7 @@ The primary feature development workflow. Invoked with `/cook`, `/cook:fast`, `/
 
 The `/cook` workflow is the most complex in the system, capable of producing fully-tested, reviewed code across multiple domains. The :team variant uses the [[Golden Triangle]] pattern for adversarial quality assurance.
 
-**Source**: `documents/business/business-workflows/02-workflow-catalog.md:16-33`
+**Source**: `.documents/business/business-workflows/02-workflow-catalog.md:16-33`
 
 #### W2: /code — Code Generation
 
@@ -74,7 +74,7 @@ Lightweight code generation for snippets and small implementations.
 | **Complexity** | Low-Medium |
 | **Phases** | 2 |
 
-**Source**: `documents/business/business-workflows/02-workflow-catalog.md:37-47`
+**Source**: `.documents/business/business-workflows/02-workflow-catalog.md:37-47`
 
 #### W3: /fix — Bug Fix
 
@@ -91,7 +91,7 @@ Systematic bug investigation and resolution with root cause analysis.
 
 The /fix workflow follows the debugging framework: investigate root cause, implement fix, verify solution. The debugger agent traces backward through the call stack to identify the actual cause, not just the symptom.
 
-**Source**: `documents/business/business-workflows/02-workflow-catalog.md:51-61`
+**Source**: `.documents/business/business-workflows/02-workflow-catalog.md:51-61`
 
 #### W4: /design — Design Specification
 
@@ -106,7 +106,7 @@ UI/UX and technical design creation from concept requirements.
 | **Complexity** | Medium |
 | **Phases** | 2 (research, design) |
 
-**Source**: `documents/business/business-workflows/02-workflow-catalog.md:65-75`
+**Source**: `.documents/business/business-workflows/02-workflow-catalog.md:65-75`
 
 #### W5: /brainstorm — Solution Exploration
 
@@ -121,7 +121,7 @@ Generate multiple solution alternatives with trade-off analysis.
 | **Complexity** | Low-Medium |
 | **Phases** | 2 (explore, document) |
 
-**Source**: `documents/business/business-workflows/02-workflow-catalog.md:79-89`
+**Source**: `.documents/business/business-workflows/02-workflow-catalog.md:79-89`
 
 ### Category 2: Quality Workflows (W6–W9)
 
@@ -139,7 +139,7 @@ Create comprehensive test suites with coverage targets.
 | **Outcome** | Test suite with unit, integration, or E2E tests |
 | **Variants** | :fast (60% coverage), :hard (80% coverage) |
 
-**Source**: `documents/business/business-workflows/02-workflow-catalog.md:95-105`
+**Source**: `.documents/business/business-workflows/02-workflow-catalog.md:95-105`
 
 #### W7: /review — Code Review
 
@@ -154,7 +154,7 @@ Structured code review against quality and security standards.
 | **Complexity** | Medium |
 | **Phases** | 2 (review, report) |
 
-**Source**: `documents/business/business-workflows/02-workflow-catalog.md:109-119`
+**Source**: `.documents/business/business-workflows/02-workflow-catalog.md:109-119`
 
 #### W8: /debug — Debugging
 
@@ -169,7 +169,7 @@ Systematic root cause investigation for errors and failures.
 | **Complexity** | Medium-High |
 | **Phases** | 3 (investigate, analyze, report) |
 
-**Source**: `documents/business/business-workflows/02-workflow-catalog.md:123-133`
+**Source**: `.documents/business/business-workflows/02-workflow-catalog.md:123-133`
 
 #### W9: Security Review
 
@@ -184,7 +184,7 @@ Automated or manual security vulnerability assessment.
 | **Complexity** | High |
 | **Phases** | 3 (scan, analyze, report) |
 
-**Source**: `documents/business/business-workflows/02-workflow-catalog.md:137-147`
+**Source**: `.documents/business/business-workflows/02-workflow-catalog.md:137-147`
 
 ### Category 3: Planning Workflows (W10–W13)
 
@@ -203,7 +203,7 @@ Create detailed implementation plans with milestones and estimates.
 | **Complexity** | Medium |
 | **Phases** | 3 (scout, plan, review) |
 
-**Source**: `documents/business/business-workflows/02-workflow-catalog.md:153-163`
+**Source**: `.documents/business/business-workflows/02-workflow-catalog.md:153-163`
 
 #### W11: /ask — Question Answering
 
@@ -218,7 +218,7 @@ Direct question answering or research-based responses.
 | **Complexity** | Low |
 | **Phases** | 1-2 |
 
-**Source**: `documents/business/business-workflows/02-workflow-catalog.md:167-177`
+**Source**: `.documents/business/business-workflows/02-workflow-catalog.md:167-177`
 
 #### W12: /report — Reporting
 
@@ -232,7 +232,7 @@ Generate status reports and project summaries.
 | **Outcome** | Status report or project summary |
 | **Variants** | :fast (1 agent), :hard (1 agent), :team (3 agents) |
 
-**Source**: `documents/business/business-workflows/02-workflow-catalog.md:181-191`
+**Source**: `.documents/business/business-workflows/02-workflow-catalog.md:181-191`
 
 #### W13: /docs — Documentation
 
@@ -247,7 +247,7 @@ Create and maintain project documentation.
 | **Complexity** | Medium |
 | **Phases** | 2-3 |
 
-**Source**: `documents/business/business-workflows/02-workflow-catalog.md:195-205`
+**Source**: `.documents/business/business-workflows/02-workflow-catalog.md:195-205`
 
 ### Category 4: Support Workflows (W14–W20)
 
@@ -266,7 +266,7 @@ Deployment execution and verification across environments.
 | **Complexity** | Medium-High |
 | **Phases** | 3-4 |
 
-**Source**: `documents/business/business-workflows/02-workflow-catalog.md:211-221`
+**Source**: `.documents/business/business-workflows/02-workflow-catalog.md:211-221`
 
 #### W15: /wiki — Wiki Generation
 
@@ -283,7 +283,7 @@ Generate project wikis from source code and documentation.
 
 The wiki workflow extracts entities, relationships, and API contracts from source code, organizing them into a navigable wiki structure with cross-references.
 
-**Source**: `documents/business/business-workflows/02-workflow-catalog.md:225-235`
+**Source**: `.documents/business/business-workflows/02-workflow-catalog.md:225-235`
 
 #### W16–W20: Automated Workflows
 
@@ -295,7 +295,7 @@ The wiki workflow extracts entities, relationships, and API contracts from sourc
 | W19 | Phase Transition | Previous phase completes | Next phase begins |
 | W20 | Team Consensus | Team debate completes | Agreed output with consensus stamp |
 
-**Source**: `documents/business/business-workflows/02-workflow-catalog.md:239-305`
+**Source**: `.documents/business/business-workflows/02-workflow-catalog.md:239-305`
 
 ---
 
@@ -303,7 +303,7 @@ The wiki workflow extracts entities, relationships, and API contracts from sourc
 
 The Actor System defines 16 entity types that interact within the workflow system. Each actor has specific responsibilities, boundaries, communication patterns, and touchpoints. Actors are categorized into 5 types: Primary, System, Meta, Execution, Validation, Research, and Support.
 
-**Source**: `documents/business/business-workflows/01-actor-map.md:8-10`
+**Source**: `.documents/business/business-workflows/01-actor-map.md:8-10`
 
 ### Actor Summary Table
 
@@ -326,7 +326,7 @@ The Actor System defines 16 entity types that interact within the workflow syste
 | A15 | Designer | Research | UI/UX design |
 | A16 | Docs Manager | Support | Technical writing |
 
-**Source**: `documents/business/business-workflows/01-actor-map.md:14-210`
+**Source**: `.documents/business/business-workflows/01-actor-map.md:14-210`
 
 ### Actor Communication Matrix
 
@@ -341,7 +341,7 @@ The Actor System defines 16 entity types that interact within the workflow syste
 | A13-A15: Researchers | A4 | A2, A4 | RESEARCH, SCOUT, DESIGN |
 | A16: Docs Manager | A2 | A2, A5-A8 | DOC deliverables |
 
-**Source**: `documents/business/business-workflows/01-actor-map.md:214-225`
+**Source**: `.documents/business/business-workflows/01-actor-map.md:214-225`
 
 ### Actor Boundaries Enforcement
 
@@ -352,7 +352,7 @@ The Actor System defines 16 entity types that interact within the workflow syste
 | Engineers implement only | Cannot change requirements; must follow specs |
 | Orchestrator delegates | L1: Single Point of Truth; Orchestrator routes only |
 
-**Source**: `documents/business/business-workflows/01-actor-map.md:229-236`
+**Source**: `.documents/business/business-workflows/01-actor-map.md:229-236`
 
 ---
 
@@ -360,7 +360,7 @@ The Actor System defines 16 entity types that interact within the workflow syste
 
 Commands support three variants that scale complexity, agent count, and review depth based on task requirements. The variant system ensures resources are proportional to task complexity while maintaining consistent quality gates.
 
-**Source**: `documents/business/business-workflows/02-workflow-catalog.md:28-33`
+**Source**: `.documents/business/business-workflows/02-workflow-catalog.md:28-33`
 
 ### Variant Comparison Table
 
@@ -402,7 +402,7 @@ Phase 3: Delivery
   → EXIT: Deliverable ready
 ```
 
-**Source**: `documents/business/business-workflows/03-detailed-workflows.md:10-47`
+**Source**: `.documents/business/business-workflows/03-detailed-workflows.md:10-47`
 
 ### /cook:hard Flow (6 Phases)
 
@@ -432,7 +432,7 @@ Phase 6: Delivery
   → EXIT: All criteria verified
 ```
 
-**Source**: `documents/business/business-workflows/03-detailed-workflows.md:50-129`
+**Source**: `.documents/business/business-workflows/03-detailed-workflows.md:50-129`
 
 ### /cook:team Flow (4 Phases with Golden Triangle)
 
@@ -460,7 +460,7 @@ Phase 4: Consensus + Delivery
   → EXIT: Consensus stamp present
 ```
 
-**Source**: `documents/business/business-workflows/03-detailed-workflows.md:132-186`
+**Source**: `.documents/business/business-workflows/03-detailed-workflows.md:132-186`
 
 ---
 
@@ -468,7 +468,7 @@ Phase 4: Consensus + Delivery
 
 The SLA Framework defines timing expectations and quality criteria for every workflow. SLAs ensure predictable performance and provide measurable targets for system optimization.
 
-**Source**: `documents/business/business-workflows/05-sla-and-handoffs.md:8-18`
+**Source**: `.documents/business/business-workflows/05-sla-and-handoffs.md:8-18`
 
 ### SLA Metrics Definitions
 
@@ -479,7 +479,7 @@ The SLA Framework defines timing expectations and quality criteria for every wor
 | **Success Rate** | Workflows completing without error |
 | **Quality Score** | Exit criteria compliance rate |
 
-**Source**: `documents/business/business-workflows/05-sla-and-handoffs.md:10-18`
+**Source**: `.documents/business/business-workflows/05-sla-and-handoffs.md:10-18`
 
 ### Key Workflow SLAs
 
@@ -491,7 +491,7 @@ The SLA Framework defines timing expectations and quality criteria for every wor
 | :hard | 15s | 5min | 15min | 98% |
 | :team | 30s | 15min | 45min | 95% |
 
-**Source**: `documents/business/business-workflows/05-sla-and-handoffs.md:25-31`
+**Source**: `.documents/business/business-workflows/05-sla-and-handoffs.md:25-31`
 
 #### /fix SLA Targets
 
@@ -503,7 +503,7 @@ The SLA Framework defines timing expectations and quality criteria for every wor
 | Verification | 1min | 3min |
 | **Total Completion** | 8min | 23min |
 
-**Source**: `documents/business/business-workflows/05-sla-and-handoffs.md:41-49`
+**Source**: `.documents/business/business-workflows/05-sla-and-handoffs.md:41-49`
 
 #### /test SLA Targets
 
@@ -512,7 +512,7 @@ The SLA Framework defines timing expectations and quality criteria for every wor
 | :fast | 10s | 5min | 10min |
 | :hard | 15s | 15min | 30min |
 
-**Source**: `documents/business/business-workflows/05-sla-and-handoffs.md:95-100`
+**Source**: `.documents/business/business-workflows/05-sla-and-handoffs.md:95-100`
 
 ### Phase Timing Reference
 
@@ -525,7 +525,7 @@ The SLA Framework defines timing expectations and quality criteria for every wor
 | Testing | 5-20 min | 40 min |
 | Delivery | 1-5 min | 10 min |
 
-**Source**: `documents/business/business-workflows/05-sla-and-handoffs.md:337-346`
+**Source**: `.documents/business/business-workflows/05-sla-and-handoffs.md:337-346`
 
 ---
 
@@ -533,7 +533,7 @@ The SLA Framework defines timing expectations and quality criteria for every wor
 
 Handoff contracts define the precise inputs, outputs, timing, and failure modes for each transition point in the workflow system. These contracts ensure that information is preserved across boundaries and that failures are handled consistently.
 
-**Source**: `documents/business/business-workflows/05-sla-and-handoffs.md:214-216`
+**Source**: `.documents/business/business-workflows/05-sla-and-handoffs.md:214-216`
 
 ### H1: Orchestrator → Agent
 
@@ -554,7 +554,7 @@ Handoff contracts define the precise inputs, outputs, timing, and failure modes 
 
 **Failure Mode**: One retry with same context, then escalate to Orchestrator
 
-**Source**: `documents/business/business-workflows/05-sla-and-handoffs.md:216-240`
+**Source**: `.documents/business/business-workflows/05-sla-and-handoffs.md:216-240`
 
 ### H2: Agent → Reviewer
 
@@ -574,7 +574,7 @@ Handoff contracts define the precise inputs, outputs, timing, and failure modes 
 
 **Failure Mode**: Tech Lead rejects rubber-stamp reviews
 
-**Source**: `documents/business/business-workflows/05-sla-and-handoffs.md:242-264`
+**Source**: `.documents/business/business-workflows/05-sla-and-handoffs.md:242-264`
 
 ### H3: Executor → Reviewer (Team)
 
@@ -594,7 +594,7 @@ Handoff contracts define the precise inputs, outputs, timing, and failure modes 
 
 **Failure Mode**: Executor posts DEFENSE with evidence; Round 3 without agreement escalates to Tech Lead
 
-**Source**: `documents/business/business-workflows/05-sla-and-handoffs.md:266-289`
+**Source**: `.documents/business/business-workflows/05-sla-and-handoffs.md:266-289`
 
 ### H4: Reviewer → Tech Lead (Team)
 
@@ -610,7 +610,7 @@ Handoff contracts define the precise inputs, outputs, timing, and failure modes 
 - reasoning: Decision rationale
 - stamp: ✅ CONSENSUS: TechLead ✓ | Executor ✓ | Reviewer ✓
 
-**Source**: `documents/business/business-workflows/05-sla-and-handoffs.md:291-310`
+**Source**: `.documents/business/business-workflows/05-sla-and-handoffs.md:291-310`
 
 ### H5: Phase → Phase
 
@@ -628,7 +628,7 @@ Handoff contracts define the precise inputs, outputs, timing, and failure modes 
 
 **Failure Mode**: Phase N does not complete if criteria not met
 
-**Source**: `documents/business/business-workflows/05-sla-and-handoffs.md:312-331`
+**Source**: `.documents/business/business-workflows/05-sla-and-handoffs.md:312-331`
 
 ---
 
@@ -636,7 +636,7 @@ Handoff contracts define the precise inputs, outputs, timing, and failure modes 
 
 The system defines 4 escalation paths for handling failures at different levels.
 
-**Source**: `documents/business/business-workflows/05-sla-and-handoffs.md:359-397`
+**Source**: `.documents/business/business-workflows/05-sla-and-handoffs.md:359-397`
 
 ### E1: Execution Escalation
 
@@ -703,7 +703,7 @@ Round 3: Review FAIL → Tech Lead arbitration (binding)
 | W19 | Phase Transition | Support | Low | 1 | Auto |
 | W20 | Team Consensus | Support | Med | 3 | Auto |
 
-**Source**: `documents/business/business-workflows/02-workflow-catalog.md:309-332`
+**Source**: `.documents/business/business-workflows/02-workflow-catalog.md:309-332`
 
 ---
 

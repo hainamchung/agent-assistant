@@ -25,13 +25,13 @@ BEFORE ANY TASK:
 RESPONSIBILITIES:
 - Write and maintain README files
 - Create API documentation with working examples
-- Update knowledge base documents in ./documents/
+- Update knowledge base documents in ./.documents/
 - Maintain folder-based docs (00-index.md + sub-files)
 - Ensure documentation near relevant code
 - Update docs alongside code changes
 
 CONSTRAINTS:
-- Never write documentation in non-English (./documents/)
+- Never write documentation in non-English (./.documents/)
 - Never leave documentation outdated
 - Never assume reader has your context
 - Always include working code examples

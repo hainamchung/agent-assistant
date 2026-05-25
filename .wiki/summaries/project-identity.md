@@ -14,13 +14,13 @@ related:
 
 # Project Identity
 
-**Source**: `documents/knowledge-overview/01-project-identity.md:1-130`
+**Source**: `.documents/knowledge-overview/01-project-identity.md:1-130`
 
 ---
 
 ## Purpose
 
-**Source**: `documents/knowledge-overview/01-project-identity.md:27-37`
+**Source**: `.documents/knowledge-overview/01-project-identity.md:27-37`
 
 Agent Assistant transforms a single AI coding assistant into a **coordinated team of 21 specialist agents** with:
 
@@ -36,7 +36,7 @@ The framework operates as a **middleware layer** between the user and the underl
 
 ## Vision Statement
 
-**Source**: `documents/knowledge-overview/01-project-identity.md:41-50`
+**Source**: `.documents/knowledge-overview/01-project-identity.md:41-50`
 
 > "Every developer deserves the power of a full engineering team in their IDE."
 
@@ -52,7 +52,7 @@ Agent Assistant envisions a world where:
 
 ## Mission Statement
 
-**Source**: `documents/knowledge-overview/01-project-identity.md:54-62`
+**Source**: `.documents/knowledge-overview/01-project-identity.md:54-62`
 
 Deliver a production-ready, multi-agent orchestration framework that:
 
@@ -66,7 +66,7 @@ Deliver a production-ready, multi-agent orchestration framework that:
 
 ## Package Identity
 
-**Source**: `documents/knowledge-overview/01-project-identity.md:104-120`
+**Source**: `.documents/knowledge-overview/01-project-identity.md:104-120`
 
 ### Package Metadata
 
@@ -84,7 +84,7 @@ Deliver a production-ready, multi-agent orchestration framework that:
 
 > "Multi-agent orchestration framework for AI coding assistants"
 
-**Source**: `documents/knowledge-overview/01-project-identity.md:112`
+**Source**: `.documents/knowledge-overview/01-project-identity.md:112`
 
 The package is published to npm under the `@namch` scope, providing the complete orchestration framework including:
 
@@ -94,7 +94,7 @@ The package is published to npm under the `@namch` scope, providing the complete
 - 14 commands with fast, hard, and team variants in `commands/` directory
 - 18 Golden Triangle team definitions in `agents/teams/`
 
-**Source**: `documents/knowledge-overview/01-project-identity.md:104-120`, `documents/knowledge-overview/01-project-identity.md:86-88`
+**Source**: `.documents/knowledge-overview/01-project-identity.md:104-120`, `.documents/knowledge-overview/01-project-identity.md:86-88`
 
 ### Version History
 
@@ -104,13 +104,13 @@ The package is published to npm under the `@namch` scope, providing the complete
 | **Current Version** | 4.0.0 |
 | **Changelog Location** | `CHANGELOG.md` |
 
-**Source**: `documents/knowledge-overview/01-project-identity.md:18-23`
+**Source**: `.documents/knowledge-overview/01-project-identity.md:18-23`
 
 ---
 
 ## Project Name
 
-**Source**: `documents/knowledge-overview/01-project-identity.md:8-12`
+**Source**: `.documents/knowledge-overview/01-project-identity.md:8-12`
 
 | Name Form | Value |
 |-----------|-------|
@@ -132,7 +132,7 @@ Also known as: `agent-assistant`, `@namch/agent-assistant` (npm package name)
 
 > "Every developer deserves the power of a full engineering team in their IDE."
 
-**Source**: `documents/knowledge-overview/01-project-identity.md:43`
+**Source**: `.documents/knowledge-overview/01-project-identity.md:43`
 
 ### Logo Concept
 
@@ -156,13 +156,13 @@ The logo concept reflects the orchestration nature of the framework — a centra
 
 ## First 60 Minutes
 
-**Source**: `documents/knowledge-overview/01-project-identity.md:66-101`
+**Source**: `.documents/knowledge-overview/01-project-identity.md:66-101`
 
 New to the project? Complete these steps in order to go from zero knowledge to first contribution:
 
 ### Minute 0-10: Understand the Project
 
-**Source**: `documents/knowledge-overview/01-project-identity.md:70-73`
+**Source**: `.documents/knowledge-overview/01-project-identity.md:70-73`
 
 - [ ] Read `README.md` (5 minutes)
 - [ ] Review this Project Identity document (5 minutes)
@@ -171,7 +171,7 @@ These documents establish the foundational context needed for all subsequent ste
 
 ### Minute 10-20: Set Up Environment
 
-**Source**: `documents/knowledge-overview/01-project-identity.md:75-79`
+**Source**: `.documents/knowledge-overview/01-project-identity.md:75-79`
 
 - [ ] Verify Node.js >= 18.0.0 (`node --version`)
 - [ ] Clone repository (if not already)
@@ -179,11 +179,11 @@ These documents establish the foundational context needed for all subsequent ste
 
 The environment check ensures compatibility with the CLI runtime requirements. Reviewing `package.json` scripts reveals the available npm commands for development, testing, and deployment.
 
-**Source**: `documents/knowledge-overview/01-project-identity.md:77`
+**Source**: `.documents/knowledge-overview/01-project-identity.md:77`
 
 ### Minute 20-35: Install and Explore
 
-**Source**: `documents/knowledge-overview/01-project-identity.md:81-88`
+**Source**: `.documents/knowledge-overview/01-project-identity.md:81-88`
 
 - [ ] Run `npm install` in project root
 - [ ] Explore directory structure (see [[Getting Started]])
@@ -194,11 +194,11 @@ The environment check ensures compatibility with the CLI runtime requirements. R
 
 After installation, the directory exploration phase helps mental model building. Understanding the structure before diving into code accelerates subsequent learning.
 
-**Source**: `documents/knowledge-overview/01-project-identity.md:83-88`
+**Source**: `.documents/knowledge-overview/01-project-identity.md:83-88`
 
 ### Minute 35-50: Understand the Architecture
 
-**Source**: `documents/knowledge-overview/01-project-identity.md:90-94`
+**Source**: `.documents/knowledge-overview/01-project-identity.md:90-94`
 
 - [ ] Read [[Architecture Overview]]
 - [ ] Review design patterns documentation
@@ -206,11 +206,11 @@ After installation, the directory exploration phase helps mental model building.
 
 The architecture understanding phase connects the directory structure to the system's orchestration layers. Understanding how commands route through the tiered architecture (Command → Rule → Agent → Team → Skill) is essential for effective contribution.
 
-**Source**: `documents/knowledge-overview/01-project-identity.md:90-94`
+**Source**: `.documents/knowledge-overview/01-project-identity.md:90-94`
 
 ### Minute 50-60: Make Your First Contribution
 
-**Source**: `documents/knowledge-overview/01-project-identity.md:96-100`
+**Source**: `.documents/knowledge-overview/01-project-identity.md:96-100`
 
 - [ ] Pick a command variant to understand (e.g., `/fix`)
 - [ ] Review the corresponding agent files
@@ -218,7 +218,7 @@ The architecture understanding phase connects the directory structure to the sys
 
 The first contribution should be low-risk and high-learning. Documentation updates provide familiarity with the contribution workflow without the complexity of code changes.
 
-**Source**: `documents/knowledge-overview/01-project-identity.md:96-100`
+**Source**: `.documents/knowledge-overview/01-project-identity.md:96-100`
 
 ---
 
@@ -233,7 +233,7 @@ npm install
 node cli/install.js
 ```
 
-**Source**: `documents/knowledge-overview/01-project-identity.md:83`
+**Source**: `.documents/knowledge-overview/01-project-identity.md:83`
 
 ### Key Commands
 
@@ -255,7 +255,7 @@ node cli/install.js
 | `commands/` | 14 commands with variants |
 | `agents/teams/` | 18 Golden Triangle team definitions |
 
-**Source**: `documents/knowledge-overview/01-project-identity.md:86-88`
+**Source**: `.documents/knowledge-overview/01-project-identity.md:86-88`
 
 ---
 

@@ -29,7 +29,7 @@ Agent Assistant provides four distinct entry point categories:
 | [[Command System]] | `commands/*.md` | User command routing |
 | [[Agent System]] | `agents/*.md` | Agent dispatch and loading |
 
-**Source**: `documents/knowledge-source-base/02-entry-points.md:1-13`
+**Source**: `.documents/knowledge-source-base/02-entry-points.md:1-13`
 
 ---
 
@@ -58,7 +58,7 @@ The [[CLI Installer]] handles the following operations:
 - **Verification**: Ensure all files are written correctly
 - **Summary Reporting**: Display installation statistics
 
-**Source**: `cli/install.js:1-24`, `documents/knowledge-source-base/02-entry-points.md:26-30`
+**Source**: `cli/install.js:1-24`, `.documents/knowledge-source-base/02-entry-points.md:26-30`
 
 ### Supported Platforms
 
@@ -93,7 +93,7 @@ node cli/install.js --uninstall
 node cli/install.js --uninstall cursor
 ```
 
-**Source**: `cli/install.js:14-17`, `documents/knowledge-source-base/02-entry-points.md:34-43`
+**Source**: `cli/install.js:14-17`, `.documents/knowledge-source-base/02-entry-points.md:34-43`
 
 ### CLI Key Functions
 
@@ -109,7 +109,7 @@ node cli/install.js --uninstall cursor
 | `verify()` | Verify all files written | Core |
 | `getVSCodePromptsFolder()` | Platform-specific prompts path | `cli/install.js:39-48` |
 
-**Source**: `documents/knowledge-source-base/02-entry-points.md:69-79`
+**Source**: `.documents/knowledge-source-base/02-entry-points.md:69-79`
 
 ### CLI Architecture
 
@@ -141,7 +141,7 @@ cli/install.js
         └── Verification phase
 ```
 
-**Source**: `documents/knowledge-source-base/02-entry-points.md:45-66`
+**Source**: `.documents/knowledge-source-base/02-entry-points.md:45-66`
 
 ---
 
@@ -250,7 +250,7 @@ web/
 └── tsconfig.json
 ```
 
-**Source**: `documents/knowledge-source-base/01-directory-structure.md`, `web/src/App.tsx`
+**Source**: `.documents/knowledge-source-base/01-directory-structure.md`, `web/src/App.tsx`
 
 ---
 
@@ -260,7 +260,7 @@ web/
 
 All command definitions reside in the `commands/` directory at the project root.
 
-**Source**: `documents/knowledge-source-base/02-entry-points.md:130-131`
+**Source**: `.documents/knowledge-source-base/02-entry-points.md:130-131`
 
 ### Available Commands
 
@@ -281,7 +281,7 @@ All command definitions reside in the `commands/` directory at the project root.
 | `/brainstorm` | fast, hard, team | Brainstorming |
 | `/ask` | fast, hard, team | Q&A |
 
-**Source**: `documents/knowledge-source-base/01-directory-structure.md`, `commands/wiki.md`
+**Source**: `.documents/knowledge-source-base/01-directory-structure.md`, `commands/wiki.md`
 
 ### Command File Structure
 
@@ -302,7 +302,7 @@ execution-mode: execute
 ...
 ```
 
-**Source**: `documents/knowledge-source-base/02-entry-points.md:148-162`
+**Source**: `.documents/knowledge-source-base/02-entry-points.md:148-162`
 
 ### Command Variant Organization
 
@@ -313,7 +313,7 @@ commands/wiki/
 └── team.md     # Team variant (Golden Triangle)
 ```
 
-**Source**: `documents/knowledge-source-base/02-entry-points.md:164-172`
+**Source**: `.documents/knowledge-source-base/02-entry-points.md:164-172`
 
 ### Command Routing Logic
 
@@ -334,7 +334,7 @@ IF user invokes /wiki only  → Assess scope → Route to variant
 
 All agent definitions reside in the `agents/` directory at the project root.
 
-**Source**: `documents/knowledge-source-base/02-entry-points.md:176-178`
+**Source**: `.documents/knowledge-source-base/02-entry-points.md:176-178`
 
 ### Available Agents (24 total)
 
@@ -365,7 +365,7 @@ All agent definitions reside in the `agents/` directory at the project root.
 | `game-engineer` | Game development | tech-lead |
 | `tech-lead` | Orchestration | (root) |
 
-**Source**: `documents/knowledge-source-base/01-directory-structure.md`, `rules/AGENTS.md`
+**Source**: `.documents/knowledge-source-base/01-directory-structure.md`, `rules/AGENTS.md`
 
 ### Agent File Structure
 
@@ -388,7 +388,7 @@ standard: docs-as-code
 ...
 ```
 
-**Source**: `documents/knowledge-source-base/02-entry-points.md:196-215`
+**Source**: `.documents/knowledge-source-base/02-entry-points.md:196-215`
 
 ### Agent Loading Process
 
@@ -410,7 +410,7 @@ Rule Engine
     └── Register agent in orchestration layer
 ```
 
-**Source**: `documents/knowledge-source-base/02-entry-points.md:182-194`
+**Source**: `.documents/knowledge-source-base/02-entry-points.md:182-194`
 
 ---
 
@@ -420,7 +420,7 @@ Rule Engine
 
 All rule definitions reside in the `rules/` directory at the project root.
 
-**Source**: `documents/knowledge-source-base/02-entry-points.md:219-221`
+**Source**: `.documents/knowledge-source-base/02-entry-points.md:219-221`
 
 ### Rule Loading Order
 
@@ -435,7 +435,7 @@ All rule definitions reside in the `rules/` directory at the project root.
 | 7 | `REFERENCE.md` | Quick reference for common operations |
 | 8 | `WIKI.md` | Wiki documentation standards |
 
-**Source**: `documents/knowledge-source-base/02-entry-points.md:224-235`
+**Source**: `.documents/knowledge-source-base/02-entry-points.md:224-235`
 
 ### Rule Loading Sequence
 
@@ -461,7 +461,7 @@ Rule Engine
     └── Apply rules in order (later rules override earlier)
 ```
 
-**Source**: `documents/knowledge-source-base/02-entry-points.md:237-254`
+**Source**: `.documents/knowledge-source-base/02-entry-points.md:237-254`
 
 ---
 
@@ -473,7 +473,7 @@ Skills are organized in two locations:
 - `skills/` — Domain-organized skills for human navigation
 - `matrix-skills/` — HSOL-optimized skills by tier
 
-**Source**: `documents/knowledge-source-base/02-entry-points.md:258-261`
+**Source**: `.documents/knowledge-source-base/02-entry-points.md:258-261`
 
 ### Skill Tier Organization
 
@@ -484,7 +484,7 @@ Skills are organized in two locations:
 | Specialized | `matrix-skills/specialized/` | ~500 | Technology-specific skills |
 | Expert | `matrix-skills/expert/` | ~300 | Advanced skills (on-demand) |
 
-**Source**: `documents/knowledge-source-base/02-entry-points.md:279-287`
+**Source**: `.documents/knowledge-source-base/02-entry-points.md:279-287`
 
 ### Skill Loading Process
 
@@ -508,7 +508,7 @@ Agent
     └── Inject skills into agent context
 ```
 
-**Source**: `documents/knowledge-source-base/02-entry-points.md:263-277`
+**Source**: `.documents/knowledge-source-base/02-entry-points.md:263-277`
 
 ---
 
@@ -518,7 +518,7 @@ Agent
 
 Platform configurations reside in the `code-assistants/` directory.
 
-**Source**: `documents/knowledge-source-base/02-entry-points.md:291-293`
+**Source**: `.documents/knowledge-source-base/02-entry-points.md:291-293`
 
 ### Platform Configurations
 
@@ -530,7 +530,7 @@ Platform configurations reside in the `code-assistants/` directory.
 | Antigravity | `code-assistants/antigravity/` | `GEMINI.md` | `config.toml` |
 | Codex | `code-assistants/codex/` | `CODEX.md` | `config.toml` |
 
-**Source**: `documents/knowledge-source-base/02-entry-points.md:296-304`, `documents/knowledge-source-base/01-directory-structure.md:201-222`
+**Source**: `.documents/knowledge-source-base/02-entry-points.md:296-304`, `.documents/knowledge-source-base/01-directory-structure.md:201-222`
 
 ### Config Loading Process
 
@@ -550,7 +550,7 @@ CLI
         └── Convert to absolute paths
 ```
 
-**Source**: `documents/knowledge-source-base/02-entry-points.md:306-318`
+**Source**: `.documents/knowledge-source-base/02-entry-points.md:306-318`
 
 ---
 
@@ -571,7 +571,7 @@ module.exports = {
 };
 ```
 
-**Source**: `documents/knowledge-source-base/02-entry-points.md:323-334`
+**Source**: `.documents/knowledge-source-base/02-entry-points.md:323-334`
 
 ### Web Module Entry
 
@@ -593,7 +593,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
 );
 ```
 
-**Source**: `documents/knowledge-source-base/02-entry-points.md:336-349`
+**Source**: `.documents/knowledge-source-base/02-entry-points.md:336-349`
 
 ---
 

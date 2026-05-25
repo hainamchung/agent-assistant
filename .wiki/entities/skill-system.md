@@ -24,7 +24,7 @@ HSOL is the context-aware skill injection engine that bridges the gap between th
 | **Architecture** | Matrix-first with dynamic enhancement |
 | **Discovery Mode** | Blocking (when matrix insufficient) or Async (when matrix adequate) |
 
-**Source**: `documents/SMART-SKILL-ORCHESTRATION-BLUEPRINT.md:1-22`, `documents/HSOL-ASSESSMENT.md`
+**Source**: `.documents/SMART-SKILL-ORCHESTRATION-BLUEPRINT.md:1-22`, `.documents/HSOL-ASSESSMENT.md`
 
 ---
 
@@ -62,7 +62,7 @@ ROOT CAUSE: No automated feedback loop between:
 
 **Solution**: HSOL introduces intelligent decision logic for dynamic skill acquisition while preserving the reliability of matrix-skills as the primary execution tier.
 
-**Source**: `documents/SMART-SKILL-ORCHESTRATION-BLUEPRINT.md:137-166`
+**Source**: `.documents/SMART-SKILL-ORCHESTRATION-BLUEPRINT.md:137-166`
 
 ---
 
@@ -141,7 +141,7 @@ The final layer handles skill execution and continuous improvement:
 - Feed metrics to autonomous evolution system
 - Update skill usage statistics
 
-**Source**: `documents/SMART-SKILL-ORCHESTRATION-BLUEPRINT.md:187-251`, `documents/HSOL-ASSESSMENT.md:9-17`
+**Source**: `.documents/SMART-SKILL-ORCHESTRATION-BLUEPRINT.md:187-251`, `.documents/HSOL-ASSESSMENT.md:9-17`
 
 ---
 
@@ -212,7 +212,7 @@ Based on comparison:
 - If matrix is adequate: continue with matrix skills
 - If no suitable skill found: report capability gap
 
-**Source**: `documents/SMART-SKILL-ORCHESTRATION-BLUEPRINT.md:1-22`, `documents/HSOL-ASSESSMENT.md`
+**Source**: `.documents/SMART-SKILL-ORCHESTRATION-BLUEPRINT.md:1-22`, `.documents/HSOL-ASSESSMENT.md`
 
 ---
 
@@ -250,7 +250,7 @@ When matrix skills are adequate but not optimal:
 | `hard` | Discovery when matrix fitness < 0.8 |
 | `team` | Discovery when matrix fitness < 0.8 |
 
-**Source**: `documents/SMART-SKILL-ORCHESTRATION-BLUEPRINT.md:262-267`, `documents/HSOL-ASSESSMENT.md:29-34`
+**Source**: `.documents/SMART-SKILL-ORCHESTRATION-BLUEPRINT.md:262-267`, `.documents/HSOL-ASSESSMENT.md:29-34`
 
 ---
 
@@ -333,7 +333,7 @@ Expert skills are advanced, niche, or highly specialized:
 - ML/AI: ml-deployment, model-optimization, vector-databases
 - Systems: operating-system-kernel, distributed-systems, cqrs
 
-**Source**: `documents/knowledge-architecture/04-design-patterns.md:187-195`, `documents/SMART-SKILL-ORCHESTRATION-BLUEPRINT.md:10-22`
+**Source**: `.documents/knowledge-architecture/04-design-patterns.md:187-195`, `.documents/SMART-SKILL-ORCHESTRATION-BLUEPRINT.md:10-22`
 
 ---
 
@@ -357,7 +357,7 @@ Skill selection follows a strict priority order:
 - **Tier is a soft filter**: Skills are ranked within tiers by relevance, not eliminated
 - **Expert is opt-in**: Expert skills are never auto-injected — the user or agent must request them
 
-**Source**: `documents/knowledge-domain/04-business-rules.md:96-138`
+**Source**: `.documents/knowledge-domain/04-business-rules.md:96-138`
 
 ---
 
@@ -420,7 +420,7 @@ matrix-skills/
     └── security-auditing.md
 ```
 
-**Source**: `documents/knowledge-domain/01-entities.md:208-238`
+**Source**: `.documents/knowledge-domain/01-entities.md:208-238`
 
 ---
 
@@ -499,7 +499,7 @@ USER REQUEST: "Implement OAuth with Clerk"
 └───────────────────────────────────────────────────────────────┘
 ```
 
-**Source**: `documents/SMART-SKILL-ORCHESTRATION-BLUEPRINT.md:271-336`
+**Source**: `.documents/SMART-SKILL-ORCHESTRATION-BLUEPRINT.md:271-336`
 
 ---
 
@@ -576,7 +576,7 @@ def detect_superior_dynamic_skill(matrix_skill, dynamic_skill, request):
     return SuperiorityResult(is_superior=False)
 ```
 
-**Source**: `documents/SMART-SKILL-ORCHESTRATION-BLUEPRINT.md:366-458`
+**Source**: `.documents/SMART-SKILL-ORCHESTRATION-BLUEPRINT.md:366-458`
 
 ---
 
@@ -614,7 +614,7 @@ PROMOTION_CRITERIA = {
 | Capability Duplication | Fitness scoring determines winner |
 | Version Incompatibility | Block installation, notify user |
 
-**Source**: `documents/SMART-SKILL-ORCHESTRATION-BLUEPRINT.md:741-751`, `documents/SMART-SKILL-ORCHESTRATION-BLUEPRINT.md:983-1030`
+**Source**: `.documents/SMART-SKILL-ORCHESTRATION-BLUEPRINT.md:741-751`, `.documents/SMART-SKILL-ORCHESTRATION-BLUEPRINT.md:983-1030`
 
 ---
 
@@ -661,7 +661,7 @@ PROMOTION_CRITERIA = {
 └──────────┘   └──────────────┘
 ```
 
-**Source**: `documents/SMART-SKILL-ORCHESTRATION-BLUEPRINT.md:593-634`
+**Source**: `.documents/SMART-SKILL-ORCHESTRATION-BLUEPRINT.md:593-634`
 
 ---
 
@@ -691,7 +691,7 @@ If find-skills is not installed or `npx skills find` fails:
 2. Surface message: "Dynamic skill discovery unavailable. Using built-in skills."
 3. Queue background retry for later
 
-**Source**: `documents/SMART-SKILL-ORCHESTRATION-BLUEPRINT.md:863-941`, `documents/HSOL-ASSESSMENT.md:61-66`
+**Source**: `.documents/SMART-SKILL-ORCHESTRATION-BLUEPRINT.md:863-941`, `.documents/HSOL-ASSESSMENT.md:61-66`
 
 ---
 
@@ -718,7 +718,7 @@ The agent sees only:
 2. Optional enhancement recommendations (non-blocking)
 3. Capability gap alerts (when no skill can satisfy request)
 
-**Source**: `documents/SMART-SKILL-ORCHESTRATION-BLUEPRINT.md:338-361`
+**Source**: `.documents/SMART-SKILL-ORCHESTRATION-BLUEPRINT.md:338-361`
 
 ---
 
@@ -731,7 +731,7 @@ The agent sees only:
 | **Project** | Project team | Project repository | Project-specific | `npx skills add <skill> --project` |
 | **Matrix Promoted** | All agents, all projects | Matrix skill system | Battle-tested | Auto-promotion |
 
-**Source**: `documents/SMART-SKILL-ORCHESTRATION-BLUEPRINT.md:636-687`
+**Source**: `.documents/SMART-SKILL-ORCHESTRATION-BLUEPRINT.md:636-687`
 
 ---
 
@@ -765,7 +765,7 @@ The Skill System must meet these production requirements:
 - User confirmation required for low-trust, task-critical installs
 - Low-trust + task-critical → ask user confirm before install
 
-**Source**: `documents/HSOL-ASSESSMENT.md:9-19`, `documents/SMART-SKILL-ORCHESTRATION-BLUEPRINT.md:1091-1120`
+**Source**: `.documents/HSOL-ASSESSMENT.md:9-19`, `.documents/SMART-SKILL-ORCHESTRATION-BLUEPRINT.md:1091-1120`
 
 ---
 
@@ -804,7 +804,7 @@ SKILL_FITNESS = (
 )
 ```
 
-**Source**: `documents/SMART-SKILL-ORCHESTRATION-BLUEPRINT.md:1274-1292`
+**Source**: `.documents/SMART-SKILL-ORCHESTRATION-BLUEPRINT.md:1274-1292`
 
 ---
 

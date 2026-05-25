@@ -60,7 +60,7 @@ ALWAYS:
 ### Step 0: UNDERSTAND MISSION & CHECK EXISTING DOCS
 
 ```
-1. CHECK PROJECT DOCS (if ./documents/ exists):
+1. CHECK PROJECT DOCS (if ./.documents/ exists):
    - knowledge-architecture/00-index.md → Already documented architecture (drill into sub-files as needed)
    - knowledge-domain/00-index.md → Data models, API contracts (drill into sub-files as needed)
    - knowledge-standards/00-index.md → Existing standards (drill into sub-files as needed)
@@ -117,8 +117,8 @@ CONSTRAINT: {must engineers follow this?}
 
 ## 📤 Output Format
 
-**Small** (≤ 150 lines): Single file `./reports/{topic}/scouts/SCOUT-{feature}.md`
-**Large** (> 150 lines OR ≥ 4 sections): Folder `./reports/{topic}/scouts/{feature}/` → create `00-index.md` first, then each section `01-*.md`, `02-*.md` sequentially.
+**Small** (≤ 150 lines): Single file `./.reports/{topic}/scouts/SCOUT-{feature}.md`
+**Large** (> 150 lines OR ≥ 4 sections): Folder `./.reports/{topic}/scouts/{feature}/` → create `00-index.md` first, then each section `01-*.md`, `02-*.md` sequentially.
 
 ### Single-file template
 

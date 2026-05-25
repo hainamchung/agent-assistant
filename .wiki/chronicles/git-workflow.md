@@ -28,7 +28,7 @@ main (protected)
 | `fix/*` | Bug fixes | Open |
 | `docs/*` | Documentation | Open |
 
-**Source**: `documents/knowledge-standards/03-git-workflow.md:1-337`
+**Source**: `.documents/knowledge-standards/03-git-workflow.md:1-337`
 
 ---
 

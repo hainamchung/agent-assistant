@@ -44,13 +44,13 @@ execution-mode: execute
 
 | Agent        | Output                                          |
 | ------------ | ----------------------------------------------- |
-| brainstormer | `./reports/{topic}/brainstorms/BRAINSTORM-{feature}` |
-| researcher   | `./reports/{topic}/researchers/RESEARCH-{feature}`   |
-| scouter      | `./reports/{topic}/scouts/SCOUT-{feature}`           |
-| designer     | `./reports/{topic}/designs/DESIGN-{feature}`         |
-| planner      | `./reports/{topic}/plans/PLAN-{feature}`             |
+| brainstormer | `./.reports/{topic}/brainstorms/BRAINSTORM-{feature}` |
+| researcher   | `./.reports/{topic}/researchers/RESEARCH-{feature}`   |
+| scouter      | `./.reports/{topic}/scouts/SCOUT-{feature}`           |
+| designer     | `./.reports/{topic}/designs/DESIGN-{feature}`         |
+| planner      | `./.reports/{topic}/plans/PLAN-{feature}`             |
 
-All files in `./reports/{topic}/` → English only.
+All files in `./.reports/{topic}/` → English only.
 **⚠️ Paths above = base names.** Small (≤ 150 lines) → create as `{name}.md`. Large (> 150 lines or ≥ 4 sections) → create as `{name}/` folder with `00-index.md` + `01-*.md`, `02-*.md` section files.
 
 ---
@@ -132,7 +132,7 @@ One phase at a time, each phase independent: Phase 1 → then Phase 2 → … in
 | ------------ | --------------------------------------------------- |
 | Prerequisite | **READ** RESEARCH + SCOUT + DESIGN files            |
 | Goal         | Create detailed implementation plan                 |
-| Output       | `./reports/{topic}/plans/PLAN-{feature}`                 |
+| Output       | `./.reports/{topic}/plans/PLAN-{feature}`                 |
 | Exit         | Plan file created, phases defined, risks identified |
 
 ---
@@ -141,7 +141,7 @@ One phase at a time, each phase independent: Phase 1 → then Phase 2 → … in
 
 | Agent        | `tech-lead` → routes to specialists                     |
 | ------------ | ------------------------------------------------------- |
-| Prerequisite | **READ and FOLLOW** `./reports/{topic}/plans/PLAN-{feature}` |
+| Prerequisite | **READ and FOLLOW** `./.reports/{topic}/plans/PLAN-{feature}` |
 | Goal         | Execute implementation plan                             |
 
 **STRICT ADHERENCE:**

@@ -36,7 +36,7 @@ COMMANDS = ~/.{TOOL}/skills/agent-assistant/commands/
 AGENTS   = ~/.{TOOL}/skills/agent-assistant/agents/
 SKILLS   = ~/.{TOOL}/skills/
 RULES    = ~/.{TOOL}/skills/agent-assistant/rules/
-REPORTS  = ./reports/{topic}/
+REPORTS  = ./.reports/{topic}/
 ```
 
 ---
@@ -49,7 +49,7 @@ REPORTS  = ./reports/{topic}/
 |---------|----------|
 | Response to user | **Same as user's** |
 | Code & comments | **Always English** |
-| Files in `./reports/{topic}/` | **Always English** |
+| Files in `./.reports/{topic}/` | **Always English** |
 
 ---
 

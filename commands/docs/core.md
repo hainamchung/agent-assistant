@@ -48,12 +48,12 @@ tiered_execution:
 > **MUST CREATE OR UPDATE ALL 5 FOLDERS** with their `00-index.md` and sub-files. Incomplete = FAILED execution.
 
 > **DOCUMENT LANGUAGE — NON-NEGOTIABLE**
-> Every file under `./documents/` must be written in **English only**. Headings, body text, tables, and lists must be in English. Do not use the user's language for file content. Chat/UI may follow user language; document files do not. (CORE LAW 6.)
+> Every file under `./.documents/` must be written in **English only**. Headings, body text, tables, and lists must be in English. Do not use the user's language for file content. Chat/UI may follow user language; document files do not. (CORE LAW 6.)
 
 ### Folder Structure
 
 ```
-./documents/
+./.documents/
   knowledge-overview/
     00-index.md                  # Summary + TOC + cross-references
     01-project-identity.md       # Name, version, purpose, vision, mission
@@ -174,11 +174,11 @@ One phase at a time, each phase independent: Phase 1 -> then Phase 2 -> then Ver
 
 ### Step 1.0: PRE-FLIGHT — Mode Detection
 
-BEFORE any scanning, check the current state of `./documents/`:
+BEFORE any scanning, check the current state of `./.documents/`:
 
 ```
 CHECK:
-1. Does ./documents/ directory exist? (Create if missing)
+1. Does ./.documents/ directory exist? (Create if missing)
 2. Do knowledge FOLDERS exist? (knowledge-overview/, knowledge-architecture/, etc.)
 3. Do legacy flat files exist? (knowledge-overview.md, knowledge-architecture.md, etc.)
 4. Determine mode PER knowledge area:
@@ -568,7 +568,7 @@ After all folders are generated, perform a final verification pass:
 ### File Completeness Check
 
 ```
-./documents/
+./.documents/
   knowledge-overview/
     [ ] 00-index.md         — Has TOC, Quick Summary, cross-refs
     [ ] 01-project-identity.md — Has First 60 Minutes checklist

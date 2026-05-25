@@ -29,8 +29,8 @@ The Agent Assistant system is built on 7 core entity types that work together to
 | 7 | Platform Config | 5 | Platform-specific configurations |
 
 **Sources**:
-- `documents/knowledge-domain/01-entities.md:1-100` — Entity definitions and counts
-- `documents/business/business-glossary/03-domain-entities-and-events.md:1-174` — Domain entity model
+- `.documents/knowledge-domain/01-entities.md:1-100` — Entity definitions and counts
+- `.documents/business/business-glossary/03-domain-entities-and-events.md:1-174` — Domain entity model
 
 ---
 
@@ -194,7 +194,7 @@ This section provides detailed property definitions for each of the 7 core entit
 - Consults with other Agents (Many-to-Many)
 - Reports to another Agent (Many-to-One)
 
-**Source**: `documents/business/business-glossary/03-domain-entities-and-events.md:10-31`
+**Source**: `.documents/business/business-glossary/03-domain-entities-and-events.md:10-31`
 
 ---
 
@@ -239,7 +239,7 @@ This section provides detailed property definitions for each of the 7 core entit
 - Follows Rules (Many-to-Many)
 - Triggers Phase completion events
 
-**Source**: `documents/knowledge-domain/01-entities.md:67-121`
+**Source**: `.documents/knowledge-domain/01-entities.md:67-121`
 
 ---
 
@@ -289,7 +289,7 @@ This section provides detailed property definitions for each of the 7 core entit
 - Applies to Command (Many-to-Many)
 - Triggers Agent actions (One-to-Many)
 
-**Source**: `documents/knowledge-domain/01-entities.md:124-170`
+**Source**: `.documents/knowledge-domain/01-entities.md:124-170`
 
 ---
 
@@ -324,7 +324,7 @@ This section provides detailed property definitions for each of the 7 core entit
 - Belongs to Matrix Skill (Many-to-One)
 - Used by Agent (Many-to-Many)
 
-**Source**: `documents/knowledge-domain/01-entities.md:173-204`
+**Source**: `.documents/knowledge-domain/01-entities.md:173-204`
 
 ---
 
@@ -358,7 +358,7 @@ matrix-skills/
 - Contains Skill (One-to-Many)
 - Injected into Agent (Many-to-Many)
 
-**Source**: `documents/knowledge-domain/01-entities.md:207-238`
+**Source**: `.documents/knowledge-domain/01-entities.md:207-238`
 
 ---
 
@@ -415,7 +415,7 @@ matrix-skills/
 - Specializes in Command (Many-to-Many)
 - Produces team_consensus events
 
-**Source**: `documents/knowledge-domain/01-entities.md:241-295`
+**Source**: `.documents/knowledge-domain/01-entities.md:241-295`
 
 ---
 
@@ -464,7 +464,7 @@ matrix-skills/
 - Configures Agent (Many-to-Many)
 - Configures Rule (Many-to-Many)
 
-**Source**: `documents/knowledge-domain/01-entities.md:298-339`
+**Source**: `.documents/knowledge-domain/01-entities.md:298-339`
 
 ---
 
@@ -491,7 +491,7 @@ The Agent Assistant system emits 5 distinct event types during execution. These 
 
 **Flow**: Orchestrator → Agent
 
-**Source**: `documents/business/business-glossary/03-domain-entities-and-events.md:178-196`
+**Source**: `.documents/business/business-glossary/03-domain-entities-and-events.md:178-196`
 
 ---
 
@@ -513,7 +513,7 @@ The Agent Assistant system emits 5 distinct event types during execution. These 
 
 **Flow**: HSOL → Agent
 
-**Source**: `documents/business/business-glossary/03-domain-entities-and-events.md:200-217`
+**Source**: `.documents/business/business-glossary/03-domain-entities-and-events.md:200-217`
 
 ---
 
@@ -537,7 +537,7 @@ The Agent Assistant system emits 5 distinct event types during execution. These 
 
 **Flow**: Phase → Orchestrator
 
-**Source**: `documents/business/business-glossary/03-domain-entities-and-events.md:221-240`
+**Source**: `.documents/business/business-glossary/03-domain-entities-and-events.md:221-240`
 
 ---
 
@@ -560,7 +560,7 @@ The Agent Assistant system emits 5 distinct event types during execution. These 
 
 **Flow**: User → Router → Orchestrator
 
-**Source**: `documents/business/business-glossary/03-domain-entities-and-events.md:244-262`
+**Source**: `.documents/business/business-glossary/03-domain-entities-and-events.md:244-262`
 
 ---
 
@@ -584,7 +584,7 @@ The Agent Assistant system emits 5 distinct event types during execution. These 
 
 **Flow**: Tech Lead → Orchestrator
 
-**Source**: `documents/business/business-glossary/03-domain-entities-and-events.md:266-285`
+**Source**: `.documents/business/business-glossary/03-domain-entities-and-events.md:266-285`
 
 ---
 
@@ -717,8 +717,8 @@ Understanding how to discover entities through relationships:
 
 ## Evidence Sources
 
-- `documents/knowledge-domain/01-entities.md` — Core entity definitions with properties
-- `documents/business/business-glossary/03-domain-entities-and-events.md` — Domain entity model with event schemas
+- `.documents/knowledge-domain/01-entities.md` — Core entity definitions with properties
+- `.documents/business/business-glossary/03-domain-entities-and-events.md` — Domain entity model with event schemas
 - `rules/CORE.md` — Command routing, Orchestrator
 - `rules/AGENTS.md` — Agent entity, dispatch
 - `rules/TEAMS.md` — Team entity, consensus

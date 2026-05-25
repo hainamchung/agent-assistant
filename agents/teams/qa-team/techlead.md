@@ -61,7 +61,7 @@ Status flow: ⏳ Pending → 🔄 In Progress → ✅ Approved → ❌ Blocked �
 
 ## 📬 MAILBOX PROTOCOL
 
-**Location**: `./reports/{topic}/MAILBOX-{date}.md` — append-only, never edit prior exchanges.
+**Location**: `./.reports/{topic}/MAILBOX-{date}.md` — append-only, never edit prior exchanges.
 
 | Permission | Scope |
 |------------|-------|

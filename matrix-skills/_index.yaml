@@ -166,7 +166,7 @@ hsol:
   # Skill Graph for Relationship Modeling (NEW v2)
   skill_graph:
     enabled: true
-    storage: "./reports/{topic}/meta/hsol-v2/skill-graph.yaml"
+    storage: "./.reports/{topic}/meta/hsol-v2/skill-graph.yaml"
     
     # Edge Types
     edge_types:

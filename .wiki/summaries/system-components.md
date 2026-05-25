@@ -52,7 +52,7 @@ Each command variant scales the agent count and review depth:
 - **hard**: 5–8 agents, standard review
 - **team**: Golden Triangle (Tech Lead + Executor + Reviewer), adversarial review
 
-**Source**: `documents/knowledge-overview/03-features.md:16-36`, `documents/knowledge-architecture/03-data-flow.md:60-79`
+**Source**: `.documents/knowledge-overview/03-features.md:16-36`, `.documents/knowledge-architecture/03-data-flow.md:60-79`
 
 See [[Command System]] for the full command reference.
 
@@ -75,7 +75,7 @@ The Rule Layer loads orchestration protocols in a specific order that governs ho
 
 The Rule Layer is loaded in order (CORE → PHASES → AGENTS → SKILLS → TEAMS → ERRORS → REFERENCE → WIKI) for every command invocation, ensuring consistent orchestration behavior.
 
-**Source**: `documents/knowledge-architecture/02-components.md:88-99`
+**Source**: `.documents/knowledge-architecture/02-components.md:88-99`
 
 See [[Rule System]] for the full rule reference.
 
@@ -134,7 +134,7 @@ See [[Rule System]] for the full rule reference.
 | wiki-extractor | Code documentation, JSDoc, docstrings |
 | database-architect | Data layer design, schema, queries |
 
-**Source**: `documents/knowledge-overview/03-features.md:48-99`, `documents/knowledge-domain/01-entities.md:140-208`
+**Source**: `.documents/knowledge-overview/03-features.md:48-99`, `.documents/knowledge-domain/01-entities.md:140-208`
 
 See [[Agent System]] for the full agent reference.
 
@@ -165,7 +165,7 @@ See [[Agent System]] for the full agent reference.
 | security-team | Security | tech-lead | security-engineer | reviewer |
 | wiki-team | Wiki | wiki-architect | wiki-extractor | wiki-reviewer |
 
-**Source**: `documents/knowledge-domain/01-entities.md:266-288`
+**Source**: `.documents/knowledge-domain/01-entities.md:266-288`
 
 See [[Team System]] and [[Golden Triangle]].
 
@@ -190,7 +190,7 @@ Skill selection follows priority: foundation → professional → specialized �
 | Medium (32K–64K) | 20–30 skills |
 | Large (>64K) | 50+ skills |
 
-**Source**: `documents/knowledge-architecture/04-design-patterns.md:141-216`, `documents/knowledge-domain/04-business-rules.md:96-138`
+**Source**: `.documents/knowledge-architecture/04-design-patterns.md:141-216`, `.documents/knowledge-domain/04-business-rules.md:96-138`
 
 See [[Skill System]] and [[HSOL Skill Injection]].
 
@@ -206,7 +206,7 @@ Single-file Node.js application (`cli/install.js`, 1716 lines) with no framework
 
 Installs to all 7 configured platforms by copying files and replacing path placeholders. Progress tracking and fsync reliability ensure consistent installation.
 
-**Source**: `documents/knowledge-overview/02-tech-stack.md:30-40`, `documents/knowledge-source-base/02-entry-points.md:16-80`
+**Source**: `.documents/knowledge-overview/02-tech-stack.md:30-40`, `.documents/knowledge-source-base/02-entry-points.md:16-80`
 
 ### Web Application
 
@@ -214,7 +214,7 @@ React 19 documentation site with four routes. Built with Vite 6, TypeScript, Tai
 
 **Routes**: `/` (HomePage), `/docs` (Docs), `/installation` (Installation), `/features/agent-teams` (AgentTeams)
 
-**Source**: `documents/knowledge-overview/02-tech-stack.md:213-226`, `documents/knowledge-source-base/02-entry-points.md:82-140`
+**Source**: `.documents/knowledge-overview/02-tech-stack.md:213-226`, `.documents/knowledge-source-base/02-entry-points.md:82-140`
 
 See [[CLI Installer]] and [[Web Application]].
 

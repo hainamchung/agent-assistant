@@ -89,9 +89,9 @@ ALWAYS:
    → INCORPORATE into plan constraints
 
 2. CHECK for prior deliverables:
-   - ./reports/{topic}/researchers/RESEARCH-{feature}
-   - ./reports/{topic}/scouts/SCOUT-{feature}
-   - ./reports/{topic}/designs/DESIGN-{feature}
+   - ./.reports/{topic}/researchers/RESEARCH-{feature}
+   - ./.reports/{topic}/scouts/SCOUT-{feature}
+   - ./.reports/{topic}/designs/DESIGN-{feature}
    → IF EXISTS: READ → EXTRACT constraints → USE in plan
    → IF MISSING + Complex: STOP → Request scouter/researcher first
 ```
@@ -141,8 +141,8 @@ ALWAYS:
 
 ## 📤 Output Format
 
-**Small** (≤ 150 lines): Single file `./reports/{topic}/plans/PLAN-{feature}.md`
-**Large** (> 150 lines OR ≥ 4 sections): Folder `./reports/{topic}/plans/{feature}/` → create `00-index` first, then each section `01-*`, `02-*` sequentially.
+**Small** (≤ 150 lines): Single file `./.reports/{topic}/plans/PLAN-{feature}.md`
+**Large** (> 150 lines OR ≥ 4 sections): Folder `./.reports/{topic}/plans/{feature}/` → create `00-index` first, then each section `01-*`, `02-*` sequentially.
 
 ### Single-file template
 

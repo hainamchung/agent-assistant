@@ -34,7 +34,7 @@ See [GitHub](https://github.com/...)  # NO
 Every fact in entity and concept pages must cite source:
 
 ```
-Source: `documents/knowledge-architecture/01-system-overview.md:42`
+Source: `.documents/knowledge-architecture/01-system-overview.md:42`
 ```
 
 ## Page Structure by Type

@@ -34,7 +34,7 @@ COMMANDS = ~/.claude/skills/agent-assistant/commands/
 AGENTS   = ~/.claude/skills/agent-assistant/agents/
 SKILLS   = ~/.claude/skills/
 RULES    = ~/.claude/skills/agent-assistant/rules/
-REPORTS  = ./reports/{topic}/
+REPORTS  = ./.reports/{topic}/
 ```
 
 ---
@@ -45,7 +45,7 @@ REPORTS  = ./reports/{topic}/
 |---------|----------|
 | Response to user | **Same as user's language** |
 | Code & comments | **Always English** |
-| Files in `./reports/{topic}/`, `./documents/` | **Always English** |
+| Files in `./.reports/{topic}/`, `./.documents/` | **Always English** |
 
 ---
 
@@ -147,7 +147,7 @@ REPORTS  = ./reports/{topic}/
 
 - Agent Definitions: `~/.claude/skills/agent-assistant/agents/*.md`
 - Skills Catalog: `~/.claude/skills/*/SKILL.md`
-- Documentation: `./documents/`
+- Documentation: `./.documents/`
 
 ---
 

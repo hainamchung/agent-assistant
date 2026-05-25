@@ -67,7 +67,7 @@ Installing to:
 
 The installer will report status for each platform. If a platform directory is not found, it is skipped gracefully.
 
-**Source**: `documents/knowledge-overview/04-getting-started.md:1-100`
+**Source**: `.documents/knowledge-overview/04-getting-started.md:1-100`
 
 ---
 

@@ -72,7 +72,7 @@
 |---|------|-------|--------|-------|
 | 1 | {task} | `{executor}` | ✅/🔄/⏳ | 1/3 |
 
-### 📬 Mailbox Exchanges (key entries from ./reports/{topic}/MAILBOX-{date}.md)
+### 📬 Mailbox Exchanges (key entries from ./.reports/{topic}/MAILBOX-{date}.md)
 | # | From → To | Type | Summary |
 |---|-----------|------|---------|
 | 1 | Tech Lead → Executor | TASK_ASSIGNMENT | {summary} |
@@ -100,7 +100,7 @@
 - Team phases use Golden Triangle format; non-team phases use standard format
 - ALWAYS exactly 3 agents per phase (Tech Lead + Executor + Reviewer)
 - Tech Lead decomposes → Executor implements → Reviewer critiques → Debate → Consensus
-- Mailbox (`./reports/{topic}/MAILBOX-{date}.md`) captures ALL inter-agent communication
+- Mailbox (`./.reports/{topic}/MAILBOX-{date}.md`) captures ALL inter-agent communication
 - Maximum 3 debate rounds per task — then Tech Lead arbitrates
 - Output released ONLY with explicit consensus stamp: `✅ CONSENSUS: X ✓ | Y ✓ | Z ✓`
 - NO phase can complete without all 3 agents confirming
@@ -163,7 +163,7 @@ BEFORE Phase N:
 ### Chunked Deliverable Structure
 
 ```
-./reports/{topic}/{type}/{feature}/
+./.reports/{topic}/{type}/{feature}/
 ├── 00-index.md              # Overview + table of contents + links
 ├── 01-{section-name}.md     # Section 1
 ├── 02-{section-name}.md     # Section 2
@@ -215,12 +215,12 @@ WHEN creating chunked deliverable:
 
 | Agent | Single File Path | Chunked Folder Path |
 |-------|------------------|---------------------|
-| `brainstormer` | `./reports/{topic}/brainstorms/BRAINSTORM-{f}.md` | `./reports/{topic}/brainstorms/{f}/00-index.md` |
-| `researcher` | `./reports/{topic}/researchers/RESEARCH-{f}.md` | `./reports/{topic}/researchers/{f}/00-index.md` |
-| `scouter` | `./reports/{topic}/scouts/SCOUT-{f}.md` | `./reports/{topic}/scouts/{f}/00-index.md` |
-| `designer` | `./reports/{topic}/designs/DESIGN-{f}.md` | `./reports/{topic}/designs/{f}/00-index.md` |
-| `planner` | `./reports/{topic}/plans/PLAN-{f}.md` | `./reports/{topic}/plans/{f}/00-index.md` |
-| `reporter` | `./reports/{topic}/general/REPORT-{t}-{d}.md` | `./reports/{topic}/general/{t}-{d}/00-index.md` |
+| `brainstormer` | `./.reports/{topic}/brainstorms/BRAINSTORM-{f}.md` | `./.reports/{topic}/brainstorms/{f}/00-index.md` |
+| `researcher` | `./.reports/{topic}/researchers/RESEARCH-{f}.md` | `./.reports/{topic}/researchers/{f}/00-index.md` |
+| `scouter` | `./.reports/{topic}/scouts/SCOUT-{f}.md` | `./.reports/{topic}/scouts/{f}/00-index.md` |
+| `designer` | `./.reports/{topic}/designs/DESIGN-{f}.md` | `./.reports/{topic}/designs/{f}/00-index.md` |
+| `planner` | `./.reports/{topic}/plans/PLAN-{f}.md` | `./.reports/{topic}/plans/{f}/00-index.md` |
+| `reporter` | `./.reports/{topic}/general/REPORT-{t}-{d}.md` | `./.reports/{topic}/general/{t}-{d}/00-index.md` |
 
 ### Decision Flow
 

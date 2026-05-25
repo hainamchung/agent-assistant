@@ -110,7 +110,7 @@ graph TB
     TEAMS --> SKILLS
 ```
 
-**Source**: `documents/knowledge-architecture/01-system-overview.md:20-117`
+**Source**: `.documents/knowledge-architecture/01-system-overview.md:20-117`
 
 ---
 
@@ -175,7 +175,7 @@ The 5-layer architecture processes every user request through a sequential pipel
 
 This architecture is the foundation for all [[Tiered Orchestration]] patterns in the system. Each layer can be tested independently, and the tiered approach means simple tasks only travel as deep as needed.
 
-**Source**: `documents/knowledge-architecture/01-system-overview.md:1-166`
+**Source**: `.documents/knowledge-architecture/01-system-overview.md:1-166`
 
 ---
 
@@ -205,7 +205,7 @@ Skills inject horizontally into any layer:
 Agent ← HSOL → Skills
 ```
 
-**Source**: `documents/knowledge-architecture/01-system-overview.md:170-194`
+**Source**: `.documents/knowledge-architecture/01-system-overview.md:170-194`
 
 ---
 
@@ -449,7 +449,7 @@ Agent Assistant consists of seven major components:
 | Installation | `/installation` | Setup guide |
 | Features | `/features/*` | Feature documentation |
 
-**Source**: `documents/knowledge-architecture/02-components.md:1-332`
+**Source**: `.documents/knowledge-architecture/02-components.md:1-332`
 
 ---
 
@@ -584,7 +584,7 @@ graph TD
 4. **HSOL** — Injects relevant skills
 5. **Review** — Validates quality
 
-**Source**: `documents/knowledge-architecture/04-design-patterns.md:19-334`
+**Source**: `.documents/knowledge-architecture/04-design-patterns.md:19-334`
 
 ---
 
@@ -769,7 +769,7 @@ graph TD
 
 Error handling is integrated at every stage with a 3-retry backoff policy. Errors are classified by severity (Warning, Error, Critical) and propagated through the chain.
 
-**Source**: `documents/knowledge-architecture/03-data-flow.md:1-317`
+**Source**: `.documents/knowledge-architecture/03-data-flow.md:1-317`
 
 ---
 
@@ -798,7 +798,7 @@ The system operates under 10 fundamental Orchestration Laws (L1-L10) that govern
 | L5: Phase N+1 before N | Phase sequencing enforcement |
 | L7: Meta implementing | Agent category check |
 
-**Source**: `documents/business/business-features/03-feature-specifications.md:170-227`
+**Source**: `.documents/business/business-features/03-feature-specifications.md:170-227`
 
 ---
 
@@ -838,7 +838,7 @@ See [[Platform System]] for the full platform abstraction details.
 | Teams | 18 | Domain teams |
 | Skills | 1400+ | Tiered by expertise |
 
-**Source**: `documents/knowledge-architecture/01-system-overview.md:229-237`
+**Source**: `.documents/knowledge-architecture/01-system-overview.md:229-237`
 
 ---
 

@@ -48,7 +48,7 @@ If you submitted it, you own the measurements. If it regressed, fix it. If it's 
 
 ## 📬 MAILBOX PROTOCOL
 
-**Location**: `./reports/{topic}/MAILBOX-{date}.md` — append-only, never edit prior exchanges.
+**Location**: `./.reports/{topic}/MAILBOX-{date}.md` — append-only, never edit prior exchanges.
 
 | Permission | Scope |
 |------------|-------|

@@ -74,31 +74,31 @@
 ### Single File (≤ 150 lines, < 4 sections)
 
 ```yaml
-brainstormer:         ./reports/{topic}/brainstorms/BRAINSTORM-{feature}.md
-researcher:           ./reports/{topic}/researchers/RESEARCH-{feature}.md
-scouter:              ./reports/{topic}/scouts/SCOUT-{feature}.md
-designer:             ./reports/{topic}/designs/DESIGN-{feature}.md
-planner:              ./reports/{topic}/plans/PLAN-{feature}.md
-reporter:             ./reports/{topic}/general/REPORT-{type}-{date}.md
-debugger:             ./reports/{topic}/debugs/DEBUG-{issue}.md
-tester:               ./reports/{topic}/tests/TEST-{feature}.md
-business-analyst:     ./reports/{topic}/requirements/REQ-{feature}.md
-performance-engineer: ./reports/{topic}/performance/PERF-{component}.md
+brainstormer:         ./.reports/{topic}/brainstorms/BRAINSTORM-{feature}.md
+researcher:           ./.reports/{topic}/researchers/RESEARCH-{feature}.md
+scouter:              ./.reports/{topic}/scouts/SCOUT-{feature}.md
+designer:             ./.reports/{topic}/designs/DESIGN-{feature}.md
+planner:              ./.reports/{topic}/plans/PLAN-{feature}.md
+reporter:             ./.reports/{topic}/general/REPORT-{type}-{date}.md
+debugger:             ./.reports/{topic}/debugs/DEBUG-{issue}.md
+tester:               ./.reports/{topic}/tests/TEST-{feature}.md
+business-analyst:     ./.reports/{topic}/requirements/REQ-{feature}.md
+performance-engineer: ./.reports/{topic}/performance/PERF-{component}.md
 ```
 
 ### Chunked Folder (> 150 lines OR ≥ 4 sections)
 
 ```yaml
-brainstormer:         ./reports/{topic}/brainstorms/{feature}/00-index.md + sections
-researcher:           ./reports/{topic}/researchers/{feature}/00-index.md + sections
-scouter:              ./reports/{topic}/scouts/{feature}/00-index.md + sections
-designer:             ./reports/{topic}/designs/{feature}/00-index.md + sections
-planner:              ./reports/{topic}/plans/{feature}/00-index.md + sections
-reporter:             ./reports/{topic}/general/{type}-{date}/00-index.md + sections
-debugger:             ./reports/{topic}/debugs/{issue}/00-index.md + sections
-tester:               ./reports/{topic}/tests/{feature}/00-index.md + sections
-business-analyst:     ./reports/{topic}/requirements/{feature}/00-index.md + sections
-performance-engineer: ./reports/{topic}/performance/{component}/00-index.md + sections
+brainstormer:         ./.reports/{topic}/brainstorms/{feature}/00-index.md + sections
+researcher:           ./.reports/{topic}/researchers/{feature}/00-index.md + sections
+scouter:              ./.reports/{topic}/scouts/{feature}/00-index.md + sections
+designer:             ./.reports/{topic}/designs/{feature}/00-index.md + sections
+planner:              ./.reports/{topic}/plans/{feature}/00-index.md + sections
+reporter:             ./.reports/{topic}/general/{type}-{date}/00-index.md + sections
+debugger:             ./.reports/{topic}/debugs/{issue}/00-index.md + sections
+tester:               ./.reports/{topic}/tests/{feature}/00-index.md + sections
+business-analyst:     ./.reports/{topic}/requirements/{feature}/00-index.md + sections
+performance-engineer: ./.reports/{topic}/performance/{component}/00-index.md + sections
 ```
 
 > **Rule**: Create `00-index.md` FIRST, then section files SEQUENTIALLY. See `PHASES.md > DELIVERABLE SIZE MANAGEMENT`.
@@ -109,11 +109,11 @@ performance-engineer: ./reports/{topic}/performance/{component}/00-index.md + se
 
 ```yaml
 # Each knowledge area is now a FOLDER with 00-index.md + sub-files
-overview:     ./documents/knowledge-overview/00-index.md       # + 01~04 sub-files
-architecture: ./documents/knowledge-architecture/00-index.md   # + 01~05 sub-files
-domain:       ./documents/knowledge-domain/00-index.md         # + 01~04 sub-files
-source-base:  ./documents/knowledge-source-base/00-index.md    # + 01~04 sub-files
-standards:    ./documents/knowledge-standards/00-index.md       # + 01~04 sub-files
+overview:     ./.documents/knowledge-overview/00-index.md       # + 01~04 sub-files
+architecture: ./.documents/knowledge-architecture/00-index.md   # + 01~05 sub-files
+domain:       ./.documents/knowledge-domain/00-index.md         # + 01~04 sub-files
+source-base:  ./.documents/knowledge-source-base/00-index.md    # + 01~04 sub-files
+standards:    ./.documents/knowledge-standards/00-index.md       # + 01~04 sub-files
 
 # To get full context: read 00-index.md first, then load specific sub-files
 # To get quick overview: read only 00-index.md files

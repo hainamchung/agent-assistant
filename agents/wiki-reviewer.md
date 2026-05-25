@@ -74,10 +74,10 @@ ALWAYS:
    - What variant generated this? (fast / hard / team)
 
 3. GATHER REVIEW MATERIALS:
-   - Scout report (./reports/{topic}/scouts/SCOUT-{project})
-   - Entity catalog (./reports/{topic}/wikis/WIKI-{variant}-{project}/00-catalog.md)
+   - Scout report (./.reports/{topic}/scouts/SCOUT-{project})
+   - Entity catalog (./.reports/{topic}/wikis/WIKI-{variant}-{project}/00-catalog.md)
    - Wiki taxonomy (if exists)
-   - Generation plan (./reports/{topic}/plans/PLAN-WIKI-{project})
+   - Generation plan (./.reports/{topic}/plans/PLAN-WIKI-{project})
 
 4. ESTABLISH BASELINE (llm-wiki.toml § required_fields + § lint):
    - Total entities from scout/catalog

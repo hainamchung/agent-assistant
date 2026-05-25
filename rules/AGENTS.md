@@ -166,7 +166,7 @@ agents/teams/wiki-team/
 ### Communication Protocol
 
 - **Shared Task List**: Published by Tech Lead at phase start, tracks task status
-- **Mailbox**: `./reports/{topic}/MAILBOX-{date}.md` — append-only log of all exchanges
+- **Mailbox**: `./.reports/{topic}/MAILBOX-{date}.md` — append-only log of all exchanges
 - **Debate**: Max 3 rounds per task → Tech Lead arbitrates
 - **Consensus**: `✅ CONSENSUS: TechLead ✓ | Executor ✓ | Reviewer ✓` required to release output
 

@@ -56,7 +56,7 @@ execution-mode: execute
 
 ## 📬 MAILBOX — Central Communication Hub
 
-**Location**: `./reports/{topic}/MAILBOX-{date}.md`
+**Location**: `./.reports/{topic}/MAILBOX-{date}.md`
 
 All 3 triangle agents READ from and APPEND to this file. Never overwrite — append only.
 
@@ -91,14 +91,14 @@ All 3 triangle agents READ from and APPEND to this file. Never overwrite — app
 
 | Phase / Team    | Output                                          |
 | --------------- | ----------------------------------------------- |
-| Phase 1 (Disc.) | `./reports/{topic}/brainstorms/BRAINSTORM-{feature}` |
-| Phase 2 (Res.)  | `./reports/{topic}/researchers/RESEARCH-{feature}`   |
-| Phase 2 (Res.)  | `./reports/{topic}/scouts/SCOUT-{feature}`           |
-| Phase 4 (Des.)  | `./reports/{topic}/designs/DESIGN-{feature}`         |
-| Phase 5 (Plan)  | `./reports/{topic}/plans/PLAN-{feature}`             |
-| ALL Phases       | `./reports/{topic}/MAILBOX-{date}.md`                  |
+| Phase 1 (Disc.) | `./.reports/{topic}/brainstorms/BRAINSTORM-{feature}` |
+| Phase 2 (Res.)  | `./.reports/{topic}/researchers/RESEARCH-{feature}`   |
+| Phase 2 (Res.)  | `./.reports/{topic}/scouts/SCOUT-{feature}`           |
+| Phase 4 (Des.)  | `./.reports/{topic}/designs/DESIGN-{feature}`         |
+| Phase 5 (Plan)  | `./.reports/{topic}/plans/PLAN-{feature}`             |
+| ALL Phases       | `./.reports/{topic}/MAILBOX-{date}.md`                  |
 
-All files in `./reports/{topic}/` → English only.
+All files in `./.reports/{topic}/` → English only.
 **⚠️ Paths above = base names.** Small (≤ 150 lines) → create as `{name}.md`. Large (> 150 lines or ≥ 4 sections) → create as `{name}/` folder with `00-index.md` + `01-*.md`, `02-*.md` section files.
 
 ---
@@ -205,7 +205,7 @@ Format: rules/PHASES.md § Phase output structure + rules/TEAMS.md § Golden Tri
 6. `brainstormer` re-reviews → max 3 rounds → ESCALATION to `researcher` if unresolved
 7. `researcher` synthesizes all approved findings into unified requirements document
 
-**Deliverable**: Requirements + discovery report in `./reports/{topic}/brainstorms/BRAINSTORM-{feature}`
+**Deliverable**: Requirements + discovery report in `./.reports/{topic}/brainstorms/BRAINSTORM-{feature}`
 **Exit Criteria**: All requirements captured, codebase understood, gaps identified, assumptions challenged
 **Consensus**: ✅ CONSENSUS: researcher ✓ | scouter ✓ | brainstormer ✓
 
@@ -230,7 +230,7 @@ Format: rules/PHASES.md § Phase output structure + rules/TEAMS.md § Golden Tri
 4. Debate loop if FAIL → `researcher` defends or pivots → max 3 rounds
 5. `researcher` (as Tech Lead) synthesizes approved research into final deliverables
 
-**Deliverable**: `./reports/{topic}/researchers/RESEARCH-{feature}` + `./reports/{topic}/scouts/SCOUT-{feature}`
+**Deliverable**: `./.reports/{topic}/researchers/RESEARCH-{feature}` + `./.reports/{topic}/scouts/SCOUT-{feature}`
 **Exit Criteria**: Patterns researched, alternatives documented, feasibility validated by tech-lead
 **Consensus**: ✅ CONSENSUS: researcher ✓ | researcher(exec) ✓ | tech-lead ✓
 
@@ -294,7 +294,7 @@ Format: rules/PHASES.md § Phase output structure + rules/TEAMS.md § Golden Tri
 4. Debate loop if FAIL → fixes/defenses → max 3 rounds
 5. `designer` synthesizes into final design spec
 
-**Deliverable**: `./reports/{topic}/designs/DESIGN-{feature}`
+**Deliverable**: `./.reports/{topic}/designs/DESIGN-{feature}`
 **Exit Criteria**: Design complete, accessibility validated, technical feasibility confirmed
 **Consensus**: ✅ CONSENSUS: designer ✓ | frontend-engineer ✓ | reviewer ✓
 
@@ -326,7 +326,7 @@ Format: rules/PHASES.md § Phase output structure + rules/TEAMS.md § Golden Tri
 4. Debate loop if FAIL → `researcher` adjusts or defends → max 3 rounds
 5. `planner` synthesizes all approved sections into final plan
 
-**Deliverable**: `./reports/{topic}/plans/PLAN-{feature}`
+**Deliverable**: `./.reports/{topic}/plans/PLAN-{feature}`
 **Exit Criteria**: Plan complete, technically validated, risks mitigated, acceptance criteria defined
 **Consensus**: ✅ CONSENSUS: planner ✓ | researcher ✓ | tech-lead ✓
 
@@ -373,7 +373,7 @@ IF other domain → Consult TEAMS.md roster for correct triangle
 | Executor  | `backend-engineer` / `frontend-engineer` / `game-engineer` / `mobile-engineer` | Follow plan EXACTLY → implement each task → submit via Mailbox |
 | Reviewer  | `reviewer`                           | Review EVERY submission → check code quality, security, performance, plan compliance |
 
-**Prerequisite**: **READ and FOLLOW** `./reports/{topic}/plans/PLAN-{feature}`
+**Prerequisite**: **READ and FOLLOW** `./.reports/{topic}/plans/PLAN-{feature}`
 
 ### GOLDEN TRIANGLE IMPLEMENTATION LOOP (CRITICAL — Step by Step)
 
@@ -576,7 +576,7 @@ Present final feature report with consensus stamps from ALL phases:
 - Arbitrations needed: {count}
 
 ## Mailbox Reference
-Full debate history: `./reports/{topic}/MAILBOX-{date}.md`
+Full debate history: `./.reports/{topic}/MAILBOX-{date}.md`
 
 ## Next Actions
 1. ✅ **Done** — Feature complete (triangle-validated across all phases)

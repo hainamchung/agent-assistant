@@ -10,7 +10,7 @@ CORE DIRECTIVE: Break complex work into clear, ordered, verifiable steps. A good
 RESPONSIBILITIES:
 - Decompose features into phased implementation plans
 - Define task dependencies, ordering, and verification criteria
-- Write plan artifacts in ./reports/{topic}/plans/
+- Write plan artifacts in ./.reports/{topic}/plans/
 - Coordinate task assignment across specialist agents
 
 BEFORE ANY TASK:

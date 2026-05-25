@@ -17,7 +17,7 @@ The Actor Map defines all 16 actors that interact within the Agent Assistant sys
 
 Actors are organized into six categories based on their primary function: Primary Actors (who initiate and receive work), Meta Actors (who coordinate and plan), Execution Actors (who implement), Validation Actors (who verify), Research Actors (who investigate), and Support Actors (who document). This categorization enables the [[Tiered Orchestration]] system to route commands and tasks to the correct actors with minimal friction.
 
-**Source**: `documents/business/business-workflows/01-actor-map.md:1-11`
+**Source**: `.documents/business/business-workflows/01-actor-map.md:1-11`
 
 ---
 
@@ -27,7 +27,7 @@ The 16 actors form an interconnected system where work flows from primary actors
 
 The orchestration layer (A2) serves as the central routing mechanism, receiving commands from the End User (A1) and delegating work to specialized actors. Meta actors (A3-A4) break down tasks and coordinate teams. Execution actors (A5-A8) implement code across different platforms. Validation actors (A9-A12) verify correctness, security, and quality. Research actors (A13-A15) investigate and design solutions. Support actors (A16) document everything.
 
-**Source**: `documents/business/business-workflows/01-actor-map.md:8-12`
+**Source**: `.documents/business/business-workflows/01-actor-map.md:8-12`
 
 ---
 
@@ -49,7 +49,7 @@ Primary actors are the entry and exit points for all work in the system. They re
 
 The End User is the primary driver of all activity in the system. They issue natural language commands that are interpreted and routed by the Orchestrator. The End User provides requirements, reviews deliverables, and accepts or rejects suggestions from the system. They serve as the ultimate arbiter of quality and the source of truth for business requirements.
 
-**Source**: `documents/business/business-workflows/01-actor-map.md:16-25`
+**Source**: `.documents/business/business-workflows/01-actor-map.md:16-25`
 
 #### Boundaries
 
@@ -69,7 +69,7 @@ The End User interacts with the system through three primary touchpoints: comman
 
 The End User communicates exclusively through the User Interface with the Orchestrator. All other actor communications are mediated through the Orchestrator to maintain the single point of truth principle defined in [[Tiered Orchestration]].
 
-**Source**: `documents/business/business-workflows/01-actor-map.md:16-25`
+**Source**: `.documents/business/business-workflows/01-actor-map.md:16-25`
 
 ---
 
@@ -89,7 +89,7 @@ The Orchestrator is the central nervous system of the Agent Assistant. It routes
 
 The Orchestrator implements Law 1 (Single Point of Truth) and Law 7 (Explicit Over Implicit) from the [[Agent System]] rules. It never writes code directly but instead routes all implementation requests to execution actors. This separation of concerns ensures that the coordination logic remains clean and maintainable.
 
-**Source**: `documents/business/business-workflows/01-actor-map.md:27-36`
+**Source**: `.documents/business/business-workflows/01-actor-map.md:27-36`
 
 #### Boundaries
 
@@ -113,7 +113,7 @@ The Orchestrator connects to all other actors through its touchpoints: command r
 
 The Orchestrator maintains bidirectional communication with the End User and Tech Lead, while delegating outbound to execution, validation, and research actors. This hub-and-spoke pattern ensures that all routing decisions flow through a single point.
 
-**Source**: `documents/business/business-workflows/01-actor-map.md:27-36`
+**Source**: `.documents/business/business-workflows/01-actor-map.md:27-36`
 
 ---
 
@@ -137,7 +137,7 @@ The Tech Lead decomposes complex tasks into manageable subtasks, coordinates tea
 
 The Tech Lead owns the quality of every deliverable that leaves the team. They monitor debates between Executors and Reviewers, intervene when discussions exceed the 3-round limit, and make binding arbitration decisions on unresolved disputes. They apply the consensus stamp before releasing any phase output.
 
-**Source**: `documents/business/business-workflows/01-actor-map.md:42-51`
+**Source**: `.documents/business/business-workflows/01-actor-map.md:42-51`
 
 #### Boundaries
 
@@ -160,7 +160,7 @@ The Tech Lead interacts through task assignments (distributing work to team memb
 
 The Tech Lead communicates with all implementation actors through the Mailbox system, which provides an asynchronous coordination mechanism for distributed team activities.
 
-**Source**: `documents/business/business-workflows/01-actor-map.md:42-51`
+**Source**: `.documents/business/business-workflows/01-actor-map.md:42-51`
 
 ---
 
@@ -180,7 +180,7 @@ The Planner creates detailed implementation plans, breaks down features into dis
 
 The Planner consults with the Tech Lead on technical feasibility and with the Brainstormer on alternative approaches. This consultation network ensures that plans are both technically sound and consider multiple implementation strategies.
 
-**Source**: `documents/business/business-workflows/01-actor-map.md:53-62`
+**Source**: `.documents/business/business-workflows/01-actor-map.md:53-62`
 
 #### Boundaries
 
@@ -200,7 +200,7 @@ The Planner receives requirements intake (understanding what needs to be built) 
 
 The Planner delivers plans to execution actors and receives research input from the Research actors to inform estimation decisions.
 
-**Source**: `documents/business/business-workflows/01-actor-map.md:53-62`
+**Source**: `.documents/business/business-workflows/01-actor-map.md:53-62`
 
 ---
 
@@ -224,7 +224,7 @@ The Backend Engineer implements server-side logic, designs and implements APIs, 
 
 The Backend Engineer implements assigned subtasks to publication quality, self-reviews against quality standards before submitting, and defends or fixes issues raised by the Reviewer. As part of the [[Golden Triangle]] pattern, the Backend Engineer serves as the Executor role on the backend-team.
 
-**Source**: `documents/business/business-workflows/01-actor-map.md:68-77`
+**Source**: `.documents/business/business-workflows/01-actor-map.md:68-77`
 
 #### Boundaries
 
@@ -243,7 +243,7 @@ The Backend Engineer receives requirements and design specs as input and produce
 | A10: Reviewer | Inbound | CODE deliverables | Quality verification |
 | A11: Debugger | Inbound | Error reports | Bug investigation |
 
-**Source**: `documents/business/business-workflows/01-actor-map.md:68-77`
+**Source**: `.documents/business/business-workflows/01-actor-map.md:68-77`
 
 ---
 
@@ -263,7 +263,7 @@ The Frontend Engineer implements UI components, manages client-side logic, and e
 
 The Frontend Engineer consults with the Backend Engineer on API integration and with the Designer on visual implementation. This consultation network ensures that frontend implementations align with both technical constraints and design intent.
 
-**Source**: `documents/business/business-workflows/01-actor-map.md:79-88`
+**Source**: `.documents/business/business-workflows/01-actor-map.md:79-88`
 
 #### Boundaries
 
@@ -282,7 +282,7 @@ The Frontend Engineer receives design specs and requirements as input and produc
 | A15: Designer | Consultation | Design specs | Visual implementation |
 | A10: Reviewer | Inbound | CODE deliverables | Quality verification |
 
-**Source**: `documents/business/business-workflows/01-actor-map.md:79-88`
+**Source**: `.documents/business/business-workflows/01-actor-map.md:79-88`
 
 ---
 
@@ -302,7 +302,7 @@ The Mobile Engineer implements features for iOS and Android platforms using Reac
 
 The Mobile Engineer works as part of the mobile-team, following the [[Golden Triangle]] pattern with the Tech Lead coordinating and the Reviewer verifying quality.
 
-**Source**: `documents/business/business-workflows/01-actor-map.md:90-99`
+**Source**: `.documents/business/business-workflows/01-actor-map.md:90-99`
 
 #### Boundaries
 
@@ -319,7 +319,7 @@ The Mobile Engineer receives platform requirements and produces deliverable outp
 | A3: Tech Lead | Bidirectional | Mailbox, Task List | Task assignment, submission |
 | A10: Reviewer | Inbound | CODE deliverables | Quality verification |
 
-**Source**: `documents/business/business-workflows/01-actor-map.md:90-99`
+**Source**: `.documents/business/business-workflows/01-actor-map.md:90-99`
 
 ---
 
@@ -339,7 +339,7 @@ The Game Engineer implements game logic, physics simulation, graphics rendering,
 
 The Game Engineer follows the [[Golden Triangle]] pattern with the Tech Lead coordinating and the Reviewer verifying implementation quality.
 
-**Source**: `documents/business/business-workflows/01-actor-map.md:101-110`
+**Source**: `.documents/business/business-workflows/01-actor-map.md:101-110`
 
 #### Boundaries
 
@@ -356,7 +356,7 @@ The Game Engineer receives game design specs and produces deliverable output (ga
 | A3: Tech Lead | Bidirectional | Mailbox, Task List | Task assignment, submission |
 | A10: Reviewer | Inbound | CODE deliverables | Quality verification |
 
-**Source**: `documents/business/business-workflows/01-actor-map.md:101-110`
+**Source**: `.documents/business/business-workflows/01-actor-map.md:101-110`
 
 ---
 
@@ -380,7 +380,7 @@ The Tester generates comprehensive test suites including unit tests, integration
 
 The Tester creates tests but does not fix implementation issues. When tests fail, the Tester reports findings to the Tech Lead who coordinates with the appropriate execution actor to address issues.
 
-**Source**: `documents/business/business-workflows/01-actor-map.md:116-125`
+**Source**: `.documents/business/business-workflows/01-actor-map.md:116-125`
 
 #### Boundaries
 
@@ -398,7 +398,7 @@ The Tester receives code input and produces test output and coverage reports. Th
 | A5-A8: Engineers | Inbound | CODE deliverables | Test creation |
 | A11: Debugger | Consultation | TEST deliverables | Failure investigation |
 
-**Source**: `documents/business/business-workflows/01-actor-map.md:116-125`
+**Source**: `.documents/business/business-workflows/01-actor-map.md:116-125`
 
 ---
 
@@ -418,7 +418,7 @@ The Reviewer performs code review against best practices and design patterns, en
 
 The Reviewer posts structured review findings with severity levels and can block delivery until the quality bar is met. The Reviewer consults with the Tester and Security Engineer for specialized review areas.
 
-**Source**: `documents/business/business-workflows/01-actor-map.md:127-136`
+**Source**: `.documents/business/business-workflows/01-actor-map.md:127-136`
 
 #### Boundaries
 
@@ -437,7 +437,7 @@ The Reviewer receives code input and produces review output with PASS/FAIL statu
 | A9: Tester | Consultation | Coverage reports | Testing coordination |
 | A12: Security Engineer | Consultation | Security findings | Security review |
 
-**Source**: `documents/business/business-workflows/01-actor-map.md:127-136`
+**Source**: `.documents/business/business-workflows/01-actor-map.md:127-136`
 
 ---
 
@@ -457,7 +457,7 @@ The Debugger investigates bugs, traces root causes, and proposes solutions witho
 
 The Debugger produces DEBUG reports with root cause analysis that enable execution actors to implement targeted fixes.
 
-**Source**: `documents/business/business-workflows/01-actor-map.md:138-147`
+**Source**: `.documents/business/business-workflows/01-actor-map.md:138-147`
 
 #### Boundaries
 
@@ -475,7 +475,7 @@ The Debugger receives error reports and investigates code, producing analysis ou
 | A5-A8: Engineers | Inbound | Error reports | Investigation requests |
 | A9: Tester | Consultation | TEST deliverables | Test failure investigation |
 
-**Source**: `documents/business/business-workflows/01-actor-map.md:138-147`
+**Source**: `.documents/business/business-workflows/01-actor-map.md:138-147`
 
 ---
 
@@ -495,7 +495,7 @@ The Security Engineer performs security audits, assesses vulnerabilities, and re
 
 The Security Engineer produces security reports with vulnerability findings that enable appropriate remediation by execution actors.
 
-**Source**: `documents/business/business-workflows/01-actor-map.md:149-158`
+**Source**: `.documents/business/business-workflows/01-actor-map.md:149-158`
 
 #### Boundaries
 
@@ -513,7 +513,7 @@ The Security Engineer receives code input and produces security reports with vul
 | A5-A8: Engineers | Inbound | CODE deliverables | Security review requests |
 | A10: Reviewer | Consultation | Review findings | Security integration |
 
-**Source**: `documents/business/business-workflows/01-actor-map.md:149-158`
+**Source**: `.documents/business/business-workflows/01-actor-map.md:149-158`
 
 ---
 
@@ -535,7 +535,7 @@ Research actors investigate, explore, and design solutions without implementing 
 
 The Researcher investigates technologies, analyzes best practices, and gathers evidence to inform decision-making. The Researcher produces research deliverables that provide the factual foundation for plans and implementations. The Researcher consults with the Business Analyst and Reporter for specialized research areas.
 
-**Source**: `documents/business/business-workflows/01-actor-map.md:164-173`
+**Source**: `.documents/business/business-workflows/01-actor-map.md:164-173`
 
 #### Boundaries
 
@@ -552,7 +552,7 @@ The Researcher receives research questions and produces findings output. These t
 | A2: Orchestrator | Bidirectional | RESEARCH deliverables | Research coordination |
 | A4: Planner | Inbound | RESEARCH deliverables | Information provision |
 
-**Source**: `documents/business/business-workflows/01-actor-map.md:164-173`
+**Source**: `.documents/business/business-workflows/01-actor-map.md:164-173`
 
 ---
 
@@ -570,7 +570,7 @@ The Researcher receives research questions and produces findings output. These t
 
 The Scouter explores the codebase, maps dependencies, and discovers patterns that inform implementation decisions. The Scouter produces SCOUT reports with dependency maps that help execution actors understand the existing architecture before making changes.
 
-**Source**: `documents/business/business-workflows/01-actor-map.md:175-184`
+**Source**: `.documents/business/business-workflows/01-actor-map.md:175-184`
 
 #### Boundaries
 
@@ -587,7 +587,7 @@ The Scouter analyzes the codebase and produces pattern reports. These touchpoint
 | A3: Tech Lead | Bidirectional | SCOUT reports | Exploration coordination |
 | A5-A8: Engineers | Inbound | Dependency requests | Architecture understanding |
 
-**Source**: `documents/business/business-workflows/01-actor-map.md:175-184`
+**Source**: `.documents/business/business-workflows/01-actor-map.md:175-184`
 
 ---
 
@@ -605,7 +605,7 @@ The Scouter analyzes the codebase and produces pattern reports. These touchpoint
 
 The Designer creates UI/UX designs, establishes design systems, and reviews accessibility compliance. The Designer produces DESIGN deliverables that guide frontend implementation. The Designer consults with the Frontend Engineer to ensure designs are technically feasible.
 
-**Source**: `documents/business/business-workflows/01-actor-map.md:186-195`
+**Source**: `.documents/business/business-workflows/01-actor-map.md:186-195`
 
 #### Boundaries
 
@@ -622,7 +622,7 @@ The Designer receives requirements and produces design specs. These touchpoints 
 | A3: Tech Lead | Bidirectional | Design coordination | Design oversight |
 | A6: Frontend Engineer | Consultation | Design specs | Implementation guidance |
 
-**Source**: `documents/business/business-workflows/01-actor-map.md:186-195`
+**Source**: `.documents/business/business-workflows/01-actor-map.md:186-195`
 
 ---
 
@@ -644,7 +644,7 @@ Support actors provide essential services that enable other actors to work effec
 
 The Docs Manager performs technical writing, manages documentation architecture, and produces API documentation. The Docs Manager ensures that all deliverables are properly documented and that documentation remains consistent across the system. The Docs Manager consults with the Wiki Reviewer and Researcher for documentation quality assurance.
 
-**Source**: `documents/business/business-workflows/01-actor-map.md:201-210`
+**Source**: `.documents/business/business-workflows/01-actor-map.md:201-210`
 
 #### Boundaries
 
@@ -661,7 +661,7 @@ The Docs Manager receives code input and produces documentation output. These to
 | A2: Orchestrator | Bidirectional | DOC deliverables | Documentation coordination |
 | A5-A8: Engineers | Inbound | CODE deliverables | Documentation source |
 
-**Source**: `documents/business/business-workflows/01-actor-map.md:201-210`
+**Source**: `.documents/business/business-workflows/01-actor-map.md:201-210`
 
 ---
 
@@ -688,7 +688,7 @@ The following matrix defines the communication patterns between all actors in th
 | Designer | A15 | A4 | A2, A4 | DESIGN deliverables |
 | Docs Manager | A16 | A2 | A2, A5-A8 | DOC deliverables |
 
-**Source**: `documents/business/business-workflows/01-actor-map.md:214-225`
+**Source**: `.documents/business/business-workflows/01-actor-map.md:214-225`
 
 ---
 
@@ -700,25 +700,25 @@ Boundary enforcement ensures that each actor operates within its defined scope a
 
 Meta agents (A3: Tech Lead, A4: Planner) **coordinate only**. They design, plan, and arbitrate, but never implement. This boundary is enforced by the Tiered Orchestration pattern, which routes all implementation requests to execution actors. When a Meta agent receives an implementation request, it must delegate to the appropriate execution actor rather than handling it directly.
 
-**Source**: `documents/business/business-workflows/01-actor-map.md:229-237`
+**Source**: `.documents/business/business-workflows/01-actor-map.md:229-237`
 
 ### Validation Boundary: Report, Never Fix
 
 Validation actors (A9-A12) **report only**. They verify, audit, and investigate, but never fix. When a validation actor identifies an issue, it documents the finding and routes the fix request to the appropriate execution actor. This boundary maintains the adversarial relationship that makes validation effective.
 
-**Source**: `documents/business/business-workflows/01-actor-map.md:229-237`
+**Source**: `.documents/business/business-workflows/01-actor-map.md:229-237`
 
 ### Execution Boundary: Implement, Never Change Requirements
 
 Execution actors (A5-A8) **implement only**. They follow specifications and do not change requirements. When an execution actor encounters unclear or conflicting requirements, it must escalate to the Tech Lead rather than making unilateral decisions. This boundary ensures that requirements remain stable throughout implementation.
 
-**Source**: `documents/business/business-workflows/01-actor-map.md:229-237`
+**Source**: `.documents/business/business-workflows/01-actor-map.md:229-237`
 
 ### Orchestration Boundary: Route, Never Execute
 
 The Orchestrator (A2) **routes only**. It receives commands, delegates to appropriate agents, and coordinates phases, but never implements directly. This boundary is defined by Law 1 (Single Point of Truth) in the [[Agent System]], which establishes the Orchestrator as the central coordination hub. All requests that require implementation must pass through the Orchestrator to the appropriate execution actor.
 
-**Source**: `documents/business/business-workflows/01-actor-map.md:229-237`
+**Source**: `.documents/business/business-workflows/01-actor-map.md:229-237`
 
 ### Enforcement Mechanisms
 
@@ -732,7 +732,7 @@ Boundary violations are prevented through multiple mechanisms:
 
 4. **Evidence Source Tracking**: Every action is traced to its source, enabling accountability and boundary enforcement verification.
 
-**Source**: `documents/business/business-workflows/01-actor-map.md:240-246`
+**Source**: `.documents/business/business-workflows/01-actor-map.md:240-246`
 
 ---
 
@@ -746,7 +746,7 @@ The Actor Map is derived from the following authoritative sources:
 - `rules/PHASES.md` — Phase roles and required outputs
 - `web/src/data/agents.ts` — Agent definition data structure
 
-**Source**: `documents/business/business-workflows/01-actor-map.md:240-247`
+**Source**: `.documents/business/business-workflows/01-actor-map.md:240-247`
 
 ---
 

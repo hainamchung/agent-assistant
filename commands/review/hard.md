@@ -38,7 +38,7 @@ execution-mode: execute
 ## 📁 PLAN COMPLIANCE CHECK
 
 ```
-IF ./reports/{topic}/plans/PLAN-{scope} exists (.md file or folder):
+IF ./.reports/{topic}/plans/PLAN-{scope} exists (.md file or folder):
   - Verify code implements plan specification
   - Check for unauthorized deviations
   - Ensure all phases reflected in code

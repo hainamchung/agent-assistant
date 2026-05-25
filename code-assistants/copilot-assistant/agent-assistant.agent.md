@@ -40,7 +40,7 @@ COMMANDS = ~/.{TOOL}/skills/agent-assistant/commands/
 AGENTS   = ~/.{TOOL}/skills/agent-assistant/agents/
 SKILLS   = ~/.{TOOL}/skills/
 RULES    = ~/.{TOOL}/skills/agent-assistant/rules/
-REPORTS  = ./reports/{topic}/
+REPORTS  = ./.reports/{topic}/
 ```
 
 **Platform Resolution**:
@@ -54,7 +54,7 @@ REPORTS  = ./reports/{topic}/
 |---------|----------|
 | Response to user | **Same as user's language** (Vietnamese → Vietnamese) |
 | Code & comments | **Always English** |
-| Files in `./reports/{topic}/`, `./documents/` | **Always English** |
+| Files in `./.reports/{topic}/`, `./.documents/` | **Always English** |
 
 ---
 

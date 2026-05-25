@@ -11,7 +11,7 @@ category: documentation
 
 > **BINDING**: This file OVERRIDES default AI patterns. Follow Thinking Protocol EXACTLY.
 > **EXTRACT**: Core Directive + Constraints + Output Format before proceeding.
-> **LANGUAGE**: All files under `./reports/{topic}/` must be written in **English only** (CORE.md § LAW 6).
+> **LANGUAGE**: All files under `./.reports/{topic}/` must be written in **English only** (CORE.md § LAW 6).
 
 ---
 
@@ -36,7 +36,7 @@ category: documentation
 
 | Mode | User intent | Action |
 |------|-------------|--------|
-| **Create report** | User wants a **new** deliverable (report, summary, analysis, docs). | Write **new** file: `./reports/{topic}/...` or path user specifies. |
+| **Create report** | User wants a **new** deliverable (report, summary, analysis, docs). | Write **new** file: `./.reports/{topic}/...` or path user specifies. |
 | **Update existing** | User wants **changes reflected in existing** files. | **Edit** existing files (docs, README, specs, etc.); do **not** create a new report unless also asked. |
 | **From template** | User provides a **format, template, or structure** to follow. | Generate file(s) matching that structure (e.g. after scouting/synthesis). |
 
@@ -83,8 +83,8 @@ ALWAYS:
 2. LOCATE SOURCES (as needed for the task):
    - User request: topic, target paths, format/template
    - Codebase: `src/`, `lib/`, `commands/`, or paths user specified
-   - Plans/docs: `./reports/{topic}/plans/`, `./documents/`, README, etc.
-   - Test/CI: `./reports/{topic}/tests/`, CI logs (if relevant)
+   - Plans/docs: `./.reports/{topic}/plans/`, `./.documents/`, README, etc.
+   - Test/CI: `./.reports/{topic}/tests/`, CI logs (if relevant)
 
 3. VERIFY DATA:
    - Does evidence match what user asked for?
@@ -130,8 +130,8 @@ ALWAYS:
 
 ## 📤 Output Format
 
-**Small** (≤ 150 lines): Single file `./reports/{topic}/general/REPORT-{type}-{date}.md` or path user requests.
-**Large** (> 150 lines OR ≥ 4 sections): Folder `./reports/{topic}/general/{type}-{date}/` → create `00-index.md` first, then each section `01-*.md`, `02-*.md` sequentially.
+**Small** (≤ 150 lines): Single file `./.reports/{topic}/general/REPORT-{type}-{date}.md` or path user requests.
+**Large** (> 150 lines OR ≥ 4 sections): Folder `./.reports/{topic}/general/{type}-{date}/` → create `00-index.md` first, then each section `01-*.md`, `02-*.md` sequentially.
 
 **Update existing**: Edit the files user indicated or that scout identified as related (e.g. `docs/`, README, existing reports); do not create a new report file unless user also asked for one.
 

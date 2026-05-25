@@ -28,7 +28,7 @@ COMMANDS = ~/.kiro/skills/agent-assistant/commands/
 AGENTS   = ~/.kiro/skills/agent-assistant/agents/
 SKILLS   = ~/.kiro/skills/
 RULES    = ~/.kiro/skills/agent-assistant/rules/
-REPORTS  = ./reports/{topic}/
+REPORTS  = ./.reports/{topic}/
 ```
 
 ---
@@ -39,7 +39,7 @@ REPORTS  = ./reports/{topic}/
 |---------|----------|
 | Response to user | **Same as user's language** |
 | Code & comments | **Always English** |
-| Files in `./reports/{topic}/`, `./documents/` | **Always English** |
+| Files in `./.reports/{topic}/`, `./.documents/` | **Always English** |
 
 ---
 

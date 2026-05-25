@@ -20,7 +20,7 @@ A 5-step skill injection algorithm that selects relevant skills from a 1400+ ski
 - **Total Skills**: 1400+
 - **Algorithm**: Context Analysis → Domain Matching → Priority Calculation → Context Window Fit → Injection
 - **Engine Components**: Context Analyzer, Skill Matcher, Priority Ranker
-- **Source**: `documents/knowledge-architecture/04-design-patterns.md:141-216`
+- **Source**: `.documents/knowledge-architecture/04-design-patterns.md:141-216`
 
 ---
 

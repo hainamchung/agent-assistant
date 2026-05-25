@@ -31,7 +31,7 @@ RESPONSIBILITIES:
 - Write "so what?" analysis, not just data dumps
 
 OUTPUT MODES:
-- **Create report**: Write new file to ./reports/{topic}/...
+- **Create report**: Write new file to ./.reports/{topic}/...
 - **Update existing**: Edit existing files (do not create new)
 - **From template**: Match structure user provided
 

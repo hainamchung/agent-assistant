@@ -16,9 +16,9 @@ related:
 
 The Agent Assistant project is organized into eight core modules, each serving a distinct purpose in the overall system. Together, they form a layered architecture: the [[Rule System]] and [[Agent System]] provide orchestration logic at the top, commands act as entry points, skills provide domain knowledge, code-assistants enable multi-platform deployment, the CLI handles installation, and the web application delivers a user-facing interface.
 
-This page documents each module's path, purpose, key files, exported interfaces, dependencies, and consumer relationships. Every fact traces to source documents via citations in the format `documents/knowledge-source-base/03-key-modules.md:line-range`.
+This page documents each module's path, purpose, key files, exported interfaces, dependencies, and consumer relationships. Every fact traces to source documents via citations in the format `.documents/knowledge-source-base/03-key-modules.md:line-range`.
 
-**Source**: `documents/knowledge-source-base/03-key-modules.md:1-12`
+**Source**: `.documents/knowledge-source-base/03-key-modules.md:1-12`
 
 ---
 
@@ -30,7 +30,7 @@ This page documents each module's path, purpose, key files, exported interfaces,
 ### Purpose
 The Rules module contains eight Markdown files that define the core orchestration principles, phase execution order, agent delegation policies, skill loading behavior, team coordination protocols, error handling strategies, quick reference guides, and wiki documentation standards for the entire system.
 
-**Source**: `documents/knowledge-source-base/03-key-modules.md:188-229`
+**Source**: `.documents/knowledge-source-base/03-key-modules.md:188-229`
 
 ### Files
 
@@ -45,12 +45,12 @@ The Rules module contains eight Markdown files that define the core orchestratio
 | `REFERENCE.md` | Quick reference for common operations | 7 |
 | `WIKI.md` | Wiki documentation standards and conventions | 8 |
 
-**Source**: `documents/knowledge-source-base/03-key-modules.md:197-212`
+**Source**: `.documents/knowledge-source-base/03-key-modules.md:197-212`
 
 ### Load Order
 Rules are loaded in a strict, non-negotiable sequence: `CORE → PHASES → AGENTS → SKILLS → TEAMS → ERRORS → REFERENCE → WIKI`. This ordering ensures that foundational principles are established before domain-specific rules are applied, and that critical error handling is loaded before any user-facing operations execute.
 
-**Source**: `documents/knowledge-source-base/03-key-modules.md:199`
+**Source**: `.documents/knowledge-source-base/03-key-modules.md:199`
 
 ### Rule File Structure
 
@@ -69,7 +69,7 @@ Every rule file follows a consistent Markdown structure:
 [Rule details and specifications]
 ```
 
-**Source**: `documents/knowledge-source-base/03-key-modules.md:214-227`
+**Source**: `.documents/knowledge-source-base/03-key-modules.md:214-227`
 
 ### Dependencies
 Rules files depend on one another through the load order. `AGENTS.md` depends on `PHASES.md` (which defines execution phases that agents operate within). `TEAMS.md` depends on both `AGENTS.md` and `SKILLS.md`. `ERRORS.md` depends on `CORE.md` for foundational error philosophy.
@@ -87,7 +87,7 @@ All other modules consume rules at runtime. The [[Agent System]] loads `AGENTS.m
 ### Purpose
 The Agents module provides 21 agent definition files in Markdown format, each describing a specialized role that the orchestration system can delegate work to. Agents are categorized into five functional areas: Implementation, Architecture, Quality, Planning, and Support.
 
-**Source**: `documents/knowledge-source-base/03-key-modules.md:58-130`
+**Source**: `.documents/knowledge-source-base/03-key-modules.md:58-130`
 
 ### Files
 
@@ -118,7 +118,7 @@ The Agents module provides 21 agent definition files in Markdown format, each de
 | `agent-wiki-architect.md` | Wiki Architect | Support |
 | `agent-wiki-extractor.md` | Wiki Extractor | Support |
 
-**Source**: `documents/knowledge-source-base/03-key-modules.md:73-98`
+**Source**: `.documents/knowledge-source-base/03-key-modules.md:73-98`
 
 ### Agent File Structure
 
@@ -152,12 +152,12 @@ standard: docs-as-code
 [Expected output structure]
 ```
 
-**Source**: `documents/knowledge-source-base/03-key-modules.md:100-128`
+**Source**: `.documents/knowledge-source-base/03-key-modules.md:100-128`
 
 ### Key Exports
 Each agent exports a structured set of metadata through its YAML frontmatter: `id` (unique identifier), `name` (human-readable name), `role` (functional category), `profile` (expertise domain), `reportsTo` (supervisory relationship), `consults` (peer collaboration list), `standard` (operating standard), and additional fields for capabilities and skills.
 
-**Source**: `documents/knowledge-source-base/03-key-modules.md:100-113`
+**Source**: `.documents/knowledge-source-base/03-key-modules.md:100-113`
 
 ### Dependencies
 Agents depend on `rules/AGENTS.md` for their operational definitions and on `rules/SKILLS.md` for skill loading. Agents in the Architecture category may depend on domain-specific skills from `skills/`.
@@ -175,7 +175,7 @@ The [[Command System]] consumes agents by loading the appropriate agent based on
 ### Purpose
 The Commands module provides 14 command definitions, each with three execution variants (fast, hard, team), enabling the orchestration system to handle tasks of varying complexity and scope through a consistent interface.
 
-**Source**: `documents/knowledge-source-base/03-key-modules.md:132-184`
+**Source**: `.documents/knowledge-source-base/03-key-modules.md:132-184`
 
 ### Files
 
@@ -196,7 +196,7 @@ The Commands module provides 14 command definitions, each with three execution v
 | `/brainstorm` | `brainstorm.md` | fast, hard, team | brainstormer |
 | `/ask` | `ask.md` | fast, hard, team | researcher |
 
-**Source**: `documents/knowledge-source-base/03-key-modules.md:145-162`
+**Source**: `.documents/knowledge-source-base/03-key-modules.md:145-162`
 
 ### Command File Structure
 
@@ -220,7 +220,7 @@ defaultAgents: [frontend-engineer, backend-engineer]
 [Usage examples]
 ```
 
-**Source**: `documents/knowledge-source-base/03-key-modules.md:164-184`
+**Source**: `.documents/knowledge-source-base/03-key-modules.md:164-184`
 
 ### Variant Behavior
 
@@ -230,7 +230,7 @@ defaultAgents: [frontend-engineer, backend-engineer]
 | `hard` | Full implementation for complex tasks; complete review and testing |
 | `team` | Multi-agent team execution for large-scale features; coordinated review pipeline |
 
-**Source**: `documents/knowledge-source-base/03-key-modules.md:145-162`
+**Source**: `.documents/knowledge-source-base/03-key-modules.md:145-162`
 
 ### Dependencies
 Commands depend on `rules/PHASES.md` for phase sequencing, `rules/AGENTS.md` for agent delegation, and `agents/` files for the specific agents they invoke.
@@ -248,7 +248,7 @@ The orchestration layer consumes command files to route user requests. Each comm
 ### Purpose
 The Matrix Skills module organizes 1,400+ skills into four hierarchical tiers for optimized HSOL (Hierarchical Skill Orchestration Layer) selection. Each tier represents a level of specialization and depth, enabling the system to select the most appropriate skill set for a given task complexity.
 
-**Source**: `documents/knowledge-source-base/03-key-modules.md:231-273`
+**Source**: `.documents/knowledge-source-base/03-key-modules.md:231-273`
 
 ### Tier Structure
 
@@ -259,7 +259,7 @@ The Matrix Skills module organizes 1,400+ skills into four hierarchical tiers fo
 | `specialized/` | ~500 | Domain-specific expertise skills | `kubernetes.md`, `tensorflow.md`, `react-hooks.md` |
 | `expert/` | ~300 | Advanced and cutting-edge topic skills | `distributed-systems.md`, `compiler-design.md` |
 
-**Source**: `documents/knowledge-source-base/03-key-modules.md:244-251`
+**Source**: `.documents/knowledge-source-base/03-key-modules.md:244-251`
 
 ### Matrix Skill File Structure
 
@@ -282,12 +282,12 @@ skills:
 [Skill overview]
 ```
 
-**Source**: `documents/knowledge-source-base/03-key-modules.md:253-272`
+**Source**: `.documents/knowledge-source-base/03-key-modules.md:253-272`
 
 ### Key Exports
 Each matrix skill exports tier classification (`tier`), domain classification (`domain`), tag set (`tags`), and a `skills` array that maps skill names to their corresponding skill files in the `skills/` module.
 
-**Source**: `documents/knowledge-source-base/03-key-modules.md:257-266`
+**Source**: `.documents/knowledge-source-base/03-key-modules.md:257-266`
 
 ### Dependencies
 Matrix skills depend on the `skills/` module for actual skill content. The `rules/SKILLS.md` file defines how matrix skills are loaded and matched against task requirements.
@@ -305,7 +305,7 @@ The [[Skill System]] and `rules/SKILLS.md` consume matrix skills during task res
 ### Purpose
 The Skills module contains 1,400+ skill files organized by domain, providing detailed domain knowledge and best practices that agents consult during execution. Unlike matrix-skills which handle organization, this module contains the actual skill content.
 
-**Source**: `documents/knowledge-source-base/03-key-modules.md:276-328`
+**Source**: `.documents/knowledge-source-base/03-key-modules.md:276-328`
 
 ### Skill Organization
 
@@ -333,7 +333,7 @@ skills/
 └── ... (many more)
 ```
 
-**Source**: `documents/knowledge-source-base/03-key-modules.md:290-309`
+**Source**: `.documents/knowledge-source-base/03-key-modules.md:290-309`
 
 ### Skill File Structure
 
@@ -353,12 +353,12 @@ skills/
 [Best practices]
 ```
 
-**Source**: `documents/knowledge-source-base/03-key-modules.md:311-327`
+**Source**: `.documents/knowledge-source-base/03-key-modules.md:311-327`
 
 ### Key Exports
 Each skill file exports a structured document with: `Overview` (scope and purpose), `Key Concepts` (main topics covered), `Examples` (working code samples), and `Best Practices` (recommended approaches).
 
-**Source**: `documents/knowledge-source-base/03-key-modules.md:313-326`
+**Source**: `.documents/knowledge-source-base/03-key-modules.md:313-326`
 
 ### Dependencies
 Skills depend on the `matrix-skills/` module for organizational metadata and on `rules/SKILLS.md` for loading and matching logic.
@@ -376,7 +376,7 @@ Agents consume skills during execution to access domain-specific knowledge. The 
 ### Purpose
 The Code Assistants module provides platform-specific configurations for five AI coding assistant platforms: Cursor, GitHub Copilot, Claude Code, Antigravity/Gemini, and Codex. Each platform receives tailored instructions and configuration to operate within the Agent Assistant framework.
 
-**Source**: `documents/knowledge-source-base/03-key-modules.md:331-390`
+**Source**: `.documents/knowledge-source-base/03-key-modules.md:331-390`
 
 ### Platform Configurations
 
@@ -415,7 +415,7 @@ code-assistants/codex/
 └── config.toml
 ```
 
-**Source**: `documents/knowledge-source-base/03-key-modules.md:344-379`
+**Source**: `.documents/knowledge-source-base/03-key-modules.md:344-379`
 
 ### Path Placeholders
 
@@ -427,7 +427,7 @@ code-assistants/codex/
 | `{{ANTIGRAVITY_PATH}}` | Antigravity | `~/.antigravity/` |
 | `{{CODEX_PATH}}` | Codex | `~/.codex/` |
 
-**Source**: `documents/knowledge-source-base/03-key-modules.md:381-389`
+**Source**: `.documents/knowledge-source-base/03-key-modules.md:381-389`
 
 ### Dependencies
 Code assistants depend on `cli/` for installation to the correct platform paths. Each platform's configuration references path placeholders that resolve at installation time.
@@ -445,12 +445,12 @@ The CLI module consumes code-assistant configurations during installation, copyi
 ### Purpose
 The CLI module is a 1,716-line Node.js script that provides multi-platform installation and uninstallation capabilities for Agent Assistant across all five supported platforms. It handles file copying, path replacement, and progress tracking without any external framework dependencies.
 
-**Source**: `documents/knowledge-source-base/03-key-modules.md:14-55`
+**Source**: `.documents/knowledge-source-base/03-key-modules.md:14-55`
 
 ### File
 `cli/install.js` — single-file Node.js installer written in JavaScript ES2022+
 
-**Source**: `documents/knowledge-source-base/03-key-modules.md:17`
+**Source**: `.documents/knowledge-source-base/03-key-modules.md:17`
 
 ### Module Overview
 
@@ -462,7 +462,7 @@ The CLI module is a 1,716-line Node.js script that provides multi-platform insta
 | **Purpose** | Multi-platform installer |
 | **Framework Dependencies** | None (uses only `fs` and `path`) |
 
-**Source**: `documents/knowledge-source-base/03-key-modules.md:19-27`
+**Source**: `.documents/knowledge-source-base/03-key-modules.md:19-27`
 
 ### Core Functions
 
@@ -475,7 +475,7 @@ The CLI module is a 1,716-line Node.js script that provides multi-platform insta
 | `replacePaths()` | Path placeholder replacement | `replacePaths(content, platform)` |
 | `copyFiles()` | Copy files to target | `copyFiles(files, target)` |
 
-**Source**: `documents/knowledge-source-base/03-key-modules.md:28-37`
+**Source**: `.documents/knowledge-source-base/03-key-modules.md:28-37`
 
 ### Platform Support
 
@@ -487,7 +487,7 @@ The CLI module is a 1,716-line Node.js script that provides multi-platform insta
 | Antigravity | `~/.antigravity/` | Supported |
 | Codex | `~/.codex/` | Supported |
 
-**Source**: `documents/knowledge-source-base/03-key-modules.md:39-47`
+**Source**: `.documents/knowledge-source-base/03-key-modules.md:39-47`
 
 ### Key Implementation Details
 
@@ -497,7 +497,7 @@ The CLI module is a 1,716-line Node.js script that provides multi-platform insta
 - Error handling with graceful degradation on partial failures
 - Platform detection and validation before installation
 
-**Source**: `documents/knowledge-source-base/03-key-modules.md:49-54`
+**Source**: `.documents/knowledge-source-base/03-key-modules.md:49-54`
 
 ### Dependencies
 The CLI has no external dependencies. It uses only Node.js core modules (`fs`, `path`) and is fully self-contained.
@@ -515,7 +515,7 @@ End users consume the CLI to install Agent Assistant. The CLI consumes `code-ass
 ### Purpose
 The Web module is a React 19 single-page application that provides a user-facing interface for Agent Assistant, including landing pages, documentation viewing, installation guides, and feature showcases.
 
-**Source**: `documents/knowledge-source-base/03-key-modules.md:393-458`
+**Source**: `.documents/knowledge-source-base/03-key-modules.md:393-458`
 
 ### Technology Stack
 
@@ -526,7 +526,7 @@ The Web module is a React 19 single-page application that provides a user-facing
 | **Language** | TypeScript |
 | **Styling** | Tailwind CSS 4 |
 
-**Source**: `documents/knowledge-source-base/03-key-modules.md:399-406`
+**Source**: `.documents/knowledge-source-base/03-key-modules.md:399-406`
 
 ### Directory Structure
 
@@ -561,7 +561,7 @@ web/
 └── index.html
 ```
 
-**Source**: `documents/knowledge-source-base/03-key-modules.md:408-434`
+**Source**: `.documents/knowledge-source-base/03-key-modules.md:408-434`
 
 ### Key Components
 
@@ -576,7 +576,7 @@ web/
 | `seo-config.ts` | SEO configuration and metadata |
 | `StructuredData.tsx` | Structured data generation for SEO |
 
-**Source**: `documents/knowledge-source-base/03-key-modules.md:436-446`
+**Source**: `.documents/knowledge-source-base/03-key-modules.md:436-446`
 
 ### Dependencies
 
@@ -589,13 +589,13 @@ web/
 | @xyflow/react | 12 | ReactFlow for workflow visualization |
 | tailwindcss | 4 | Utility-first CSS framework |
 
-**Source**: `documents/knowledge-source-base/03-key-modules.md:448-458`
+**Source**: `.documents/knowledge-source-base/03-key-modules.md:448-458`
 
 ### Dependencies
-The Web module depends on `cli/` for installation instructions and on `documents/` for documentation content rendered in the `Docs.tsx` page.
+The Web module depends on `cli/` for installation instructions and on `.documents/` for documentation content rendered in the `Docs.tsx` page.
 
 ### Consumers
-End users access Agent Assistant through the web interface. The web application consumes agent data from `web/src/data/agents.ts` and renders documentation from `documents/`.
+End users access Agent Assistant through the web interface. The web application consumes agent data from `web/src/data/agents.ts` and renders documentation from `.documents/`.
 
 ---
 
@@ -604,7 +604,7 @@ End users access Agent Assistant through the web interface. The web application 
 The following diagram illustrates how modules depend on one another:
 
 ```
-web/              ←  cli/, documents/, agents/
+web/              ←  cli/, .documents/, agents/
 cli/              ←  code-assistants/
 code-assistants/  ←  (none — leaf module)
 agents/           ←  rules/, skills/
@@ -622,14 +622,14 @@ Rules is the only module with no dependencies — it provides foundational defin
 
 | Module | Source File | Lines |
 |--------|-------------|-------|
-| CLI | `documents/knowledge-source-base/03-key-modules.md` | 14–55 |
-| Agents | `documents/knowledge-source-base/03-key-modules.md` | 58–130 |
-| Commands | `documents/knowledge-source-base/03-key-modules.md` | 132–184 |
-| Rules | `documents/knowledge-source-base/03-key-modules.md` | 188–229 |
-| Matrix Skills | `documents/knowledge-source-base/03-key-modules.md` | 231–273 |
-| Skills | `documents/knowledge-source-base/03-key-modules.md` | 276–328 |
-| Code Assistants | `documents/knowledge-source-base/03-key-modules.md` | 331–390 |
-| Web | `documents/knowledge-source-base/03-key-modules.md` | 393–458 |
+| CLI | `.documents/knowledge-source-base/03-key-modules.md` | 14–55 |
+| Agents | `.documents/knowledge-source-base/03-key-modules.md` | 58–130 |
+| Commands | `.documents/knowledge-source-base/03-key-modules.md` | 132–184 |
+| Rules | `.documents/knowledge-source-base/03-key-modules.md` | 188–229 |
+| Matrix Skills | `.documents/knowledge-source-base/03-key-modules.md` | 231–273 |
+| Skills | `.documents/knowledge-source-base/03-key-modules.md` | 276–328 |
+| Code Assistants | `.documents/knowledge-source-base/03-key-modules.md` | 331–390 |
+| Web | `.documents/knowledge-source-base/03-key-modules.md` | 393–458 |
 
 ---
 

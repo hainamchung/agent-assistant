@@ -15,7 +15,7 @@ related:
 
 Agent Assistant is a **hybrid application** combining CLI tooling for installation and orchestration, a web documentation site for human-readable reference, file-based configuration for multi-platform support, and markdown-based agents for AI consumption. This architecture enables the framework to work across multiple AI coding platforms while maintaining a single codebase. The technology choices prioritize simplicity, portability, and developer experience over framework complexity.
 
-**Source**: `documents/knowledge-overview/02-tech-stack.md:1-17`
+**Source**: `.documents/knowledge-overview/02-tech-stack.md:1-17`
 
 ---
 
@@ -31,7 +31,7 @@ The technology stack spans five distinct layers that work together to provide a 
 | Automation | Semantic Release, Husky | CI/CD and commit conventions |
 | Documentation | Markdown, Mermaid, YAML | Content authoring and metadata |
 
-**Source**: `documents/knowledge-overview/02-tech-stack.md:21-27`
+**Source**: `.documents/knowledge-overview/02-tech-stack.md:21-27`
 
 ---
 
@@ -48,7 +48,7 @@ The technology stack spans five distinct layers that work together to provide a 
 
 Node.js serves as the universal runtime for all CLI operations. The minimum version requirement of 18.0.0 ensures availability of modern JavaScript features including native fetch API, improved ESM support, and better performance characteristics. The choice of Node.js provides cross-platform compatibility (macOS, Linux, Windows) without requiring users to install additional language runtimes.
 
-**Source**: `documents/knowledge-overview/02-tech-stack.md:27`
+**Source**: `.documents/knowledge-overview/02-tech-stack.md:27`
 
 ### npm
 
@@ -61,7 +61,7 @@ Node.js serves as the universal runtime for all CLI operations. The minimum vers
 
 npm is the default package manager for both the CLI tooling and web application. It handles dependency resolution, script execution, and publishing workflows. The web application maintains its own `web/package.json` with React-specific dependencies separate from the CLI dependencies.
 
-**Source**: `documents/knowledge-overview/02-tech-stack.md:28`
+**Source**: `.documents/knowledge-overview/02-tech-stack.md:28`
 
 ---
 
@@ -81,7 +81,7 @@ Agent Assistant is designed to work across seven AI coding assistant platforms, 
 
 The platform portability architecture uses a single codebase with platform-specific configuration files. This approach ensures feature parity across all supported environments while allowing platform-specific optimizations. Each platform directory contains rules, agents, and skills tailored to that environment's API and capabilities.
 
-**Source**: `documents/knowledge-overview/02-tech-stack.md:131-138`
+**Source**: `.documents/knowledge-overview/02-tech-stack.md:131-138`
 
 ---
 
@@ -105,7 +105,7 @@ The CLI implementation uses pure Node.js with standard library modules (`fs`, `p
 - Uses Node.js built-in modules exclusively
 - Single-file architecture simplifies deployment and debugging
 
-**Source**: `documents/knowledge-overview/02-tech-stack.md:30-39`
+**Source**: `.documents/knowledge-overview/02-tech-stack.md:30-39`
 
 ---
 
@@ -121,7 +121,7 @@ The CLI implementation uses pure Node.js with standard library modules (`fs`, `p
 
 React 19 provides the component architecture for the documentation site and agent visualization features. Vite 6 serves as both the build tool and development server, offering fast cold starts and optimized production builds. TypeScript adds static type checking throughout the codebase, catching type-related errors before runtime.
 
-**Source**: `documents/knowledge-overview/02-tech-stack.md:45-47`
+**Source**: `.documents/knowledge-overview/02-tech-stack.md:45-47`
 
 ### Styling
 
@@ -131,7 +131,7 @@ React 19 provides the component architecture for the documentation site and agen
 
 Tailwind CSS 4 enables utility-first styling without requiring custom CSS files for every component. The configuration allows consistent theming and easy customization while keeping the bundle size minimal through tree-shaking.
 
-**Source**: `documents/knowledge-overview/02-tech-stack.md:48`
+**Source**: `.documents/knowledge-overview/02-tech-stack.md:48`
 
 ### Routing and Navigation
 
@@ -141,7 +141,7 @@ Tailwind CSS 4 enables utility-first styling without requiring custom CSS files 
 
 React Router 7 handles all client-side navigation within the web application, supporting four primary routes: the landing page (`/`), documentation browser (`/docs`), installation guide (`/installation`), and agent team visualization (`/features/agent-teams`).
 
-**Source**: `documents/knowledge-overview/02-tech-stack.md:49`
+**Source**: `.documents/knowledge-overview/02-tech-stack.md:49`
 
 ### Animation and Visualization
 
@@ -152,7 +152,7 @@ React Router 7 handles all client-side navigation within the web application, su
 
 Framer Motion 12 provides smooth page transitions, component animations, and gesture handling throughout the UI. ReactFlow 12 (imported as `@xyflow/react`) renders the interactive agent and team relationship diagrams, allowing users to explore the orchestration architecture visually.
 
-**Source**: `documents/knowledge-overview/02-tech-stack.md:50-51`
+**Source**: `.documents/knowledge-overview/02-tech-stack.md:50-51`
 
 ### Web Entry Points
 
@@ -162,7 +162,7 @@ Framer Motion 12 provides smooth page transitions, component animations, and ges
 | `web/src/pages/` | Page-level components (HomePage, Docs, Installation, AgentTeams) |
 | `web/src/components/` | Reusable UI components (seo/, layout/, etc.) |
 
-**Source**: `documents/knowledge-overview/02-tech-stack.md:54-57`
+**Source**: `.documents/knowledge-overview/02-tech-stack.md:54-57`
 
 ---
 
@@ -184,7 +184,7 @@ The web application depends on the following production packages:
 
 The CLI script is self-contained with no external npm dependencies. All functionality relies on Node.js built-in modules including `fs` for file operations, `path` for path manipulation, and `process` for runtime information.
 
-**Source**: `documents/knowledge-overview/02-tech-stack.md:103-115`
+**Source**: `.documents/knowledge-overview/02-tech-stack.md:103-115`
 
 ### Development Dependencies
 
@@ -196,7 +196,7 @@ The CLI script is self-contained with no external npm dependencies. All function
 | `husky` | Git hooks for pre-commit and commit-msg validation |
 | `semantic-release` | Automated versioning and changelog generation |
 
-**Source**: `documents/knowledge-overview/02-tech-stack.md:117-125`
+**Source**: `.documents/knowledge-overview/02-tech-stack.md:117-125`
 
 ---
 
@@ -213,7 +213,7 @@ The CLI script is self-contained with no external npm dependencies. All function
 
 Semantic Release automates the entire release workflow by analyzing commit messages to determine version bumps, generating changelogs, and publishing releases. The configuration in `.releaserc.json` defines the release branches, plugins, and conditional publishing rules.
 
-**Source**: `documents/knowledge-overview/02-tech-stack.md:63`
+**Source**: `.documents/knowledge-overview/02-tech-stack.md:63`
 
 ### Conventional Commits
 
@@ -226,7 +226,7 @@ Semantic Release automates the entire release workflow by analyzing commit messa
 
 The project enforces Conventional Commits specification through a Husky git hook that validates commit message format before allowing commits. This ensures the semantic release tool can accurately categorize changes and generate meaningful changelogs.
 
-**Source**: `documents/knowledge-overview/02-tech-stack.md:64`
+**Source**: `.documents/knowledge-overview/02-tech-stack.md:64`
 
 ### Husky
 
@@ -239,7 +239,7 @@ The project enforces Conventional Commits specification through a Husky git hook
 
 Husky v8 manages Git hooks for enforcing commit message conventions and running pre-commit checks. The hooks are configured in `.husky/` directory and ensure code quality standards are maintained across all contributors.
 
-**Source**: `documents/knowledge-overview/02-tech-stack.md:65`
+**Source**: `.documents/knowledge-overview/02-tech-stack.md:65`
 
 ---
 
@@ -249,7 +249,7 @@ No explicit testing framework dependencies are listed in the source documentatio
 
 **Note**: Testing dependencies should be added based on project testing requirements. Common choices include Vitest (aligned with Vite), Jest, React Testing Library, or Playwright for end-to-end testing.
 
-**Source**: `documents/knowledge-overview/02-tech-stack.md` (no explicit testing section)
+**Source**: `.documents/knowledge-overview/02-tech-stack.md` (no explicit testing section)
 
 ---
 
@@ -285,7 +285,7 @@ Mermaid diagrams are embedded directly in markdown files to provide visual repre
 
 Every wiki page includes YAML frontmatter that provides structured metadata for the documentation system. This metadata enables categorization, tagging, cross-referencing, and programmatic access to document properties.
 
-**Source**: `documents/knowledge-overview/02-tech-stack.md:73-77`
+**Source**: `.documents/knowledge-overview/02-tech-stack.md:73-77`
 
 ---
 
@@ -302,7 +302,7 @@ Every wiki page includes YAML frontmatter that provides structured metadata for 
 | `agents/` | Agent definitions and team configurations |
 | `skills/` | Skill library organized by tier |
 | `rules/` | Orchestration rules and protocols |
-| `documents/` | Source documentation organized by domain |
+| `.documents/` | Source documentation organized by domain |
 
 ### Configuration Files
 
@@ -314,7 +314,7 @@ Every wiki page includes YAML frontmatter that provides structured metadata for 
 | `.husky/` | Git hook scripts |
 | `code-assistants/*/config.toml` | Platform-specific AI assistant configurations |
 
-**Source**: `documents/knowledge-overview/02-tech-stack.md:141-147`
+**Source**: `.documents/knowledge-overview/02-tech-stack.md:141-147`
 
 ---
 
@@ -363,7 +363,7 @@ See [[Configuration Reference]] for detailed configuration options and [[Project
 | Diagram Format | Mermaid | — | Format |
 | Metadata Format | YAML Frontmatter | — | Format |
 
-**Source**: `documents/knowledge-overview/02-tech-stack.md:81-98`
+**Source**: `.documents/knowledge-overview/02-tech-stack.md:81-98`
 
 ---
 

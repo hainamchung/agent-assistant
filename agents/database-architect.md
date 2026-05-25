@@ -60,13 +60,13 @@ ALWAYS:
 ### Step 0: CONTEXT & PLAN CHECK (MANDATORY)
 
 ```
-1. CHECK PROJECT DOCS (if ./documents/ exists):
+1. CHECK PROJECT DOCS (if ./.documents/ exists):
    - knowledge-architecture/00-index.md → Existing architecture (drill into sub-files as needed)
    - knowledge-domain/00-index.md → Data models, schema (drill into sub-files as needed)
    - knowledge-standards/00-index.md → Naming conventions (drill into sub-files as needed)
    → USE these for schema naming and structure
 
-2. CHECK: ./reports/{topic}/plans/PLAN-{feature}
+2. CHECK: ./.reports/{topic}/plans/PLAN-{feature}
    → EXISTS: READ data model sections, follow EXACTLY
    → Complex + NO PLAN: STOP → Request plan (DB changes hard to undo)
 ```

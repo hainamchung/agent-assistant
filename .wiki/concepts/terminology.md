@@ -20,7 +20,7 @@ updated: 2026-05-20
 
 This page serves as the authoritative reference for all terminology used in Agent Assistant. It establishes a shared vocabulary across all documentation, rules, and communications, ensuring consistent usage of terms throughout the system. The terminology is organized into 7 categories covering all 31 canonical terms, supplemented by deprecated synonyms, event type definitions, and domain-to-code mapping references.
 
-**Source**: `documents/business/business-glossary/01-canonical-terms.md:1-373`, `documents/business/business-glossary/02-synonyms-and-deprecated-terms.md:1-313`, `documents/business/business-glossary/03-domain-entities-and-events.md:1-337`, `documents/business/business-glossary/04-api-term-mapping.md:1-457`
+**Source**: `.documents/business/business-glossary/01-canonical-terms.md:1-373`, `.documents/business/business-glossary/02-synonyms-and-deprecated-terms.md:1-313`, `.documents/business/business-glossary/03-domain-entities-and-events.md:1-337`, `.documents/business/business-glossary/04-api-term-mapping.md:1-457`
 
 ---
 
@@ -41,7 +41,7 @@ These terms govern how the system coordinates work across agents and phases.
 
 **Example**: When user types `/cook:fast "add dark mode"`, the Orchestrator routes to the cook workflow, selects the appropriate agent, and manages phase execution. It coordinates the entire pipeline from input to deliverable without directly implementing any code.
 
-**Source**: `documents/business/business-glossary/01-canonical-terms.md:10-18`
+**Source**: `.documents/business/business-glossary/01-canonical-terms.md:10-18`
 
 ---
 
@@ -61,7 +61,7 @@ These terms govern how the system coordinates work across agents and phases.
 - Fallback when TIER 1 is unavailable
 - Lower resource cost but context pollution risk
 
-**Source**: `documents/business/business-glossary/01-canonical-terms.md:20-27`
+**Source**: `.documents/business/business-glossary/01-canonical-terms.md:20-27`
 
 ---
 
@@ -83,7 +83,7 @@ These terms govern how the system coordinates work across agents and phases.
 - Exit criteria must be satisfied before phase completion
 - Deliverable is produced at phase conclusion
 
-**Source**: `documents/business/business-glossary/01-canonical-terms.md:30-37`
+**Source**: `.documents/business/business-glossary/01-canonical-terms.md:30-37`
 
 ---
 
@@ -99,7 +99,7 @@ These terms govern how the system coordinates work across agents and phases.
 | `:hard` | 1 | Full review | Medium | Standard implementation tasks |
 | `:team` | 3 (triangle) | Adversarial review | Slowest | Critical, complex deliverables |
 
-**Source**: `documents/business/business-glossary/01-canonical-terms.md:40-47`
+**Source**: `.documents/business/business-glossary/01-canonical-terms.md:40-47`
 
 ---
 
@@ -115,7 +115,7 @@ These terms govern how the system coordinates work across agents and phases.
 
 **Example**: Orchestrator hands off to `backend-engineer` with requirements for the API endpoint, including input/output specifications, error handling requirements, and the expected deliverable format.
 
-**Source**: `documents/business/business-glossary/01-canonical-terms.md:50-57`
+**Source**: `.documents/business/business-glossary/01-canonical-terms.md:50-57`
 
 ---
 
@@ -134,7 +134,7 @@ These terms govern how the system coordinates work across agents and phases.
 ✅ CONSENSUS: TechLead ✓ | Executor ✓ | Reviewer ✓
 ```
 
-**Source**: `documents/business/business-glossary/01-canonical-terms.md:60-67`
+**Source**: `.documents/business/business-glossary/01-canonical-terms.md:60-67`
 
 ---
 
@@ -155,7 +155,7 @@ These terms define the specialized roles that execute work within the system.
 
 **Example**: `backend-engineer` specializes in server-side logic, APIs, and database operations. It declares a profile of `backend:execution` which resolves relevant skills for backend development.
 
-**Source**: `documents/business/business-glossary/01-canonical-terms.md:72-79`
+**Source**: `.documents/business/business-glossary/01-canonical-terms.md:72-79`
 
 ---
 
@@ -174,7 +174,7 @@ These terms define the specialized roles that execute work within the system.
 
 **Example**: `backend-engineer` in a backend team configuration acts as the Executor, implementing API endpoints, database schemas, and server logic according to requirements.
 
-**Source**: `documents/business/business-glossary/01-canonical-terms.md:82-89`
+**Source**: `.documents/business/business-glossary/01-canonical-terms.md:82-89`
 
 ---
 
@@ -193,7 +193,7 @@ These terms define the specialized roles that execute work within the system.
 
 **Example**: `reviewer` agent in team configuration reviews backend implementation, checking for security vulnerabilities, performance issues, and requirement compliance.
 
-**Source**: `documents/business/business-glossary/01-canonical-terms.md:92-99`
+**Source**: `.documents/business/business-glossary/01-canonical-terms.md:92-99`
 
 ---
 
@@ -212,7 +212,7 @@ These terms define the specialized roles that execute work within the system.
 
 **Example**: `tech-lead` agent publishes Task List, arbitrates disputes, and synthesizes output. When Executor and Reviewer disagree, Tech Lead makes the final call.
 
-**Source**: `documents/business/business-glossary/01-canonical-terms.md:102-109`
+**Source**: `.documents/business/business-glossary/01-canonical-terms.md:102-109`
 
 ---
 
@@ -231,7 +231,7 @@ These terms define the specialized roles that execute work within the system.
 - `database-team` = tech-lead + database-architect + reviewer
 - `fullstack-team` = tech-lead + fullstack-engineer + reviewer
 
-**Source**: `documents/business/business-glossary/01-canonical-terms.md:112-119`
+**Source**: `.documents/business/business-glossary/01-canonical-terms.md:112-119`
 
 ---
 
@@ -247,7 +247,7 @@ These terms define the specialized roles that execute work within the system.
 
 **Example**: `planner` agent creates implementation plans but does not write code. `wiki-architect` designs documentation structure without creating content.
 
-**Source**: `documents/business/business-glossary/01-canonical-terms.md:122-129`
+**Source**: `.documents/business/business-glossary/01-canonical-terms.md:122-129`
 
 ---
 
@@ -264,7 +264,7 @@ These terms define the specialized roles that execute work within the system.
 
 **Example**: `frontend-engineer` implements UI components and client-side logic, producing React components, styles, and interactions.
 
-**Source**: `documents/business/business-glossary/01-canonical-terms.md:132-139`
+**Source**: `.documents/business/business-glossary/01-canonical-terms.md:132-139`
 
 ---
 
@@ -282,7 +282,7 @@ These terms define the specialized roles that execute work within the system.
 
 **Example**: `security-engineer` audits code for vulnerabilities, checking for OWASP Top 10 issues, injection risks, and authentication weaknesses.
 
-**Source**: `documents/business/business-glossary/01-canonical-terms.md:142-149`
+**Source**: `.documents/business/business-glossary/01-canonical-terms.md:142-149`
 
 ---
 
@@ -308,7 +308,7 @@ These terms govern how users invoke workflows and how the system routes requests
 
 **Example**: `/cook:hard "implement OAuth 2.0"` triggers the hard variant of the cook command with the specified parameter.
 
-**Source**: `documents/business/business-glossary/01-canonical-terms.md:152-161`
+**Source**: `.documents/business/business-glossary/01-canonical-terms.md:152-161`
 
 ---
 
@@ -329,7 +329,7 @@ These terms govern how users invoke workflows and how the system routes requests
 - "write tests" → `/test`
 - "review my code" → `/review`
 
-**Source**: `documents/business/business-glossary/01-canonical-terms.md:164-171`
+**Source**: `.documents/business/business-glossary/01-canonical-terms.md:164-171`
 
 ---
 
@@ -345,7 +345,7 @@ These terms govern how users invoke workflows and how the system routes requests
 
 **Example**: Orchestrator dispatches to `backend-engineer` for API implementation, providing requirements, constraints, and deliverable format specifications.
 
-**Source**: `documents/business/business-glossary/01-canonical-terms.md:174-181`
+**Source**: `.documents/business/business-glossary/01-canonical-terms.md:174-181`
 
 ---
 
@@ -366,7 +366,7 @@ These terms define how domain knowledge is organized, resolved, and injected int
 
 **Example**: `fastapi-expert` skill provides FastAPI patterns to backend agents, including async patterns, Pydantic validation, and OpenAPI generation.
 
-**Source**: `documents/business/business-glossary/01-canonical-terms.md:186-193`
+**Source**: `.documents/business/business-glossary/01-canonical-terms.md:186-193`
 
 ---
 
@@ -392,7 +392,7 @@ matrix-skills/
 - Matrix skills resolve faster (no trust calculation)
 - Dynamic skills undergo fitness calculation before use
 
-**Source**: `documents/business/business-glossary/01-canonical-terms.md:196-203`
+**Source**: `.documents/business/business-glossary/01-canonical-terms.md:196-203`
 
 ---
 
@@ -409,7 +409,7 @@ matrix-skills/
 - `database:architecture` — Database design
 - `security:validation` — Security auditing
 
-**Source**: `documents/business/business-glossary/01-canonical-terms.md:206-213`
+**Source**: `.documents/business/business-glossary/01-canonical-terms.md:206-213`
 
 ---
 
@@ -427,7 +427,7 @@ matrix-skills/
 
 **Example**: Resolution scans matrix for skills matching `backend:execution` profile, finding `nodejs`, `python`, `databases`, `fastapi-expert`, and `docker` skills, then injecting the highest-priority ones.
 
-**Source**: `documents/business/business-glossary/01-canonical-terms.md:216-223`
+**Source**: `.documents/business/business-glossary/01-canonical-terms.md:216-223`
 
 ---
 
@@ -451,7 +451,7 @@ These terms define the AI coding tools that host Agent Assistant.
 | Kiro | `~/.kiro/` | Yes | Kiro AI Editor |
 | Qwen | `~/.qwen/` | Yes | Alibaba Qwen Code |
 
-**Source**: `documents/business/business-glossary/01-canonical-terms.md:228-235`
+**Source**: `.documents/business/business-glossary/01-canonical-terms.md:228-235`
 
 ---
 
@@ -466,7 +466,7 @@ These terms define the AI coding tools that host Agent Assistant.
 - Extensive MCP tool support
 - Active development community
 
-**Source**: `documents/business/business-glossary/01-canonical-terms.md:238-243`
+**Source**: `.documents/business/business-glossary/01-canonical-terms.md:238-243`
 
 ---
 
@@ -481,7 +481,7 @@ These terms define the AI coding tools that host Agent Assistant.
 - Markdown-first interaction
 - Growing ecosystem
 
-**Source**: `documents/business/business-glossary/01-canonical-terms.md:246-251`
+**Source**: `.documents/business/business-glossary/01-canonical-terms.md:246-251`
 
 ---
 
@@ -496,7 +496,7 @@ These terms define the AI coding tools that host Agent Assistant.
 - Different capability profile than Claude
 - Complementary to other platforms
 
-**Source**: `documents/business/business-glossary/01-canonical-terms.md:254-259`
+**Source**: `.documents/business/business-glossary/01-canonical-terms.md:254-259`
 
 ---
 
@@ -511,7 +511,7 @@ These terms define the AI coding tools that host Agent Assistant.
 - Rich agent and tool support
 - Custom MCP server integration
 
-**Source**: `documents/business/business-glossary/01-canonical-terms.md:262-269`
+**Source**: `.documents/business/business-glossary/01-canonical-terms.md:262-269`
 
 ---
 
@@ -526,7 +526,7 @@ These terms define the AI coding tools that host Agent Assistant.
 - Cross-platform skills support
 - Growing Chinese AI ecosystem
 
-**Source**: `documents/business/business-glossary/01-canonical-terms.md:270-277`
+**Source**: `.documents/business/business-glossary/01-canonical-terms.md:270-277`
 
 ---
 
@@ -547,7 +547,7 @@ These terms define how work flows through the system from request to delivery.
 
 **Example**: `/cook:hard` workflow has 6 phases: Requirements → Planning → Implementation → Review → Testing → Delivery.
 
-**Source**: `documents/business/business-glossary/01-canonical-terms.md:263-271`
+**Source**: `.documents/business/business-glossary/01-canonical-terms.md:263-271`
 
 ---
 
@@ -566,7 +566,7 @@ These terms define how work flows through the system from request to delivery.
 
 **Example**: `A5: Backend Engineer` is an execution actor responsible for server-side implementation.
 
-**Source**: `documents/business/business-glossary/01-canonical-terms.md:274-281`
+**Source**: `.documents/business/business-glossary/01-canonical-terms.md:274-281`
 
 ---
 
@@ -582,13 +582,13 @@ These terms define how work flows through the system from request to delivery.
 | `:hard` | < 15s | < 5min | 99.5% |
 | `:team` | < 30s | < 15min | 99.9% |
 
-**Source**: `documents/business/business-glossary/01-canonical-terms.md:284-291`
+**Source**: `.documents/business/business-glossary/01-canonical-terms.md:284-291`
 
 ---
 
 ### T31: Mailbox
 
-**Definition**: The append-only communication log for Golden Triangle team phases. Located at `./reports/{topic}/MAILBOX-{date}.md`. The Mailbox enables asynchronous team collaboration.
+**Definition**: The append-only communication log for Golden Triangle team phases. Located at `./.reports/{topic}/MAILBOX-{date}.md`. The Mailbox enables asynchronous team collaboration.
 
 **Mailbox Functions**:
 - Record task assignments
@@ -607,7 +607,7 @@ These terms define how work flows through the system from request to delivery.
 
 **Example**: Executor posts SUBMISSION to Mailbox; Reviewer posts REVIEW (PASS/FAIL) in response.
 
-**Source**: `documents/business/business-glossary/01-canonical-terms.md:294-301`
+**Source**: `.documents/business/business-glossary/01-canonical-terms.md:294-301`
 
 ---
 
@@ -628,7 +628,7 @@ These terms define how outputs are produced and approved.
 
 **Example**: `backend-engineer` produces `API_ENDPOINT.md` deliverable documenting the API implementation with usage examples, error handling, and test coverage.
 
-**Source**: `documents/business/business-glossary/01-canonical-terms.md:306-313`
+**Source**: `.documents/business/business-glossary/01-canonical-terms.md:306-313`
 
 ---
 
@@ -648,7 +648,7 @@ These terms define how outputs are produced and approved.
 ✅ CONSENSUS: TechLead ✓ | Executor ✓ | Reviewer ✓
 ```
 
-**Source**: `documents/business/business-glossary/01-canonical-terms.md:316-323`
+**Source**: `.documents/business/business-glossary/01-canonical-terms.md:316-323`
 
 ---
 
@@ -672,7 +672,7 @@ The following terms are deprecated and should not be used in new documentation. 
 "This is an orchestrated workflow."
 ```
 
-**Source**: `documents/business/business-glossary/02-synonyms-and-deprecated-terms.md:92-110`
+**Source**: `.documents/business/business-glossary/02-synonyms-and-deprecated-terms.md:92-110`
 
 ---
 
@@ -693,7 +693,7 @@ The following terms are deprecated and should not be used in new documentation. 
 "Use TIER 1 (sub-agent) for delegation."
 ```
 
-**Source**: `documents/business/business-glossary/02-synonyms-and-deprecated-terms.md:112-130`
+**Source**: `.documents/business/business-glossary/02-synonyms-and-deprecated-terms.md:112-130`
 
 ---
 
@@ -708,7 +708,7 @@ The following terms are deprecated and should not be used in new documentation. 
 
 **Rationale**: "Task" is too generic; specific terms convey intent.
 
-**Source**: `documents/business/business-glossary/02-synonyms-and-deprecated-terms.md:133-154`
+**Source**: `.documents/business/business-glossary/02-synonyms-and-deprecated-terms.md:133-154`
 
 ---
 
@@ -728,7 +728,7 @@ The following terms are deprecated and should not be used in new documentation. 
 "The Tech Lead coordinates the work."
 ```
 
-**Source**: `documents/business/business-glossary/02-synonyms-and-deprecated-terms.md:157-174`
+**Source**: `.documents/business/business-glossary/02-synonyms-and-deprecated-terms.md:157-174`
 
 ---
 
@@ -739,7 +739,7 @@ The following terms are deprecated and should not be used in new documentation. 
 
 **Rationale**: "Worker" is too generic; agent conveys specialization.
 
-**Source**: `documents/business/business-glossary/02-synonyms-and-deprecated-terms.md:177-194`
+**Source**: `.documents/business/business-glossary/02-synonyms-and-deprecated-terms.md:177-194`
 
 ---
 
@@ -759,7 +759,7 @@ The following terms are deprecated and should not be used in new documentation. 
 "The agent declares its profile."
 ```
 
-**Source**: `documents/business/business-glossary/02-synonyms-and-deprecated-terms.md:197-214`
+**Source**: `.documents/business/business-glossary/02-synonyms-and-deprecated-terms.md:197-214`
 
 ---
 
@@ -779,7 +779,7 @@ The following terms are deprecated and should not be used in new documentation. 
 "Load CORE.md first — the single source of truth."
 ```
 
-**Source**: `documents/business/business-glossary/02-synonyms-and-deprecated-terms.md:217-234`
+**Source**: `.documents/business/business-glossary/02-synonyms-and-deprecated-terms.md:217-234`
 
 ---
 
@@ -799,7 +799,7 @@ The following terms are deprecated and should not be used in new documentation. 
 "Use the :fast variant for simple tasks."
 ```
 
-**Source**: `documents/business/business-glossary/02-synonyms-and-deprecated-terms.md:237-254`
+**Source**: `.documents/business/business-glossary/02-synonyms-and-deprecated-terms.md:237-254`
 
 ---
 
@@ -897,7 +897,7 @@ The system emits events to track operations and enable observability. Events fol
 
 **Flow**: Orchestrator → Agent
 
-**Source**: `documents/business/business-glossary/03-domain-entities-and-events.md:178-197`
+**Source**: `.documents/business/business-glossary/03-domain-entities-and-events.md:178-197`
 
 ---
 
@@ -918,7 +918,7 @@ The system emits events to track operations and enable observability. Events fol
 
 **Flow**: HSOL → Agent
 
-**Source**: `documents/business/business-glossary/03-domain-entities-and-events.md:200-218`
+**Source**: `.documents/business/business-glossary/03-domain-entities-and-events.md:200-218`
 
 ---
 
@@ -941,7 +941,7 @@ The system emits events to track operations and enable observability. Events fol
 
 **Flow**: Phase → Orchestrator
 
-**Source**: `documents/business/business-glossary/03-domain-entities-and-events.md:221-241`
+**Source**: `.documents/business/business-glossary/03-domain-entities-and-events.md:221-241`
 
 ---
 
@@ -963,7 +963,7 @@ The system emits events to track operations and enable observability. Events fol
 
 **Flow**: User → Router → Orchestrator
 
-**Source**: `documents/business/business-glossary/03-domain-entities-and-events.md:244-263`
+**Source**: `.documents/business/business-glossary/03-domain-entities-and-events.md:244-263`
 
 ---
 
@@ -986,7 +986,7 @@ The system emits events to track operations and enable observability. Events fol
 
 **Flow**: Tech Lead → Orchestrator
 
-**Source**: `documents/business/business-glossary/03-domain-entities-and-events.md:266-286`
+**Source**: `.documents/business/business-glossary/03-domain-entities-and-events.md:266-286`
 
 ---
 
@@ -1018,7 +1018,7 @@ runSubagent(
 }
 ```
 
-**Source**: `documents/business/business-glossary/04-api-term-mapping.md:10-41`
+**Source**: `.documents/business/business-glossary/04-api-term-mapping.md:10-41`
 
 #### T2: Read Tool
 
@@ -1033,7 +1033,7 @@ Read(
 ) → string
 ```
 
-**Source**: `documents/business/business-glossary/04-api-term-mapping.md:44-66`
+**Source**: `.documents/business/business-glossary/04-api-term-mapping.md:44-66`
 
 #### T3: Write Tool
 
@@ -1047,7 +1047,7 @@ Write(
 ) → void
 ```
 
-**Source**: `documents/business/business-glossary/04-api-term-mapping.md:69-91`
+**Source**: `.documents/business/business-glossary/04-api-term-mapping.md:69-91`
 
 ---
 
@@ -1065,7 +1065,7 @@ Write(
 ## RECURSIVE DELEGATION       → Domain: Meta agent rules
 ```
 
-**Source**: `documents/business/business-glossary/04-api-term-mapping.md:94-115`
+**Source**: `.documents/business/business-glossary/04-api-term-mapping.md:94-115`
 
 #### F2: matrix-skills/
 
@@ -1082,7 +1082,7 @@ matrix-skills/
 └── security.yaml            → Domain: Security skills
 ```
 
-**Source**: `documents/business/business-glossary/04-api-term-mapping.md:118-169`
+**Source**: `.documents/business/business-glossary/04-api-term-mapping.md:118-169`
 
 #### F3: commands/
 
@@ -1115,7 +1115,7 @@ commands/
 └── code.md
 ```
 
-**Source**: `documents/business/business-glossary/04-api-term-mapping.md:172-215`
+**Source**: `.documents/business/business-glossary/04-api-term-mapping.md:172-215`
 
 #### F4: agents/teams/
 
@@ -1148,7 +1148,7 @@ agents/teams/{team-name}/
 ## Protocol: Challenge → Validate → FAIL/PASS
 ```
 
-**Source**: `documents/business/business-glossary/04-api-term-mapping.md:218-249`
+**Source**: `.documents/business/business-glossary/04-api-term-mapping.md:218-249`
 
 #### F5: agents/{agent-id}.md
 
@@ -1176,7 +1176,7 @@ profile: "backend:execution"
 - Follow API conventions
 ```
 
-**Source**: `documents/business/business-glossary/04-api-term-mapping.md:252-279`
+**Source**: `.documents/business/business-glossary/04-api-term-mapping.md:252-279`
 
 ---
 
@@ -1194,7 +1194,7 @@ profile: "backend:execution"
 | R2 | {extracted} | H/M/L | ✅ |
 ```
 
-**Source**: `documents/business/business-glossary/04-api-term-mapping.md:282-298`
+**Source**: `.documents/business/business-glossary/04-api-term-mapping.md:282-298`
 
 #### D2: Shared Task List
 
@@ -1216,7 +1216,7 @@ profile: "backend:execution"
 | ❌ | Blocked |
 | 🔁 | Revision Needed |
 
-**Source**: `documents/business/business-glossary/04-api-term-mapping.md:301-323`
+**Source**: `.documents/business/business-glossary/04-api-term-mapping.md:301-323`
 
 #### D3: Mailbox Entry
 
@@ -1243,7 +1243,7 @@ profile: "backend:execution"
 - [Issue 1: severity HIGH — description]
 ```
 
-**Source**: `documents/business/business-glossary/04-api-term-mapping.md:326-355`
+**Source**: `.documents/business/business-glossary/04-api-term-mapping.md:326-355`
 
 #### D4: Phase Output Format
 
@@ -1265,7 +1265,7 @@ profile: "backend:execution"
 **Deliverable**: {summary}
 ```
 
-**Source**: `documents/business/business-glossary/04-api-term-mapping.md:358-380`
+**Source**: `.documents/business/business-glossary/04-api-term-mapping.md:358-380`
 
 #### D5: Consensus Stamp
 
@@ -1277,7 +1277,7 @@ profile: "backend:execution"
 
 **Required for**: All :team variant output releases
 
-**Source**: `documents/business/business-glossary/04-api-term-mapping.md:383-395`
+**Source**: `.documents/business/business-glossary/04-api-term-mapping.md:383-395`
 
 ---
 
@@ -1323,10 +1323,10 @@ profile: "backend:execution"
 
 All terminology definitions are traced to authoritative source documents:
 
-- `documents/business/business-glossary/01-canonical-terms.md` — Orchestration, Agent, Command, Skill, Platform, Workflow, Delivery terms (T1-T31)
-- `documents/business/business-glossary/02-synonyms-and-deprecated-terms.md` — Synonyms, deprecated terms, migration guidance (D1-D8)
-- `documents/business/business-glossary/03-domain-entities-and-events.md` — Entity types (E1-E7), Event types (EV1-EV5)
-- `documents/business/business-glossary/04-api-term-mapping.md` — Tool mapping (T1-T3), File mapping (F1-F5), Data structures (D1-D5)
+- `.documents/business/business-glossary/01-canonical-terms.md` — Orchestration, Agent, Command, Skill, Platform, Workflow, Delivery terms (T1-T31)
+- `.documents/business/business-glossary/02-synonyms-and-deprecated-terms.md` — Synonyms, deprecated terms, migration guidance (D1-D8)
+- `.documents/business/business-glossary/03-domain-entities-and-events.md` — Entity types (E1-E7), Event types (EV1-EV5)
+- `.documents/business/business-glossary/04-api-term-mapping.md` — Tool mapping (T1-T3), File mapping (F1-F5), Data structures (D1-D5)
 
 ---
 

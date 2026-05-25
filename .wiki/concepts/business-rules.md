@@ -21,7 +21,7 @@ Business rules are explicit specifications that constrain or govern the system's
 - **Exception Categories**: 4 with 16 specific handlers
 - **Fallback Paths**: 4 with step-by-step recovery procedures
 - **Categories (BR)**: Command Parsing, Variant Selection, Skill Resolution, Platform Path Resolution, Agent Selection, Team Coordination, Error Handling
-- **Source**: `documents/knowledge-domain/04-business-rules.md:1-285`
+- **Source**: `.documents/knowledge-domain/04-business-rules.md:1-285`
 
 ---
 
@@ -185,7 +185,7 @@ Rules governing error classification, retry, and propagation.
 
 ## Decision Rules (R1–R15)
 
-Decision rules govern orchestration flow, agent behavior, skill injection, and team dynamics. These rules are sourced from `documents/business/business-workflows/04-decision-rules-and-exceptions.md:10-177`.
+Decision rules govern orchestration flow, agent behavior, skill injection, and team dynamics. These rules are sourced from `.documents/business/business-workflows/04-decision-rules-and-exceptions.md:10-177`.
 
 ### R1: Command Routing
 
@@ -341,7 +341,7 @@ Decision rules govern orchestration flow, agent behavior, skill injection, and t
 
 Exception categories define specific failure scenarios and their recovery procedures. See [[Error Handling]] for related policies.
 
-**Source**: `documents/business/business-workflows/04-decision-rules-and-exceptions.md:180-217`
+**Source**: `.documents/business/business-workflows/04-decision-rules-and-exceptions.md:180-217`
 
 ### E1: Input Exceptions
 
@@ -385,7 +385,7 @@ Exception categories define specific failure scenarios and their recovery proced
 
 Fallback paths provide step-by-step recovery procedures when primary paths fail.
 
-**Source**: `documents/business/business-workflows/04-decision-rules-and-exceptions.md:220-267`
+**Source**: `.documents/business/business-workflows/04-decision-rules-and-exceptions.md:220-267`
 
 ### F1: TIER 1 Fallback
 
@@ -440,7 +440,7 @@ Phase cannot complete:
 
 The decision matrix provides a quick reference for primary and fallback paths across scenarios.
 
-**Source**: `documents/business/business-workflows/04-decision-rules-and-exceptions.md:271-281`
+**Source**: `.documents/business/business-workflows/04-decision-rules-and-exceptions.md:271-281`
 
 | Scenario | Primary Path | Fallback Path |
 |----------|--------------|---------------|
@@ -456,10 +456,10 @@ The decision matrix provides a quick reference for primary and fallback paths ac
 ## Evidence Sources
 
 ### Business Rules (BR-001–BR-062)
-- `documents/knowledge-domain/04-business-rules.md:1-285`
+- `.documents/knowledge-domain/04-business-rules.md:1-285`
 
 ### Decision Rules (R1–R15)
-- `documents/business/business-workflows/04-decision-rules-and-exceptions.md:10-177`
+- `.documents/business/business-workflows/04-decision-rules-and-exceptions.md:10-177`
 - `rules/CORE.md` — R1, R2, R3, R14, R15
 - `rules/AGENTS.md` — R4, R5, R6
 - `rules/TEAMS.md` — R9, R10, R11
@@ -467,13 +467,13 @@ The decision matrix provides a quick reference for primary and fallback paths ac
 - `rules/SKILLS.md` — R7, R8
 
 ### Exception Categories (E1–E4)
-- `documents/business/business-workflows/04-decision-rules-and-exceptions.md:180-217`
+- `.documents/business/business-workflows/04-decision-rules-and-exceptions.md:180-217`
 - `rules/CORE.md` — E1, E2
 - `rules/SKILLS.md` — E3
 - `rules/TEAMS.md` — E4
 
 ### Fallback Paths (F1–F4)
-- `documents/business/business-workflows/04-decision-rules-and-exceptions.md:220-267`
+- `.documents/business/business-workflows/04-decision-rules-and-exceptions.md:220-267`
 - `rules/CORE.md` — F1-F4
 
 ---

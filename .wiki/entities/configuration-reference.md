@@ -23,7 +23,7 @@ The Agent Assistant uses 6 configuration files across its CLI and web components
 | `web/tsconfig.json` | TypeScript configuration | JSON |
 | `code-assistants/*/config.toml` | Platform-specific configuration | TOML |
 
-**Source**: `documents/knowledge-source-base/04-configuration.md:1-259`
+**Source**: `.documents/knowledge-source-base/04-configuration.md:1-259`
 
 ---
 
@@ -77,7 +77,7 @@ Root-level NPM manifest for the CLI package.
 }
 ```
 
-**Source**: `documents/knowledge-source-base/04-configuration.md:28-69`
+**Source**: `.documents/knowledge-source-base/04-configuration.md:28-69`
 
 ---
 
@@ -120,7 +120,7 @@ Semantic Release configuration for automated versioning and changelog generation
 }
 ```
 
-**Source**: `documents/knowledge-source-base/04-configuration.md:73-106`
+**Source**: `.documents/knowledge-source-base/04-configuration.md:73-106`
 
 ---
 
@@ -148,7 +148,7 @@ NPM package manifest for the React web application.
 | `preview` | `vite preview` | Preview production build |
 | `lint` | `eslint . --ext ts,tsx` | Lint TypeScript files |
 
-**Source**: `documents/knowledge-source-base/04-configuration.md:109-220`
+**Source**: `.documents/knowledge-source-base/04-configuration.md:109-220`
 
 ---
 
@@ -273,7 +273,7 @@ file = "CURSOR.md"
 autoInject = true
 ```
 
-**Source**: `documents/knowledge-source-base/04-configuration.md:224-259`
+**Source**: `.documents/knowledge-source-base/04-configuration.md:224-259`
 
 ---
 
@@ -527,4 +527,4 @@ export default defineConfig({
 - `agents/*/agent-*.md` — Agent frontmatter examples
 - `commands/*/*.md` — Command frontmatter examples
 
-**Source**: `documents/knowledge-source-base/04-configuration.md:262-417`
+**Source**: `.documents/knowledge-source-base/04-configuration.md:262-417`

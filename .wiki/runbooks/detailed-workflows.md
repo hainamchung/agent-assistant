@@ -24,7 +24,7 @@ This runbook documents the complete phase-by-phase execution flows for all 14 co
 
 The command system operates on a tiered execution model where the appropriate workflow is selected based on feature complexity and collaboration requirements. The three primary workflow variants—fast, hard, and team—scale from single-phase execution to full parallel team collaboration.
 
-**Source**: `documents/business/business-workflows/03-detailed-workflows.md:1-5`
+**Source**: `.documents/business/business-workflows/03-detailed-workflows.md:1-5`
 
 ### Workflow Selection Matrix
 
@@ -39,7 +39,7 @@ The command system operates on a tiered execution model where the appropriate wo
 | `/wiki` | 3 phases | — | — | single variant |
 | `/deploy` | 3 phases | — | — | check, preview, production, rollback |
 
-**Source**: `documents/business/business-workflows/03-detailed-workflows.md:8-48`
+**Source**: `.documents/business/business-workflows/03-detailed-workflows.md:8-48`
 
 ---
 
@@ -47,7 +47,7 @@ The command system operates on a tiered execution model where the appropriate wo
 
 The `/cook` command handles feature implementation across three variants that scale in complexity and team involvement. The variant is selected based on feature complexity, with fast for simple features, hard for complex multi-component features, and team for maximum quality with parallel agent collaboration.
 
-**Source**: `documents/business/business-workflows/03-detailed-workflows.md:8-130`
+**Source**: `.documents/business/business-workflows/03-detailed-workflows.md:8-130`
 
 ### /cook:fast — Quick Implementation
 
@@ -99,7 +99,7 @@ The fast variant executes feature development in three phases with minimal overh
 └─────────────────────────────────────────────────────────────────┘
 ```
 
-**Source**: `documents/business/business-workflows/03-detailed-workflows.md:12-48`
+**Source**: `.documents/business/business-workflows/03-detailed-workflows.md:12-48`
 
 #### Phase Details
 
@@ -127,7 +127,7 @@ The fast variant executes feature development in three phases with minimal overh
 
 The hard variant implements complex multi-component features with enhanced requirements intake, dedicated planning phase, milestone-based implementation, and mandatory review and testing cycles.
 
-**Source**: `documents/business/business-workflows/03-detailed-workflows.md:50-130`
+**Source**: `.documents/business/business-workflows/03-detailed-workflows.md:50-130`
 
 #### Phase Flow Diagram
 
@@ -223,7 +223,7 @@ The hard variant implements complex multi-component features with enhanced requi
 └─────────────────────────────────────────────────────────────────┘
 ```
 
-**Source**: `documents/business/business-workflows/03-detailed-workflows.md:50-130`
+**Source**: `.documents/business/business-workflows/03-detailed-workflows.md:50-130`
 
 #### Phase Details
 
@@ -278,7 +278,7 @@ The hard variant implements complex multi-component features with enhanced requi
 | Loop Handling | None | Review failures return to Phase 3 |
 | Coverage Tracking | None | Required thresholds |
 
-**Source**: `documents/business/business-workflows/03-detailed-workflows.md:50-130`
+**Source**: `.documents/business/business-workflows/03-detailed-workflows.md:50-130`
 
 ---
 
@@ -286,7 +286,7 @@ The hard variant implements complex multi-component features with enhanced requi
 
 The team variant executes feature development with the Golden Triangle team structure (Tech Lead, Executor, Reviewer) in parallel, using the Mailbox protocol for coordination. This variant provides maximum quality through adversarial review and consensus building.
 
-**Source**: `documents/business/business-workflows/03-detailed-workflows.md:132-187`
+**Source**: `.documents/business/business-workflows/03-detailed-workflows.md:132-187`
 
 #### Golden Triangle Architecture
 
@@ -302,7 +302,7 @@ The team variant executes feature development with the Golden Triangle team stru
 │        └────────────────────┴────────────────────┘              │
 │                              │                                   │
 │                       Mailbox Protocol                          │
-│                  ./reports/{topic}/MAILBOX-{date}.md            │
+│                  ./.reports/{topic}/MAILBOX-{date}.md            │
 │                                                                  │
 └─────────────────────────────────────────────────────────────────┘
 ```
@@ -319,7 +319,7 @@ The team variant executes feature development with the Golden Triangle team stru
 ├─────────────────────────────────────────────────────────────────┤
 │ 1.1. Parse requirements (as /cook:hard)                         │
 │ 1.2. Select team configuration (backend, frontend, fullstack)    │
-│ 1.3. Initialize Mailbox: ./reports/{topic}/MAILBOX-{date}.md   │
+│ 1.3. Initialize Mailbox: ./.reports/{topic}/MAILBOX-{date}.md   │
 │ 1.4. Spawn Golden Triangle: Tech Lead + Executor + Reviewer      │
 ├─────────────────────────────────────────────────────────────────┤
 │ EXIT CRITERIA: Requirements locked, team spawned, Mailbox ready │
@@ -374,14 +374,14 @@ The team variant executes feature development with the Golden Triangle team stru
 └─────────────────────────────────────────────────────────────────┘
 ```
 
-**Source**: `documents/business/business-workflows/03-detailed-workflows.md:132-187`
+**Source**: `.documents/business/business-workflows/03-detailed-workflows.md:132-187`
 
 #### Phase Details
 
 **Phase 1: Requirements Intake + Team Setup**
 - Requirements are parsed at the enhanced level (same as /cook:hard)
 - Team configuration is selected based on the feature type: backend, frontend, or fullstack
-- The Mailbox is initialized at `./reports/{topic}/MAILBOX-{date}.md`
+- The Mailbox is initialized at `./.reports/{topic}/MAILBOX-{date}.md`
 - Three agents are spawned: Tech Lead (decomposition + arbitration), Executor (implementation), Reviewer (adversarial review)
 - Exit criteria: Requirements locked, all three agents active, Mailbox initialized
 
@@ -448,7 +448,7 @@ The team variant executes feature development with the Golden Triangle team stru
 | Task Decomposition | Milestones | Tasks with dependencies |
 | Skill Resolution | Per milestone | Per task |
 
-**Source**: `documents/business/business-workflows/03-detailed-workflows.md:132-187`
+**Source**: `.documents/business/business-workflows/03-detailed-workflows.md:132-187`
 
 ---
 
@@ -456,7 +456,7 @@ The team variant executes feature development with the Golden Triangle team stru
 
 The `/fix` command handles bug resolution through a streamlined three-phase workflow that focuses on root cause investigation, fix implementation, and verification.
 
-**Source**: `documents/business/business-workflows/03-detailed-workflows.md:191-226`
+**Source**: `.documents/business/business-workflows/03-detailed-workflows.md:191-226`
 
 ### Phase Flow Diagram
 
@@ -501,7 +501,7 @@ The `/fix` command handles bug resolution through a streamlined three-phase work
 └─────────────────────────────────────────────────────────────────┘
 ```
 
-**Source**: `documents/business/business-workflows/03-detailed-workflows.md:191-226`
+**Source**: `.documents/business/business-workflows/03-detailed-workflows.md:191-226`
 
 ### Phase Details
 
@@ -533,7 +533,7 @@ The `/fix` command handles bug resolution through a streamlined three-phase work
 | 2: Implementation | Backend/Frontend Engineer | — |
 | 3: Verification | Tester Agent | — |
 
-**Source**: `documents/business/business-workflows/03-detailed-workflows.md:191-226`
+**Source**: `.documents/business/business-workflows/03-detailed-workflows.md:191-226`
 
 ---
 
@@ -541,7 +541,7 @@ The `/fix` command handles bug resolution through a streamlined three-phase work
 
 The `/test` command generates and executes tests based on feature context, following a three-phase workflow focused on planning, generation, and verification.
 
-**Source**: `documents/business/business-workflows/03-detailed-workflows.md:230-265`
+**Source**: `.documents/business/business-workflows/03-detailed-workflows.md:230-265`
 
 ### Phase Flow Diagram
 
@@ -586,7 +586,7 @@ The `/test` command generates and executes tests based on feature context, follo
 └─────────────────────────────────────────────────────────────────┘
 ```
 
-**Source**: `documents/business/business-workflows/03-detailed-workflows.md:230-265`
+**Source**: `.documents/business/business-workflows/03-detailed-workflows.md:230-265`
 
 ### Phase Details
 
@@ -615,12 +615,12 @@ The `/test` command generates and executes tests based on feature context, follo
 
 | Component | Target | Source |
 |-----------|--------|--------|
-| CLI functions | 80% | `documents/knowledge-standards/04-testing-standards.md` |
-| Web critical paths | 100% | `documents/knowledge-standards/04-testing-standards.md` |
-| Web utilities | 70% | `documents/knowledge-standards/04-testing-standards.md` |
-| Web components | 70% | `documents/knowledge-standards/04-testing-standards.md` |
+| CLI functions | 80% | `.documents/knowledge-standards/04-testing-standards.md` |
+| Web critical paths | 100% | `.documents/knowledge-standards/04-testing-standards.md` |
+| Web utilities | 70% | `.documents/knowledge-standards/04-testing-standards.md` |
+| Web components | 70% | `.documents/knowledge-standards/04-testing-standards.md` |
 
-**Source**: `documents/knowledge-standards/04-testing-standards.md:99-107`
+**Source**: `.documents/knowledge-standards/04-testing-standards.md:99-107`
 
 ---
 
@@ -628,7 +628,7 @@ The `/test` command generates and executes tests based on feature context, follo
 
 The `/plan` command creates detailed implementation plans through a three-phase workflow focused on scouting, planning, and review.
 
-**Source**: `documents/business/business-workflows/03-detailed-workflows.md:269-306`
+**Source**: `.documents/business/business-workflows/03-detailed-workflows.md:269-306`
 
 ### Phase Flow Diagram
 
@@ -675,7 +675,7 @@ The `/plan` command creates detailed implementation plans through a three-phase 
 └─────────────────────────────────────────────────────────────────┘
 ```
 
-**Source**: `documents/business/business-workflows/03-detailed-workflows.md:269-306`
+**Source**: `.documents/business/business-workflows/03-detailed-workflows.md:269-306`
 
 ### Phase Details
 
@@ -731,7 +731,7 @@ The `/plan` command produces a milestone-based implementation plan:
 | {risk} | {impact} | {mitigation} |
 ```
 
-**Source**: `documents/business/business-workflows/03-detailed-workflows.md:269-306`
+**Source**: `.documents/business/business-workflows/03-detailed-workflows.md:269-306`
 
 ---
 
@@ -739,7 +739,7 @@ The `/plan` command produces a milestone-based implementation plan:
 
 The `/review` command evaluates code quality through a two-phase workflow focused on thorough analysis and structured reporting.
 
-**Source**: `documents/business/business-workflows/03-detailed-workflows.md:310-338`
+**Source**: `.documents/business/business-workflows/03-detailed-workflows.md:310-338`
 
 ### Phase Flow Diagram
 
@@ -775,7 +775,7 @@ The `/review` command evaluates code quality through a two-phase workflow focuse
 └─────────────────────────────────────────────────────────────────┘
 ```
 
-**Source**: `documents/business/business-workflows/03-detailed-workflows.md:310-338`
+**Source**: `.documents/business/business-workflows/03-detailed-workflows.md:310-338`
 
 ### Phase Details
 
@@ -806,7 +806,7 @@ The `/review` command evaluates code quality through a two-phase workflow focuse
 | Medium | Code quality issue or minor functional gap | Address in next sprint |
 | Low | Style violation or minor improvement opportunity | Address when convenient |
 
-**Source**: `documents/business/business-workflows/03-detailed-workflows.md:310-338`
+**Source**: `.documents/business/business-workflows/03-detailed-workflows.md:310-338`
 
 ---
 
@@ -814,7 +814,7 @@ The `/review` command evaluates code quality through a two-phase workflow focuse
 
 The `/debug` command performs systematic root cause analysis through a three-phase workflow that prioritizes evidence gathering over speculation.
 
-**Source**: `documents/business/business-workflows/03-detailed-workflows.md:342-377`
+**Source**: `.documents/business/business-workflows/03-detailed-workflows.md:342-377`
 
 ### Phase Flow Diagram
 
@@ -859,7 +859,7 @@ The `/debug` command performs systematic root cause analysis through a three-pha
 └─────────────────────────────────────────────────────────────────┘
 ```
 
-**Source**: `documents/business/business-workflows/03-detailed-workflows.md:342-377`
+**Source**: `.documents/business/business-workflows/03-detailed-workflows.md:342-377`
 
 ### Phase Details
 
@@ -899,7 +899,7 @@ The `/debug` command performs systematic root cause analysis through a three-pha
 
 The `/wiki` command generates project documentation through a three-phase workflow focused on extraction, organization, and generation.
 
-**Source**: `documents/business/business-workflows/03-detailed-workflows.md:381-417`
+**Source**: `.documents/business/business-workflows/03-detailed-workflows.md:381-417`
 
 ### Phase Flow Diagram
 
@@ -945,7 +945,7 @@ The `/wiki` command generates project documentation through a three-phase workfl
 └─────────────────────────────────────────────────────────────────┘
 ```
 
-**Source**: `documents/business/business-workflows/03-detailed-workflows.md:381-417`
+**Source**: `.documents/business/business-workflows/03-detailed-workflows.md:381-417`
 
 ### Phase Details
 
@@ -996,7 +996,7 @@ The `/wiki` command generates project documentation through a three-phase workfl
     └── architecture-decisions.md
 ```
 
-**Source**: `documents/knowledge-architecture/01-system-overview.md` — Wiki conventions
+**Source**: `.documents/knowledge-architecture/01-system-overview.md` — Wiki conventions
 
 ---
 
@@ -1004,7 +1004,7 @@ The `/wiki` command generates project documentation through a three-phase workfl
 
 The `/deploy` command handles deployment operations through a three-phase workflow with variant-specific Phase 2 execution.
 
-**Source**: `documents/business/business-workflows/03-detailed-workflows.md:421-455`
+**Source**: `.documents/business/business-workflows/03-detailed-workflows.md:421-455`
 
 ### Phase Flow Diagram
 
@@ -1049,7 +1049,7 @@ The `/deploy` command handles deployment operations through a three-phase workfl
 └─────────────────────────────────────────────────────────────────┘
 ```
 
-**Source**: `documents/business/business-workflows/03-detailed-workflows.md:421-455`
+**Source**: `.documents/business/business-workflows/03-detailed-workflows.md:421-455`
 
 ### Phase Details
 
@@ -1083,7 +1083,7 @@ The `/deploy` command handles deployment operations through a three-phase workfl
 | `:production` | Deploy to production | Yes |
 | `:rollback` | Revert to previous | N/A |
 
-**Source**: `documents/business/business-workflows/03-detailed-workflows.md:421-455`
+**Source**: `.documents/business/business-workflows/03-detailed-workflows.md:421-455`
 
 ### Actor Assignment
 
@@ -1093,7 +1093,7 @@ The `/deploy` command handles deployment operations through a three-phase workfl
 | 2: Deployment | DevOps Engineer / CI Pipeline | — |
 | 3: Verification | Tester Agent | Monitoring System |
 
-**Source**: `documents/business/business-workflows/03-detailed-workflows.md:421-455`
+**Source**: `.documents/business/business-workflows/03-detailed-workflows.md:421-455`
 
 ---
 
@@ -1123,7 +1123,7 @@ Error Detected → Agent Level (Retry if applicable)
                  User Level (Receive formatted error)
 ```
 
-**Source**: `documents/knowledge-domain/04-business-rules.md:256-285`
+**Source**: `.documents/knowledge-domain/04-business-rules.md:256-285`
 
 ### Workflow 3: Skill Resolution
 
@@ -1145,13 +1145,13 @@ Complex Task Detected → Analyze Required Skills
 
 All workflow definitions in this runbook are sourced from the following documents:
 
-- `documents/business/business-workflows/03-detailed-workflows.md:1-465` — Primary source for all workflow phase flows
+- `.documents/business/business-workflows/03-detailed-workflows.md:1-465` — Primary source for all workflow phase flows
 - `rules/CORE.md` — Command routing, execution loop, skill resolution
 - `rules/PHASES.md` — Phase execution patterns, output formats
 - `rules/TEAMS.md` — Golden Triangle communication, Mailbox protocol
 - `commands/` — Command workflow implementations
-- `documents/knowledge-standards/04-testing-standards.md:1-200` — Testing standards and coverage requirements
-- `documents/knowledge-domain/04-business-rules.md:256-285` — Error propagation chain
+- `.documents/knowledge-standards/04-testing-standards.md:1-200` — Testing standards and coverage requirements
+- `.documents/knowledge-domain/04-business-rules.md:256-285` — Error propagation chain
 - `skills/debugging/SKILL.md` — Systematic debugging framework
 
 ---

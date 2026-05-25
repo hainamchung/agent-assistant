@@ -182,7 +182,7 @@ All wikilinks resolve to existing pages. No orphaned links.
 Every fact in this wiki is traceable to a source document. Source references use the format:
 
 ```
-**Source**: `documents/category/file.md:line-range`
+**Source**: `.documents/category/file.md:line-range`
 ```
 
 ### Quality Standards

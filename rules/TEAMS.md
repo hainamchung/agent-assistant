@@ -114,7 +114,7 @@ All agent communication flows through two shared artifacts:
 | Artifact | Owner | Purpose |
 |----------|-------|---------|
 | **Shared Task List** | Tech Lead | State management for the phase's tasks — assignments, status, priorities |
-| **Mailbox** | All agents (append-only) | `./reports/{topic}/MAILBOX-{date}.md` — communication log for submissions, reviews, defenses, decisions |
+| **Mailbox** | All agents (append-only) | `./.reports/{topic}/MAILBOX-{date}.md` — communication log for submissions, reviews, defenses, decisions |
 
 **Rules**:
 - Mailbox is **append-only** — no agent may edit or delete prior exchanges
@@ -122,8 +122,8 @@ All agent communication flows through two shared artifacts:
 - Tech Lead manages the Shared Task List; Executor and Reviewer read it
 - One Mailbox per phase execution, timestamped by date
 - **Size management**: If Mailbox exceeds 500 lines, Tech Lead creates a new segment per phase:
-  - Current phase: `./reports/{topic}/MAILBOX-{date}-P{n}.md`
-  - Archived phase: `./reports/{topic}/MAILBOX-{date}-P{n}-FINAL.md`
+  - Current phase: `./.reports/{topic}/MAILBOX-{date}-P{n}.md`
+  - Archived phase: `./.reports/{topic}/MAILBOX-{date}-P{n}-FINAL.md`
   - Each phase starts with a fresh, focused Mailbox
 
 ---
@@ -230,7 +230,7 @@ The `fullstack` domain spawns **two Executors** (backend + frontend). They share
 1. Orchestrator spawns Tech Lead as sub-agent
 2. Tech Lead spawns Executor as sub-agent
 3. Tech Lead spawns Reviewer as sub-agent
-4. Communication flows via Mailbox file (./reports/{topic}/MAILBOX-{date}.md)
+4. Communication flows via Mailbox file (./.reports/{topic}/MAILBOX-{date}.md)
 5. Debate loop runs until consensus or max rounds
 6. Tech Lead collects final output and returns to Orchestrator
 ```
@@ -291,7 +291,7 @@ The `fullstack` domain spawns **two Executors** (backend + frontend). They share
 
 ## MAILBOX FILE FORMAT
 
-**File**: `./reports/{topic}/MAILBOX-{date}.md`
+**File**: `./.reports/{topic}/MAILBOX-{date}.md`
 
 ```markdown
 # 📬 MAILBOX — {Phase Name} — {date}
@@ -492,7 +492,7 @@ NEVER spawn 4+ agents in one triangle
 □ Is the correct team domain identified from the roster?
 □ Are exactly 3 roles assigned (Tech Lead + Executor + Reviewer)?
 □ Has Tech Lead produced the Shared Task List BEFORE dispatch?
-□ Is the Mailbox file initialized at ./reports/{topic}/MAILBOX-{date}.md?
+□ Is the Mailbox file initialized at ./.reports/{topic}/MAILBOX-{date}.md?
 □ Is TIER 1 attempted first? (TIER 2 only on spawn failure)
 □ Is the debate loop capped at 3 rounds?
 □ Does every REVIEW contain explicit PASS/FAIL?
@@ -529,7 +529,7 @@ NEVER spawn 4+ agents in one triangle
 │                                                             │
 │  ALWAYS 3 AGENTS: Tech Lead · Executor · Reviewer           │
 │  MAX 3 DEBATE ROUNDS: Implement → Review → Fix/Defend       │
-│  MAILBOX: ./reports/{topic}/MAILBOX-{date}.md (append-only)         │
+│  MAILBOX: ./.reports/{topic}/MAILBOX-{date}.md (append-only)         │
 │  CONSENSUS: ✅ TechLead ✓ | Executor ✓ | Reviewer ✓         │
 │                                                             │
 │  Tech Lead = FINAL AUTHORITY (arbitrates, synthesizes)       │

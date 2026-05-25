@@ -80,7 +80,7 @@ ALWAYS:
      Update existing pages in place rather than creating duplicates.
 
 4. IF wiki-architect provided a plan:
-   → READ: ./reports/{topic}/plans/PLAN-WIKI-{project}
+   → READ: ./.reports/{topic}/plans/PLAN-WIKI-{project}
    → FOLLOW generation order exactly
    → Report deviations to wiki-architect
 ```

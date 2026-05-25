@@ -33,7 +33,7 @@ Reporter **infers** the mode from what the user asks for — no fixed phrase lis
 
 | Mode | User intent | Reporter action |
 |------|-------------|-----------------|
-| **Create report** | User wants a **new** deliverable (report, summary, analysis, documentation). | Scout/synthesize → write **new** file under `./reports/{topic}/` or path user specifies. |
+| **Create report** | User wants a **new** deliverable (report, summary, analysis, documentation). | Scout/synthesize → write **new** file under `./.reports/{topic}/` or path user specifies. |
 | **Update existing** | User wants **changes reflected in existing** files (docs, README, specs, etc.). | Scout → identify related files → **edit** those files. Do not create a new report unless also asked. |
 | **From template** | User provides a **format, template, or structure** to follow. | Use that format/structure → generate file(s) matching it (e.g. after scouting source). |
 

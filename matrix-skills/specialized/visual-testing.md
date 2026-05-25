@@ -100,7 +100,7 @@ Examples:
 ### 4. Organize Evidence
 
 ```
-./reports/{topic}/screenshots/
+./.reports/{topic}/screenshots/
 ├── 00-index.md              # Screenshot manifest
 ├── navbar/
 │   ├── navbar-mobile.png
@@ -197,7 +197,7 @@ When submitting UI changes via Mailbox, include:
 - [x] Images load correctly
 
 ### Screenshot Location
-`./reports/{topic}/screenshots/`
+`./.reports/{topic}/screenshots/`
 ```
 
 ---
