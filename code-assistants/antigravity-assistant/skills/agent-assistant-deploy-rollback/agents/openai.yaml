@@ -1,0 +1,4 @@
+display_name: "/deploy:rollback"
+short_description: "⏪ Deploy Rollback — Revert to previous deployment"
+brand_color: "#8B5CF6"
+allow_implicit_invocation: true

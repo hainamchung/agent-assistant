@@ -1,0 +1,4 @@
+display_name: "/deploy"
+short_description: "🚀 Deploy Router — Route to deployment workflows"
+brand_color: "#8B5CF6"
+allow_implicit_invocation: true

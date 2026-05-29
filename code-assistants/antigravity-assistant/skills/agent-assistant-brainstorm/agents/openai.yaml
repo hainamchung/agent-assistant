@@ -1,0 +1,4 @@
+display_name: "/brainstorm"
+short_description: "💡 Brainstorm Router — Route to ideation workflows"
+brand_color: "#F59E0B"
+allow_implicit_invocation: true

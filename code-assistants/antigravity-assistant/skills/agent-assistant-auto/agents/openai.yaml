@@ -1,0 +1,4 @@
+display_name: "/auto"
+short_description: "🤖 Autonomous Execution — Full workflow automation"
+brand_color: "#6366F1"
+allow_implicit_invocation: true

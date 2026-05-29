@@ -1,0 +1,4 @@
+display_name: "/code:fast"
+short_description: "⚡ Quick Implementation — Direct coding without planning phase"
+brand_color: "#6366F1"
+allow_implicit_invocation: true

@@ -1,0 +1,4 @@
+display_name: "/fix:fast"
+short_description: "⚡ Quick Fix — Rapid issue resolution"
+brand_color: "#EF4444"
+allow_implicit_invocation: true

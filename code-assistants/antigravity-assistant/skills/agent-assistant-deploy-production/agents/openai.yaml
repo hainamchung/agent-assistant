@@ -1,0 +1,4 @@
+display_name: "/deploy:production"
+short_description: "🚀 Deploy Production — Production release with safety gates"
+brand_color: "#8B5CF6"
+allow_implicit_invocation: true

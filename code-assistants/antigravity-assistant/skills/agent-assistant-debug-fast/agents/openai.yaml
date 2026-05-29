@@ -1,0 +1,4 @@
+display_name: "/debug:fast"
+short_description: "⚡ Quick Debug — Fast diagnosis for simple bugs"
+brand_color: "#EF4444"
+allow_implicit_invocation: true

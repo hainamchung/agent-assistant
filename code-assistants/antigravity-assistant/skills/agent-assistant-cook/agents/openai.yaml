@@ -1,0 +1,4 @@
+display_name: "/cook"
+short_description: "🍳 Cook Router — Route to feature implementation workflows"
+brand_color: "#6366F1"
+allow_implicit_invocation: true

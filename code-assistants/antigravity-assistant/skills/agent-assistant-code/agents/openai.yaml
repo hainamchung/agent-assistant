@@ -1,0 +1,4 @@
+display_name: "/code"
+short_description: "💻 Code Router — Route to implementation workflows"
+brand_color: "#6366F1"
+allow_implicit_invocation: true

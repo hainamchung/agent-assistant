@@ -1,0 +1,4 @@
+display_name: "/review:hard"
+short_description: "⚡⚡⚡ Full Review — Deep code analysis with architecture review"
+brand_color: "#10B981"
+allow_implicit_invocation: true

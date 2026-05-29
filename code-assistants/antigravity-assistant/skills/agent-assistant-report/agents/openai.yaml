@@ -1,0 +1,4 @@
+display_name: "/report"
+short_description: "📝 Report Router — Multi-purpose reporting"
+brand_color: "#3B82F6"
+allow_implicit_invocation: true

@@ -1,0 +1,4 @@
+display_name: "/ask"
+short_description: "❓ Ask Router — Route questions to answer workflows"
+brand_color: "#06B6D4"
+allow_implicit_invocation: true

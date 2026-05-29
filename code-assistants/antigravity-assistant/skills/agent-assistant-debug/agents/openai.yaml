@@ -1,0 +1,4 @@
+display_name: "/debug"
+short_description: "🐛 Debug Router — Route to debugging workflows"
+brand_color: "#EF4444"
+allow_implicit_invocation: true

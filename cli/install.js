@@ -120,6 +120,7 @@ const TOOLS = {
         assets: {
             geminiMd: path.join(ROOT, 'code-assistants', 'antigravity-assistant', 'GEMINI.md'),
             agentFile: path.join(ROOT, 'code-assistants', 'antigravity-assistant', 'AntigravityGlobal.agent.md'),
+            commandSkillsDir: path.join(ROOT, 'code-assistants', 'antigravity-assistant', 'skills'),
         }
     },
     claude: {
@@ -954,6 +955,14 @@ function installAntigravity() {
 
     // 3.3 Skills (~/.gemini/antigravity/skills)
     total += copyWithReplace(path.join(ROOT, 'skills'), tool.paths.skills, tool.replacements);
+
+    // 3.4 Install antigravity-specific command skills (from antigravity-assistant/skills/)
+    if (tool.assets.commandSkillsDir && fs.existsSync(tool.assets.commandSkillsDir)) {
+        total += copyWithReplace(tool.assets.commandSkillsDir, tool.paths.skills, tool.replacements);
+        const cmdSkillCount = fs.readdirSync(tool.assets.commandSkillsDir)
+            .filter(f => fs.statSync(path.join(tool.assets.commandSkillsDir, f)).isDirectory()).length;
+        console.log(`   ✅ Installed ${cmdSkillCount} command skills (Antigravity-native)`);
+    }
 
     // Complete progress bar
     completeProgress();

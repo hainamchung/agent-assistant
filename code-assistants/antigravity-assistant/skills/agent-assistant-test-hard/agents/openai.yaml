@@ -1,0 +1,4 @@
+display_name: "/test:hard"
+short_description: "⚡⚡⚡ Full Test — Comprehensive QA with quality gates"
+brand_color: "#10B981"
+allow_implicit_invocation: true

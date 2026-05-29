@@ -1,0 +1,4 @@
+display_name: "/report:hard"
+short_description: "⚡ Detailed Report — Comprehensive project analysis and documentation"
+brand_color: "#3B82F6"
+allow_implicit_invocation: true

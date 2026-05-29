@@ -1,0 +1,4 @@
+display_name: "/design:fast"
+short_description: "⚡ Quick Design — Rapid component/UI design"
+brand_color: "#EC4899"
+allow_implicit_invocation: true

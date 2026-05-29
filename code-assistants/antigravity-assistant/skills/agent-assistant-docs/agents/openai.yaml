@@ -1,0 +1,4 @@
+display_name: "/docs"
+short_description: "📝 Docs — Full documentation suite (all sub-commands sequentially)"
+brand_color: "#3B82F6"
+allow_implicit_invocation: true

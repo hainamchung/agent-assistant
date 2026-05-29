@@ -1,0 +1,4 @@
+display_name: "/ask:fast"
+short_description: "⚡ Quick Answer — Direct response from codebase context"
+brand_color: "#06B6D4"
+allow_implicit_invocation: true

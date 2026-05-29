@@ -1,0 +1,4 @@
+display_name: "/deploy:preview"
+short_description: "🔍 Deploy Preview — Staging/Preview deployment"
+brand_color: "#8B5CF6"
+allow_implicit_invocation: true

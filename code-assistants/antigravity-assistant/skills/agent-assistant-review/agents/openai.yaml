@@ -1,0 +1,4 @@
+display_name: "/review"
+short_description: "🔍 Review Router — Route to code review workflows"
+brand_color: "#10B981"
+allow_implicit_invocation: true
